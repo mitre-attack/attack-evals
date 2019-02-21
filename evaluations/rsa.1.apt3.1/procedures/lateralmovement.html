@@ -109,11 +109,22 @@
 													</a>
 												</span>
 										</tr>
+										<tr>
+											<td>
+												<br />
+												<div class='divDisclaimer_overview'>
+													<em>MITRE does not rank, score, validate, or endorse any product. The evaluation results are available to the public, so other organizations may provide their own analysis and interpretation - these are not endorsed or validated by MITRE.</em>
+												</div>
+												<br />
+											</td>
+										</tr>
+										<tr>
 											<td class='tdMainLabel-tacticsummary'>
 												<a href="/rsa.1.apt3.1_configuration">Vendor Configuration</a> &nbsp;&nbsp;&nbsp;&nbsp;
-												<a href="/evaluations/rsa.1.apt3.1/rsa.1.apt3.1_overview">All Results</a>
 											</td>
 											<td class='tdLegend-tacticsummary'>
+												<a href="/evaluations/rsa.1.apt3.1/rsa.1.apt3.1_overview" class='aLegendExport'>All Results</a>
+												&nbsp;&nbsp;&nbsp;
 												<a href='/RSA.1.APT3.1_Results.json' class='aLegendExport'>
 													JSON
 												</a>
@@ -252,437 +263,437 @@
 										</tr>
 									</table>
 				
-										<table class='table1'>
-											<tr class='tr1'>
-												<td class='td1A'>
-													<table class='table2'>
-														<tr>
-															<td class='td2Technique'>
-													<a class='aTechnique-tacticsummary' href='/evaluations/rsa.1.apt3.1/procedures/remotedesktopprotocol'>Remote Desktop Protocol							<br />(T1076)						</a>
-															</td>
-														</tr>
+											<table class='table1'>
+												<tr class='tr1'>
+													<td class='td1A'>
+														<table class='table2'>
+															<tr>
+																<td class='td2Technique'>
+														<a class='aTechnique-tacticsummary' href='/evaluations/rsa.1.apt3.1/procedures/remotedesktopprotocol'>Remote Desktop Protocol							<br />(T1076)						</a>
+																</td>
+															</tr>
+														</table>
+													</td>
+													<td class='td1B'>
+														<table class='table2'>
+											<tr class='tr2'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Cobalt Strike: C2 channel modified to proxy RDP connection to Conficker (10.0.0.5)
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p6_C_1' onclick="scroll_to_step('6_C_1')">6.C.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed cmd.exe connecting to 10.0.0.5 (Conficker) over port 3389.									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/rsa-06-3.png.html", "_blank");'>Telemetry showing cmd.exe connecting over port 3389 (RDP) to 10.0.0.5 (Conficker)									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+													<tr class='tr2'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										RDP connection made to Conficker (10.0.0.5) as part of execution of persistence mechanism
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p10_B_1' onclick="scroll_to_step('10_B_1')">10.B.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											None 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-ban' title='None'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>No detection capability demonstrated for this procedure.									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															</table>
+																	</td>
+																</tr>
+													<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										RDP connection made to Creeper (10.0.0.4) as part of execution of persistence mechanism
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p20_A_1' onclick="scroll_to_step('20_A_1')">20.A.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											None 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-ban' title='None'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>No detection capability demonstrated for this procedure.									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															</table>
+																	</td>
+																</tr>
+										
 													</table>
 												</td>
-												<td class='td1B'>
-													<table class='table2'>
-										<tr class='tr2'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Cobalt Strike: C2 channel modified to proxy RDP connection to Conficker (10.0.0.5)
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p6_C_1' onclick="scroll_to_step('6_C_1')">6.C.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed cmd.exe connecting to 10.0.0.5 (Conficker) over port 3389.									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/rsa-06-3.png.html", "_blank");'>Telemetry showing cmd.exe connecting over port 3389 (RDP) to 10.0.0.5 (Conficker)									</a>							</span>							<br />						</td>					</tr>					</table>
+											</tr>
+										</table>
+								
+											<table class='table1'>
+												<tr class='tr1'>
+													<td class='td1A'>
+														<table class='table2'>
+															<tr>
+																<td class='td2Technique'>
+														<a class='aTechnique-tacticsummary' href='/evaluations/rsa.1.apt3.1/procedures/remotefilecopy'>Remote File Copy							<br />(T1105)						</a>
 																</td>
 															</tr>
-												<tr class='tr2'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									RDP connection made to Conficker (10.0.0.5) as part of execution of persistence mechanism
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p10_B_1' onclick="scroll_to_step('10_B_1')">10.B.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										None 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-ban' title='None'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>No detection capability demonstrated for this procedure.									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
 														</table>
-																</td>
-															</tr>
-												<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									RDP connection made to Creeper (10.0.0.4) as part of execution of persistence mechanism
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p20_A_1' onclick="scroll_to_step('20_A_1')">20.A.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										None 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-ban' title='None'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>No detection capability demonstrated for this procedure.									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														</table>
-																</td>
-															</tr>
-									
-												</table>
-											</td>
-										</tr>
-									</table>
-							
-										<table class='table1'>
-											<tr class='tr1'>
-												<td class='td1A'>
-													<table class='table2'>
-														<tr>
-															<td class='td2Technique'>
-													<a class='aTechnique-tacticsummary' href='/evaluations/rsa.1.apt3.1/procedures/remotefilecopy'>Remote File Copy							<br />(T1105)						</a>
-															</td>
-														</tr>
+													</td>
+													<td class='td1B'>
+														<table class='table2'>
+											<tr class='tr2'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Cobalt Strike: Built-in upload capability executed to write a DLL payload (updater.dll) to disk on Nimda (10.0.1.6)
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p7_B_1' onclick="scroll_to_step('7_B_1')">7.B.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed file write of updater.dll.									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/rsa-07-1.png.html", "_blank");'>Telemetry showing file write event of updater.dll									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+													<tr class='tr2'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Empire: UAC bypass module downloaded and wrote a new Empire stager (wdbypass) to disk
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p14_A_1' onclick="scroll_to_step('14_A_1')">14.A.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											None 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-ban' title='None'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>No detection capability demonstrated for this procedure, though telemetry showed an encoded PowerShell command that could be decoded outside the capability to show the IEX command used to download the file (wdbypass) over HTTP port 8080.									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/rsa-14-1.png.html", "_blank");'>Telemetry showing decoded PowerShell showing download request over HTTP (does not count as a detection due to decoding outside of capability)									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+													<tr class='tr2'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Empire: Built-in upload module executed to write malicious VBScript (autoupdate.vbs) to disk on CodeRed (10.0.1.5)
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p16_E_1' onclick="scroll_to_step('16_E_1')">16.E.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed file write of autoupdate.vbs.									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/rsa-16-5.png.html", "_blank");'>Telemetry showing file write of autoupdate.vbs									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+													<tr class='tr2'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Empire: Built-in move capability executed to write malicious VBScript (update.vbs) to disk on Creeper (10.0.0.4)
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p16_G_1' onclick="scroll_to_step('16_G_1')">16.G.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											None 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-ban' title='None'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>No detection capability demonstrated for this procedure.									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															</table>
+																	</td>
+																</tr>
+													<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Empire: Built-in upload module executed to write binary (recycler.exe) to disk on CodeRed (10.0.1.5)
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p19_A_1' onclick="scroll_to_step('19_A_1')">19.A.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed a write file event for recycler.exe.									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/rsa-19-1.png.html", "_blank");'>Telemetry showing file write of recycler.exe									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+										
 													</table>
 												</td>
-												<td class='td1B'>
-													<table class='table2'>
-										<tr class='tr2'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Cobalt Strike: Built-in upload capability executed to write a DLL payload (updater.dll) to disk on Nimda (10.0.1.6)
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p7_B_1' onclick="scroll_to_step('7_B_1')">7.B.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed file write of updater.dll.									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/rsa-07-1.png.html", "_blank");'>Telemetry showing file write event of updater.dll									</a>							</span>							<br />						</td>					</tr>					</table>
+											</tr>
+										</table>
+								
+											<table class='table1'>
+												<tr class='tr1'>
+													<td class='td1A'>
+														<table class='table2'>
+															<tr>
+																<td class='td2Technique'>
+														<a class='aTechnique-tacticsummary' href='/evaluations/rsa.1.apt3.1/procedures/windowsadminshares'>Windows Admin Shares							<br />(T1077)						</a>
 																</td>
 															</tr>
-												<tr class='tr2'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Empire: UAC bypass module downloaded and wrote a new Empire stager (wdbypass) to disk
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p14_A_1' onclick="scroll_to_step('14_A_1')">14.A.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										None 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-ban' title='None'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>No detection capability demonstrated for this procedure, though telemetry showed an encoded PowerShell command that could be decoded outside the capability to show the IEX command used to download the file (wdbypass) over HTTP port 8080.									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/rsa-14-1.png.html", "_blank");'>Telemetry showing decoded PowerShell showing download request over HTTP (does not count as a detection due to decoding outside of capability)									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-												<tr class='tr2'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Empire: Built-in upload module executed to write malicious VBScript (autoupdate.vbs) to disk on CodeRed (10.0.1.5)
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p16_E_1' onclick="scroll_to_step('16_E_1')">16.E.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed file write of autoupdate.vbs.									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/rsa-16-5.png.html", "_blank");'>Telemetry showing file write of autoupdate.vbs									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-												<tr class='tr2'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Empire: Built-in move capability executed to write malicious VBScript (update.vbs) to disk on Creeper (10.0.0.4)
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p16_G_1' onclick="scroll_to_step('16_G_1')">16.G.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										None 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-ban' title='None'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>No detection capability demonstrated for this procedure.									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
 														</table>
-																</td>
-															</tr>
-												<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Empire: Built-in upload module executed to write binary (recycler.exe) to disk on CodeRed (10.0.1.5)
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p19_A_1' onclick="scroll_to_step('19_A_1')">19.A.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed a write file event for recycler.exe.									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/rsa-19-1.png.html", "_blank");'>Telemetry showing file write of recycler.exe									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-									
-												</table>
-											</td>
-										</tr>
-									</table>
-							
-										<table class='table1'>
-											<tr class='tr1'>
-												<td class='td1A'>
-													<table class='table2'>
-														<tr>
-															<td class='td2Technique'>
-													<a class='aTechnique-tacticsummary' href='/evaluations/rsa.1.apt3.1/procedures/windowsadminshares'>Windows Admin Shares							<br />(T1077)						</a>
-															</td>
-														</tr>
+													</td>
+													<td class='td1B'>
+														<table class='table2'>
+											<tr class='tr2'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Empire: Brute force password spraying attempts targeted Windows admin shares on Morris (10.0.1.4) and Nimda (10.0.1.6)
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p16_A_1' onclick="scroll_to_step('16_A_1')">16.A.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed repeated logon attempts targeting ADMIN$ via net.exe and command-line arguments.									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/rsa-16-1.png.html", "_blank");'>Telemetry showing logon attempts targeting ADMIN$ via net.exe and command-line arguments									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+													<tr class='tr2'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Empire: Successful authentication targeted Windows admin share on Conficker (10.0.0.5) 
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p16_B_1' onclick="scroll_to_step('16_B_1')">16.B.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed a logon attempt via net.exe and command-line arguments targeting ADMIN$ via net.exe and command-line arguments.									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/rsa-16-2.png.html", "_blank");'>Telemetry showing logon attempt targeting ADMIN$ via net.exe and command-line arguments									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+													<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Empire: Successful authentication targeted Windows admin shares on Conficker (10.0.0.5)
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p16_D_1' onclick="scroll_to_step('16_D_1')">16.D.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed a logon attempt via net.exe and command-line arguments targeting C$ via net.exe and command-line arguments.									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/rsa-16-4.png.html", "_blank");'>Telemetry showing logon attempt targeting C$ via net.exe and command-line arguments									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+										
 													</table>
 												</td>
-												<td class='td1B'>
-													<table class='table2'>
-										<tr class='tr2'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Empire: Brute force password spraying attempts targeted Windows admin shares on Morris (10.0.1.4) and Nimda (10.0.1.6)
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p16_A_1' onclick="scroll_to_step('16_A_1')">16.A.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed repeated logon attempts targeting ADMIN$ via net.exe and command-line arguments.									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/rsa-16-1.png.html", "_blank");'>Telemetry showing logon attempts targeting ADMIN$ via net.exe and command-line arguments									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-												<tr class='tr2'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Empire: Successful authentication targeted Windows admin share on Conficker (10.0.0.5) 
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p16_B_1' onclick="scroll_to_step('16_B_1')">16.B.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed a logon attempt via net.exe and command-line arguments targeting ADMIN$ via net.exe and command-line arguments.									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/rsa-16-2.png.html", "_blank");'>Telemetry showing logon attempt targeting ADMIN$ via net.exe and command-line arguments									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-												<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Empire: Successful authentication targeted Windows admin shares on Conficker (10.0.0.5)
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p16_D_1' onclick="scroll_to_step('16_D_1')">16.D.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed a logon attempt via net.exe and command-line arguments targeting C$ via net.exe and command-line arguments.									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/rsa-16-4.png.html", "_blank");'>Telemetry showing logon attempt targeting C$ via net.exe and command-line arguments									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-									
-												</table>
-											</td>
-										</tr>
-									</table>
-								</td>
+											</tr>
+										</table>
+									</td>
 								<td class='tdMainRightPane-tacticsummary'>
 									<br />
 									<br />

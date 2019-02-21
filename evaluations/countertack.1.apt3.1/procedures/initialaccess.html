@@ -109,11 +109,22 @@
 													</a>
 												</span>
 										</tr>
+										<tr>
+											<td>
+												<br />
+												<div class='divDisclaimer_overview'>
+													<em>MITRE does not rank, score, validate, or endorse any product. The evaluation results are available to the public, so other organizations may provide their own analysis and interpretation - these are not endorsed or validated by MITRE.</em>
+												</div>
+												<br />
+											</td>
+										</tr>
+										<tr>
 											<td class='tdMainLabel-tacticsummary'>
 												<a href="/countertack.1.apt3.1_configuration">Vendor Configuration</a> &nbsp;&nbsp;&nbsp;&nbsp;
-												<a href="/evaluations/countertack.1.apt3.1/countertack.1.apt3.1_overview">All Results</a>
 											</td>
 											<td class='tdLegend-tacticsummary'>
+												<a href="/evaluations/countertack.1.apt3.1/countertack.1.apt3.1_overview" class='aLegendExport'>All Results</a>
+												&nbsp;&nbsp;&nbsp;
 												<a href='/CounterTack.1.APT3.1_Results.json' class='aLegendExport'>
 													JSON
 												</a>
@@ -252,127 +263,127 @@
 										</tr>
 									</table>
 				
-										<table class='table1'>
-											<tr class='tr1'>
-												<td class='td1A'>
-													<table class='table2'>
-														<tr>
-															<td class='td2Technique'>
-													<a class='aTechnique-tacticsummary' href='/evaluations/countertack.1.apt3.1/procedures/validaccounts'>Valid Accounts							<br />(T1078)						</a>
-															</td>
-														</tr>
+											<table class='table1'>
+												<tr class='tr1'>
+													<td class='td1A'>
+														<table class='table2'>
+															<tr>
+																<td class='td2Technique'>
+														<a class='aTechnique-tacticsummary' href='/evaluations/countertack.1.apt3.1/procedures/validaccounts'>Valid Accounts							<br />(T1078)						</a>
+																</td>
+															</tr>
+														</table>
+													</td>
+													<td class='td1B'>
+														<table class='table2'>
+											<tr class='tr2'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										RDP connection to Conficker (10.0.0.5) authenticated using previously added user Jesse
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p10_B_1' onclick="scroll_to_step('10_B_1')">10.B.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed that the explorer.exe process was running as the user Jesse, indicating the account exists.									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ct-10.b.1-1.png.html", "_blank");'>Telemetry showing explorer.exe running as Jesse									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+													<tr class='tr2'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Empire: 'net use' via PowerShell to successfully authenticate to Conficker (10.0.0.5) using credentials of user Kmitnick
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p16_B_1' onclick="scroll_to_step('16_B_1')">16.B.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry (Tainted) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed a logon attempt via net.exe with command-line arguments to connect using the valid credentials of user Kmitnick. The telemetry was tainted by the parent "Powershell executed remote commands" alert. Telemetry also showed explorer.exe (as the user Bob) write a PIPE on Conficker, which could indicate to an analyst that the share had been successfully mounted.<a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'>Vendor modified configurations between scenario one and two, but MITRE assesses the change did not significantly affect results for this detection. See Configuration page for details.		</span></a>									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ct-16.b.1-1.png.html", "_blank");'>Telemetry showing net.exe logon attempt to ADMIN$ on 10.0.0.5 (Conficker) with the account Kmitnick (tainted by the parent "Powershell executed remote commands" alert)									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ct-16.b.1-2.png.html", "_blank");'>Telemetry showing explorer.exe writing \\\\conficker\\PIPE\\srvsvc (tainted by the parent "FileExts Registry Key modified" alert)									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+													<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Empire: 'net use' via PowerShell to successfully authenticate to Creeper (10.0.0.4) using credentials of user Kmitnick
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p16_D_1' onclick="scroll_to_step('16_D_1')">16.D.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry (Tainted) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed a logon attempt via net.exe with command-line arguments targeting C$ on 10.0.0.4 (Creeper) using valid credentials for user Kmitnick. <a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'>Vendor modified configurations between scenario one and two, but MITRE assesses the change did not significantly affect results for this detection. See Configuration page for details.		</span></a>									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ct-16.d.1-1.png.html", "_blank");'>Telemetry showing net.exe logon attempt to C$ on 10.0.0.4 (Creeper) with valid credentials for the account Kmitnick (tainted by the parent "Powershell executed remote commands" alert)									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+										
 													</table>
 												</td>
-												<td class='td1B'>
-													<table class='table2'>
-										<tr class='tr2'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									RDP connection to Conficker (10.0.0.5) authenticated using previously added user Jesse
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p10_B_1' onclick="scroll_to_step('10_B_1')">10.B.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed that the explorer.exe process was running as the user Jesse, indicating the account exists.									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ct-10.b.1-1.png.html", "_blank");'>Telemetry showing explorer.exe running as Jesse									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-												<tr class='tr2'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Empire: 'net use' via PowerShell to successfully authenticate to Conficker (10.0.0.5) using credentials of user Kmitnick
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p16_B_1' onclick="scroll_to_step('16_B_1')">16.B.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry (Tainted) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed a logon attempt via net.exe with command-line arguments to connect using the valid credentials of user Kmitnick. The telemetry was tainted by the parent "Powershell executed remote commands" alert. Telemetry also showed explorer.exe (as the user Bob) write a PIPE on Conficker, which could indicate to an analyst that the share had been successfully mounted.<a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'>Vendor modified configurations between scenario one and two, but MITRE assesses the change did not significantly affect results for this detection. See Configuration page for details.		</span></a>									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ct-16.b.1-1.png.html", "_blank");'>Telemetry showing net.exe logon attempt to ADMIN$ on 10.0.0.5 (Conficker) with the account Kmitnick (tainted by the parent "Powershell executed remote commands" alert)									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ct-16.b.1-2.png.html", "_blank");'>Telemetry showing explorer.exe writing \\\\conficker\\PIPE\\srvsvc (tainted by the parent "FileExts Registry Key modified" alert)									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-												<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Empire: 'net use' via PowerShell to successfully authenticate to Creeper (10.0.0.4) using credentials of user Kmitnick
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p16_D_1' onclick="scroll_to_step('16_D_1')">16.D.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry (Tainted) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed a logon attempt via net.exe with command-line arguments targeting C$ on 10.0.0.4 (Creeper) using valid credentials for user Kmitnick. <a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'>Vendor modified configurations between scenario one and two, but MITRE assesses the change did not significantly affect results for this detection. See Configuration page for details.		</span></a>									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ct-16.d.1-1.png.html", "_blank");'>Telemetry showing net.exe logon attempt to C$ on 10.0.0.4 (Creeper) with valid credentials for the account Kmitnick (tainted by the parent "Powershell executed remote commands" alert)									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-									
-												</table>
-											</td>
-										</tr>
-									</table>
-								</td>
+											</tr>
+										</table>
+									</td>
 								<td class='tdMainRightPane-tacticsummary'>
 									<br />
 									<br />

@@ -76,7 +76,7 @@
 										<div style="padding: 0px; width: 100%;"> 
 											<span class="spanBreadcrumbs-results"> 
 												<a href='/'> Home </a> &nbsp;>&nbsp; <a href='/evaluations.html'> Evaluations </a> &nbsp;>&nbsp;
-					<a href='/evaluations/crowdstrike.1.apt3.1.html'> Crowdstrike </a> &nbsp;>&nbsp; Procedures: Tactics
+					<a href='/evaluations/crowdstrike.1.apt3.1.html'> CrowdStrike </a> &nbsp;>&nbsp; Procedures: Tactics
 										</span>
 									</div>
 								</td>
@@ -109,12 +109,23 @@
 													</a>
 												</span>
 										</tr>
+										<tr>
+											<td>
+												<br />
+												<div class='divDisclaimer_overview'>
+													<em>MITRE does not rank, score, validate, or endorse any product. The evaluation results are available to the public, so other organizations may provide their own analysis and interpretation - these are not endorsed or validated by MITRE.</em>
+												</div>
+												<br />
+											</td>
+										</tr>
+										<tr>
 											<td class='tdMainLabel-tacticsummary'>
 												<a href="/crowdstrike.1.apt3.1_configuration">Vendor Configuration</a> &nbsp;&nbsp;&nbsp;&nbsp;
-												<a href="/evaluations/crowdstrike.1.apt3.1/crowdstrike.1.apt3.1_overview">All Results</a>
 											</td>
 											<td class='tdLegend-tacticsummary'>
-												<a href='/Crowdstrike.1.APT3.1_Results.json' class='aLegendExport'>
+												<a href="/evaluations/crowdstrike.1.apt3.1/crowdstrike.1.apt3.1_overview" class='aLegendExport'>All Results</a>
+												&nbsp;&nbsp;&nbsp;
+												<a href='/CrowdStrike.1.APT3.1_Results.json' class='aLegendExport'>
 													JSON
 												</a>
 												&nbsp;&nbsp;&nbsp;
@@ -252,134 +263,134 @@
 										</tr>
 									</table>
 				
-										<table class='table1'>
-											<tr class='tr1'>
-												<td class='td1A'>
-													<table class='table2'>
-														<tr>
-															<td class='td2Technique'>
-													<a class='aTechnique-tacticsummary' href='/evaluations/crowdstrike.1.apt3.1/procedures/validaccounts'>Valid Accounts							<br />(T1078)						</a>
-															</td>
-														</tr>
+											<table class='table1'>
+												<tr class='tr1'>
+													<td class='td1A'>
+														<table class='table2'>
+															<tr>
+																<td class='td2Technique'>
+														<a class='aTechnique-tacticsummary' href='/evaluations/crowdstrike.1.apt3.1/procedures/validaccounts'>Valid Accounts							<br />(T1078)						</a>
+																</td>
+															</tr>
+														</table>
+													</td>
+													<td class='td1B'>
+														<table class='table2'>
+											<tr class='tr2'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										RDP connection to Conficker (10.0.0.5) authenticated using previously added user Jesse
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p10_B_1' onclick="scroll_to_step('10_B_1')">10.B.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed a type 10 (interactive) UserLogon event for Jesse.									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/cs-10.b.1-1.png.html", "_blank");'>Telemetry showing user logon by Jesse to Conficker									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+													<tr class='tr2'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Empire: 'net use' via PowerShell to successfully authenticate to Conficker (10.0.0.5) using credentials of user Kmitnick
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p16_B_1' onclick="scroll_to_step('16_B_1')">16.B.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry (Tainted) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed a logon attempt via net.exe with command-line arguments to connect using the valid credentials of user Kmitnick (following multiple failed net use attempts). The telemetry was tainted by a parent powershell.exe detection.									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											General Behavior (Delayed, Tainted) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-user-alt' title='General Behavior'></i>&nbsp;<i class='far fa-clock' title='Delayed'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>OverWatch generated a General Behavior alert indicating the successful net use connection was suspicious. The alert was tainted by a parent powershell.exe detection.<a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'>OverWatch is the managed threat hunting service.		</span></a> 									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/cs-16.b.1-1.png.html", "_blank");'>Telemetry from process tree showing successful net.exe connection using valid credentials of Kmitnick (tainted by previous powershell.exe detection by red line indicating high severity. The vendor noted the process tree view and severities change as detections occur.)									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/cs-16.b.1-2.png.html", "_blank");'>OverWatch General Behavior alert indicating successful net use connection by Kmitnick was suspicious (would be tainted by previous powershell.exe detection by orange line indicating medium severity in process tree view that is not shown)									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+													<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Empire: 'net use' via PowerShell to successfully authenticate to Creeper (10.0.0.4) using credentials of user Kmitnick
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p16_D_1' onclick="scroll_to_step('16_D_1')">16.D.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry (Tainted) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed a logon attempt via net.exe with command-line arguments to the C$ share on Creeper as the user Kmitnick. The process tree view showed net.exe as tainted by a previous powershell.exe detection.									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/cs-16.d.1-2.png.html", "_blank");'>Telemetry showing successful net use connection by Kmitnick in the process tree view (tainted by previous powershell.exe detection by red line indicating high severity)									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+										
 													</table>
 												</td>
-												<td class='td1B'>
-													<table class='table2'>
-										<tr class='tr2'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									RDP connection to Conficker (10.0.0.5) authenticated using previously added user Jesse
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p10_B_1' onclick="scroll_to_step('10_B_1')">10.B.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed a type 10 (interactive) UserLogon event for Jesse.									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/cs-10.b.1-1.png.html", "_blank");'>Telemetry showing user logon by Jesse to Conficker									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-												<tr class='tr2'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Empire: 'net use' via PowerShell to successfully authenticate to Conficker (10.0.0.5) using credentials of user Kmitnick
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p16_B_1' onclick="scroll_to_step('16_B_1')">16.B.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry (Tainted) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed a logon attempt via net.exe with command-line arguments to connect using the valid credentials of user Kmitnick (following multiple failed net use attempts). The telemetry was tainted by a parent powershell.exe detection.									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										General Behavior (Delayed, Tainted) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-user-alt' title='General Behavior'></i>&nbsp;<i class='far fa-clock' title='Delayed'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>OverWatch generated a General Behavior alert indicating the successful net use connection was suspicious. The alert was tainted by a parent powershell.exe detection.<a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'>OverWatch is the managed threat hunting service.		</span></a> 									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/cs-16.b.1-1.png.html", "_blank");'>Telemetry from process tree showing successful net.exe connection using valid credentials of Kmitnick (tainted by previous powershell.exe detection by red line indicating high severity. The vendor noted the process tree view and severities change as detections occur.)									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/cs-16.b.1-2.png.html", "_blank");'>OverWatch General Behavior alert indicating successful net use connection by Kmitnick was suspicious (would be tainted by previous powershell.exe detection by orange line indicating medium severity in process tree view that is not shown)									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-												<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Empire: 'net use' via PowerShell to successfully authenticate to Creeper (10.0.0.4) using credentials of user Kmitnick
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p16_D_1' onclick="scroll_to_step('16_D_1')">16.D.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry (Tainted) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed a logon attempt via net.exe with command-line arguments to the C$ share on Creeper as the user Kmitnick. The process tree view showed net.exe as tainted by a previous powershell.exe detection.									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/cs-16.d.1-2.png.html", "_blank");'>Telemetry showing successful net use connection by Kmitnick in the process tree view (tainted by previous powershell.exe detection by red line indicating high severity)									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-									
-												</table>
-											</td>
-										</tr>
-									</table>
-								</td>
+											</tr>
+										</table>
+									</td>
 								<td class='tdMainRightPane-tacticsummary'>
 									<br />
 									<br />

@@ -109,11 +109,22 @@
 													</a>
 												</span>
 										</tr>
+										<tr>
+											<td>
+												<br />
+												<div class='divDisclaimer_overview'>
+													<em>MITRE does not rank, score, validate, or endorse any product. The evaluation results are available to the public, so other organizations may provide their own analysis and interpretation - these are not endorsed or validated by MITRE.</em>
+												</div>
+												<br />
+											</td>
+										</tr>
+										<tr>
 											<td class='tdMainLabel-tacticsummary'>
 												<a href="/sentinelone.1.apt3.1_configuration">Vendor Configuration</a> &nbsp;&nbsp;&nbsp;&nbsp;
-												<a href="/evaluations/sentinelone.1.apt3.1/sentinelone.1.apt3.1_overview">All Results</a>
 											</td>
 											<td class='tdLegend-tacticsummary'>
+												<a href="/evaluations/sentinelone.1.apt3.1/sentinelone.1.apt3.1_overview" class='aLegendExport'>All Results</a>
+												&nbsp;&nbsp;&nbsp;
 												<a href='/SentinelOne.1.APT3.1_Results.json' class='aLegendExport'>
 													JSON
 												</a>
@@ -252,500 +263,500 @@
 										</tr>
 									</table>
 				
-										<table class='table1'>
-											<tr class='tr1'>
-												<td class='td1A'>
-													<table class='table2'>
-														<tr>
-															<td class='td2Technique'>
-													<a class='aTechnique-tacticsummary' href='/evaluations/sentinelone.1.apt3.1/procedures/userexecution'>User Execution							<br />(T1204)						</a>
-															</td>
-														</tr>
-													</table>
-												</td>
-												<td class='td1B'>
-													<table class='table2'>
-										<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Legitimate user Debbie clicked and executed malicious self-extracting archive (Resume Viewer.exe) on 10.0.1.6 (Nimda)
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p1_A_1' onclick="scroll_to_step('1_A_1')">1.A.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed Resume Viewer.exe execution with subsequent file writes and execution.									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										General Behavior 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-user-alt' title='General Behavior'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>A General Behavior alert was generated due to static analysis of the file through the DFI resulting in it being marked as suspicious, which generated a story (group ID) that subsequent linked events are tainted by.									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/s1-1.a.1-1.png.html", "_blank");'>Telemetry from process tree showing execution of Resume Viewer.exe									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/s1-1.a.1-2.png.html", "_blank");'>General Behavior alert for execution of Resume Viewer.exe as a suspicious file									</a>							</span>							<br />						</td>					</tr>					</table>
+											<table class='table1'>
+												<tr class='tr1'>
+													<td class='td1A'>
+														<table class='table2'>
+															<tr>
+																<td class='td2Technique'>
+														<a class='aTechnique-tacticsummary' href='/evaluations/sentinelone.1.apt3.1/procedures/userexecution'>User Execution							<br />(T1204)						</a>
 																</td>
 															</tr>
-									
-												</table>
-											</td>
-										</tr>
-									</table>
-							
-										<table class='table1'>
-											<tr class='tr1'>
-												<td class='td1A'>
-													<table class='table2'>
-														<tr>
-															<td class='td2Technique'>
-													<a class='aTechnique-tacticsummary' href='/evaluations/sentinelone.1.apt3.1/procedures/scripting'>Scripting							<br />(T1064)						</a>
-															</td>
-														</tr>
-													</table>
-												</td>
-												<td class='td1B'>
-													<table class='table2'>
-										<tr class='tr2'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Previously executed self-extracting archive (Resume Viewer.exe) launched an embedded batch file (pdfhelper.cmd)
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p1_A_1' onclick="scroll_to_step('1_A_1')">1.A.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry (Tainted) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed cmd.exe executing the pdfhelper.cmd script. The telemetry was tainted by the previous alert generated from Resume Viewer.exe because it was associated with the same story (Group ID).									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/s1-1.b.1-1.png.html", "_blank");'>Telemetry from process tree showing the child cmd.exe process running the script pdfhelper.cmd (tainted by relationship to threat story)									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-												<tr class='tr2'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Legitimate user Bob clicked and executed malicious VBScript (autoupdate.vbs) on 10.0.1.5 (CodeRed)
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p11_A_1' onclick="scroll_to_step('11_A_1')">11.A.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed wscript.exe executing autoupdate.vbs which then executed powershell.exe with an encoded PowerShell script.									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										General Behavior 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-user-alt' title='General Behavior'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>A General Behavior alert was generated for the execution of autoupdate.vbs that was listed as an active threat.									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/s1-11.a.1-2.png.html", "_blank");'>Telemetry showing wscript.exe and powershell.exe 									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/s1-11.a.1-1.png.html", "_blank");'>General Behavior alert for execution of autoupdate.vbs listed as an active threat									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-												<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Empire: Built-in WinEnum module executed to programmatically execute a series of enumeration techniques
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p12_E_1' onclick="scroll_to_step('12_E_1')">12.E.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry (Tainted) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed execution of a PowerShell script with follow-on enumeration activity that coincided with the execution of the WinEnum module. The telemetry was tainted by the alert generated during initial compromise because it was associated with the same story (Group ID).									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/s1-12.e.1-1.png.html", "_blank");'>Telemetry showing encoded PowerShell script (tainted Group ID not shown but was the search parameter)									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-									
-												</table>
-											</td>
-										</tr>
-									</table>
-							
-										<table class='table1'>
-											<tr class='tr1'>
-												<td class='td1A'>
-													<table class='table2'>
-														<tr>
-															<td class='td2Technique'>
-													<a class='aTechnique-tacticsummary' href='/evaluations/sentinelone.1.apt3.1/procedures/rundll32'>Rundll32							<br />(T1085)						</a>
-															</td>
-														</tr>
-													</table>
-												</td>
-												<td class='td1B'>
-													<table class='table2'>
-										<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Previously executed batch file (pdfhelper.cmd) launched a DLL payload (update.dat) using Rundll32
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p1_A_1' onclick="scroll_to_step('1_A_1')">1.A.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry (Tainted) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed rundll32.exe executing as a result of Resume Viewer.exe running. The telemetry was tainted by the previous alert generated from Resume Viewer.exe because it was associated with the same story (Group ID).									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/s1-1.a.1-1.png.html", "_blank");'>Telemetry from process tree showing rundll32.exe (tainted by relationship to threat story)									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-									
-												</table>
-											</td>
-										</tr>
-									</table>
-							
-										<table class='table1'>
-											<tr class='tr1'>
-												<td class='td1A'>
-													<table class='table2'>
-														<tr>
-															<td class='td2Technique'>
-													<a class='aTechnique-tacticsummary' href='/evaluations/sentinelone.1.apt3.1/procedures/command-lineinterface'>Command-Line Interface							<br />(T1059)						</a>
-															</td>
-														</tr>
-													</table>
-												</td>
-												<td class='td1B'>
-													<table class='table2'>
-										<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Empire: Built-in runas module executed to launch malicious VBScript (autoupdate.vbs) as user Kmitnick 
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p16_F_1' onclick="scroll_to_step('16_F_1')">16.F.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry (Tainted) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed cmd.exe execution of autoupdate.vbs. The activity seen during the initial compromise step tainted the event because it was associated with the same story (Group ID).									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/s1-16.f.1-1.png.html", "_blank");'>Telemetry showing cmd.exe launching autoupdate.vbs (tainted by relationship to threat story)									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-									
-												</table>
-											</td>
-										</tr>
-									</table>
-							
-										<table class='table1'>
-											<tr class='tr1'>
-												<td class='td1A'>
-													<table class='table2'>
-														<tr>
-															<td class='td2Technique'>
-													<a class='aTechnique-tacticsummary' href='/evaluations/sentinelone.1.apt3.1/procedures/graphicaluserinterface'>Graphical User Interface							<br />(T1061)						</a>
-															</td>
-														</tr>
-													</table>
-												</td>
-												<td class='td1B'>
-													<table class='table2'>
-										<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Microsoft Management Console (Local Users and Groups snap-in) GUI utility used to add new user through RDP connection
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p7_A_1' onclick="scroll_to_step('7_A_1')">7.A.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										None 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-ban' title='None'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>No detection capability demonstrated for this procedure.									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
 														</table>
-																</td>
-															</tr>
-									
-												</table>
-											</td>
-										</tr>
-									</table>
-							
-										<table class='table1'>
-											<tr class='tr1'>
-												<td class='td1A'>
-													<table class='table2'>
-														<tr>
-															<td class='td2Technique'>
-													<a class='aTechnique-tacticsummary' href='/evaluations/sentinelone.1.apt3.1/procedures/scheduledtask'>Scheduled Task							<br />(T1053)						</a>
-															</td>
-														</tr>
+													</td>
+													<td class='td1B'>
+														<table class='table2'>
+											<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Legitimate user Debbie clicked and executed malicious self-extracting archive (Resume Viewer.exe) on 10.0.1.6 (Nimda)
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p1_A_1' onclick="scroll_to_step('1_A_1')">1.A.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed Resume Viewer.exe execution with subsequent file writes and execution.									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											General Behavior 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-user-alt' title='General Behavior'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>A General Behavior alert was generated due to static analysis of the file through the DFI resulting in it being marked as suspicious, which generated a story (group ID) that subsequent linked events are tainted by.									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/s1-1.a.1-1.png.html", "_blank");'>Telemetry from process tree showing execution of Resume Viewer.exe									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/s1-1.a.1-2.png.html", "_blank");'>General Behavior alert for execution of Resume Viewer.exe as a suspicious file									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+										
 													</table>
 												</td>
-												<td class='td1B'>
-													<table class='table2'>
-										<tr class='tr2'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Cobalt Strike: 'schtasks' via cmd to create scheduled task that executes a DLL payload (updater.dll)
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p7_C_1' onclick="scroll_to_step('7_C_1')">7.C.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry (Tainted) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed execution of schtasks.exe and associated command-line arguments. The activity seen during the initial compromise step tainted the event because it was associated with the same story (Group ID).									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/s1-7.c.1-1.png.html", "_blank");'>Telemetry showing schtask.exe and associated command-line arguments (tainted by relationship to threat story)									</a>							</span>							<br />						</td>					</tr>					</table>
+											</tr>
+										</table>
+								
+											<table class='table1'>
+												<tr class='tr1'>
+													<td class='td1A'>
+														<table class='table2'>
+															<tr>
+																<td class='td2Technique'>
+														<a class='aTechnique-tacticsummary' href='/evaluations/sentinelone.1.apt3.1/procedures/scripting'>Scripting							<br />(T1064)						</a>
 																</td>
 															</tr>
-												<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Scheduled task executed when user Debbie logs on to Nimda (10.0.1.6), launching a DLL payload (updater.dll) using Rundll32
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p10_A_2' onclick="scroll_to_step('10_A_2')">10.A.2								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed rundll32.exe executing updater.dll as part of the scheduled task persistence. The telemetry was associated with the execution of autoupdate.bat for persistence because it was associated with the same story (Group ID) but is not marked as malicious or tainted because it is not associated with an alert.									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/s1-10.a.2-2.png.html", "_blank");'>Telemetry showing rundll32.exe executing updater.dll									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/s1-10.a.1-3.png.html", "_blank");'>Group ID query showing both autoupdate.bat and updater.dll persistence execution									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-									
-												</table>
-											</td>
-										</tr>
-									</table>
-							
-										<table class='table1'>
-											<tr class='tr1'>
-												<td class='td1A'>
-													<table class='table2'>
-														<tr>
-															<td class='td2Technique'>
-													<a class='aTechnique-tacticsummary' href='/evaluations/sentinelone.1.apt3.1/procedures/serviceexecution'>Service Execution							<br />(T1035)						</a>
-															</td>
-														</tr>
+														</table>
+													</td>
+													<td class='td1B'>
+														<table class='table2'>
+											<tr class='tr2'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Previously executed self-extracting archive (Resume Viewer.exe) launched an embedded batch file (pdfhelper.cmd)
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p1_A_1' onclick="scroll_to_step('1_A_1')">1.A.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry (Tainted) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed cmd.exe executing the pdfhelper.cmd script. The telemetry was tainted by the previous alert generated from Resume Viewer.exe because it was associated with the same story (Group ID).									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/s1-1.b.1-1.png.html", "_blank");'>Telemetry from process tree showing the child cmd.exe process running the script pdfhelper.cmd (tainted by relationship to threat story)									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+													<tr class='tr2'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Legitimate user Bob clicked and executed malicious VBScript (autoupdate.vbs) on 10.0.1.5 (CodeRed)
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p11_A_1' onclick="scroll_to_step('11_A_1')">11.A.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed wscript.exe executing autoupdate.vbs which then executed powershell.exe with an encoded PowerShell script.									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											General Behavior 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-user-alt' title='General Behavior'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>A General Behavior alert was generated for the execution of autoupdate.vbs that was listed as an active threat.									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/s1-11.a.1-2.png.html", "_blank");'>Telemetry showing wscript.exe and powershell.exe 									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/s1-11.a.1-1.png.html", "_blank");'>General Behavior alert for execution of autoupdate.vbs listed as an active threat									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+													<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Empire: Built-in WinEnum module executed to programmatically execute a series of enumeration techniques
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p12_E_1' onclick="scroll_to_step('12_E_1')">12.E.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry (Tainted) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed execution of a PowerShell script with follow-on enumeration activity that coincided with the execution of the WinEnum module. The telemetry was tainted by the alert generated during initial compromise because it was associated with the same story (Group ID).									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/s1-12.e.1-1.png.html", "_blank");'>Telemetry showing encoded PowerShell script (tainted Group ID not shown but was the search parameter)									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+										
 													</table>
 												</td>
-												<td class='td1B'>
-													<table class='table2'>
-										<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Empire: 'sc start' via PowerShell to remotely launch a specific service on Creeper (10.0.0.4)
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p16_L_1' onclick="scroll_to_step('16_L_1')">16.L.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry (Tainted) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed execution of sc.exe to start the AdobeUpdater service on Creeper. The activity seen during the initial compromise step tainted the event because it was associated with the same story (Group ID).									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										General Behavior 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-user-alt' title='General Behavior'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>A General Behavior alert was generated for the lateral movement activity. A new story grouping was generated for the event on Creeper to associate subsequent activity.									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/s1-16.l.1-1.png.html", "_blank");'>Telemetry showing execution of sc.exe to start the AdobeUpdater service on Creeper (tainted by relationship to threat story)									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/s1-16.g.1-1.png.html", "_blank");'>Lateral movement alert generated by the remote service start on Creeper									</a>							</span>							<br />						</td>					</tr>					</table>
+											</tr>
+										</table>
+								
+											<table class='table1'>
+												<tr class='tr1'>
+													<td class='td1A'>
+														<table class='table2'>
+															<tr>
+																<td class='td2Technique'>
+														<a class='aTechnique-tacticsummary' href='/evaluations/sentinelone.1.apt3.1/procedures/rundll32'>Rundll32							<br />(T1085)						</a>
 																</td>
 															</tr>
-									
-												</table>
-											</td>
-										</tr>
-									</table>
-								</td>
+														</table>
+													</td>
+													<td class='td1B'>
+														<table class='table2'>
+											<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Previously executed batch file (pdfhelper.cmd) launched a DLL payload (update.dat) using Rundll32
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p1_A_1' onclick="scroll_to_step('1_A_1')">1.A.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry (Tainted) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed rundll32.exe executing as a result of Resume Viewer.exe running. The telemetry was tainted by the previous alert generated from Resume Viewer.exe because it was associated with the same story (Group ID).									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/s1-1.a.1-1.png.html", "_blank");'>Telemetry from process tree showing rundll32.exe (tainted by relationship to threat story)									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+										
+													</table>
+												</td>
+											</tr>
+										</table>
+								
+											<table class='table1'>
+												<tr class='tr1'>
+													<td class='td1A'>
+														<table class='table2'>
+															<tr>
+																<td class='td2Technique'>
+														<a class='aTechnique-tacticsummary' href='/evaluations/sentinelone.1.apt3.1/procedures/command-lineinterface'>Command-Line Interface							<br />(T1059)						</a>
+																</td>
+															</tr>
+														</table>
+													</td>
+													<td class='td1B'>
+														<table class='table2'>
+											<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Empire: Built-in runas module executed to launch malicious VBScript (autoupdate.vbs) as user Kmitnick 
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p16_F_1' onclick="scroll_to_step('16_F_1')">16.F.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry (Tainted) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed cmd.exe execution of autoupdate.vbs. The activity seen during the initial compromise step tainted the event because it was associated with the same story (Group ID).									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/s1-16.f.1-1.png.html", "_blank");'>Telemetry showing cmd.exe launching autoupdate.vbs (tainted by relationship to threat story)									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+										
+													</table>
+												</td>
+											</tr>
+										</table>
+								
+											<table class='table1'>
+												<tr class='tr1'>
+													<td class='td1A'>
+														<table class='table2'>
+															<tr>
+																<td class='td2Technique'>
+														<a class='aTechnique-tacticsummary' href='/evaluations/sentinelone.1.apt3.1/procedures/graphicaluserinterface'>Graphical User Interface							<br />(T1061)						</a>
+																</td>
+															</tr>
+														</table>
+													</td>
+													<td class='td1B'>
+														<table class='table2'>
+											<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Microsoft Management Console (Local Users and Groups snap-in) GUI utility used to add new user through RDP connection
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p7_A_1' onclick="scroll_to_step('7_A_1')">7.A.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											None 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-ban' title='None'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>No detection capability demonstrated for this procedure.									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															</table>
+																	</td>
+																</tr>
+										
+													</table>
+												</td>
+											</tr>
+										</table>
+								
+											<table class='table1'>
+												<tr class='tr1'>
+													<td class='td1A'>
+														<table class='table2'>
+															<tr>
+																<td class='td2Technique'>
+														<a class='aTechnique-tacticsummary' href='/evaluations/sentinelone.1.apt3.1/procedures/scheduledtask'>Scheduled Task							<br />(T1053)						</a>
+																</td>
+															</tr>
+														</table>
+													</td>
+													<td class='td1B'>
+														<table class='table2'>
+											<tr class='tr2'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Cobalt Strike: 'schtasks' via cmd to create scheduled task that executes a DLL payload (updater.dll)
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p7_C_1' onclick="scroll_to_step('7_C_1')">7.C.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry (Tainted) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed execution of schtasks.exe and associated command-line arguments. The activity seen during the initial compromise step tainted the event because it was associated with the same story (Group ID).									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/s1-7.c.1-1.png.html", "_blank");'>Telemetry showing schtask.exe and associated command-line arguments (tainted by relationship to threat story)									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+													<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Scheduled task executed when user Debbie logs on to Nimda (10.0.1.6), launching a DLL payload (updater.dll) using Rundll32
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p10_A_2' onclick="scroll_to_step('10_A_2')">10.A.2								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed rundll32.exe executing updater.dll as part of the scheduled task persistence. The telemetry was associated with the execution of autoupdate.bat for persistence because it was associated with the same story (Group ID) but is not marked as malicious or tainted because it is not associated with an alert.									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/s1-10.a.2-2.png.html", "_blank");'>Telemetry showing rundll32.exe executing updater.dll									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/s1-10.a.1-3.png.html", "_blank");'>Group ID query showing both autoupdate.bat and updater.dll persistence execution									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+										
+													</table>
+												</td>
+											</tr>
+										</table>
+								
+											<table class='table1'>
+												<tr class='tr1'>
+													<td class='td1A'>
+														<table class='table2'>
+															<tr>
+																<td class='td2Technique'>
+														<a class='aTechnique-tacticsummary' href='/evaluations/sentinelone.1.apt3.1/procedures/serviceexecution'>Service Execution							<br />(T1035)						</a>
+																</td>
+															</tr>
+														</table>
+													</td>
+													<td class='td1B'>
+														<table class='table2'>
+											<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Empire: 'sc start' via PowerShell to remotely launch a specific service on Creeper (10.0.0.4)
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p16_L_1' onclick="scroll_to_step('16_L_1')">16.L.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry (Tainted) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed execution of sc.exe to start the AdobeUpdater service on Creeper. The activity seen during the initial compromise step tainted the event because it was associated with the same story (Group ID).									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											General Behavior 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-user-alt' title='General Behavior'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>A General Behavior alert was generated for the lateral movement activity. A new story grouping was generated for the event on Creeper to associate subsequent activity.									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/s1-16.l.1-1.png.html", "_blank");'>Telemetry showing execution of sc.exe to start the AdobeUpdater service on Creeper (tainted by relationship to threat story)									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/s1-16.g.1-1.png.html", "_blank");'>Lateral movement alert generated by the remote service start on Creeper									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+										
+													</table>
+												</td>
+											</tr>
+										</table>
+									</td>
 								<td class='tdMainRightPane-tacticsummary'>
 									<br />
 									<br />

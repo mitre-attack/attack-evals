@@ -109,11 +109,22 @@
 													</a>
 												</span>
 										</tr>
+										<tr>
+											<td>
+												<br />
+												<div class='divDisclaimer_overview'>
+													<em>MITRE does not rank, score, validate, or endorse any product. The evaluation results are available to the public, so other organizations may provide their own analysis and interpretation - these are not endorsed or validated by MITRE.</em>
+												</div>
+												<br />
+											</td>
+										</tr>
+										<tr>
 											<td class='tdMainLabel-tacticsummary'>
 												<a href="/microsoft.1.apt3.1_configuration">Vendor Configuration</a> &nbsp;&nbsp;&nbsp;&nbsp;
-												<a href="/evaluations/microsoft.1.apt3.1/microsoft.1.apt3.1_overview">All Results</a>
 											</td>
 											<td class='tdLegend-tacticsummary'>
+												<a href="/evaluations/microsoft.1.apt3.1/microsoft.1.apt3.1_overview" class='aLegendExport'>All Results</a>
+												&nbsp;&nbsp;&nbsp;
 												<a href='/Microsoft.1.APT3.1_Results.json' class='aLegendExport'>
 													JSON
 												</a>
@@ -252,732 +263,732 @@
 										</tr>
 									</table>
 				
-										<table class='table1'>
-											<tr class='tr1'>
-												<td class='td1A'>
-													<table class='table2'>
-														<tr>
-															<td class='td2Technique'>
-													<a class='aTechnique-tacticsummary' href='/evaluations/microsoft.1.apt3.1/procedures/accesstokenmanipulation'>Access Token Manipulation							<br />(T1134)						</a>
-															</td>
-														</tr>
+											<table class='table1'>
+												<tr class='tr1'>
+													<td class='td1A'>
+														<table class='table2'>
+															<tr>
+																<td class='td2Technique'>
+														<a class='aTechnique-tacticsummary' href='/evaluations/microsoft.1.apt3.1/procedures/accesstokenmanipulation'>Access Token Manipulation							<br />(T1134)						</a>
+																</td>
+															</tr>
+														</table>
+													</td>
+													<td class='td1B'>
+														<table class='table2'>
+											<tr class='tr2'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Cobalt Strike: Built-in UAC bypass token duplication capability executed to modify current process token
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p3_A_1' onclick="scroll_to_step('3_A_1')">3.A.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry (Tainted) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed svchost.exe executed with the seclogon command-line argument and a subsequent elevated powershell.exe process, indicating token manipulation (tainted by parent alert on a suspicious PowerShell command-line generated for the svchost.exe invocation of powershell.exe with an encoded script). 									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-3.a.1-2.png.html", "_blank");'>Telemetry showing svchost.exe execution with seclogon command-line argument then subsequent powershell.exe									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-3.c.1-2.png.html", "_blank");'>Alert for \'Suspicious PowerShell command-line\' showing tainted association via a process tree containing svchost.exe and elevated powershell.exe									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+													<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Cobalt Strike: Built-in token theft capability executed to change user context to George
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p5_B_1' onclick="scroll_to_step('5_B_1')">5.B.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry (Tainted) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed svchost.exe as a high integrity process from SYSTEM and subsequent cmd.exe process running as user George (tainted by the parent alert on suspicious process injection into lsass.exe). Svchost.exe was executed with seclogon command-line argument indicating token manipulation.									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-5.b.1-1.png.html", "_blank");'>Telemetry showing svchost.exe invocation with seclogon flag subsequently running cmd.exe as SYSTEM									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-5.b.1-2.png.html", "_blank");'>Telemetry showing resulting cmd.exe running as user George									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-5.b.1-4.png.html", "_blank");'>Alert for suspicious process injection showing tainted association via a process tree containing subsequent cmd.exe processes (inner failure message in screenshot not relevant to tested functionality)									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+										
 													</table>
 												</td>
-												<td class='td1B'>
-													<table class='table2'>
-										<tr class='tr2'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Cobalt Strike: Built-in UAC bypass token duplication capability executed to modify current process token
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p3_A_1' onclick="scroll_to_step('3_A_1')">3.A.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry (Tainted) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed svchost.exe executed with the seclogon command-line argument and a subsequent elevated powershell.exe process, indicating token manipulation (tainted by parent alert on a suspicious PowerShell command-line generated for the svchost.exe invocation of powershell.exe with an encoded script). 									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-3.a.1-2.png.html", "_blank");'>Telemetry showing svchost.exe execution with seclogon command-line argument then subsequent powershell.exe									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-3.c.1-2.png.html", "_blank");'>Alert for \'Suspicious PowerShell command-line\' showing tainted association via a process tree containing svchost.exe and elevated powershell.exe									</a>							</span>							<br />						</td>					</tr>					</table>
+											</tr>
+										</table>
+								
+											<table class='table1'>
+												<tr class='tr1'>
+													<td class='td1A'>
+														<table class='table2'>
+															<tr>
+																<td class='td2Technique'>
+														<a class='aTechnique-tacticsummary' href='/evaluations/microsoft.1.apt3.1/procedures/bypassuseraccountcontrol'>Bypass User Account Control							<br />(T1088)						</a>
 																</td>
 															</tr>
-												<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Cobalt Strike: Built-in token theft capability executed to change user context to George
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p5_B_1' onclick="scroll_to_step('5_B_1')">5.B.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry (Tainted) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed svchost.exe as a high integrity process from SYSTEM and subsequent cmd.exe process running as user George (tainted by the parent alert on suspicious process injection into lsass.exe). Svchost.exe was executed with seclogon command-line argument indicating token manipulation.									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-5.b.1-1.png.html", "_blank");'>Telemetry showing svchost.exe invocation with seclogon flag subsequently running cmd.exe as SYSTEM									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-5.b.1-2.png.html", "_blank");'>Telemetry showing resulting cmd.exe running as user George									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-5.b.1-4.png.html", "_blank");'>Alert for suspicious process injection showing tainted association via a process tree containing subsequent cmd.exe processes (inner failure message in screenshot not relevant to tested functionality)									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-									
-												</table>
-											</td>
-										</tr>
-									</table>
-							
-										<table class='table1'>
-											<tr class='tr1'>
-												<td class='td1A'>
-													<table class='table2'>
-														<tr>
-															<td class='td2Technique'>
-													<a class='aTechnique-tacticsummary' href='/evaluations/microsoft.1.apt3.1/procedures/bypassuseraccountcontrol'>Bypass User Account Control							<br />(T1088)						</a>
-															</td>
-														</tr>
+														</table>
+													</td>
+													<td class='td1B'>
+														<table class='table2'>
+											<tr class='tr2'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Cobalt Strike: Built-in UAC bypass token duplication capability executed to elevate process integrity level
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p3_A_1' onclick="scroll_to_step('3_A_1')">3.A.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry (Tainted) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed rundll32.exe as a medium integrity process as user Debbie and subsequent execution of powershell.exe as a high integrity process as SYSTEM as part of the UAC bypass (tainted by alert on a suspicious PowerShell command-line generated for the svchost.exe invocation of powershell.exe with an encoded script).									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-3.a.1-1.png.html", "_blank");'>Telemetry showing rundll32.exe running as medium integrity as user Debbie									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-3.a.1-2.png.html", "_blank");'>Telemetry showing powershell.exe running as high integrity as SYSTEM									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-3.c.1-2.png.html", "_blank");'>Alert for \'Suspicious PowerShell command-line\' showing tainted association via a process tree containing svchost.exe and elevated powershell.exe									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+													<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Empire: Built-in UAC bypass token duplication module executed to launch new callback with elevated process integrity level
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p14_A_1' onclick="scroll_to_step('14_A_1')">14.A.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry (Tainted) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed execution of powershell.exe executing "Invoke-BypassUACTokenManipulation" Empire cmdlet under the context of user Bob with medium integrity level, execution of svchost.exe with seclogon flag to use impersonation service with new high integrity powershell.exe process as SYSTEM, and subsequent context adjustment of powershell.exe to user Bob (tainted by the parent alert for suspicious sequence of exploration activities).									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-14.a.1-1.png.html", "_blank");'>Telemetry showing medium integrity powershell.exe process executing Invoke-BypassUACTokenManipulation as user Bob									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-14.a.1-2.png.html", "_blank");'>Telemetry showing high integrity powershell.exe process as SYSTEM									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-14.a.1-3.png.html", "_blank");'>Telemetry showing high integrity powershell.exe process as Bob									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-14.a.1-5.png.html", "_blank");'>Parent alert for "Suspicious sequence of exploration activities" showing powershell.exe process tainting this event									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+										
 													</table>
 												</td>
-												<td class='td1B'>
-													<table class='table2'>
-										<tr class='tr2'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Cobalt Strike: Built-in UAC bypass token duplication capability executed to elevate process integrity level
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p3_A_1' onclick="scroll_to_step('3_A_1')">3.A.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry (Tainted) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed rundll32.exe as a medium integrity process as user Debbie and subsequent execution of powershell.exe as a high integrity process as SYSTEM as part of the UAC bypass (tainted by alert on a suspicious PowerShell command-line generated for the svchost.exe invocation of powershell.exe with an encoded script).									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-3.a.1-1.png.html", "_blank");'>Telemetry showing rundll32.exe running as medium integrity as user Debbie									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-3.a.1-2.png.html", "_blank");'>Telemetry showing powershell.exe running as high integrity as SYSTEM									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-3.c.1-2.png.html", "_blank");'>Alert for \'Suspicious PowerShell command-line\' showing tainted association via a process tree containing svchost.exe and elevated powershell.exe									</a>							</span>							<br />						</td>					</tr>					</table>
+											</tr>
+										</table>
+								
+											<table class='table1'>
+												<tr class='tr1'>
+													<td class='td1A'>
+														<table class='table2'>
+															<tr>
+																<td class='td2Technique'>
+														<a class='aTechnique-tacticsummary' href='/evaluations/microsoft.1.apt3.1/procedures/processinjection'>Process Injection							<br />(T1055)						</a>
 																</td>
 															</tr>
-												<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Empire: Built-in UAC bypass token duplication module executed to launch new callback with elevated process integrity level
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p14_A_1' onclick="scroll_to_step('14_A_1')">14.A.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry (Tainted) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed execution of powershell.exe executing "Invoke-BypassUACTokenManipulation" Empire cmdlet under the context of user Bob with medium integrity level, execution of svchost.exe with seclogon flag to use impersonation service with new high integrity powershell.exe process as SYSTEM, and subsequent context adjustment of powershell.exe to user Bob (tainted by the parent alert for suspicious sequence of exploration activities).									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-14.a.1-1.png.html", "_blank");'>Telemetry showing medium integrity powershell.exe process executing Invoke-BypassUACTokenManipulation as user Bob									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-14.a.1-2.png.html", "_blank");'>Telemetry showing high integrity powershell.exe process as SYSTEM									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-14.a.1-3.png.html", "_blank");'>Telemetry showing high integrity powershell.exe process as Bob									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-14.a.1-5.png.html", "_blank");'>Parent alert for "Suspicious sequence of exploration activities" showing powershell.exe process tainting this event									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-									
-												</table>
-											</td>
-										</tr>
-									</table>
-							
-										<table class='table1'>
-											<tr class='tr1'>
-												<td class='td1A'>
-													<table class='table2'>
-														<tr>
-															<td class='td2Technique'>
-													<a class='aTechnique-tacticsummary' href='/evaluations/microsoft.1.apt3.1/procedures/processinjection'>Process Injection							<br />(T1055)						</a>
-															</td>
-														</tr>
+														</table>
+													</td>
+													<td class='td1B'>
+														<table class='table2'>
+											<tr class='tr2'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Cobalt Strike: Built-in process injection capability executed to inject callback into cmd.exe
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p3_C_1' onclick="scroll_to_step('3_C_1')">3.C.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Enrichment (Tainted) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='far fa-plus-square' title='Enrichment'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>The capability enriched data showing powershell.exe injecting into cmd.exe (tainted by alert on a suspicious PowerShell command-line generated for the svchost.exe invocation of powershell.exe with an encoded script).									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Specific Behavior (Delayed) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-bullseye' title='Specific Behavior'></i>&nbsp;<i class='far fa-clock' title='Delayed'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>A Specific Behavior alert was generated for process injection.<a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'> Process Injection attempt was audited by Exploit Guard. Vendor states that the Exploit Guard audit events demonstrate that execution would have been prevented if Export Address Table (EAF) was enabled in blocking mode.		</span></a>									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-3.c.1-1.png.html", "_blank");'>Enrichment of powershell.exe injecting into cmd.exe									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-3.c.1-2.png.html", "_blank");'>Alert for \'Suspicious PowerShell command-line\' showing tainted association via a process tree containing svchost.exe and elevated powershell.exe (subsequent powershell.exe is the injecting process)									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-3.c.1-3.png.html", "_blank");'>Specific Behavior alert showing powershell.exe process injection									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-3.c.1-4.png.html", "_blank");'>Telemetry showing process injection activity audited by Exploit Guard									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+													<tr class='tr2'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Cobalt Strike: Credential dump capability involved process injection into lsass
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p5_A_1' onclick="scroll_to_step('5_A_1')">5.A.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry (Tainted) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed svchost.exe accessing lsass.exe and dumping credentials (tainted by parent alert on sensitive credential memory read for the first credential dump). Exploit Guard audited process open and credential extraction event.<a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'>Vendor stated the Exploit Guard audit events demonstrate that execution would have been prevented if Attack Surface Reduction (ASR) was enabled in blocking mode.		</span></a>									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Specific Behavior (Delayed) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-bullseye' title='Specific Behavior'></i>&nbsp;<i class='far fa-clock' title='Delayed'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>A Specific Behavior alert was generated for process injection into lsass.exe.									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-5.a.1-3.png.html", "_blank");'>Telemetry showing svchost.exe accessing and extracting credentials from lsass.exe									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-5.a.1-1.png.html", "_blank");'>Alert on credential dump showing injecting svchost.exe process (process with syringe) that was used to access lsass.exe									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-5.a.2-2.png.html", "_blank");'>Specific Behavior alert for process injection into lsass.exe (inner failure message in screenshot not relevant to tested functionality)									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+													<tr class='tr2'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Cobalt Strike: Hash dump capability involved process injection into lsass.exe
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p5_A_2' onclick="scroll_to_step('5_A_2')">5.A.2								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry (Tainted) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed svchost.exe accessing lsass.exe and dumping credentials (tainted by parent alert on sensitive credential memory read for the first credential dump). Exploit Guard audited process open and credential extraction event.<a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'>Vendor stated the Exploit Guard audit events demonstrate that execution would have been prevented if Attack Surface Reduction (ASR) was enabled in blocking mode.		</span></a>									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Specific Behavior (Delayed) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-bullseye' title='Specific Behavior'></i>&nbsp;<i class='far fa-clock' title='Delayed'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>A Specific Behavior alert was generated for process injection into lsass.exe. The alert was rolled up under the prior lsass.exe process injection alert and the last activity seen field was updated.									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-5.a.2-1.png.html", "_blank");'>Telemetry showing svchost.exe accessing and extracting credentials from lsass.exe									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-5.a.1-1.png.html", "_blank");'>Alert on prior credential dump tainting svchost.exe process (process with syringe indicating process injection) that was used to access lsass.exe									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-5.a.2-2.png.html", "_blank");'>Specific Behavior alert for process injection into lsass.exe (inner failure message in screenshot not relevant to tested functionality)									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+													<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Cobalt Strike: Screen capture capability involved process injection into explorer.exe
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p8_D_1' onclick="scroll_to_step('8_D_1')">8.D.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Enrichment 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='far fa-plus-square' title='Enrichment'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>The capability enriched the execution sequence for cmd.exe injecting into explorer.exe with the label "Inject to process."									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-8.d.1-2.png.html", "_blank");'>Enrichment of execution sequence showing cmd.exe injecting into explorer.exe (labeled "Inject to process")									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+										
 													</table>
 												</td>
-												<td class='td1B'>
-													<table class='table2'>
-										<tr class='tr2'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Cobalt Strike: Built-in process injection capability executed to inject callback into cmd.exe
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p3_C_1' onclick="scroll_to_step('3_C_1')">3.C.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Enrichment (Tainted) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='far fa-plus-square' title='Enrichment'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>The capability enriched data showing powershell.exe injecting into cmd.exe (tainted by alert on a suspicious PowerShell command-line generated for the svchost.exe invocation of powershell.exe with an encoded script).									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Specific Behavior (Delayed) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-bullseye' title='Specific Behavior'></i>&nbsp;<i class='far fa-clock' title='Delayed'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>A Specific Behavior alert was generated for process injection.<a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'> Process Injection attempt was audited by Exploit Guard. Vendor states that the Exploit Guard audit events demonstrate that execution would have been prevented if Export Address Table (EAF) was enabled in blocking mode.		</span></a>									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-3.c.1-1.png.html", "_blank");'>Enrichment of powershell.exe injecting into cmd.exe									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-3.c.1-2.png.html", "_blank");'>Alert for \'Suspicious PowerShell command-line\' showing tainted association via a process tree containing svchost.exe and elevated powershell.exe (subsequent powershell.exe is the injecting process)									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-3.c.1-3.png.html", "_blank");'>Specific Behavior alert showing powershell.exe process injection									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-3.c.1-4.png.html", "_blank");'>Telemetry showing process injection activity audited by Exploit Guard									</a>							</span>							<br />						</td>					</tr>					</table>
+											</tr>
+										</table>
+								
+											<table class='table1'>
+												<tr class='tr1'>
+													<td class='td1A'>
+														<table class='table2'>
+															<tr>
+																<td class='td2Technique'>
+														<a class='aTechnique-tacticsummary' href='/evaluations/microsoft.1.apt3.1/procedures/scheduledtask'>Scheduled Task							<br />(T1053)						</a>
 																</td>
 															</tr>
-												<tr class='tr2'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Cobalt Strike: Credential dump capability involved process injection into lsass
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p5_A_1' onclick="scroll_to_step('5_A_1')">5.A.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry (Tainted) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed svchost.exe accessing lsass.exe and dumping credentials (tainted by parent alert on sensitive credential memory read for the first credential dump). Exploit Guard audited process open and credential extraction event.<a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'>Vendor stated the Exploit Guard audit events demonstrate that execution would have been prevented if Attack Surface Reduction (ASR) was enabled in blocking mode.		</span></a>									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Specific Behavior (Delayed) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-bullseye' title='Specific Behavior'></i>&nbsp;<i class='far fa-clock' title='Delayed'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>A Specific Behavior alert was generated for process injection into lsass.exe.									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-5.a.1-3.png.html", "_blank");'>Telemetry showing svchost.exe accessing and extracting credentials from lsass.exe									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-5.a.1-1.png.html", "_blank");'>Alert on credential dump showing injecting svchost.exe process (process with syringe) that was used to access lsass.exe									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-5.a.2-2.png.html", "_blank");'>Specific Behavior alert for process injection into lsass.exe (inner failure message in screenshot not relevant to tested functionality)									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-												<tr class='tr2'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Cobalt Strike: Hash dump capability involved process injection into lsass.exe
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p5_A_2' onclick="scroll_to_step('5_A_2')">5.A.2								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry (Tainted) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed svchost.exe accessing lsass.exe and dumping credentials (tainted by parent alert on sensitive credential memory read for the first credential dump). Exploit Guard audited process open and credential extraction event.<a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'>Vendor stated the Exploit Guard audit events demonstrate that execution would have been prevented if Attack Surface Reduction (ASR) was enabled in blocking mode.		</span></a>									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Specific Behavior (Delayed) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-bullseye' title='Specific Behavior'></i>&nbsp;<i class='far fa-clock' title='Delayed'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>A Specific Behavior alert was generated for process injection into lsass.exe. The alert was rolled up under the prior lsass.exe process injection alert and the last activity seen field was updated.									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-5.a.2-1.png.html", "_blank");'>Telemetry showing svchost.exe accessing and extracting credentials from lsass.exe									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-5.a.1-1.png.html", "_blank");'>Alert on prior credential dump tainting svchost.exe process (process with syringe indicating process injection) that was used to access lsass.exe									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-5.a.2-2.png.html", "_blank");'>Specific Behavior alert for process injection into lsass.exe (inner failure message in screenshot not relevant to tested functionality)									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-												<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Cobalt Strike: Screen capture capability involved process injection into explorer.exe
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p8_D_1' onclick="scroll_to_step('8_D_1')">8.D.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Enrichment 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='far fa-plus-square' title='Enrichment'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>The capability enriched the execution sequence for cmd.exe injecting into explorer.exe with the label "Inject to process."									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-8.d.1-2.png.html", "_blank");'>Enrichment of execution sequence showing cmd.exe injecting into explorer.exe (labeled "Inject to process")									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-									
-												</table>
-											</td>
-										</tr>
-									</table>
-							
-										<table class='table1'>
-											<tr class='tr1'>
-												<td class='td1A'>
-													<table class='table2'>
-														<tr>
-															<td class='td2Technique'>
-													<a class='aTechnique-tacticsummary' href='/evaluations/microsoft.1.apt3.1/procedures/scheduledtask'>Scheduled Task							<br />(T1053)						</a>
-															</td>
-														</tr>
+														</table>
+													</td>
+													<td class='td1B'>
+														<table class='table2'>
+											<tr class='tr2'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Cobalt Strike: 'schtasks' via cmd to create scheduled task that executes a DLL payload (updater.dll)
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p7_C_1' onclick="scroll_to_step('7_C_1')">7.C.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed cmd.exe registering the "Resume Viewer Update Checker" scheduled task.									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Specific Behavior (Delayed) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-bullseye' title='Specific Behavior'></i>&nbsp;<i class='far fa-clock' title='Delayed'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>A delayed Specific Behavior alert was generated on a low-reputation DLL persisting through a scheduled task.									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-7.c.1-1.png.html", "_blank");'>Telemetry showing schtasks.exe with command-line arguments scheduling a task for persistence									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-7.c.1-2.png.html", "_blank");'>Alert for low-reputation DLL persisting through rundll32.exe as a scheduled task									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+													<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Scheduled task executed when user Debbie logs on to Nimda (10.0.1.6), launching a DLL payload (updater.dll) using Rundll32
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p10_A_2' onclick="scroll_to_step('10_A_2')">10.A.2								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed the execution sequence for rundll32.exe executing updater.dll with a parent of svchost.exe running with command-line arguments "-k netsvcs -p -s Schedule".									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-10.a.2-1.png.html", "_blank");'>Telemetry showing execution sequence for svchost.exe parent of rundll32.exe process running with "-k netsvcs -p -s Schedule" arguments									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+										
 													</table>
 												</td>
-												<td class='td1B'>
-													<table class='table2'>
-										<tr class='tr2'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Cobalt Strike: 'schtasks' via cmd to create scheduled task that executes a DLL payload (updater.dll)
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p7_C_1' onclick="scroll_to_step('7_C_1')">7.C.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed cmd.exe registering the "Resume Viewer Update Checker" scheduled task.									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Specific Behavior (Delayed) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-bullseye' title='Specific Behavior'></i>&nbsp;<i class='far fa-clock' title='Delayed'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>A delayed Specific Behavior alert was generated on a low-reputation DLL persisting through a scheduled task.									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-7.c.1-1.png.html", "_blank");'>Telemetry showing schtasks.exe with command-line arguments scheduling a task for persistence									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-7.c.1-2.png.html", "_blank");'>Alert for low-reputation DLL persisting through rundll32.exe as a scheduled task									</a>							</span>							<br />						</td>					</tr>					</table>
+											</tr>
+										</table>
+								
+											<table class='table1'>
+												<tr class='tr1'>
+													<td class='td1A'>
+														<table class='table2'>
+															<tr>
+																<td class='td2Technique'>
+														<a class='aTechnique-tacticsummary' href='/evaluations/microsoft.1.apt3.1/procedures/validaccounts'>Valid Accounts							<br />(T1078)						</a>
 																</td>
 															</tr>
-												<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Scheduled task executed when user Debbie logs on to Nimda (10.0.1.6), launching a DLL payload (updater.dll) using Rundll32
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p10_A_2' onclick="scroll_to_step('10_A_2')">10.A.2								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed the execution sequence for rundll32.exe executing updater.dll with a parent of svchost.exe running with command-line arguments "-k netsvcs -p -s Schedule".									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-10.a.2-1.png.html", "_blank");'>Telemetry showing execution sequence for svchost.exe parent of rundll32.exe process running with "-k netsvcs -p -s Schedule" arguments									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-									
-												</table>
-											</td>
-										</tr>
-									</table>
-							
-										<table class='table1'>
-											<tr class='tr1'>
-												<td class='td1A'>
-													<table class='table2'>
-														<tr>
-															<td class='td2Technique'>
-													<a class='aTechnique-tacticsummary' href='/evaluations/microsoft.1.apt3.1/procedures/validaccounts'>Valid Accounts							<br />(T1078)						</a>
-															</td>
-														</tr>
+														</table>
+													</td>
+													<td class='td1B'>
+														<table class='table2'>
+											<tr class='tr2'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										RDP connection to Conficker (10.0.0.5) authenticated using previously added user Jesse
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p10_B_1' onclick="scroll_to_step('10_B_1')">10.B.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed the new local user account Jesse logging into Conficker.									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-10.b.1-1.png.html", "_blank");'>Telemetry showing local user account Jesse first and last seen logons on Conficker									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+													<tr class='tr2'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Empire: 'net use' via PowerShell to successfully authenticate to Conficker (10.0.0.5) using credentials of user Kmitnick
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p16_B_1' onclick="scroll_to_step('16_B_1')">16.B.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry (Tainted) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed a logon attempt via net.exe with command-line arguments to connect using the valid credentials of user Kmitnick (tainted by parent alert on PowerShell script with suspicious content). Telemetry showed Kmitnick login event on 10.0.0.5 (Conficker) and that 10.0.1.5 (CodeRed) accessed resources on 10.0.0.5 (Conficker).									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-16.b.1-1.png.html", "_blank");'>Telemetry showing net.exe logon attempt to ADMIN$ on 10.0.0.5 (Conficker) with user Kmitnick (tainted by parent alert on PowerShell script with suspicious content)									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-16.a.1-6.png.html", "_blank");'>Process tree view of alert on a PowerShell script with suspicious content showing tainted parent powershell.exe process (alert was generated on many PowerShell script executions throughout the day, specific instance of this procedure not shown in this alert)									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-16.b.1-2.png.html", "_blank");'>Telemetry showing user Kmitnick login activity on 10.0.0.5 (Conficker)									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-16.b.1-3.png.html", "_blank");'>Telemetry showing 10.0.1.5 (CodeRed) system accessed resources on 10.0.0.5 (Conficker)									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+													<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Empire: 'net use' via PowerShell to successfully authenticate to Creeper (10.0.0.4) using credentials of user Kmitnick
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p16_D_1' onclick="scroll_to_step('16_D_1')">16.D.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry (Tainted) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed a logon attempt via net.exe with command-line arguments targeting C$ on 10.0.0.4 (Creeper) using valid credentials for user Kmitnick (tainted by parent alert on PowerShell script with suspicious content). Telemetry also showed that the logon event for Kmitnick on Creeper was successful.									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-16.d.1-1.png.html", "_blank");'>Telemetry showing net.exe logon attempt to C$ on 10.0.0.4 (Creeper) with valid credentials for the account Kmitnick (tainted by parent alert on PowerShell script with suspicious content)									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-16.a.1-6.png.html", "_blank");'>Process tree view of alert on a PowerShell script with suspicious content showing tainted parent powershell.exe process (alert was generated on many PowerShell script executions throughout the day, specific instance of this procedure not shown in this alert)									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-16.d.1-2.png.html", "_blank");'>Telemetry from query showing successful Kmitnick logon event for Creeper									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+										
 													</table>
 												</td>
-												<td class='td1B'>
-													<table class='table2'>
-										<tr class='tr2'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									RDP connection to Conficker (10.0.0.5) authenticated using previously added user Jesse
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p10_B_1' onclick="scroll_to_step('10_B_1')">10.B.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed the new local user account Jesse logging into Conficker.									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-10.b.1-1.png.html", "_blank");'>Telemetry showing local user account Jesse first and last seen logons on Conficker									</a>							</span>							<br />						</td>					</tr>					</table>
+											</tr>
+										</table>
+								
+											<table class='table1'>
+												<tr class='tr1'>
+													<td class='td1A'>
+														<table class='table2'>
+															<tr>
+																<td class='td2Technique'>
+														<a class='aTechnique-tacticsummary' href='/evaluations/microsoft.1.apt3.1/procedures/newservice'>New Service							<br />(T1050)						</a>
 																</td>
 															</tr>
-												<tr class='tr2'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Empire: 'net use' via PowerShell to successfully authenticate to Conficker (10.0.0.5) using credentials of user Kmitnick
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p16_B_1' onclick="scroll_to_step('16_B_1')">16.B.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry (Tainted) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed a logon attempt via net.exe with command-line arguments to connect using the valid credentials of user Kmitnick (tainted by parent alert on PowerShell script with suspicious content). Telemetry showed Kmitnick login event on 10.0.0.5 (Conficker) and that 10.0.1.5 (CodeRed) accessed resources on 10.0.0.5 (Conficker).									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-16.b.1-1.png.html", "_blank");'>Telemetry showing net.exe logon attempt to ADMIN$ on 10.0.0.5 (Conficker) with user Kmitnick (tainted by parent alert on PowerShell script with suspicious content)									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-16.a.1-6.png.html", "_blank");'>Process tree view of alert on a PowerShell script with suspicious content showing tainted parent powershell.exe process (alert was generated on many PowerShell script executions throughout the day, specific instance of this procedure not shown in this alert)									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-16.b.1-2.png.html", "_blank");'>Telemetry showing user Kmitnick login activity on 10.0.0.5 (Conficker)									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-16.b.1-3.png.html", "_blank");'>Telemetry showing 10.0.1.5 (CodeRed) system accessed resources on 10.0.0.5 (Conficker)									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-												<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Empire: 'net use' via PowerShell to successfully authenticate to Creeper (10.0.0.4) using credentials of user Kmitnick
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p16_D_1' onclick="scroll_to_step('16_D_1')">16.D.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry (Tainted) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed a logon attempt via net.exe with command-line arguments targeting C$ on 10.0.0.4 (Creeper) using valid credentials for user Kmitnick (tainted by parent alert on PowerShell script with suspicious content). Telemetry also showed that the logon event for Kmitnick on Creeper was successful.									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-16.d.1-1.png.html", "_blank");'>Telemetry showing net.exe logon attempt to C$ on 10.0.0.4 (Creeper) with valid credentials for the account Kmitnick (tainted by parent alert on PowerShell script with suspicious content)									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-16.a.1-6.png.html", "_blank");'>Process tree view of alert on a PowerShell script with suspicious content showing tainted parent powershell.exe process (alert was generated on many PowerShell script executions throughout the day, specific instance of this procedure not shown in this alert)									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-16.d.1-2.png.html", "_blank");'>Telemetry from query showing successful Kmitnick logon event for Creeper									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-									
-												</table>
-											</td>
-										</tr>
-									</table>
-							
-										<table class='table1'>
-											<tr class='tr1'>
-												<td class='td1A'>
-													<table class='table2'>
-														<tr>
-															<td class='td2Technique'>
-													<a class='aTechnique-tacticsummary' href='/evaluations/microsoft.1.apt3.1/procedures/newservice'>New Service							<br />(T1050)						</a>
-															</td>
-														</tr>
+														</table>
+													</td>
+													<td class='td1B'>
+														<table class='table2'>
+											<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Empire: 'sc create' via PowerShell to remotely create a service on Creeper (10.0.0.4)
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p16_I_1' onclick="scroll_to_step('16_I_1')">16.I.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry (Tainted) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry from CodeRed showed sc.exe execution to remotely create the AdobeUpdater service with a binPath set to run cmd.exe with an argument to execute update.vbs on Creeper (tainted by parent alert on PowerShell script with suspicious content). Telemetry from Creeper shows the registry keys that were changed to add the new service									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Specific Behavior 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-bullseye' title='Specific Behavior'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>A Specific Behavior alert was generated for the suspicious service registration of AdobeUpdater.									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-16.i.1-1.png.html", "_blank");'>Telemetry from CodeRed showing execution sequence of sc.exe AdobeUpdater remote service creation									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-16.d.1-4.png.html", "_blank");'>Parent alert for PowerShell script with suspicious content tainting powershell.exe on CodeRed (alert was generated on many PowerShell script executions throughout the day, specific instance of this procedure not shown in this alert)									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-16.i.1-2.png.html", "_blank");'>Telemetry showing AdobeUpdater service registry information that was changed on Creeper									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-16.i.1-3.png.html", "_blank");'>Specific Behavior alert on suspicious service registration on Creeper									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+										
 													</table>
 												</td>
-												<td class='td1B'>
-													<table class='table2'>
-										<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Empire: 'sc create' via PowerShell to remotely create a service on Creeper (10.0.0.4)
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p16_I_1' onclick="scroll_to_step('16_I_1')">16.I.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry (Tainted) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-link' title='Tainted'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry from CodeRed showed sc.exe execution to remotely create the AdobeUpdater service with a binPath set to run cmd.exe with an argument to execute update.vbs on Creeper (tainted by parent alert on PowerShell script with suspicious content). Telemetry from Creeper shows the registry keys that were changed to add the new service									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Specific Behavior 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-bullseye' title='Specific Behavior'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>A Specific Behavior alert was generated for the suspicious service registration of AdobeUpdater.									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-16.i.1-1.png.html", "_blank");'>Telemetry from CodeRed showing execution sequence of sc.exe AdobeUpdater remote service creation									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-16.d.1-4.png.html", "_blank");'>Parent alert for PowerShell script with suspicious content tainting powershell.exe on CodeRed (alert was generated on many PowerShell script executions throughout the day, specific instance of this procedure not shown in this alert)									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-16.i.1-2.png.html", "_blank");'>Telemetry showing AdobeUpdater service registry information that was changed on Creeper									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-16.i.1-3.png.html", "_blank");'>Specific Behavior alert on suspicious service registration on Creeper									</a>							</span>							<br />						</td>					</tr>					</table>
+											</tr>
+										</table>
+								
+											<table class='table1'>
+												<tr class='tr1'>
+													<td class='td1A'>
+														<table class='table2'>
+															<tr>
+																<td class='td2Technique'>
+														<a class='aTechnique-tacticsummary' href='/evaluations/microsoft.1.apt3.1/procedures/accessibilityfeatures'>Accessibility Features							<br />(T1015)						</a>
 																</td>
 															</tr>
-									
-												</table>
-											</td>
-										</tr>
-									</table>
-							
-										<table class='table1'>
-											<tr class='tr1'>
-												<td class='td1A'>
-													<table class='table2'>
-														<tr>
-															<td class='td2Technique'>
-													<a class='aTechnique-tacticsummary' href='/evaluations/microsoft.1.apt3.1/procedures/accessibilityfeatures'>Accessibility Features							<br />(T1015)						</a>
-															</td>
-														</tr>
+														</table>
+													</td>
+													<td class='td1B'>
+														<table class='table2'>
+											<tr class='tr2'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Empire: 'copy' via PowerShell to overwrite magnify.exe with cmd.exe
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p17_C_1' onclick="scroll_to_step('17_C_1')">17.C.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed powershell.exe overwriting magnify.exe with the new file containing the same hash for cmd.exe. Reputation metadata confirms magnify.exe is cmd.exe under the file names observed.									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Specific Behavior 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-bullseye' title='Specific Behavior'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>A Specific Behavior alert was generated for overwrite of magnify.exe indicating a sticky keys binary hijack for persistence was detected.									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-17.c.1-1.png.html", "_blank");'>Telemetry showing overwrite of magnify.exe									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-17.c.1-2.png.html", "_blank");'>Binary metadata and reputation information showing magnify.exe is cmd.exe due to names observed and common hash									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-17.c.1-3.png.html", "_blank");'>Specific Behavior alert on sticky keys binary hijack for persistence when magnify.exe was overwritten									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+													<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										magnifer.exe previously overwritten by cmd.exe launched through RDP connection made to Creeper (10.0.0.4)
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p20_A_1' onclick="scroll_to_step('20_A_1')">20.A.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed execution of magnify.exe from utilman.exe.									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Specific Behavior 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-bullseye' title='Specific Behavior'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>A Specific Behavior alert was generated on a successful sticky keys binary hijack because magnify.exe was executing as cmd.exe.									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-20.a.1-1.png.html", "_blank");'>Telemetry showing sequence of magnify.exe executing from utilman.exe									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-20.a.1-4.png.html", "_blank");'>Specific Behavior alert on sticky keys binary hijack of magnify.exe									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+										
 													</table>
 												</td>
-												<td class='td1B'>
-													<table class='table2'>
-										<tr class='tr2'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Empire: 'copy' via PowerShell to overwrite magnify.exe with cmd.exe
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p17_C_1' onclick="scroll_to_step('17_C_1')">17.C.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed powershell.exe overwriting magnify.exe with the new file containing the same hash for cmd.exe. Reputation metadata confirms magnify.exe is cmd.exe under the file names observed.									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Specific Behavior 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-bullseye' title='Specific Behavior'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>A Specific Behavior alert was generated for overwrite of magnify.exe indicating a sticky keys binary hijack for persistence was detected.									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-17.c.1-1.png.html", "_blank");'>Telemetry showing overwrite of magnify.exe									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-17.c.1-2.png.html", "_blank");'>Binary metadata and reputation information showing magnify.exe is cmd.exe due to names observed and common hash									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-17.c.1-3.png.html", "_blank");'>Specific Behavior alert on sticky keys binary hijack for persistence when magnify.exe was overwritten									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-												<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									magnifer.exe previously overwritten by cmd.exe launched through RDP connection made to Creeper (10.0.0.4)
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p20_A_1' onclick="scroll_to_step('20_A_1')">20.A.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed execution of magnify.exe from utilman.exe.									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Specific Behavior 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-bullseye' title='Specific Behavior'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>A Specific Behavior alert was generated on a successful sticky keys binary hijack because magnify.exe was executing as cmd.exe.									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-20.a.1-1.png.html", "_blank");'>Telemetry showing sequence of magnify.exe executing from utilman.exe									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/ms-20.a.1-4.png.html", "_blank");'>Specific Behavior alert on sticky keys binary hijack of magnify.exe									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-									
-												</table>
-											</td>
-										</tr>
-									</table>
-								</td>
+											</tr>
+										</table>
+									</td>
 								<td class='tdMainRightPane-tacticsummary'>
 									<br />
 									<br />

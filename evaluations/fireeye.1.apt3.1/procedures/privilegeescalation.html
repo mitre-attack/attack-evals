@@ -109,11 +109,22 @@
 													</a>
 												</span>
 										</tr>
+										<tr>
+											<td>
+												<br />
+												<div class='divDisclaimer_overview'>
+													<em>MITRE does not rank, score, validate, or endorse any product. The evaluation results are available to the public, so other organizations may provide their own analysis and interpretation - these are not endorsed or validated by MITRE.</em>
+												</div>
+												<br />
+											</td>
+										</tr>
+										<tr>
 											<td class='tdMainLabel-tacticsummary'>
 												<a href="/fireeye.1.apt3.1_configuration">Vendor Configuration</a> &nbsp;&nbsp;&nbsp;&nbsp;
-												<a href="/evaluations/fireeye.1.apt3.1/fireeye.1.apt3.1_overview">All Results</a>
 											</td>
 											<td class='tdLegend-tacticsummary'>
+												<a href="/evaluations/fireeye.1.apt3.1/fireeye.1.apt3.1_overview" class='aLegendExport'>All Results</a>
+												&nbsp;&nbsp;&nbsp;
 												<a href='/FireEye.1.APT3.1_Results.json' class='aLegendExport'>
 													JSON
 												</a>
@@ -252,652 +263,652 @@
 										</tr>
 									</table>
 				
-										<table class='table1'>
-											<tr class='tr1'>
-												<td class='td1A'>
-													<table class='table2'>
-														<tr>
-															<td class='td2Technique'>
-													<a class='aTechnique-tacticsummary' href='/evaluations/fireeye.1.apt3.1/procedures/accesstokenmanipulation'>Access Token Manipulation							<br />(T1134)						</a>
-															</td>
-														</tr>
-													</table>
-												</td>
-												<td class='td1B'>
-													<table class='table2'>
-										<tr class='tr2'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Cobalt Strike: Built-in UAC bypass token duplication capability executed to modify current process token
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p3_A_1' onclick="scroll_to_step('3_A_1')">3.A.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry (Configuration Change) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-cog' title='Configuration Change'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed a svchost.exe seclogon event for a token logon ID later used by a process whose group membership indicated high integrity. <a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'> A Configuration Change was made in order to collect Windows Event Logs for events 4627 (Group Membership Information) and 4673 (A privileged service was called).		</span></a>									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-3.a.1-3.png.html", "_blank");'>Telemetry showing svchost.exe seclogon event for token login ID 0xfcf5fd									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-3.a.1-4.png.html", "_blank");'>Telemetry showing group membership of token logon ID 0xfcf5fd, which includes S-1-16-12288 (High Mandatory Level)									</a>							</span>							<br />						</td>					</tr>					</table>
+											<table class='table1'>
+												<tr class='tr1'>
+													<td class='td1A'>
+														<table class='table2'>
+															<tr>
+																<td class='td2Technique'>
+														<a class='aTechnique-tacticsummary' href='/evaluations/fireeye.1.apt3.1/procedures/accesstokenmanipulation'>Access Token Manipulation							<br />(T1134)						</a>
 																</td>
 															</tr>
-												<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Cobalt Strike: Built-in token theft capability executed to change user context to George
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p5_B_1' onclick="scroll_to_step('5_B_1')">5.B.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed a process (net.exe) executed during Step 4 as user Debbie and a subsequent process (reg.exe) executed during Step 6 as user George, indicating a change in user context from a stolen token. 									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-4.a.1-1.png.html", "_blank");'>Telemetry showing the user Debbie executing net.exe with command-line arguments during Step 4									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-5.b.1-1.png.html", "_blank");'>Telemetry showing the user George executing reg.exe with command-line arguments during Step 6									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-									
-												</table>
-											</td>
-										</tr>
-									</table>
-							
-										<table class='table1'>
-											<tr class='tr1'>
-												<td class='td1A'>
-													<table class='table2'>
-														<tr>
-															<td class='td2Technique'>
-													<a class='aTechnique-tacticsummary' href='/evaluations/fireeye.1.apt3.1/procedures/bypassuseraccountcontrol'>Bypass User Account Control							<br />(T1088)						</a>
-															</td>
-														</tr>
-													</table>
-												</td>
-												<td class='td1B'>
-													<table class='table2'>
-										<tr class='tr2'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Cobalt Strike: Built-in UAC bypass token duplication capability executed to elevate process integrity level
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p3_A_1' onclick="scroll_to_step('3_A_1')">3.A.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry (Configuration Change) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-cog' title='Configuration Change'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed execution of powershell.exe as a high integrity process as SYSTEM with a token login ID previously associated with user Debbie. <a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'> A Configuration Change was made in order to collect Windows Event Logs for events 4627 (Group Membership Information) and 4673 (A privileged service was called).		</span></a>									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-3.a.1-3.png.html", "_blank");'>Telemetry showing execution of powershell.exe running as SYSTEM with token login ID 0xfcf5fd									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-3.a.1-4.png.html", "_blank");'>Telemetry showing group membership of token logon ID 0xfcf5fd, associated with user Debbie, which includes S-1-16-12288 (High Mandatory Level)									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-												<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Empire: Built-in UAC bypass token duplication module executed to launch new callback with elevated process integrity level
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p14_A_1' onclick="scroll_to_step('14_A_1')">14.A.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry (Configuration Change) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-cog' title='Configuration Change'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed execution of powershell.exe as a high integrity process as SYSTEM with a token login ID previously associated with user Bob, which indicates UAC bypassing. <a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'> A Configuration Change was made in order to collect Windows Event Logs for events 4627 (Group Membership Information) and 4673 (A privileged service was called).		</span></a>									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-14.a.1-7.png.html", "_blank");'>Telemetry showing execution of powershell.exe running as SYSTEM with token login ID 0x10530b3 									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-14.a.1-8.png.html", "_blank");'>Telemetry showing group membership of token logon ID 0x10530b3 associated with user Bob, which includes S-1-16-12288 (High Mandatory Level)									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-									
-												</table>
-											</td>
-										</tr>
-									</table>
-							
-										<table class='table1'>
-											<tr class='tr1'>
-												<td class='td1A'>
-													<table class='table2'>
-														<tr>
-															<td class='td2Technique'>
-													<a class='aTechnique-tacticsummary' href='/evaluations/fireeye.1.apt3.1/procedures/processinjection'>Process Injection							<br />(T1055)						</a>
-															</td>
-														</tr>
-													</table>
-												</td>
-												<td class='td1B'>
-													<table class='table2'>
-										<tr class='tr2'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Cobalt Strike: Built-in process injection capability executed to inject callback into cmd.exe
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p3_C_1' onclick="scroll_to_step('3_C_1')">3.C.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Specific Behavior (Delayed) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-bullseye' title='Specific Behavior'></i>&nbsp;<i class='far fa-clock' title='Delayed'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>The Managed Defense Report indicated a Specific Behavior occurred because it identified a process injection from PowerShell.exe to cmd.exe. <a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'> Managed Defense Reports are reports provided by FireEye's managed detection and response (MDR) service. FireEye provided reports to MITRE after the completion of the evaluation to mimic what they would produce in a real incident.		</span></a><a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'> The vendor stated the process injection detection capability is a HX plugin that is only available within the Managed Defense Service, and the data is reported to  a separate cloud server which is not accessible to customers at this time.		</span></a> 									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-3.c.1-1.png.html", "_blank");'>Excerpt from the Managed Defense Report identifying a process injection from PowerShell.exe to cmd.exe (Specific Behavior)									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-3.c.1-2.png.html", "_blank");'>Continued excerpt from the Managed Defense Report showing the artifact evidence of a process injection from PowerShell.exe to cmd.exe									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-												<tr class='tr2'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Cobalt Strike: Credential dump capability involved process injection into lsass
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p5_A_1' onclick="scroll_to_step('5_A_1')">5.A.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										None 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-ban' title='None'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>No detection capability demonstrated for this procedure.									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
 														</table>
+													</td>
+													<td class='td1B'>
+														<table class='table2'>
+											<tr class='tr2'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Cobalt Strike: Built-in UAC bypass token duplication capability executed to modify current process token
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p3_A_1' onclick="scroll_to_step('3_A_1')">3.A.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry (Configuration Change) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-cog' title='Configuration Change'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed a svchost.exe seclogon event for a token logon ID later used by a process whose group membership indicated high integrity. <a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'> A Configuration Change was made in order to collect Windows Event Logs for events 4627 (Group Membership Information) and 4673 (A privileged service was called).		</span></a>									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-3.a.1-3.png.html", "_blank");'>Telemetry showing svchost.exe seclogon event for token login ID 0xfcf5fd									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-3.a.1-4.png.html", "_blank");'>Telemetry showing group membership of token logon ID 0xfcf5fd, which includes S-1-16-12288 (High Mandatory Level)									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+													<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Cobalt Strike: Built-in token theft capability executed to change user context to George
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p5_B_1' onclick="scroll_to_step('5_B_1')">5.B.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed a process (net.exe) executed during Step 4 as user Debbie and a subsequent process (reg.exe) executed during Step 6 as user George, indicating a change in user context from a stolen token. 									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-4.a.1-1.png.html", "_blank");'>Telemetry showing the user Debbie executing net.exe with command-line arguments during Step 4									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-5.b.1-1.png.html", "_blank");'>Telemetry showing the user George executing reg.exe with command-line arguments during Step 6									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+										
+													</table>
+												</td>
+											</tr>
+										</table>
+								
+											<table class='table1'>
+												<tr class='tr1'>
+													<td class='td1A'>
+														<table class='table2'>
+															<tr>
+																<td class='td2Technique'>
+														<a class='aTechnique-tacticsummary' href='/evaluations/fireeye.1.apt3.1/procedures/bypassuseraccountcontrol'>Bypass User Account Control							<br />(T1088)						</a>
 																</td>
 															</tr>
-												<tr class='tr2'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Cobalt Strike: Hash dump capability involved process injection into lsass.exe
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p5_A_2' onclick="scroll_to_step('5_A_2')">5.A.2								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										None 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-ban' title='None'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>No detection capability demonstrated for this procedure.									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
 														</table>
+													</td>
+													<td class='td1B'>
+														<table class='table2'>
+											<tr class='tr2'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Cobalt Strike: Built-in UAC bypass token duplication capability executed to elevate process integrity level
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p3_A_1' onclick="scroll_to_step('3_A_1')">3.A.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry (Configuration Change) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-cog' title='Configuration Change'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed execution of powershell.exe as a high integrity process as SYSTEM with a token login ID previously associated with user Debbie. <a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'> A Configuration Change was made in order to collect Windows Event Logs for events 4627 (Group Membership Information) and 4673 (A privileged service was called).		</span></a>									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-3.a.1-3.png.html", "_blank");'>Telemetry showing execution of powershell.exe running as SYSTEM with token login ID 0xfcf5fd									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-3.a.1-4.png.html", "_blank");'>Telemetry showing group membership of token logon ID 0xfcf5fd, associated with user Debbie, which includes S-1-16-12288 (High Mandatory Level)									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+													<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Empire: Built-in UAC bypass token duplication module executed to launch new callback with elevated process integrity level
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p14_A_1' onclick="scroll_to_step('14_A_1')">14.A.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry (Configuration Change) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i>&nbsp;<i class='fas fa-cog' title='Configuration Change'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed execution of powershell.exe as a high integrity process as SYSTEM with a token login ID previously associated with user Bob, which indicates UAC bypassing. <a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'> A Configuration Change was made in order to collect Windows Event Logs for events 4627 (Group Membership Information) and 4673 (A privileged service was called).		</span></a>									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-14.a.1-7.png.html", "_blank");'>Telemetry showing execution of powershell.exe running as SYSTEM with token login ID 0x10530b3 									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-14.a.1-8.png.html", "_blank");'>Telemetry showing group membership of token logon ID 0x10530b3 associated with user Bob, which includes S-1-16-12288 (High Mandatory Level)									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+										
+													</table>
+												</td>
+											</tr>
+										</table>
+								
+											<table class='table1'>
+												<tr class='tr1'>
+													<td class='td1A'>
+														<table class='table2'>
+															<tr>
+																<td class='td2Technique'>
+														<a class='aTechnique-tacticsummary' href='/evaluations/fireeye.1.apt3.1/procedures/processinjection'>Process Injection							<br />(T1055)						</a>
 																</td>
 															</tr>
-												<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Cobalt Strike: Screen capture capability involved process injection into explorer.exe
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p8_D_1' onclick="scroll_to_step('8_D_1')">8.D.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										None 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-ban' title='None'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>No detection capability demonstrated for this procedure.									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
 														</table>
-																</td>
-															</tr>
-									
-												</table>
-											</td>
-										</tr>
-									</table>
-							
-										<table class='table1'>
-											<tr class='tr1'>
-												<td class='td1A'>
-													<table class='table2'>
-														<tr>
-															<td class='td2Technique'>
-													<a class='aTechnique-tacticsummary' href='/evaluations/fireeye.1.apt3.1/procedures/validaccounts'>Valid Accounts							<br />(T1078)						</a>
-															</td>
-														</tr>
+													</td>
+													<td class='td1B'>
+														<table class='table2'>
+											<tr class='tr2'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Cobalt Strike: Built-in process injection capability executed to inject callback into cmd.exe
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p3_C_1' onclick="scroll_to_step('3_C_1')">3.C.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Specific Behavior (Delayed) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-bullseye' title='Specific Behavior'></i>&nbsp;<i class='far fa-clock' title='Delayed'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>The Managed Defense Report indicated a Specific Behavior occurred because it identified a process injection from PowerShell.exe to cmd.exe. <a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'> Managed Defense Reports are reports provided by FireEye's managed detection and response (MDR) service. FireEye provided reports to MITRE after the completion of the evaluation to mimic what they would produce in a real incident.		</span></a><a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'> The vendor stated the process injection detection capability is a HX plugin that is only available within the Managed Defense Service, and the data is reported to  a separate cloud server which is not accessible to customers at this time.		</span></a> 									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-3.c.1-1.png.html", "_blank");'>Excerpt from the Managed Defense Report identifying a process injection from PowerShell.exe to cmd.exe (Specific Behavior)									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-3.c.1-2.png.html", "_blank");'>Continued excerpt from the Managed Defense Report showing the artifact evidence of a process injection from PowerShell.exe to cmd.exe									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+													<tr class='tr2'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Cobalt Strike: Credential dump capability involved process injection into lsass
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p5_A_1' onclick="scroll_to_step('5_A_1')">5.A.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											None 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-ban' title='None'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>No detection capability demonstrated for this procedure.									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															</table>
+																	</td>
+																</tr>
+													<tr class='tr2'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Cobalt Strike: Hash dump capability involved process injection into lsass.exe
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p5_A_2' onclick="scroll_to_step('5_A_2')">5.A.2								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											None 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-ban' title='None'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>No detection capability demonstrated for this procedure.									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															</table>
+																	</td>
+																</tr>
+													<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Cobalt Strike: Screen capture capability involved process injection into explorer.exe
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p8_D_1' onclick="scroll_to_step('8_D_1')">8.D.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											None 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-ban' title='None'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>No detection capability demonstrated for this procedure.									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															</table>
+																	</td>
+																</tr>
+										
 													</table>
 												</td>
-												<td class='td1B'>
-													<table class='table2'>
-										<tr class='tr2'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									RDP connection to Conficker (10.0.0.5) authenticated using previously added user Jesse
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p10_B_1' onclick="scroll_to_step('10_B_1')">10.B.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed a Logon Type 10 (interactive) event for the account Jesse logging on to Conficker.									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Specific Behavior (Delayed) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-bullseye' title='Specific Behavior'></i>&nbsp;<i class='far fa-clock' title='Delayed'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'> The Managed Defense Report indicated a Specific Behavior occurred because it identified that the account Jesse was used to log in to Conficker as part of Lateral Movement.<a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'> Managed Defense Reports are reports provided by FireEye's managed detection and response (MDR) service. FireEye provided reports to MITRE after the completion of the evaluation to mimic what they would produce in a real incident.		</span></a>									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-10.b.1-2.png.html", "_blank");'>Telemetry showing Logon Type 10 (interactive) event for Jesse logging on to Conficker									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-10.b.1-3.png.html", "_blank");'>Excerpt from Managed Defense Report indicating account Jesse was used to logon to Conficker as part of Lateral Movement (Specific Behavior)									</a>							</span>							<br />						</td>					</tr>					</table>
+											</tr>
+										</table>
+								
+											<table class='table1'>
+												<tr class='tr1'>
+													<td class='td1A'>
+														<table class='table2'>
+															<tr>
+																<td class='td2Technique'>
+														<a class='aTechnique-tacticsummary' href='/evaluations/fireeye.1.apt3.1/procedures/validaccounts'>Valid Accounts							<br />(T1078)						</a>
 																</td>
 															</tr>
-												<tr class='tr2'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Empire: 'net use' via PowerShell to successfully authenticate to Conficker (10.0.0.5) using credentials of user Kmitnick
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p16_B_1' onclick="scroll_to_step('16_B_1')">16.B.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Enrichment 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='far fa-plus-square' title='Enrichment'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>The capability enriched a logon attempt via net.exe using valid credentials for user Kmitnick with an alert for Net Use Command Execution (Weak Signal). The password for Kmitnick was redacted within the capability. <a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'> The vendor indicated the un-redacted passwords could be observed in triage/acquistion data.		</span></a> 									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Telemetry 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'> Telemetry showed the successful logon for the user Kmitnick. 									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-16.b.1-1.png.html", "_blank");'>Enrichment of net.exe logon attempt by Kmitnick with Net Use Command Execution alert									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-16.b.1-2.png.html", "_blank");'>Telemetry showing successful logon of user Kmitnick									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-												<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Empire: 'net use' via PowerShell to successfully authenticate to Creeper (10.0.0.4) using credentials of user Kmitnick
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p16_D_1' onclick="scroll_to_step('16_D_1')">16.D.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Enrichment 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='far fa-plus-square' title='Enrichment'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>The capability enriched a logon attempt via net1.exe using valid credentials for user Kmitnick with an alert for Net Use Command Execution (Weak Signal). The password for the user Kmitnick was redacted by the capability.<a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'> The vendor indicated the un-redacted passwords could be observed in triage/acquistion data.		</span></a> 									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Specific Behavior (Delayed) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-bullseye' title='Specific Behavior'></i>&nbsp;<i class='far fa-clock' title='Delayed'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'> The Managed Defense Report indicated a Specific Behavior occurred because it identified that the attacker mounted the C$ drive on creeper with the kmitnick account. <a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'> Managed Defense Reports are reports provided by FireEye's managed detection and response (MDR) service. FireEye provided reports to MITRE after the completion of the evaluation to mimic what they would produce in a real incident.		</span></a>									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-16.d.1-1.png.html", "_blank");'>Enrichment of net1.exe logon attempt by Kmitnick with Net Use Command Execution alert									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-16.d.1-2.png.html", "_blank");'>Excerpt from the Managed Defense Report indicating the attacker mounting the C$ on creeper with the kmitnick account (Specific Behavior)									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-									
-												</table>
-											</td>
-										</tr>
-									</table>
-							
-										<table class='table1'>
-											<tr class='tr1'>
-												<td class='td1A'>
-													<table class='table2'>
-														<tr>
-															<td class='td2Technique'>
-													<a class='aTechnique-tacticsummary' href='/evaluations/fireeye.1.apt3.1/procedures/newservice'>New Service							<br />(T1050)						</a>
-															</td>
-														</tr>
+														</table>
+													</td>
+													<td class='td1B'>
+														<table class='table2'>
+											<tr class='tr2'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										RDP connection to Conficker (10.0.0.5) authenticated using previously added user Jesse
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p10_B_1' onclick="scroll_to_step('10_B_1')">10.B.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>Telemetry showed a Logon Type 10 (interactive) event for the account Jesse logging on to Conficker.									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Specific Behavior (Delayed) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-bullseye' title='Specific Behavior'></i>&nbsp;<i class='far fa-clock' title='Delayed'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'> The Managed Defense Report indicated a Specific Behavior occurred because it identified that the account Jesse was used to log in to Conficker as part of Lateral Movement.<a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'> Managed Defense Reports are reports provided by FireEye's managed detection and response (MDR) service. FireEye provided reports to MITRE after the completion of the evaluation to mimic what they would produce in a real incident.		</span></a>									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-10.b.1-2.png.html", "_blank");'>Telemetry showing Logon Type 10 (interactive) event for Jesse logging on to Conficker									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-10.b.1-3.png.html", "_blank");'>Excerpt from Managed Defense Report indicating account Jesse was used to logon to Conficker as part of Lateral Movement (Specific Behavior)									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+													<tr class='tr2'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Empire: 'net use' via PowerShell to successfully authenticate to Conficker (10.0.0.5) using credentials of user Kmitnick
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p16_B_1' onclick="scroll_to_step('16_B_1')">16.B.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Enrichment 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='far fa-plus-square' title='Enrichment'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>The capability enriched a logon attempt via net.exe using valid credentials for user Kmitnick with an alert for Net Use Command Execution (Weak Signal). The password for Kmitnick was redacted within the capability. <a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'> The vendor indicated the un-redacted passwords could be observed in triage/acquistion data.		</span></a> 									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Telemetry 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-search' title='Telemetry'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'> Telemetry showed the successful logon for the user Kmitnick. 									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-16.b.1-1.png.html", "_blank");'>Enrichment of net.exe logon attempt by Kmitnick with Net Use Command Execution alert									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-16.b.1-2.png.html", "_blank");'>Telemetry showing successful logon of user Kmitnick									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+													<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Empire: 'net use' via PowerShell to successfully authenticate to Creeper (10.0.0.4) using credentials of user Kmitnick
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p16_D_1' onclick="scroll_to_step('16_D_1')">16.D.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Enrichment 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='far fa-plus-square' title='Enrichment'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>The capability enriched a logon attempt via net1.exe using valid credentials for user Kmitnick with an alert for Net Use Command Execution (Weak Signal). The password for the user Kmitnick was redacted by the capability.<a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'> The vendor indicated the un-redacted passwords could be observed in triage/acquistion data.		</span></a> 									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Specific Behavior (Delayed) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-bullseye' title='Specific Behavior'></i>&nbsp;<i class='far fa-clock' title='Delayed'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'> The Managed Defense Report indicated a Specific Behavior occurred because it identified that the attacker mounted the C$ drive on creeper with the kmitnick account. <a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'> Managed Defense Reports are reports provided by FireEye's managed detection and response (MDR) service. FireEye provided reports to MITRE after the completion of the evaluation to mimic what they would produce in a real incident.		</span></a>									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-16.d.1-1.png.html", "_blank");'>Enrichment of net1.exe logon attempt by Kmitnick with Net Use Command Execution alert									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-16.d.1-2.png.html", "_blank");'>Excerpt from the Managed Defense Report indicating the attacker mounting the C$ on creeper with the kmitnick account (Specific Behavior)									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+										
 													</table>
 												</td>
-												<td class='td1B'>
-													<table class='table2'>
-										<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Empire: 'sc create' via PowerShell to remotely create a service on Creeper (10.0.0.4)
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p16_I_1' onclick="scroll_to_step('16_I_1')">16.I.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Enrichment 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='far fa-plus-square' title='Enrichment'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>The capability enriched sc.exe with an alert for SC Execution (Weak Signal). The alert was also tagged with the correct ATT&CK Technique (T1050 - New Service) and Tactic (Persistence).									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Specific Behavior (Delayed) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-bullseye' title='Specific Behavior'></i>&nbsp;<i class='far fa-clock' title='Delayed'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'> The Managed Defense Report indicated a Specific Behavior occurred because it observed the sc.exe command creating a new service called adobeupdater on Creeper from CodeRed. <a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'> Managed Defense Reports are reports provided by FireEye's managed detection and response (MDR) service. FireEye provided reports to MITRE after the completion of the evaluation to mimic what they would produce in a real incident.		</span></a><a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'> All five of the sc.exe events are rolled under the same SC Execution alert.		</span></a> 									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-16.l.1-1.png.html", "_blank");'>Enrichment of sc.exe with an alert for SC Execution (Weak Signal) (tagged with correct ATT&CK Technique, T1050 - New Service, and Tactic, Discovery)									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-16.i.1-1.png.html", "_blank");'>Additional details on enrichment of sc.exe with SC Execution alert									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-16.i.1-3.png.html", "_blank");'>Excerpt from the Managed Defense Report indicating sc.exe was used to create a new service (Specific Behavior)									</a>							</span>							<br />						</td>					</tr>					</table>
+											</tr>
+										</table>
+								
+											<table class='table1'>
+												<tr class='tr1'>
+													<td class='td1A'>
+														<table class='table2'>
+															<tr>
+																<td class='td2Technique'>
+														<a class='aTechnique-tacticsummary' href='/evaluations/fireeye.1.apt3.1/procedures/newservice'>New Service							<br />(T1050)						</a>
 																</td>
 															</tr>
-									
-												</table>
-											</td>
-										</tr>
-									</table>
-							
-										<table class='table1'>
-											<tr class='tr1'>
-												<td class='td1A'>
-													<table class='table2'>
-														<tr>
-															<td class='td2Technique'>
-													<a class='aTechnique-tacticsummary' href='/evaluations/fireeye.1.apt3.1/procedures/accessibilityfeatures'>Accessibility Features							<br />(T1015)						</a>
-															</td>
-														</tr>
+														</table>
+													</td>
+													<td class='td1B'>
+														<table class='table2'>
+											<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Empire: 'sc create' via PowerShell to remotely create a service on Creeper (10.0.0.4)
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p16_I_1' onclick="scroll_to_step('16_I_1')">16.I.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Enrichment 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='far fa-plus-square' title='Enrichment'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>The capability enriched sc.exe with an alert for SC Execution (Weak Signal). The alert was also tagged with the correct ATT&CK Technique (T1050 - New Service) and Tactic (Persistence).									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Specific Behavior (Delayed) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-bullseye' title='Specific Behavior'></i>&nbsp;<i class='far fa-clock' title='Delayed'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'> The Managed Defense Report indicated a Specific Behavior occurred because it observed the sc.exe command creating a new service called adobeupdater on Creeper from CodeRed. <a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'> Managed Defense Reports are reports provided by FireEye's managed detection and response (MDR) service. FireEye provided reports to MITRE after the completion of the evaluation to mimic what they would produce in a real incident.		</span></a><a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'> All five of the sc.exe events are rolled under the same SC Execution alert.		</span></a> 									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-16.l.1-1.png.html", "_blank");'>Enrichment of sc.exe with an alert for SC Execution (Weak Signal) (tagged with correct ATT&CK Technique, T1050 - New Service, and Tactic, Discovery)									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-16.i.1-1.png.html", "_blank");'>Additional details on enrichment of sc.exe with SC Execution alert									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-16.i.1-3.png.html", "_blank");'>Excerpt from the Managed Defense Report indicating sc.exe was used to create a new service (Specific Behavior)									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+										
 													</table>
 												</td>
-												<td class='td1B'>
-													<table class='table2'>
-										<tr class='tr2'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									Empire: 'copy' via PowerShell to overwrite magnify.exe with cmd.exe
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p17_C_1' onclick="scroll_to_step('17_C_1')">17.C.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Specific Behavior 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-bullseye' title='Specific Behavior'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>A Specific Behavior alert was generated for Suspicious Accessibility Features Replacement (BACKDOOR) based on magnifer.exe being overwritten. The alert was also tagged with the correct ATT&CK Technique (T1015 - Accessibility Features) and Tactic (Persistence).									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										 Specific Behavior 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-bullseye' title='Specific Behavior'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'> A Specific Behavior alert was also generated for Accessibility Features File Write (Weak Signal) based on magnifier.exe being overwritten. The alert was also tagged with the correct ATT&CK Technique (T1015 - Accessibility Features) and Tactic (Persistence). 									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Specific Behavior (Delayed) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-bullseye' title='Specific Behavior'></i>&nbsp;<i class='far fa-clock' title='Delayed'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'> The Managed Defense Report indicated a Specific Behavior occurred because it identified magnifer.exe being overwritten with cmd.exe. <a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'> Managed Defense Reports are reports provided by FireEye's managed detection and response (MDR) service. FireEye provided reports to MITRE after the completion of the evaluation to mimic what they would produce in a real incident.		</span></a>									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-17.c.1-1.png.html", "_blank");'>Specific Behavior alert on overwrite of magnify.exe for Suspicious Accessibility Features Replacement (BACKDOOR) (tagged with correct ATT&CK Technique, T1015 - Accessibility Features, and Tactic, Persistence)									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-17.c.1-2.png.html", "_blank");'>Specific Behavior alert on overwrite of the magnify.exe for Accessibility Feature File Write (tagged with correct ATT&CK Technique, T1015 - Accessibility Features, and Tactic, Persistence)									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-17.c.1-3.png.html", "_blank");'>Excerpt from the Managed Defense Report indicating the attacker overwrote magnifier.exe (Specific Behavior)									</a>							</span>							<br />						</td>					</tr>					</table>
+											</tr>
+										</table>
+								
+											<table class='table1'>
+												<tr class='tr1'>
+													<td class='td1A'>
+														<table class='table2'>
+															<tr>
+																<td class='td2Technique'>
+														<a class='aTechnique-tacticsummary' href='/evaluations/fireeye.1.apt3.1/procedures/accessibilityfeatures'>Accessibility Features							<br />(T1015)						</a>
 																</td>
 															</tr>
-												<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-									magnifer.exe previously overwritten by cmd.exe launched through RDP connection made to Creeper (10.0.0.4)
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2Steps'>
-																	<table class='table3'>
-																		<tr class='tr3'>
-																			<td class='td3'>
-																	<span class='spanProcedureSummaryStep' id='p20_A_1' onclick="scroll_to_step('20_A_1')">20.A.1								</span>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td class='td2DetectionTypesAndNotes' colspan='2'>
-																	<table class='tableDetectionTypesAndNotes'>
-														<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										General Behavior 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-user-alt' title='General Behavior'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>A General Behavior alert was generated for RENAMED CMD.EXE, with a description explaining how attackers will sometimes rename cmd.exe to other filenames to try to bypass detections. 									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										 Specific Behavior 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-bullseye' title='Specific Behavior'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'> A Specific Behavior alert was generated for Accessibility Features Child Process due to whoami.exe spawning from magnify.exe. The alert was also tagged with the correct ATT&CK Technique (T1015 - Accessibility Features) and Tactics (Persistence, Privilege Escalation).									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
-																					<tr>
-																						<td class='tdSummaryDetectionIcons'>
-										Specific Behavior (Delayed) 								</td>
-																					</tr>
-																				</table>
-																				&nbsp;&nbsp;
-										<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-bullseye' title='Specific Behavior'></i>&nbsp;<i class='far fa-clock' title='Delayed'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'> The Managed Defense Report indicated a Specific Behavior occurred because it identified that the attacker replaced the magnifier.exe accessibility feature to launch a privileged command shell. <a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'> Managed Defense Reports are reports provided by FireEye's managed detection and response (MDR) service. FireEye provided reports to MITRE after the completion of the evaluation to mimic what they would produce in a real incident.		</span></a>									</td>								</tr>							</table>						</td>					</tr>					</table>
-																</td>
-																<td class='td2Screenshots'>
-																	<table class='tableScreenshot3'>
-														<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-20.a.1-3.png.html", "_blank");'>General Behavior alert for RENAMED CMD.EXE									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-20.a.1-4.png.html", "_blank");'>Continued details for General Behavior alert for RENAMED CMD.EXE									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-20.a.1-5.png.html", "_blank");'>Specific Behavior alert for Accessibility Features Child Process due to magnify.exe spawning whoami.exe (tagged with the correct ATT&CK Technique, T1015 - Accessibility Features, and Tactics, Persistence, Privilege Escalation)									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-20.a.1-2.png.html", "_blank");'>Excerpt from the Managed Defense Report indicating the attacker replaced the magnifier.exe accessibility feature to launch a privileged command shell (Specific Behavior)									</a>							</span>							<br />						</td>					</tr>					</table>
-																</td>
-															</tr>
-									
-												</table>
-											</td>
-										</tr>
-									</table>
-								</td>
+														</table>
+													</td>
+													<td class='td1B'>
+														<table class='table2'>
+											<tr class='tr2'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										Empire: 'copy' via PowerShell to overwrite magnify.exe with cmd.exe
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p17_C_1' onclick="scroll_to_step('17_C_1')">17.C.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Specific Behavior 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-bullseye' title='Specific Behavior'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>A Specific Behavior alert was generated for Suspicious Accessibility Features Replacement (BACKDOOR) based on magnifer.exe being overwritten. The alert was also tagged with the correct ATT&CK Technique (T1015 - Accessibility Features) and Tactic (Persistence).									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											 Specific Behavior 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-bullseye' title='Specific Behavior'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'> A Specific Behavior alert was also generated for Accessibility Features File Write (Weak Signal) based on magnifier.exe being overwritten. The alert was also tagged with the correct ATT&CK Technique (T1015 - Accessibility Features) and Tactic (Persistence). 									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Specific Behavior (Delayed) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-bullseye' title='Specific Behavior'></i>&nbsp;<i class='far fa-clock' title='Delayed'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'> The Managed Defense Report indicated a Specific Behavior occurred because it identified magnifer.exe being overwritten with cmd.exe. <a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'> Managed Defense Reports are reports provided by FireEye's managed detection and response (MDR) service. FireEye provided reports to MITRE after the completion of the evaluation to mimic what they would produce in a real incident.		</span></a>									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-17.c.1-1.png.html", "_blank");'>Specific Behavior alert on overwrite of magnify.exe for Suspicious Accessibility Features Replacement (BACKDOOR) (tagged with correct ATT&CK Technique, T1015 - Accessibility Features, and Tactic, Persistence)									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-17.c.1-2.png.html", "_blank");'>Specific Behavior alert on overwrite of the magnify.exe for Accessibility Feature File Write (tagged with correct ATT&CK Technique, T1015 - Accessibility Features, and Tactic, Persistence)									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-17.c.1-3.png.html", "_blank");'>Excerpt from the Managed Defense Report indicating the attacker overwrote magnifier.exe (Specific Behavior)									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+													<tr class='tr2NoBottomBorder'>				<td class='td2Procedures'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+										magnifer.exe previously overwritten by cmd.exe launched through RDP connection made to Creeper (10.0.0.4)
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2Steps'>
+																		<table class='table3'>
+																			<tr class='tr3'>
+																				<td class='td3'>
+																		<span class='spanProcedureSummaryStep' id='p20_A_1' onclick="scroll_to_step('20_A_1')">20.A.1								</span>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td class='td2DetectionTypesAndNotes' colspan='2'>
+																		<table class='tableDetectionTypesAndNotes'>
+															<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											General Behavior 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-user-alt' title='General Behavior'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'>A General Behavior alert was generated for RENAMED CMD.EXE, with a description explaining how attackers will sometimes rename cmd.exe to other filenames to try to bypass detections. 									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionTypeDotted'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											 Specific Behavior 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-bullseye' title='Specific Behavior'></i></td></tr></table>						</td>					<td class='tdDetectionNotesDotted'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'> A Specific Behavior alert was generated for Accessibility Features Child Process due to whoami.exe spawning from magnify.exe. The alert was also tagged with the correct ATT&CK Technique (T1015 - Accessibility Features) and Tactics (Persistence, Privilege Escalation).									</td>								</tr>							</table>						</td>					</tr>					<tr class='trDetectionTypesAndNotes'>					<td class='tdDetectionType'>							<table class='tableSummaryDetectionIcons'>
+																						<tr>
+																							<td class='tdSummaryDetectionIcons'>
+											Specific Behavior (Delayed) 								</td>
+																						</tr>
+																					</table>
+																					&nbsp;&nbsp;
+											<table class='tableSummaryDetectionIcons'><tr><td class='tdSummaryDetectionIcons'><i class='fas fa-bullseye' title='Specific Behavior'></i>&nbsp;<i class='far fa-clock' title='Delayed'></i></td></tr></table>						</td>					<td class='tdDetectionNotes'>							<table class='table3'>								<tr class='tr3'>									<td class='tdInnerDetectionNotes'> The Managed Defense Report indicated a Specific Behavior occurred because it identified that the attacker replaced the magnifier.exe accessibility feature to launch a privileged command shell. <a class='aFootnote' href='javascript:void(0);'><i class='fas fa-info-circle'></i>		<span class='spanPopup-footnotes' onclick='return false;' href='#'> Managed Defense Reports are reports provided by FireEye's managed detection and response (MDR) service. FireEye provided reports to MITRE after the completion of the evaluation to mimic what they would produce in a real incident.		</span></a>									</td>								</tr>							</table>						</td>					</tr>					</table>
+																	</td>
+																	<td class='td2Screenshots'>
+																		<table class='tableScreenshot3'>
+															<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-20.a.1-3.png.html", "_blank");'>General Behavior alert for RENAMED CMD.EXE									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-20.a.1-4.png.html", "_blank");'>Continued details for General Behavior alert for RENAMED CMD.EXE									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-20.a.1-5.png.html", "_blank");'>Specific Behavior alert for Accessibility Features Child Process due to magnify.exe spawning whoami.exe (tagged with the correct ATT&CK Technique, T1015 - Accessibility Features, and Tactics, Persistence, Privilege Escalation)									</a>							</span>							<br />						</td>					</tr>					<tr class='tr3'>						<td class='tdInnerScreenshots'>							<span class='spanScreenshotCaption-tacticsummary'>								&bull;								<a href='javascript:void(0)' onclick='window.open("/fe-20.a.1-2.png.html", "_blank");'>Excerpt from the Managed Defense Report indicating the attacker replaced the magnifier.exe accessibility feature to launch a privileged command shell (Specific Behavior)									</a>							</span>							<br />						</td>					</tr>					</table>
+																	</td>
+																</tr>
+										
+													</table>
+												</td>
+											</tr>
+										</table>
+									</td>
 								<td class='tdMainRightPane-tacticsummary'>
 									<br />
 									<br />
