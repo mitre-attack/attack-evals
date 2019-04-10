@@ -50,6 +50,7 @@
                     <a class="dropdown-item" href="/using-attack-evaluations.html">Using ATT&CK Evaluations</a>
                     <a class="dropdown-item" href="/FAQ.html">FAQ</a>
                     <a class="dropdown-item" href="/about-attack-evaluations.html">ATT&CK Evaluations</a>
+                    <a class="dropdown-item" href="/issues.html">Issue Tracker</a>
                 </div>  
             </li>
             <li class='nav-item'><a  class='nav-link'  href='https://medium.com/mitre-attack/tagged/evaluation' target="_blank"><strong>Blog</strong><img src="/theme/images/external-site.svg"
@@ -88,7 +89,8 @@
 	<p>
 		We divided the tested techniques into “Primary” techniques and “Enabling” techniques. Execution of many of the techniques required Command-Line Interface, Execution through API, and PowerShell. We considered these to be “Enabling” techniques for the evaluation, and we generally did not capture detections directly associated with their execution (except in cases where one of those techniques was executing the behavior under test, such as “RunAs”). Instead, we focused on the Primary technique that was performed, rather than the mechanism of execution (which was considered the Enabling technique). For example, if Process Discovery was performed via Command-Line Interface, we captured detections for Process Discovery but not Command-Line Interface.
 	</p>
-	<img src="/theme/images/round1_scope_navigator.png" style="width: 100%; height: auto;"/>
+	<!-- <img src="/theme/images/round1_scope_navigator.png" style="width: 100%; height: auto;"/> -->
+	<img src="https://d1zq5d3dtjfcoj.cloudfront.net/round1_scope_navigator.png" style="width: 100%; height: auto;"/>
 	<br><br>
 	<p>
 		As we explained in the previous section, we divided technique execution into sequences we refer to as “Steps” to help capture detections as we performed the evaluations. Each Step corresponded to an adversary’s intended goal during an operation. We performed 20 Steps in total across two scenarios: 10 Steps corresponded to our first scenario (which used Cobalt Strike), and 10 Steps corresponded to our second scenario (which used Empire). We further divided each Step into Sub-Steps that are denoted by letters (e.g. 1A, 1B, etc.). Those Steps, Sub-Steps, and the corresponding techniques are outlined below.
