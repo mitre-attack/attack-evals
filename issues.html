@@ -38,10 +38,10 @@
                     <a class="dropdown-item" href="/methodology">Overview - Adversary Emulation</a>
                     <a class="dropdown-item" href="/methodology/evaluation-process.html">&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;Evaluation Process</a>
                     <a class="dropdown-item" href="/methodology/setup-and-configuration.html">&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;Setup and Configuration</a>
-                    <a class="dropdown-item" href="/methodology/detection-categorization.html">&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;Detection Categorization</a>
                     <a class="dropdown-item" href="/methodology/round1">Round 1 - APT3</a>
-                    <a class="dropdown-item" href="/methodology/round1/environment.html">&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;Round 1 Environment</a>
-                    <a class="dropdown-item" href="/methodology/round1/scope.html">&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;Round 1 Scope</a>
+                    <a class="dropdown-item" href="/methodology/round1/environment.html">&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;APT3 Environment</a>
+                    <a class="dropdown-item" href="/methodology/round1/scope.html">&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;APT3 Scope</a>
+					<a class="dropdown-item" href="/methodology/detection-categorization.html">&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;APT3 Detection Categorization</a>
                 </div>  
             </li>           
             <li class='nav-item dropdown'>
@@ -110,188 +110,243 @@
 		</tr>
 	</table>
 
-
-
 	<script>
 
-	function get_github_data(url)
-	{
-    	var Httpreq = new XMLHttpRequest();
-    	Httpreq.open("GET", url, false);
-    	Httpreq.send(null);
-
-    	return Httpreq.responseText;
-	}
-
-
-	function makeIssueItem(issue_title, issue_body, issue_resolution_str, previously_resolved_post, date_posted, issue_creator, issue_fixer, issue_html_url, issue_labels)
-	{
-		var strHTML = "";
-		var i;
-
-		strHTML += "<div class='divIssue'>" + "\n";
-		strHTML += "	<table style='width: 100%'>" + "\n";
-		strHTML += "		<tr>" + "\n";
-		strHTML += "			<td class='tdIssueTitleLink'>" + "\n";
-		strHTML += "				<a class='aIssueLink' href='" + issue_html_url + "'>" + "\n";
-		strHTML += "					" + issue_title + "\n";
-		strHTML += "				</a>" + "\n";
-		strHTML += "			</td>" + "\n";
-		strHTML += "			<td class='tdIssueSubmissionDate'>" + "\n";
-		strHTML += "				<span class='spanIssueSubmissionDate'>" + "\n";
-
-		if (issue_resolution_str)
+		function get_github_data(url)
 		{
-			strHTML += "					Resolution Date <br /> " + date_posted + "\n";	
-		}
-		else
-		{
-			strHTML += "					Submission Date <br /> " + date_posted + "\n";
-		}
-		
-		strHTML += "				</span>" + "\n";
-		strHTML += "			</td>" + "\n";
-		strHTML += "		</tr>" + "\n";
-		strHTML += "	</table>" + "\n";
-		strHTML += "	<br />" + "\n";
-		strHTML += "	<p class='pIssueBody'>" + "\n";
+	    	var Httpreq = new XMLHttpRequest();
+	    	Httpreq.open("GET", url, false);
+	    	Httpreq.send(null);
 
-		if (previously_resolved_post)
-		{
-			issue_body = issue_body.replace(/--/g, "<br /><br />-");
+	    	return Httpreq.responseText;
 		}
 
-		strHTML += "		" + issue_body + "\n";
 
-		if (issue_resolution_str && !previously_resolved_post)
+		function makeIssueItem(issue_title, issue_body, issue_resolution_str, previously_resolved_post, date_posted, issue_creator, issue_fixer, issue_html_url, issue_labels)
 		{
-			strHTML += "	<br /><br />" + "\n";
-			strHTML += "	<i>";
+			var strHTML = "";
+			var i;
 
-			if (issue_resolution_str.indexOf("FIXED:") == -1)
+			strHTML += "<div class='divIssue'>" + "\n";
+			strHTML += "	<table style='width: 100%'>" + "\n";
+			strHTML += "		<tr>" + "\n";
+			strHTML += "			<td class='tdIssueTitleLink'>" + "\n";
+			strHTML += "				<a class='aIssueLink' href='" + issue_html_url + "'>" + "\n";
+			strHTML += "					" + issue_title + "\n";
+			strHTML += "				</a>" + "\n";
+			strHTML += "			</td>" + "\n";
+			strHTML += "			<td class='tdIssueSubmissionDate'>" + "\n";
+			strHTML += "				<span class='spanIssueSubmissionDate'>" + "\n";
+
+			if (issue_resolution_str)
 			{
-				strHTML += "<b> FIXED: </b>";
+				strHTML += "					Resolution Date <br /> " + date_posted + "\n";	
 			}
 			else
 			{
-				issue_resolution_str = issue_resolution_str.replace("FIXED: ", "<b>FIXED: </b>");
+				strHTML += "					Submission Date <br /> " + date_posted + "\n";
+			}
+			
+			strHTML += "				</span>" + "\n";
+			strHTML += "			</td>" + "\n";
+			strHTML += "		</tr>" + "\n";
+			strHTML += "	</table>" + "\n";
+			strHTML += "	<br />" + "\n";
+			strHTML += "	<p class='pIssueBody'>" + "\n";
+
+			if (previously_resolved_post)
+			{
+				issue_body = issue_body.replace(/--/g, "<br /><br />-");
 			}
 
-			strHTML += "		" + issue_resolution_str + "\n";
-			strHTML += "	</i>";
-		}
+			strHTML += "		" + issue_body + "\n";
 
-		strHTML += "	</p>" + "\n";
-
-		for (i = 0; i < issue_labels.length; i++)
-		{
-			strHTML += "<div class='div_issue_label' style='background-color: #" + issue_labels[i]["color"] + ";'>" + "\n";
-			strHTML += issue_labels[i]["name"] + "\n";
-			strHTML += "</div>" + "\n";
-		}
-
-		return strHTML;
-	}
-
-	function getNoIssuesHTML() 
-	{
-		var no_issues_HTML = "";
-
-		no_issues_HTML = "<div class='div_no_issues'>";
-		no_issues_HTML += 		"<span class='span_no_issues'>";
-		no_issues_HTML += 			"There are currently no open issues.";
-		no_issues_HTML += 			"<br />";
-		no_issues_HTML += 			" To submit a new issue, please visit our <a href='https://github.com/mitre-attack/attack-evals/issues' target='_blank'>ATT&CK Evaluations Git Repository. </a>";
-		no_issues_HTML += 		"</span>";
-		no_issues_HTML += "</div>";
-
-		return no_issues_HTML;
-	}
-
-  	var issues_url = "https://api.github.com/repos/mitre-attack/attack-evals/issues?state=all";
-	var issues_json = JSON.parse(get_github_data(issues_url));
-	var i = 0;
-	var j = 0;
-	var submission_date_obj;
-	var submission_date_str = "";
-	var resolution_date_obj;
-	var resolution_date_str = "";
-	var str_resolution_text = "";
-	var previously_resolved_post = false;
-	var str_issue_fixer = "";
-	var issue_number;
-	var comments_url;
-	var comments_json;
-	var strHTML = "";
-	var no_issues_HTML = "";
-	var acceptable_labels = ["Evaluation UI", "Website Content", "Results Data"]
-	var no_open_issues = true;
-
-	for (i = 0; i < issues_json.length; i++)
-	{
-		if (issues_json[i]["labels"].length > 0 && acceptable_labels.includes(issues_json[i]["labels"][0]["name"]))
-		{
-			if (issues_json[i]["state"] == "open")
+			if (issue_resolution_str && !previously_resolved_post)
 			{
-				submission_date_obj = new Date(issues_json[i]["created_at"]);
+				strHTML += "	<br /><br />" + "\n";
+				strHTML += "	<i>";
+
+				if (issue_resolution_str.indexOf("FIXED:") == -1)
+				{
+					strHTML += "<b> FIXED: </b>";
+				}
+				else
+				{
+					issue_resolution_str = issue_resolution_str.replace("FIXED: ", "<b>FIXED: </b>");
+				}
+
+				strHTML += "		" + issue_resolution_str + "\n";
+				strHTML += "	</i>";
+			}
+
+			strHTML += "	</p>" + "\n";
+
+			for (i = 0; i < issue_labels.length; i++)
+			{
+				strHTML += "<div class='div_issue_label' style='background-color: #" + issue_labels[i]["color"] + ";'>" + "\n";
+				strHTML += issue_labels[i]["name"] + "\n";
+				strHTML += "</div>" + "\n";
+			}
+
+			return strHTML;
+		}
+
+		function getNoIssuesHTML() 
+		{
+			var no_issues_HTML = "";
+
+			no_issues_HTML = "<div class='div_no_issues'>";
+			no_issues_HTML += 		"<span class='span_no_issues'>";
+			no_issues_HTML += 			"There are currently no open issues.";
+			no_issues_HTML += 			"<br />";
+			no_issues_HTML += 			" To submit a new issue, please visit our <a href='https://github.com/mitre-attack/attack-evals/issues' target='_blank'>ATT&CK Evaluations Git Repository. </a>";
+			no_issues_HTML += 		"</span>";
+			no_issues_HTML += "</div>";
+
+			return no_issues_HTML;
+		}
+
+	  	var open_issues_url = "https://api.github.com/repos/mitre-attack/attack-evals/issues?state=open";
+	  	var closed_issues_url = "https://api.github.com/repos/mitre-attack/attack-evals/issues?state=closed";
+		var open_issues_json = JSON.parse(get_github_data(open_issues_url));
+		var closed_issues_json = JSON.parse(get_github_data(closed_issues_url));
+		var i = 0;
+		var j = 0;
+		var submission_date_obj;
+		var submission_date_str = "";
+		var resolution_date_obj;
+		var resolution_date_str = "";
+		var str_resolution_text = "";
+		var previously_resolved_post = false;
+		var str_issue_fixer = "";
+		var issue_number;
+		var comments_url;
+		var comments_json;
+		var strHTML = "";
+		var no_issues_HTML = "";
+		var acceptable_labels = ["Evaluation UI", "Website Content", "Results Data"]
+		var no_open_issues = true;
+
+		var issues_sorted_by_resolution_date = [];
+		var issues_sorted_copy;
+		var temp_array = [];
+		var new_date_obj;
+		var old_date_obj;
+
+		for (i = 0; i < open_issues_json.length; i++)
+		{
+			if (open_issues_json[i]["labels"].length > 0 && acceptable_labels.includes(open_issues_json[i]["labels"][0]["name"]))
+			{
+				submission_date_obj = new Date(open_issues_json[i]["created_at"]);
 				submission_date_str = submission_date_obj.toLocaleDateString("en-US");
 
-				strHTML = makeIssueItem(issues_json[i]["title"], issues_json[i]["body"], "", false, submission_date_str, issues_json[i]["user"]["login"], "", issues_json[i]["html_url"], issues_json[i]["labels"]);
+				strHTML = makeIssueItem(open_issues_json[i]["title"], open_issues_json[i]["body"], "", false, submission_date_str, open_issues_json[i]["user"]["login"], "", open_issues_json[i]["html_url"], open_issues_json[i]["labels"]);
 
 				$("#divKnownIssues").append(strHTML);
 				no_open_issues = false;
 			}
+		}
+
+		if (no_open_issues) 
+		{
+			no_issues_HTML = getNoIssuesHTML();
+			$("#divKnownIssues").append(no_issues_HTML);
+		}
+
+		for (i = 0; i < closed_issues_json.length; i++) 
+		{
+			new_date_obj = new Date(closed_issues_json[i]["closed_at"]);
+
+			if (issues_sorted_by_resolution_date.length == 0)
+			{
+				issues_sorted_by_resolution_date = [closed_issues_json[i]];
+			}
 			else
 			{
-				issue_number = issues_json[i]["number"];
-				comments_url = "https://api.github.com/repos/mitre-attack/attack-evals/issues/" + issue_number + "/comments";
+	      		issues_sorted_copy = issues_sorted_by_resolution_date.slice(0);
 
-				comments_json = JSON.parse(get_github_data(comments_url));
-
-				if (issues_json[i]["comments"] > 1)
+				for (j = 0; j < issues_sorted_copy.length; j++)
 				{
-					for (j = 0; j < comments_json.length; j++)
-					{
-						if (comments_json[j]["body"].indexOf("FIXED:") != -1)
-						{
-							resolution_date_obj = new Date(comments_json[j]["created_at"]);
+					old_date_obj = new Date(issues_sorted_copy[j]["closed_at"]);
 
-							str_resolution_text = comments_json[j]["body"];
-							str_issue_fixer = comments_json[j]["user"]["login"];
+					if (old_date_obj.getTime() - new_date_obj.getTime() == 0) 
+					{
+						if (j == issues_sorted_copy.length - 1)
+						{
+							issues_sorted_by_resolution_date.push(closed_issues_json[i]);
+						}
+						else
+						{
+							temp_array = issues_sorted_by_resolution_date.slice(j+1);
+							issues_sorted_by_resolution_date = issues_sorted_by_resolution_date.slice(0, j+1);
+							
+							issues_sorted_by_resolution_date.push(closed_issues_json[i]);
+
+							issues_sorted_by_resolution_date = issues_sorted_by_resolution_date.concat(temp_array);	
+	            
+	            			break;
 						}
 					}
-				}
-				else if (issues_json[i]["comments"] < 1)
-				{
-					resolution_date_obj = new Date(issues_json[i]["created_at"]);
-					previously_resolved_post = true;
-				}
-				else
-				{
-					resolution_date_obj = new Date(comments_json[0]["created_at"]);
+					else if (old_date_obj.getTime() - new_date_obj.getTime() <= 0)
+					{
+						temp_array = issues_sorted_by_resolution_date.slice(j);
+						issues_sorted_by_resolution_date = issues_sorted_by_resolution_date.slice(0, j);
+						
+						issues_sorted_by_resolution_date.push(closed_issues_json[i]);
 
-					str_resolution_text = comments_json[0]["body"];
-					str_issue_fixer = comments_json[0]["user"]["login"];
+						issues_sorted_by_resolution_date = issues_sorted_by_resolution_date.concat(temp_array);
+
+	          			break;
+					}
+
+					if (j == issues_sorted_copy.length - 1)
+					{
+						issues_sorted_by_resolution_date.push(closed_issues_json[i]);
+					}				
 				}
-
-				resolution_date_str = resolution_date_obj.toLocaleDateString("en-US");
-
-				strHTML = makeIssueItem(issues_json[i]["title"], issues_json[i]["body"], str_resolution_text, previously_resolved_post, resolution_date_str, issues_json[i]["user"]["login"], str_issue_fixer, issues_json[i]["html_url"], issues_json[i]["labels"]);
-				
-				$("#divResolvedIssues").append(strHTML);
 			}
 		}
-	}
 
-	if (no_open_issues) 
-	{
-		no_issues_HTML = getNoIssuesHTML();
-		$("#divKnownIssues").append(no_issues_HTML);
-	}
+		for (i = 0; i < issues_sorted_by_resolution_date.length; i++) 
+		{
+			issue_number = issues_sorted_by_resolution_date[i]["number"];
+			comments_url = "https://api.github.com/repos/mitre-attack/attack-evals/issues/" + issue_number + "/comments";
+			comments_json = JSON.parse(get_github_data(comments_url));
 
+			if (issues_sorted_by_resolution_date[i]["comments"] > 1)
+			{
+				for (j = 0; j < comments_json.length; j++)
+				{
+					if (comments_json[j]["body"].indexOf("FIXED:") != -1)
+					{
+						resolution_date_obj = new Date(comments_json[j]["created_at"]);
 
+						str_resolution_text = comments_json[j]["body"];
+						str_issue_fixer = comments_json[j]["user"]["login"];
+					}
+				}
+			}
+			else if (issues_sorted_by_resolution_date[i]["comments"] < 1)
+			{
+				resolution_date_obj = new Date(issues_sorted_by_resolution_date[i]["created_at"]);
+				previously_resolved_post = true;
+			}
+			else
+			{
+				resolution_date_obj = new Date(comments_json[0]["created_at"]);
 
-</script>
+				str_resolution_text = comments_json[0]["body"];
+				str_issue_fixer = comments_json[0]["user"]["login"];
+			}
+
+			resolution_date_str = resolution_date_obj.toLocaleDateString("en-US");
+
+			strHTML = makeIssueItem(issues_sorted_by_resolution_date[i]["title"], issues_sorted_by_resolution_date[i]["body"], str_resolution_text, previously_resolved_post, resolution_date_str, issues_sorted_by_resolution_date[i]["user"]["login"], str_issue_fixer, issues_sorted_by_resolution_date[i]["html_url"], issues_sorted_by_resolution_date[i]["labels"]);
+			
+			$("#divResolvedIssues").append(strHTML);
+		}
+		
+	</script>
 
 </div>
     <footer class="footer pt-3 pb-2">
