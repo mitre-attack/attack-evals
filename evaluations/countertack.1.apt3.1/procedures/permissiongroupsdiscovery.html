@@ -31,38 +31,69 @@
         </button>
         <div class='collapse navbar-collapse' id='navbarCollapse'>
           <ul class='nav nav-tabs ml-auto'>
-            <li class='nav-item'><a  class='nav-link'  href='/evaluations.html'><strong>Evaluations</strong></a></li>
-            <li class='nav-item'><a  class='nav-link'  href='/get-evaluated.html'><strong>Get Evaluated</strong></a></li>
+            <li class='nav-item'><a  class='nav-link'  href='/evaluations.html'><strong>Results</strong></a></li>    
+            <li class="dropdown-submenu">
+               <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Methodology</strong></a>
+                <!-- <ul class="dropdown-menu dropleft"> -->
+                <ul class="dropdown-menu dropright">
+				    <li class="dropdown-item dropdown-submenu2">
+                        <!-- <ul class="dropdown-menu drop_menu_side"> -->
+                        <ul class="dropdown-menu drop_menu_side_right">
+                            <li><a class="dropdown-item" href="/methodology/">Adversary Emulation</a></li>
+                            <li><a class="dropdown-item" href="/methodology/evaluation-process.html">Evaluation Process</a></li>
+                            <li><a class="dropdown-item" href="/methodology/setup-and-configuration.html">Setup and Configuration</a></li>
+                        </ul>
+                        <a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">
+                            Evaluation Overview
+                        </a>
+                    </li>
+                    <li class="dropdown-item dropdown-submenu2">
+                        <ul class="dropdown-menu drop_menu_side_right" style="margin-top: 50px;">
+                            <li><a class="dropdown-item" href="/methodology/round1">APT3 Overview</a></li>
+                            <li><a class="dropdown-item" href="/methodology/round1/detection-categories.html">APT3 Detection Categories</a></li>
+                            <li><a class="dropdown-item" href="/methodology/round1/scope.html">APT3 Technique Scope</a></li>
+                            <li><a class="dropdown-item" href="/methodology/round1/operational-flow.html">APT3 Operational Flow</a></li>
+                            <li><a class="dropdown-item" href="/methodology/round1/environment.html">APT3 Environment</a></li>
+                        </ul>
+                        <a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">
+                            Round 1 - APT3
+                        </a>
+                        
+                    </li>
+                    <li class="dropdown-item dropdown-submenu2">
+                        <ul class="dropdown-menu drop_menu_side_right" style="margin-top: 90px;">
+                            <li><a class="dropdown-item" href="/methodology/round2">APT29 Overview</a></li>
+                            <li><a class="dropdown-item" href="/methodology/round2/detection-categories.html">APT29 Detection Categories</a></li>
+                            <li><a class="dropdown-item" href="/methodology/round2/scope.html">APT29 Technique Scope</a></li>
+                        </ul>
+                        <a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">
+                            Round 2 - APT29
+                        </a>
+                    </li>
+                </ul>
+            </li>
+				
             <li class='nav-item dropdown'>
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Methodology</strong></a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/methodology">Overview - Adversary Emulation</a>
-                    <a class="dropdown-item" href="/methodology/evaluation-process.html">&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;Evaluation Process</a>
-                    <a class="dropdown-item" href="/methodology/setup-and-configuration.html">&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;Setup and Configuration</a>
-                    <a class="dropdown-item" href="/methodology/round1">Round 1 - APT3</a>
-                    <a class="dropdown-item" href="/methodology/round1/environment.html">&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;APT3 Environment</a>
-                    <a class="dropdown-item" href="/methodology/round1/scope.html">&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;APT3 Scope</a>
-					<a class="dropdown-item" href="/methodology/detection-categorization.html">&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;APT3 Detection Categorization</a>
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Tools</strong></a>
+                <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown"> -->
+                <div class="dropdown-menu">
+                    <!-- <a  class='nav-link'  href='/technique_comparison.html'><strong>Technique Comparison Tool</strong></a> -->
+                    <a class="dropdown-item" href='/technique_comparison.html'>Technique Comparison Tool</a>
                 </div>  
-            </li>           
+            </li>
+			<li class='nav-item'><a  class='nav-link'  href='/get-evaluated.html'><strong>Get Evaluated</strong></a></li> 
             <li class='nav-item dropdown'>
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>About</strong></a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Resources</strong></a>
+                <!-- <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> -->
+                <div class="dropdown-menu dropdown-menu-right">
+					<a class="dropdown-item" href="/about-attack-evaluations.html">About ATT&CK Evaluations</a>
                     <a class="dropdown-item" href="/using-attack-evaluations.html">Using ATT&CK Evaluations</a>
-                    <a class="dropdown-item" href="/FAQ.html">FAQ</a>
-                    <a class="dropdown-item" href="/about-attack-evaluations.html">ATT&CK Evaluations</a>
+                    <a class="dropdown-item" href="/FAQ.html">FAQ</a>                    
                     <a class="dropdown-item" href="/issues.html">Issue Tracker</a>
                 </div>  
             </li>
-            <li class='nav-item'><a  class='nav-link'  href='https://medium.com/mitre-attack/tagged/evaluation' target="_blank"><strong>Blog</strong><img src="/theme/images/external-site.svg"
+            <li class='nav-item'><a  class='nav-link'  href='https://medium.com/mitre-attack/tagged/evaluation' target="_blank"><strong>Blog</strong>&nbsp;<img src="/theme/images/external-site.svg"
                 alt="External site" class="external-icon" /></a></li>
-
-            <li class='nav-item'>
-                <a  class='nav-link'  href='/contact.html'>
-                    <strong>Contact</strong>
-                </a>
-            </li>
-
           </ul>
         </div>
 </nav>
@@ -76,7 +107,7 @@
 									<td style='width: 50%;'>
 										<div style="padding: 0px; width: 100%;"> 
 											<span class="spanBreadcrumbs-results"> 
-												<a href='/'> Home </a> &nbsp;>&nbsp; <a href='/evaluations.html'> Evaluations </a> &nbsp;>&nbsp;
+												<a href='/'> Home </a> &nbsp;>&nbsp; <a href='/evaluations.html'> Results </a> &nbsp;>&nbsp;
 					<a href='/evaluations/countertack.1.apt3.1.html'> CounterTack </a> &nbsp;>&nbsp; Procedures: Techniques
 										</span>
 									</div>
@@ -142,7 +173,7 @@
 										<table class='tableLegend'>
 											<tr>
 												<td class='tdLegendBigIcon'>
-													<a href='/methodology/detection-categorization.html'><h5><i class="fas fa-info-circle"></i></h5></a>
+													<a href='/methodology/round1/detection-categories.html'><h5><i class="fas fa-info-circle"></i></h5></a>
 												</td>
 												<td class='tdLegendSummary'>
 													<h5> Legend </h5>
@@ -539,7 +570,7 @@
 											<span class='tdInnerDetectionNotesSum'>
 												<a class='aFootnote' href='javascript:void(0);'><i class="fas fa-info-circle"></i>
 													<span class='spanPopup-footnotes' onclick='return false;' href='#'>
-														<p>The Operational Flow panel provides the context around when a procedure was executed by showing all steps of the evaluation, including the tactics, techniques and procedures of the executed steps.  </p>
+														The Operational Flow panel provides the context around when a procedure was executed by showing all steps of the evaluation, including the tactics, techniques and procedures of the executed steps.
 													</span>
 												</a>
 											</span>
@@ -661,21 +692,54 @@
 					</script>
 
 </div>
-    <footer class="footer pt-3 pb-2">
-    <div class="container-fluid text-center">
-        <a class="btn btn-primary float-right mr-4" href="https://twitter.com/MITREattack" target="_blank" rel="noopener"
-           aria-label="Twitter">
-            <img src="/theme/images/twitter.png" class="mx-auto d-block" width="28" height="28" alt=''> Follow ATT&CK!</a>
-        <a href="https://www.mitre.org" target="_blank" rel="noopener" aria-label="MITRE" class="float-left ml-4">
-            <img src="/theme/images/mitrelogowhiteontrans.gif" width="144" height="66" alt=''></a>
-        <br />
-        <p>
-            <br />
-            Copyright © 2018, The MITRE Corporation. MITRE ATT&CK and ATT&CK are trademarks of The MITRE Corporation.
-        </p>
 
-        <small><a href="/privacy.html" class="footer-link">Privacy Policy</a>&nbsp;&nbsp;<a href="/terms-of-use.html"
-                                                                                                 class="footer-link">Terms of Use</a></small>
+<footer class="footer p-3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="footer-center-responsive my-auto">
+                    <a href="https://www.mitre.org" target="_blank" rel="noopener" aria-label="MITRE">
+                        <img src="/theme/images/mitrelogowhiteontrans.gif" style="vertical-align: center" width="144" height="66">
+                    </a>
+                </div>
+            </div>
+            <!-- <div class="w-100 p-1 footer-responsive-break"></div> -->
+            <div class="col-6 text-center">
+                    <p>
+                        Copyright © 2018, The MITRE Corporation. MITRE ATT&CK and ATT&CK are trademarks of The MITRE Corporation.
+                    </p>
+                    <div class="row">
+                        <div class="col text-right">
+                            <small>
+                                <a href="/privacy.html" class="footer-link">Privacy Policy</a>
+                            </small>
+                        </div>
+                        <div class="col text-left">
+                            <small>
+                                <a href="/terms-of-use.html" class="footer-link">Terms of Use</a>
+                            </small>
+                        </div>
+                    </div>
+            </div>
+            <div class="w-100 p-2 footer-responsive-break"></div>
+            <div class="col">
+                <div class="footer-float-right-responsive">
+                    <div class="mb-1">
+                        <a href="https://twitter.com/MITREattack" class="btn btn-primary w-100">
+                            <!-- <i class="fa fa-twitter"></i> -->
+                            <img src="/theme/images/twitter.png" class="mr-1" style="vertical-align: top" width="20" height="20">
+                            <b>@MITREattack</b>
+                        </a>
+                    </div>
+                    <div class="">
+                        <a href="/contact" class="btn btn-primary w-100">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
     </div>
 </footer>
     
@@ -685,13 +749,8 @@
     <script src="/theme/scripts/bootstrap.min.js"></script>
     <script src="/theme/scripts/site.js"></script>
     
-    
-    <script>
-    function testing_toggle(id){
-        $("#"+id).slideToggle();
-    }
-    </script>
-
 </body>
+
+<!-- jjli -->
 
 </html>

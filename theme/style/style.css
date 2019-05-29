@@ -112,52 +112,49 @@ test {
   color: white;
   font-family: 'Roboto-Light', sans-serif;
 }
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link.active {
+    color: white;
+    border: none;
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0rem;
+    text-decoration: underline;
+}
 
- .nav-tabs .nav-link:hover{
+ .nav-tabs .nav-link:hover:not(.active){
   text-decoration: underline;
-  border: none;
-  border-top-left-radius: 0rem;
-  border-top-right-radius: 0rem;
-  background-color: transparent;
+  border: 1px solid transparent;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
  }
 .nav-link{
   font-size: 1rem;
   padding: .3rem 1rem;
   color: #596877;
 }
-
-.nav-tabs .nav-link:focus, .nav-tabs .nav-link.active {
-  color: white;
-  border: none;
-  border-top-left-radius: 0rem;
-  border-top-right-radius: 0rem;
-  text-decoration: underline;
-}
-
 .nav-link.expand-title{
   font-size: 1.1rem;
   color: black;
 }
-/*.nav-link.side {
-  padding: .3rem 0.25rem;
-  word-break: break-all;
-}*/
+/* .nav-link.side {
+    padding: .3rem .3rem;
+    word-break: break-word;
+} */
 .nav-link.side:hover {
   background-color: #c63f1d;
   color: white;
 }
 .nav-link.side.active{
   background-color:#f3f3f3;
-  color: #317b22;
   color: #c63f1e;
-  border-right: 3px solid #317b22;
   border-right: 3px solid #c63f1e;
 }
 
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
   color:  #ffffff;
   background-color: #c63f1f;
-  border-color: transparent;
+  border: 1px solid transparent;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
 }
 
 .dropdown-item:focus, .dropdown-item:hover {
@@ -280,6 +277,30 @@ table  {
   background-color: #062f4f;
   color:white;
   font-family: 'Roboto-Thin', sans-serif;
+}
+
+/* mobile responsive footer stuff */
+.footer-responsive-break {
+    display: none;
+}
+.footer-float-right-responsive {
+    float: right;
+}
+.footer {
+    clear: both; /* prevent things from floating into the footer */
+}
+@media screen and (max-width: 767.8px) {
+    /* #mobile-container {
+        max-height: calc(70vh - 15px) !important;
+        overflow-y: auto;
+    } */
+    .footer-responsive-break {
+        display: block;
+    }
+    .footer-float-right-responsive {
+        float: none;
+    }
+
 }
 
 @media only screen and (max-width: 1450px) {
@@ -606,7 +627,7 @@ width: 100%;
 
 .tdMatrixLabel
 {
-width: 20%; 
+width: 40%; 
 text-align: left;
 }
 
@@ -1499,15 +1520,40 @@ margin: 0 auto;
   padding-left: 0px;
 }
 
+.dropdown-menu-right {
+    right: 0;
+    left: auto;
+}
+
 .dropdown-submenu{
   position: relative;
 }
 
 .drop_menu_side {
     top: 0;
-    left: 100%;
+    right: 100%;
+    left: auto;
+    float: right;
     margin-top: -6px;
-    margin-left: -1px;
+
+    /* ensure that the submenu doesn't have a gap */
+    margin-right: -1px !important; 
+
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+
+.drop_menu_side_right {
+    top: 0;
+    right: auto;
+    left: 100%;
+    float: right;
+    margin-top: -6px;
+
+    /* ensure that the submenu doesn't have a gap */
+    margin-left: -1px !important; 
+
     -webkit-border-radius: 0 6px 6px 6px;
     -moz-border-radius: 0 6px 6px;
     border-radius: 0 6px 6px 6px;
@@ -1855,6 +1901,237 @@ font-size: 16px;
   padding: 0px;
 }
 
+.divCalibration_Main {
+  margin-top: 30px;
+}
+
+.divCalibration_breadcrumbs_tags {
+  width: 100%; 
+  padding: 5px;
+  padding-right: 20px;
+  /*background-color: #f3f3f3;*/
+  background-color: white;
+  position: sticky;
+  top: 78px;
+  z-index: 1000;
+}
+
+.tableCalibration_Main {
+  width: 100%;
+}
+
+.tdCalibration_OperationalFlow {
+  width: 22%;
+  border-right: 1px solid lightgray;
+  vertical-align: top;
+}
+
+.divCalibration_OperationalFlow {
+  padding: 5px;
+  margin-left: 10px;
+  height: 700px;
+  overflow: auto;
+
+  position: sticky;
+  top: 120px;
+}
+
+.divCalibration_OF_Step, .divCalibration_OF_Step_Selected {
+  padding: 5px;
+  padding-left: 20px;
+}
+
+.aCalibration_OF_Step{
+  color: black;
+  font-size: 14px;
+}
+
+.aCalibration_OF_Step:hover {
+  text-decoration: none;
+}
+
+.divCalibration_OF_Step_Selected {
+  background-color: #d7e5ee;
+}
+
+.tdCalibration_Results {
+  width: 72%;
+  height: 1px;
+}
+
+.divCalibration_Results {
+  padding: 15px;
+  height: 100%;
+}
+
+.spanCalibration_Results_RoundHeader {
+  font-size: 28px
+}
+
+.spanCalibration_Results_StepHeader {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.spanCalibration_Results_ProcedureHeader {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.spanCalibration_Results_Procedure {
+  font-size: 15px;
+}
+
+.tableCalibration_Results_Header {
+  width: 100%;
+  position: sticky;
+  top: 114px;
+}
+
+.divCalibration_Results_byTID {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+.divCalibration_Results_byTID_hidden {
+  display: none;
+}
+
+.tableCalibration_Results {
+  width: 100%;
+  border: 1px solid lightgray;
+}
+
+.trCalibration_Results_HeaderBar {
+  background-color: #666666;
+}
+
+.tdCalibration_Vendor_Header {
+  font-size: 13px;
+  color: white;
+  width: 9%;
+  padding: 5px;
+  text-align: center;
+}
+
+.tdCalibration_DetectionTypesAndNotes_Header {
+  width: 58%;
+  height: 1px;
+}
+
+.tableCalibration_DetectionTypesAndNotes_Header {
+  width: 100%;
+  height: 100%;
+}
+
+.tdCalibrationDetectionTypes_Header {
+  font-size: 13px;
+  color: white;
+  width: 35%;
+  padding: 5px;
+  text-align: center;
+}
+
+.tdCalibration_DetectionNotes_Header {
+  font-size: 13px;
+  color: white;
+  width: 65%;
+  padding: 5px;
+  text-align: center;
+}
+
+.tdCalibration_Screenshots_Header {
+  font-size: 13px;
+  color: white;
+  width: 32%;
+  padding: 5px;
+  text-align: center;
+}
+
+.trCalibration_Results {
+  border-top: 5px solid lightgray;
+}
+
+.tdCalibration_Vendor {
+  font-size: 13px;
+  width: 9%;
+  padding: 5px;
+  text-align: center;
+}
+
+.tdCalibration_DetectionTypesAndNotes {
+  width: 58%;
+  height: 1px;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+}
+
+.tableCalibration_DetectionTypesAndNotes {
+  width: 100%;
+  height: 100%;
+}
+
+.tdCalibration_DetectionTypes {
+  font-size: 13px;
+  width: 35%;
+  padding: 5px;
+  text-align: center;
+  border-right: 1px solid lightgray;
+}
+
+.tdCalibration_DetectionNotes {
+  font-size: 13px;
+  width: 65%;
+  padding: 5px;
+}
+
+.trCalibration_DetectionTypeAndNotes {
+  
+}
+
+.tdCalibration_Screenshots {
+  font-size: 13px;
+  width: 32%;
+  padding: 5px;
+}
+
+.border-top-grey-dotted {
+  border-top: 2px dotted lightgray;
+}
+
+.tdCalibration_DetectionNotes a span {
+  display: none;
+}
+
+.tdCalibration_DetectionNotes a:hover span 
+{
+  display: block;
+  position: absolute;
+
+  /*position: relative;
+  right: 0;*/
+
+  margin: 0px;
+  padding: 10px;
+  color: black;
+  font-weight: normal;
+  background: white;
+  text-align: left;
+  border: 1px solid #666;
+  z-index: 2;
+  max-width: 400px;
+
+  cursor: default;
+}
+
+
+
+
+
 @media screen and (max-width:1641px)
 {
 .tableMatrixHeaders-withlegend
@@ -1980,4 +2257,52 @@ font-size: 16px;
     to { opacity: 1; }
 }
 
+.accordion-panels .card+.card {
+    margin-top: .25rem!important;
+}
+.accordion-panels .card-header {
+    /* expand panel header */
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+}
 
+.accordion-panels .card-header h5 {
+    /* expand panel title */
+    display: inline-block;
+    flex-grow: 1;
+}
+
+.accordion-panels .card-header:after {
+    /* expand panel icon */
+    margin-left: auto;
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: top;
+    background-position: center;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+    z-index: 1;
+    transition: all 0.2s ease;
+}
+
+.accordion-panels .card-header:not(.collapsed):after {
+    /* rotate icon 180 */
+    transform: rotate(-180deg); 
+}
+
+.accordion-panels .card-body > *:last-child {
+    /* last child of accordion panel body should not have lower margin because of panel padding */
+    margin-bottom:0 !important;
+}
+
+.clean-sections h2 {
+    text-align: center;
+    border-bottom: 1px solid black;
+    margin: 25px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}

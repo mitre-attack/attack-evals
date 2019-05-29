@@ -30,38 +30,69 @@
         </button>
         <div class='collapse navbar-collapse' id='navbarCollapse'>
           <ul class='nav nav-tabs ml-auto'>
-            <li class='nav-item'><a  class='nav-link'  href='/evaluations.html'><strong>Evaluations</strong></a></li>
-            <li class='nav-item'><a  class='nav-link'  href='/get-evaluated.html'><strong>Get Evaluated</strong></a></li>
+            <li class='nav-item'><a  class="nav-link active"  href='/evaluations.html'><strong>Results</strong></a></li>    
+            <li class="dropdown-submenu">
+               <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Methodology</strong></a>
+                <!-- <ul class="dropdown-menu dropleft"> -->
+                <ul class="dropdown-menu dropright">
+				    <li class="dropdown-item dropdown-submenu2">
+                        <!-- <ul class="dropdown-menu drop_menu_side"> -->
+                        <ul class="dropdown-menu drop_menu_side_right">
+                            <li><a class="dropdown-item" href="/methodology/">Adversary Emulation</a></li>
+                            <li><a class="dropdown-item" href="/methodology/evaluation-process.html">Evaluation Process</a></li>
+                            <li><a class="dropdown-item" href="/methodology/setup-and-configuration.html">Setup and Configuration</a></li>
+                        </ul>
+                        <a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">
+                            Evaluation Overview
+                        </a>
+                    </li>
+                    <li class="dropdown-item dropdown-submenu2">
+                        <ul class="dropdown-menu drop_menu_side_right" style="margin-top: 50px;">
+                            <li><a class="dropdown-item" href="/methodology/round1">APT3 Overview</a></li>
+                            <li><a class="dropdown-item" href="/methodology/round1/detection-categories.html">APT3 Detection Categories</a></li>
+                            <li><a class="dropdown-item" href="/methodology/round1/scope.html">APT3 Technique Scope</a></li>
+                            <li><a class="dropdown-item" href="/methodology/round1/operational-flow.html">APT3 Operational Flow</a></li>
+                            <li><a class="dropdown-item" href="/methodology/round1/environment.html">APT3 Environment</a></li>
+                        </ul>
+                        <a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">
+                            Round 1 - APT3
+                        </a>
+                        
+                    </li>
+                    <li class="dropdown-item dropdown-submenu2">
+                        <ul class="dropdown-menu drop_menu_side_right" style="margin-top: 90px;">
+                            <li><a class="dropdown-item" href="/methodology/round2">APT29 Overview</a></li>
+                            <li><a class="dropdown-item" href="/methodology/round2/detection-categories.html">APT29 Detection Categories</a></li>
+                            <li><a class="dropdown-item" href="/methodology/round2/scope.html">APT29 Technique Scope</a></li>
+                        </ul>
+                        <a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">
+                            Round 2 - APT29
+                        </a>
+                    </li>
+                </ul>
+            </li>
+				
             <li class='nav-item dropdown'>
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Methodology</strong></a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/methodology">Overview - Adversary Emulation</a>
-                    <a class="dropdown-item" href="/methodology/evaluation-process.html">&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;Evaluation Process</a>
-                    <a class="dropdown-item" href="/methodology/setup-and-configuration.html">&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;Setup and Configuration</a>
-                    <a class="dropdown-item" href="/methodology/round1">Round 1 - APT3</a>
-                    <a class="dropdown-item" href="/methodology/round1/environment.html">&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;APT3 Environment</a>
-                    <a class="dropdown-item" href="/methodology/round1/scope.html">&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;APT3 Scope</a>
-					<a class="dropdown-item" href="/methodology/detection-categorization.html">&nbsp;&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;APT3 Detection Categorization</a>
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Tools</strong></a>
+                <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown"> -->
+                <div class="dropdown-menu">
+                    <!-- <a  class='nav-link'  href='/technique_comparison.html'><strong>Technique Comparison Tool</strong></a> -->
+                    <a class="dropdown-item" href='/technique_comparison.html'>Technique Comparison Tool</a>
                 </div>  
-            </li>           
+            </li>
+			<li class='nav-item'><a  class='nav-link'  href='/get-evaluated.html'><strong>Get Evaluated</strong></a></li> 
             <li class='nav-item dropdown'>
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>About</strong></a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Resources</strong></a>
+                <!-- <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> -->
+                <div class="dropdown-menu dropdown-menu-right">
+					<a class="dropdown-item" href="/about-attack-evaluations.html">About ATT&CK Evaluations</a>
                     <a class="dropdown-item" href="/using-attack-evaluations.html">Using ATT&CK Evaluations</a>
-                    <a class="dropdown-item" href="/FAQ.html">FAQ</a>
-                    <a class="dropdown-item" href="/about-attack-evaluations.html">ATT&CK Evaluations</a>
+                    <a class="dropdown-item" href="/FAQ.html">FAQ</a>                    
                     <a class="dropdown-item" href="/issues.html">Issue Tracker</a>
                 </div>  
             </li>
-            <li class='nav-item'><a  class='nav-link'  href='https://medium.com/mitre-attack/tagged/evaluation' target="_blank"><strong>Blog</strong><img src="/theme/images/external-site.svg"
+            <li class='nav-item'><a  class='nav-link'  href='https://medium.com/mitre-attack/tagged/evaluation' target="_blank"><strong>Blog</strong>&nbsp;<img src="/theme/images/external-site.svg"
                 alt="External site" class="external-icon" /></a></li>
-
-            <li class='nav-item'>
-                <a  class='nav-link'  href='/contact.html'>
-                    <strong>Contact</strong>
-                </a>
-            </li>
-
           </ul>
         </div>
 </nav>
@@ -70,7 +101,7 @@
 <div class="divEvaluationSummaryBody">
 <div style="padding: 0px; width: 100%;"> 
 	<span class="spanBreadcrumbs-results"> 
-		<a href='/'> Home </a> &nbsp;>&nbsp; Evaluations
+		<a href='/'> Home </a> &nbsp;>&nbsp; Results
 	</span>
 	<br />
 	<br />
@@ -104,7 +135,7 @@ border-radius: 10px;"><br>
 Search Results
 </span>
 <table>
-    <span id="spanNoResults-results" />
+	<!-- <span id="spanNoResults-results" /> -->
     <tr id='trAPT3' class='spanRoundTr-results'><td><span class='spanRoundLabel-results'>APT3</span><div><a href='evaluations/carbonblack.1.apt3.1.html'><div id='CarbonBlack.1.APT3.1' class='EvalCard-results' data-tags='Carbon Black.Response.'><span class='labEvalName-results'>CarbonBlack</span><br /><br /><div class='divLogo-results'><img class='vendorlogo-results' src='/theme/images/CarbonBlack_logo.jpg' /></div><div class='divTags-results'><div class='divTag-results'>Carbon Black</div><div class='divTag-results'>Response</div></div></div></a><a href='evaluations/countertack.1.apt3.1.html'><div id='CounterTack.1.APT3.1' class='EvalCard-results' data-tags='CounterTack.GoSecure.'><span class='labEvalName-results'>CounterTack</span><br /><br /><div class='divLogo-results'><img class='vendorlogo-results' src='/theme/images/Logo_Gosecure.png' /></div><div class='divTags-results'><div class='divTag-results'>CounterTack</div><div class='divTag-results'>GoSecure</div></div></div></a><a href='evaluations/crowdstrike.1.apt3.1.html'><div id='CrowdStrike.1.APT3.1' class='EvalCard-results' data-tags='CrowdStrike.Falcon.Endpoint Protection Standard Bundle.Overwatch.Insight.Prevent.'><span class='labEvalName-results'>CrowdStrike</span><br /><br /><div class='divLogo-results'><img class='vendorlogo-results' src='/theme/images/CS_logo_redbground.jpg' /></div><div class='divTags-results'><div class='divTag-results'>CrowdStrike</div><div class='divTag-results'>Falcon</div><div class='divTag-results'>Endpoint Protection Standard Bundle</div><div class='divTag-results'>Overwatch</div><div class='divTag-results'>Insight</div><div class='divTag-results'>Prevent</div></div></div></a><a href='evaluations/endgame.1.apt3.1.html'><div id='Endgame.1.APT3.1' class='EvalCard-results' data-tags='Endgame.'><span class='labEvalName-results'>Endgame</span><br /><br /><div class='divLogo-results'><img class='vendorlogo-results' src='/theme/images/Endgame-Logo_2018.png' /></div><div class='divTags-results'><div class='divTag-results'>Endgame</div></div></div></a><a href='evaluations/microsoft.1.apt3.1.html'><div id='Microsoft.1.APT3.1' class='EvalCard-results' data-tags='Microsoft.Defender.Windows Defender ATP.'><span class='labEvalName-results'>Microsoft</span><br /><br /><div class='divLogo-results'><img class='vendorlogo-results' src='/theme/images/MS_WDATP_logo.png' /></div><div class='divTags-results'><div class='divTag-results'>Microsoft</div><div class='divTag-results'>Defender</div><div class='divTag-results'>Windows Defender ATP</div></div></div></a><a href='evaluations/rsa.1.apt3.1.html'><div id='RSA.1.APT3.1' class='EvalCard-results' data-tags='RSA.NetWitness.'><span class='labEvalName-results'>RSA</span><br /><br /><div class='divLogo-results'><img class='vendorlogo-results' src='/theme/images/RSA_logo.png' /></div><div class='divTags-results'><div class='divTag-results'>RSA</div><div class='divTag-results'>NetWitness</div></div></div></a><a href='evaluations/sentinelone.1.apt3.1.html'><div id='SentinelOne.1.APT3.1' class='EvalCard-results' data-tags='SentinelOne.'><span class='labEvalName-results'>SentinelOne</span><br /><br /><div class='divLogo-results'><img class='vendorlogo-results' src='/theme/images/sentinelone_icon_onwhite__4_.png' /></div><div class='divTags-results'><div class='divTag-results'>SentinelOne</div></div></div></a><br /><br /></div></td></tr>
 </table>
 </div>
@@ -116,9 +147,11 @@ border-radius: 10px;"><br>
 Search Results
 </span>
 <table>
-    <span id="spanNoResults-results" />
-    <tr id='trAPT3' class='spanRoundTr-results'><td><span class='spanRoundLabel-results'>APT3</span><div><a href='evaluations/fireeye.1.apt3.1.html'><div id='FireEye.1.APT3.1' class='EvalCard-results' data-tags='FireEye.FireEye Endpoint Security.FireEye Managed Defense.'><span class='labEvalName-results'>FireEye</span><br /><br /><div class='divLogo-results'><img class='vendorlogo-results' src='/theme/images/fireeye-logo.png' /></div><div class='divTags-results'><div class='divTag-results'>FireEye</div><div class='divTag-results'>FireEye Endpoint Security</div><div class='divTag-results'>FireEye Managed Defense</div></div></div></a><a href='evaluations/cybereason.1.apt3.1.html'><div id='Cybereason.1.APT3.1' class='EvalCard-results' data-tags='Cybereason.'><span class='labEvalName-results'>Cybereason</span><br /><br /><div class='divLogo-results'><img class='vendorlogo-results' src='/theme/images/Cybereason_Logo.png' /></div><div class='divTags-results'><div class='divTag-results'>Cybereason</div></div></div></a><div id='PaloAlto.1.APT3.1' class='EvalCard-results-preview' data-tags=''><span class='comingSoon'>Coming Soon!</span><br /><br /><br /><div class='divLogo-results'><img class='vendorlogo-results-preview' src='/theme/images/paloalto_logo.png' /></div><div class='divTags-results'></div></div><br /><br /></div></td></tr>
+    <!-- <span id="spanNoResults-results" /> -->
+    <tr id='trAPT3' class='spanRoundTr-results'><td><span class='spanRoundLabel-results'>APT3</span><div><a href='evaluations/fireeye.1.apt3.1.html'><div id='FireEye.1.APT3.1' class='EvalCard-results' data-tags='FireEye.FireEye Endpoint Security.FireEye Managed Defense.'><span class='labEvalName-results'>FireEye</span><br /><br /><div class='divLogo-results'><img class='vendorlogo-results' src='/theme/images/fireeye-logo.png' /></div><div class='divTags-results'><div class='divTag-results'>FireEye</div><div class='divTag-results'>FireEye Endpoint Security</div><div class='divTag-results'>FireEye Managed Defense</div></div></div></a><a href='evaluations/cybereason.1.apt3.1.html'><div id='Cybereason.1.APT3.1' class='EvalCard-results' data-tags='Cybereason.'><span class='labEvalName-results'>Cybereason</span><br /><br /><div class='divLogo-results'><img class='vendorlogo-results' src='/theme/images/Cybereason_Logo.png' /></div><div class='divTags-results'><div class='divTag-results'>Cybereason</div></div></div></a><a href='evaluations/paloaltonetworks.1.apt3.1.html'><div id='PaloAltoNetworks.1.APT3.1' class='EvalCard-results' data-tags='PaloAltoNetworks.WildFire.Traps.XDR.'><span class='labEvalName-results'>Palo Alto Networks</span><br /><br /><div class='divLogo-results'><img class='vendorlogo-results' src='/theme/images/paloalto_logo.png' /></div><div class='divTags-results'><div class='divTag-results'>Palo Alto Networks</div><div class='divTag-results'>WildFire</div><div class='divTag-results'>Traps</div><div class='divTag-results'>XDR</div></div></div></a><br /><br /></div></td></tr>
 </table></div><br><br>
+
+</div>
 <script type="text/javascript">
 
 	document.onload = HideShowElements(false);
@@ -224,21 +257,54 @@ Search Results
 </script>
 
 </div>
-    <footer class="footer pt-3 pb-2">
-    <div class="container-fluid text-center">
-        <a class="btn btn-primary float-right mr-4" href="https://twitter.com/MITREattack" target="_blank" rel="noopener"
-           aria-label="Twitter">
-            <img src="/theme/images/twitter.png" class="mx-auto d-block" width="28" height="28" alt=''> Follow ATT&CK!</a>
-        <a href="https://www.mitre.org" target="_blank" rel="noopener" aria-label="MITRE" class="float-left ml-4">
-            <img src="/theme/images/mitrelogowhiteontrans.gif" width="144" height="66" alt=''></a>
-        <br />
-        <p>
-            <br />
-            Copyright © 2018, The MITRE Corporation. MITRE ATT&CK and ATT&CK are trademarks of The MITRE Corporation.
-        </p>
 
-        <small><a href="/privacy.html" class="footer-link">Privacy Policy</a>&nbsp;&nbsp;<a href="/terms-of-use.html"
-                                                                                                 class="footer-link">Terms of Use</a></small>
+<footer class="footer p-3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="footer-center-responsive my-auto">
+                    <a href="https://www.mitre.org" target="_blank" rel="noopener" aria-label="MITRE">
+                        <img src="/theme/images/mitrelogowhiteontrans.gif" style="vertical-align: center" width="144" height="66">
+                    </a>
+                </div>
+            </div>
+            <!-- <div class="w-100 p-1 footer-responsive-break"></div> -->
+            <div class="col-6 text-center">
+                    <p>
+                        Copyright © 2018, The MITRE Corporation. MITRE ATT&CK and ATT&CK are trademarks of The MITRE Corporation.
+                    </p>
+                    <div class="row">
+                        <div class="col text-right">
+                            <small>
+                                <a href="/privacy.html" class="footer-link">Privacy Policy</a>
+                            </small>
+                        </div>
+                        <div class="col text-left">
+                            <small>
+                                <a href="/terms-of-use.html" class="footer-link">Terms of Use</a>
+                            </small>
+                        </div>
+                    </div>
+            </div>
+            <div class="w-100 p-2 footer-responsive-break"></div>
+            <div class="col">
+                <div class="footer-float-right-responsive">
+                    <div class="mb-1">
+                        <a href="https://twitter.com/MITREattack" class="btn btn-primary w-100">
+                            <!-- <i class="fa fa-twitter"></i> -->
+                            <img src="/theme/images/twitter.png" class="mr-1" style="vertical-align: top" width="20" height="20">
+                            <b>@MITREattack</b>
+                        </a>
+                    </div>
+                    <div class="">
+                        <a href="/contact" class="btn btn-primary w-100">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
     </div>
 </footer>
     
@@ -248,13 +314,8 @@ Search Results
     <script src="/theme/scripts/bootstrap.min.js"></script>
     <script src="/theme/scripts/site.js"></script>
     
-    
-    <script>
-    function testing_toggle(id){
-        $("#"+id).slideToggle();
-    }
-    </script>
-
 </body>
+
+<!-- jjli -->
 
 </html>
