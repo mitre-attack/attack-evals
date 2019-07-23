@@ -524,11 +524,15 @@ font-size: 22px;
 font-size: 12px;  
 }
 
-.divEvaluationSummaryBody, .divProcedureSummaryBody
+.divEvaluationSummaryBody, .divProcedureSummaryBody, .div_vendor_comparison_body
 {
 width: 95%; 
 margin: 0 auto;
 padding-top: 20px;
+}
+
+.divEvaluationSummaryBody li+li{
+	margin-top: 10px;
 }
 
 .divTag-evalsummary, .divTag-tacticsummary
@@ -916,7 +920,7 @@ position: sticky;
 top: 200px;
 }
 
-.tableHeaderBar-tacticsummary
+.tableHeaderBar-tacticsummary, .tableHeaderBar-vendorcomparison
 {
 width: 100%;
 height: 50px;
@@ -924,7 +928,7 @@ position: sticky;
 top: 78px;
 }
 
-.tableHeaderBar-withlegend-tacticsummary
+.tableHeaderBar-withlegend-tacticsummary, .tableHeaderBar-withlegend-vendorcomparison
 {
 width: 100%;
 height: 50px;
@@ -1427,6 +1431,32 @@ text-decoration: none;
 display: none;
 }
 
+
+.td_vendor_comparison_detection_notes a span
+{
+  display: none;
+}
+
+.td_vendor_comparison_detection_notes a:hover span 
+{
+  display: block;
+  position: absolute;
+
+  /*position: relative;
+  right: 0;*/
+
+  margin: 0px;
+  padding: 10px;
+  color: black;
+  font-weight: normal;
+  background: white;
+  text-align: left;
+  border: 1px solid #666;
+  z-index: 2;
+  max-width: 400px;
+
+  cursor: default;
+}
 
 .tdInnerDetectionNotes a span 
 {
@@ -2103,6 +2133,10 @@ font-size: 16px;
   border-top: 2px dotted lightgray;
 }
 
+.border-top-grey-dotted-3px {
+  border-top: 3px dotted lightgray;
+}
+
 .tdCalibration_DetectionNotes a span {
   display: none;
 }
@@ -2131,6 +2165,336 @@ font-size: 16px;
 
 
 
+/*VENDOR COMPARISON CSS*/
+.div_vendor_comparison_header
+{
+  margin-top: 20px;
+}
+
+.div_vendor_comparison_data
+{
+  margin-top: 20px;
+}
+
+/*.div_vendor_comparison_tables
+{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}*/
+
+/*.div_vendor_comparison_left
+{
+  flex: 1;
+  margin: 10px;
+}
+
+.div_vendor_comparison_right
+{
+  flex: 1;
+  margin: 10px;
+}*/
+
+/*.table_vendor_comparison_title
+{
+  width: 100%;
+  margin-bottom: 5px;
+}*/
+
+/*.table_vendor_comparison_headers
+{
+  width: 100%;
+  background-color: #666666;
+  color: white;
+  font-size: 14px;
+  font-family: Roboto;
+  height: 40px;
+}
+
+.table_vendor_comparison
+{
+  width: 100%;
+}
+
+.td_vendor_comparison_procedure
+{
+  width: 33%;
+  text-align: center;
+}
+
+.td_vendor_comparison_technique
+{
+  width: 33%;
+  text-align: center;
+}
+
+.td_vendor_comparison_detectiontype
+{
+  width: 33%;
+  text-align: center;
+}*/
+
+.div_vendor_comparison_config_legend
+{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.tableHeaderBar-vendorcomparison,
+{
+  width: 100%;
+  height: 55px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.trHeaderBar-vendorcomparison
+{
+  background-color: #666666;
+  color: white;
+  font-size: 14px;
+  font-family: Roboto;
+}
+
+.table_vendor_comparison_data
+{
+  border: 3px solid lightgray;
+  border-top: none;
+  width: 100%;
+  height: 1px;
+}
+
+.td_vendor_comparison_procedure
+{
+  width: 12%;
+  font-size: 13px;
+  border-right: 3px solid lightgray;
+  border-bottom: 3px solid lightgray;
+  height: 100%;
+  padding: 5px;
+  text-align: center;
+}
+
+.td_vendor_comparison_technique
+{
+  width: 8%;
+  font-size: 13px;
+  border-right: 3px solid lightgray;
+  border-bottom: 3px solid lightgray;
+  height: 100%;
+  padding: 5px;
+  text-align: center;
+}
+
+.td_vendor_comparison_detection_types_and_notes
+{
+  width: 40%;
+  height: 100%;
+  padding: 0;
+  border-bottom: 3px solid lightgray;
+  border-right: 3px solid lightgray;
+}
+
+.table_vendor_comparison_detection_types_and_notes
+{
+  width: 100%;
+  height: 100%;
+}
+
+.td_vendor_comparison_detection_type
+{
+  width: 25%;
+  height: 100%;
+  font-size: 13px;
+  border-right: 3px solid lightgray;
+  padding: 5px;
+  text-align: center;
+}
+
+.td_vendor_comparison_detection_notes
+{
+  width: 75%;
+  height: 100%;
+  font-size: 13px;
+  border-right: 3px solid lightgray;
+  padding: 5px;
+}
+
+.span_vendor_comparison_vendorname
+{
+  font-size: 20px;
+  font-family: Roboto;
+}
+
+.a_vendor_comparison
+{
+  font-size: 14px;
+  font-family: Roboto;
+  margin-left: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*JEFF MODAL TEST*/
+
+:root {
+  --modal-duration: 1s;
+  /*--modal-color: #428bca;*/
+  --modal-color: #F3F3F3;
+}
+
+/*body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f4f4;
+  font-size: 17px;
+  line-height: 1.6;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}*/
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  margin: 10% auto;
+  width: 50%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+}
+
+.modal-header h2,
+.modal-footer h3 {
+  margin: 0;
+}
+
+.modal-header {
+  background: var(--modal-color);
+  padding: 15px;
+  /*color: #fff;*/
+  color: black;
+  font-weight: bold;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.modal-body {
+  padding: 10px 20px;
+  background: #fff;
+  text-align: center;
+  font-size: 20px;
+}
+
+.modal-footer {
+  background: var(--modal-color);
+  padding: 10px;
+  /*color: #fff;*/
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.close {
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+  color: #fff;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#ulCompareVendorsDropdown
+{
+  background-color: white;
+}
+
+.liVendorComparisonName
+{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.liVendorComparisonName:hover
+{
+  cursor: pointer;
+  background-color: lightblue;
+}
+
+#btnCompareVendorsDropdown
+{
+  width: 200px;
+}
+
+#btnCompareVendors
+{
+  background-color: #00334F;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#btnCompareVendors:hover {
+  background: #3876ac;
+  cursor: pointer;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width:1641px)
 {
@@ -2142,7 +2506,7 @@ font-size: 16px;
 
 @media screen and (max-width:1425px)
 {
-.tableHeaderBar-withlegend-tacticsummary
+.tableHeaderBar-withlegend-tacticsummary, .tableHeaderBar-withlegend-vendorcomparison
 {
   top: 270px;
 }
@@ -2166,7 +2530,7 @@ font-size: 16px;
 
 @media screen and (max-width:836px)
 {
-.tableHeaderBar-withlegend-tacticsummary
+.tableHeaderBar-withlegend-tacticsummary, .tableHeaderBar-withlegend-vendorcomparison
 {
   top: 290px;
 }
@@ -2174,7 +2538,7 @@ font-size: 16px;
 
 @media screen and (max-width:804px)
 {
-.tableHeaderBar-withlegend-tacticsummary
+.tableHeaderBar-withlegend-tacticsummary, .tableHeaderBar-withlegend-vendorcomparison
 {
   top: 315px;
 }
@@ -2230,7 +2594,7 @@ font-size: 16px;
 
 @media screen and (max-width:423px)
 {
-.tableMatrixHeaders, .tableHeaderBar-tacticsummary
+.tableMatrixHeaders, .tableHeaderBar-tacticsummary, .tableHeaderBar-vendorcomparison
 {
   top: 115px;
 }

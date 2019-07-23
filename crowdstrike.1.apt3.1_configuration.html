@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang='en'>
 
@@ -24,13 +25,15 @@
 <body>
     <header class='pb-5'>
         <nav class='navbar navbar-expand-lg navbar-dark fixed-top bg-orange border-bottom'>
-        <a class='navbar-brand' href='/'><img src='/theme/images/ATT&CKEvals_Logo.png' alt=''></a>
+        <a class='navbar-brand' href='/'><img src='https://d1zq5d3dtjfcoj.cloudfront.net/ATT&CKEvals_Logo.png' alt=''></a>
         <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarCollapse' aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation'>
           <span class='navbar-toggler-icon'></span>
         </button>
         <div class='collapse navbar-collapse' id='navbarCollapse'>
           <ul class='nav nav-tabs ml-auto'>
-            <li class='nav-item'><a  class='nav-link'  href='/evaluations.html'><strong>Results</strong></a></li>    
+            
+            <li class='nav-item'><a  class='nav-link'  href='/evaluations.html'><strong>Results</strong></a></li>
+
             <li class="dropdown-submenu">
                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Methodology</strong></a>
                 <!-- <ul class="dropdown-menu dropleft"> -->
@@ -64,6 +67,7 @@
                             <li><a class="dropdown-item" href="/methodology/round2">APT29 Overview</a></li>
                             <li><a class="dropdown-item" href="/methodology/round2/detection-categories.html">APT29 Detection Categories</a></li>
                             <li><a class="dropdown-item" href="/methodology/round2/scope.html">APT29 Technique Scope</a></li>
+                            <li><a class="dropdown-item" href="/methodology/round2/environment.html">APT29 Environment</a></li>
                         </ul>
                         <a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">
                             Round 2 - APT29
@@ -91,94 +95,94 @@
                     <a class="dropdown-item" href="/issues.html">Issue Tracker</a>
                 </div>  
             </li>
-            <li class='nav-item'><a  class='nav-link'  href='https://medium.com/mitre-attack/tagged/evaluation' target="_blank"><strong>Blog</strong>&nbsp;<img src="/theme/images/external-site.svg"
+            <li class='nav-item'><a  class='nav-link'  href='https://medium.com/mitre-attack/tagged/evaluation' target="_blank"><strong>Blog</strong>&nbsp;<img src="https://d1zq5d3dtjfcoj.cloudfront.net/external-site.svg"
                 alt="External site" class="external-icon" /></a></li>
           </ul>
         </div>
 </nav>
     </header>
     <div id='content'>
-<div class='divEvaluationSummaryBody'>
-		
-<div style='width: 100%; padding-top: 20px;'>
-				<table style='width: 100%;'>
-					<tr>
-						<td style='width: 50%;'>
-							<div style="padding: 0px; width: 100%;"> 
-								<span class="spanBreadcrumbs-results"> 
-									<a href='/'> Home </a> &nbsp;>&nbsp; <a href='/evaluations.html'> Results </a> &nbsp;>&nbsp; 
-			<a href='/evaluations/crowdstrike.1.apt3.1.html'> CrowdStrike </a> &nbsp;>&nbsp; Configuration
-								</span>
-							</div>
-						</td>
-						<td style='width: 50%;'>
-							<div>
-							<div class='divTag-tacticsummary'>CrowdStrike		</div><div class='divTag-tacticsummary'>Falcon		</div><div class='divTag-tacticsummary'>Endpoint Protection Standard Bundle		</div><div class='divTag-tacticsummary'>Overwatch		</div><div class='divTag-tacticsummary'>Insight		</div><div class='divTag-tacticsummary'>Prevent		</div>
-								<span style='float: right;'> Tags: &nbsp;&nbsp;&nbsp;</span>
-							</div>
-						</td>
-					</tr>
-				</table>
-			</div>
+	<div class='divEvaluationSummaryBody'>
+		<div style='width: 100%; padding-top: 20px;'>
+			<table style='width: 100%;'>
+				<tr>
+					<td style='width: 50%;'>
+						<div style="padding: 0px; width: 100%;"> 
+							<span class="spanBreadcrumbs-results"> 
+								<a href='/'> Home </a> &nbsp;>&nbsp; <a href='/evaluations.html'> Results </a> &nbsp;>&nbsp; 
+								<a href='/evaluations/crowdstrike.1.apt3.1.html'> CrowdStrike </a> &nbsp;>&nbsp; Configuration
+							</span>
+						</div>
+					</td>
+					<td style='width: 50%;'>
+						<div>
+						<div class='divTag-tacticsummary'>CrowdStrike		</div><div class='divTag-tacticsummary'>Falcon		</div><div class='divTag-tacticsummary'>Endpoint Protection Standard Bundle		</div><div class='divTag-tacticsummary'>Overwatch		</div><div class='divTag-tacticsummary'>Insight		</div><div class='divTag-tacticsummary'>Prevent		</div>
+							<span style='float: right;'> Tags: &nbsp;&nbsp;&nbsp;</span>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+			<br />
+				
+			<br />
+			<div class='divFAQBody'>
+			   <div style="margin-top:20px;">
+				  <h1>CrowdStrike Configuration</h1>
+			   </div>
+				<em>The following product description and configuration information was provided by the vendor and has been included in its unedited form. Any MITRE comments are included in italics.</em> <br /><br />
+			   <br />
+			   <h3>Product Versions</h3>
+			    <p class='p-methodology'>
+				<a href="https://www.crowdstrike.com/products/falcon-bundles/">Endpoint Protection Standard Bundle</a> with the Standard Falcon Overwatch option.
+					<ul>
+						<li>The bundle includes Prevent, Insight, Overwatch </li>
+						<li>Version 4.11.7402.0</li>
+					</ul>
+					</p>
+			   <br />
+			   <h3>Description</h3>
+			   <p class='p-methodology'>
+			   CrowdStrike Falcon is a complete endpoint security platform for Windows, macOS and Linux. It provides advanced detection and prevention functionality through a single endpoint agent that combines: 
+				<ul><ul>
+					<li>Falcon Prevent for next generation antivirus</li>
+					<li>Falcon Insight for Endpoint Detection and Response (EDR) </li>
+					<li>Falcon Device Control for removable media protection </li>
+					<li>Falcon OverWatch for managed threat hunting </li>
+					<li>Falcon Discover for IT Hygiene </li>
+					<li>Falcon Spotlight for vulnerability management </li>
+					<li>Falcon X for integrated threat intelligence </li>
+				</ul></ul>	
+			   </p>
+			   <p class='p-methodology'>
+				Falcon was the first cloud-delivered endpoint protection platform and this approach has not only simplified the deployment and operational aspects of endpoint security but has also driven significant enhancements in protection efficacy. With millions of machines in over 176 countries continuously streaming security events to CrowdStrike's cloud analytics platform, customers benefit from the community immunity effect that occurs when over 1 trillion security events are crowdsourced from the install base and analyzed in the cloud. These cloud analytics work in conjunction with the behavioral indicators of attack (IOAs) and machine learning capabilities that are built into a single, lightweight Falcon agent that detects and prevents malicious activity at all stages of the attack lifecycle. 
+				</p>
+				<p class='p-methodology'>
+				CrowdStrike's cloud analytics platform is powered by the ThreatGraph&trade;. This is a purpose-built distributed graph database in the cloud that centralizes security data to enable rapid detection and prevention of advanced threats, both by analytics engines and by CrowdStrike's managed threat hunting team - Falcon OverWatch. This is a global team of elite threat hunters whose job it is to proactively hunt for previously undetected intrusions as well as to help customers understand, prioritize and respond to the threats revealed by Falcon. As this team uncovers new attack techniques, they feed that intelligence back into the platform. Protection against that new adversary tradecraft is then immediately distributed to all Falcon customers via the platform. This combinations of analytics engines and expert threat hunters forms a virtuous cycle that continuously improves the product and ensures CrowdStrike customers stay one step ahead of the adversary.  
+				</p>
+				<p class='p-methodology'>
+				The CrowdStrike Falcon management interface has adopted the MITRE ATT&CK framework to provide a uniform and widely adopted language for describing malicious behavior it has detected or prevented. 
+				</p>
 				<br />
-		
-	<br />
-	<div class='divFAQBody'>
-	   <div style="margin-top:20px;">
-		  <h1>CrowdStrike Configuration</h1>
-	   </div>
-		<em>The following product description and configuration information was provided by the vendor and has been included in its unedited form. Any MITRE comments are included in italics.</em> <br /><br />
-	   <br />
-	   <h3>Product Versions</h3>
-	    <p class='p-methodology'>
-		<a href="https://www.crowdstrike.com/products/falcon-bundles/">Endpoint Protection Standard Bundle</a> with the Standard Falcon Overwatch option.
-			<ul>
-				<li>The bundle includes Prevent, Insight, Overwatch </li>
-				<li>Version 4.11.7402.0</li>
-			</ul>
-			</p>
-	   <br />
-	   <h3>Description</h3>
-	   <p class='p-methodology'>
-	   CrowdStrike Falcon is a complete endpoint security platform for Windows, macOS and Linux. It provides advanced detection and prevention functionality through a single endpoint agent that combines: 
-		<ul><ul>
-			<li>Falcon Prevent for next generation antivirus</li>
-			<li>Falcon Insight for Endpoint Detection and Response (EDR) </li>
-			<li>Falcon Device Control for removable media protection </li>
-			<li>Falcon OverWatch for managed threat hunting </li>
-			<li>Falcon Discover for IT Hygiene </li>
-			<li>Falcon Spotlight for vulnerability management </li>
-			<li>Falcon X for integrated threat intelligence </li>
-		</ul></ul>	
-	   </p>
-	   <p class='p-methodology'>
-		Falcon was the first cloud-delivered endpoint protection platform and this approach has not only simplified the deployment and operational aspects of endpoint security but has also driven significant enhancements in protection efficacy. With millions of machines in over 176 countries continuously streaming security events to CrowdStrike's cloud analytics platform, customers benefit from the community immunity effect that occurs when over 1 trillion security events are crowdsourced from the install base and analyzed in the cloud. These cloud analytics work in conjunction with the behavioral indicators of attack (IOAs) and machine learning capabilities that are built into a single, lightweight Falcon agent that detects and prevents malicious activity at all stages of the attack lifecycle. 
-		</p>
-		<p class='p-methodology'>
-		CrowdStrike's cloud analytics platform is powered by the ThreatGraph&trade;. This is a purpose-built distributed graph database in the cloud that centralizes security data to enable rapid detection and prevention of advanced threats, both by analytics engines and by CrowdStrike's managed threat hunting team - Falcon OverWatch. This is a global team of elite threat hunters whose job it is to proactively hunt for previously undetected intrusions as well as to help customers understand, prioritize and respond to the threats revealed by Falcon. As this team uncovers new attack techniques, they feed that intelligence back into the platform. Protection against that new adversary tradecraft is then immediately distributed to all Falcon customers via the platform. This combinations of analytics engines and expert threat hunters forms a virtuous cycle that continuously improves the product and ensures CrowdStrike customers stay one step ahead of the adversary.  
-		</p>
-		<p class='p-methodology'>
-		The CrowdStrike Falcon management interface has adopted the MITRE ATT&CK framework to provide a uniform and widely adopted language for describing malicious behavior it has detected or prevented. 
-		</p>
-		<br />
-	   <h3>Configuration</h3>
-	   Sensor Visibility: Action: Enable All </br>
-		'All' includes the options: 
-		<ul>
-			<li>Additional User Mode Data </li>
-			<li>Enable Cloud Next-Gen Antivirus </li>
-			<li>Settings
+			   <h3>Configuration</h3>
+			   Sensor Visibility: Action: Enable All </br>
+				'All' includes the options: 
 				<ul>
-					<li>Cloud Anti-malware: Detection: Aggressive (options include disabled, cautious, moderate, aggressive, and extra aggressive)</li>
-					<li>Adware and PUP: Detection: Moderate (options include disabled, cautious, moderate, aggressive, and extra aggressive)</li>
+					<li>Additional User Mode Data </li>
+					<li>Enable Cloud Next-Gen Antivirus </li>
+					<li>Settings
+						<ul>
+							<li>Cloud Anti-malware: Detection: Aggressive (options include disabled, cautious, moderate, aggressive, and extra aggressive)</li>
+							<li>Adware and PUP: Detection: Moderate (options include disabled, cautious, moderate, aggressive, and extra aggressive)</li>
+						</ul>
+					</li>
+					<li>All prevention was left disabled (the default). By default all Antivirus detection is disabled.</li>
+					<li>No other product configurations were changed. </li>
 				</ul>
-			</li>
-			<li>All prevention was left disabled (the default). By default all Antivirus detection is disabled.</li>
-			<li>No other product configurations were changed. </li>
-		</ul>
-		<br />
+				<br />
+			</div>
+		</div>
 	</div>
-</div>
 </div>
 
 <footer class="footer p-3">
@@ -187,7 +191,7 @@
             <div class="col">
                 <div class="footer-center-responsive my-auto">
                     <a href="https://www.mitre.org" target="_blank" rel="noopener" aria-label="MITRE">
-                        <img src="/theme/images/mitrelogowhiteontrans.gif" style="vertical-align: center" width="144" height="66">
+                        <img src="https://d1zq5d3dtjfcoj.cloudfront.net/mitrelogowhiteontrans.gif" style="vertical-align: center" width="144" height="66">
                     </a>
                 </div>
             </div>
@@ -215,7 +219,7 @@
                     <div class="mb-1">
                         <a href="https://twitter.com/MITREattack" class="btn btn-primary w-100">
                             <!-- <i class="fa fa-twitter"></i> -->
-                            <img src="/theme/images/twitter.png" class="mr-1" style="vertical-align: top" width="20" height="20">
+                            <img src="https://d1zq5d3dtjfcoj.cloudfront.net/twitter.png" class="mr-1" style="vertical-align: top" width="20" height="20">
                             <b>@MITREattack</b>
                         </a>
                     </div>

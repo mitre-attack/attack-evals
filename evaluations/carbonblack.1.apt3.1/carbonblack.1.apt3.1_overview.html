@@ -25,13 +25,15 @@
 <body>
     <header class='pb-5'>
         <nav class='navbar navbar-expand-lg navbar-dark fixed-top bg-orange border-bottom'>
-        <a class='navbar-brand' href='/'><img src='/theme/images/ATT&CKEvals_Logo.png' alt=''></a>
+        <a class='navbar-brand' href='/'><img src='https://d1zq5d3dtjfcoj.cloudfront.net/ATT&CKEvals_Logo.png' alt=''></a>
         <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarCollapse' aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation'>
           <span class='navbar-toggler-icon'></span>
         </button>
         <div class='collapse navbar-collapse' id='navbarCollapse'>
           <ul class='nav nav-tabs ml-auto'>
-            <li class='nav-item'><a  class='nav-link'  href='/evaluations.html'><strong>Results</strong></a></li>    
+            
+            <li class='nav-item'><a  class='nav-link'  href='/evaluations.html'><strong>Results</strong></a></li>
+
             <li class="dropdown-submenu">
                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Methodology</strong></a>
                 <!-- <ul class="dropdown-menu dropleft"> -->
@@ -65,6 +67,7 @@
                             <li><a class="dropdown-item" href="/methodology/round2">APT29 Overview</a></li>
                             <li><a class="dropdown-item" href="/methodology/round2/detection-categories.html">APT29 Detection Categories</a></li>
                             <li><a class="dropdown-item" href="/methodology/round2/scope.html">APT29 Technique Scope</a></li>
+                            <li><a class="dropdown-item" href="/methodology/round2/environment.html">APT29 Environment</a></li>
                         </ul>
                         <a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">
                             Round 2 - APT29
@@ -92,7 +95,7 @@
                     <a class="dropdown-item" href="/issues.html">Issue Tracker</a>
                 </div>  
             </li>
-            <li class='nav-item'><a  class='nav-link'  href='https://medium.com/mitre-attack/tagged/evaluation' target="_blank"><strong>Blog</strong>&nbsp;<img src="/theme/images/external-site.svg"
+            <li class='nav-item'><a  class='nav-link'  href='https://medium.com/mitre-attack/tagged/evaluation' target="_blank"><strong>Blog</strong>&nbsp;<img src="https://d1zq5d3dtjfcoj.cloudfront.net/external-site.svg"
                 alt="External site" class="external-icon" /></a></li>
           </ul>
         </div>
@@ -108,7 +111,7 @@
 										<div style="padding: 0px; width: 100%;"> 
 											<span class="spanBreadcrumbs-results"> 
 												<a href='/'> Home </a> &nbsp;>&nbsp; <a href='/evaluations.html'> Results </a> &nbsp;>&nbsp;
-					<a href='/evaluations/carbonblack.1.apt3.1.html'> CarbonBlack </a> &nbsp;> &nbsp;Overview
+					<a href='/evaluations/carbonblack.1.apt3.1.html' id='aOverviewBreadcrumbVendorname'> CarbonBlack </a> &nbsp;> &nbsp;Overview
 										</span>
 									</div>
 								</td>
@@ -158,6 +161,10 @@
 												<a href="/carbonblack.1.apt3.1_configuration">Vendor Configuration</a>
 											</td>
 											<td class='tdLegend-tacticsummary'>
+												<a href='#' class='aLegendExport' id='lnk-compare'>
+													Compare
+												</a>
+												&nbsp;&nbsp;&nbsp;
 												<a href='/CarbonBlack.1.APT3.1_Results.json' class='aLegendExport'>
 													JSON
 												</a>
@@ -6196,10 +6203,63 @@
 							</td>
 						</tr>
 					</table>
-				<br /><table></table><br /></div>
-				</div>
+				<br /><table></table><br /></div></div><div id='my-modal' class='modal'><div class='modal-content'><div class='modal-header'><h2> Evaluation Comparison </h2><span class='close'>&times;</span></div><div class='modal-body'><p> Choose an evaluation to compare to this CarbonBlack evaluation.</p><div><button class='btn btn-default dropdown-toggle' type='button' id='btnCompareVendorsDropdown' data-toggle='dropdown' aria-haspopup='true' aria-expanded='true'> ------------- <span class='caret'></span></button><ul class='dropdown-menu' id='ulCompareVendorsDropdown'><li class='liVendorComparisonName' id='li_Microsoft' onclick='select_vendor_for_comparison(this.id);'>Microsoft</li><li class='liVendorComparisonName' id='li_Endgame' onclick='select_vendor_for_comparison(this.id);'>Endgame</li><li class='liVendorComparisonName' id='li_SentinelOne' onclick='select_vendor_for_comparison(this.id);'>SentinelOne</li><li class='liVendorComparisonName' id='li_RSA' onclick='select_vendor_for_comparison(this.id);'>RSA</li><li class='liVendorComparisonName' id='li_CrowdStrike' onclick='select_vendor_for_comparison(this.id);'>CrowdStrike</li><li class='liVendorComparisonName' id='li_CarbonBlack' onclick='select_vendor_for_comparison(this.id);'>CarbonBlack</li><li class='liVendorComparisonName' id='li_CounterTack' onclick='select_vendor_for_comparison(this.id);'>CounterTack</li><li class='liVendorComparisonName' id='li_FireEye' onclick='select_vendor_for_comparison(this.id);'>FireEye</li><li class='liVendorComparisonName' id='li_Cybereason' onclick='select_vendor_for_comparison(this.id);'>Cybereason</li><li class='liVendorComparisonName' id='li_Palo Alto Networks' onclick='select_vendor_for_comparison(this.id);'>Palo Alto Networks</li><li class='liVendorComparisonName' id='li_Countercept' onclick='select_vendor_for_comparison(this.id);'>Countercept</li></ul></div></div><div class=modal-footer><button id='btnCompareVendors' class='button' onclick='navigate_to_vendor_comparison();' disabled>COMPARE</button></div></div></div>
 
 				<script type="text/javascript">
+
+					// COMPARISON MODAL
+
+					// Get DOM Elements
+					const modal = document.querySelector('#my-modal');
+					const modalBtn = document.querySelector('#lnk-compare');
+					const closeBtn = document.querySelector('.close');
+
+					// Events
+					modalBtn.addEventListener('click', openModal);
+					closeBtn.addEventListener('click', closeModal);
+					window.addEventListener('click', outsideClick);
+
+					// Open
+					function openModal() {
+					  modal.style.display = 'block';
+					}
+
+					// Close
+					function closeModal() {
+					  modal.style.display = 'none';
+					}
+
+					// Close If Outside Click
+					function outsideClick(e) {
+					  if (e.target == modal) {
+					    modal.style.display = 'none';
+					  }
+					}
+
+					function navigate_to_vendor_comparison()
+					{
+						var btnCompareVendorsDropdown = document.getElementById('btnCompareVendorsDropdown');
+						var original_vendor_name = document.getElementById('aOverviewBreadcrumbVendorname').innerHTML.trim();
+						var new_vendor_name = btnCompareVendorsDropdown.innerHTML;
+						
+						original_vendor_name = original_vendor_name.replace(/\s/g, '');
+						new_vendor_name = new_vendor_name.replace(/\s/g, '');
+
+						var sort_arr = [original_vendor_name, new_vendor_name];
+						sort_arr = sort_arr.sort();
+
+						window.location.href = '/vendor_comparison/apt3/' + sort_arr[0].toLowerCase() + '_' + sort_arr[1].toLowerCase();
+						// JEFF This above link is hardcoded for APT3 because we don't have round 2 integration in the breakcrumbs and page title. We need to change that, and perhaps also change the link/path organization.
+					}
+
+					function select_vendor_for_comparison(li_id)
+					{
+						var btnCompareVendorsDropdown = document.getElementById('btnCompareVendorsDropdown');
+						var btnCompareVendors = document.getElementById('btnCompareVendors');
+
+						btnCompareVendorsDropdown.innerHTML = li_id.slice(li_id.indexOf("_") + 1);
+						btnCompareVendors.disabled = false;
+					}
 
 					function show_legend()
 					{
@@ -6220,7 +6280,6 @@
 					}
 				
 				</script>
-
 </div>
 
 <footer class="footer p-3">
@@ -6229,7 +6288,7 @@
             <div class="col">
                 <div class="footer-center-responsive my-auto">
                     <a href="https://www.mitre.org" target="_blank" rel="noopener" aria-label="MITRE">
-                        <img src="/theme/images/mitrelogowhiteontrans.gif" style="vertical-align: center" width="144" height="66">
+                        <img src="https://d1zq5d3dtjfcoj.cloudfront.net/mitrelogowhiteontrans.gif" style="vertical-align: center" width="144" height="66">
                     </a>
                 </div>
             </div>
@@ -6257,7 +6316,7 @@
                     <div class="mb-1">
                         <a href="https://twitter.com/MITREattack" class="btn btn-primary w-100">
                             <!-- <i class="fa fa-twitter"></i> -->
-                            <img src="/theme/images/twitter.png" class="mr-1" style="vertical-align: top" width="20" height="20">
+                            <img src="https://d1zq5d3dtjfcoj.cloudfront.net/twitter.png" class="mr-1" style="vertical-align: top" width="20" height="20">
                             <b>@MITREattack</b>
                         </a>
                     </div>
