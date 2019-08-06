@@ -121,7 +121,6 @@
 
 <div class="input-group" style="width: 400px; margin: 0 auto;">    
 	<input type="text" id="txtSearch-results" class="form-control-results" placeholder="Filter" onkeyup="if (event.keyCode == 13) { HideShowElements(true); return false; }" />
-		<!--<img src='/theme/images/search.png' id="imgSearch-results" onclick="HideShowElements(true)">-->
 		<img src='https://d1zq5d3dtjfcoj.cloudfront.net/search.png' id="imgSearch-results" onclick="HideShowElements(true)">
 </div>
 
@@ -165,7 +164,6 @@ Search Results
 </div>
 <script type="text/javascript">
 
-	// document.onload = HideShowElements(false);
 	document.onload = ChangeDropdownSpanValue(null, true);
 
 	function ChangeDropdownSpanValue(selected_link, use_url_round){
@@ -175,12 +173,15 @@ Search Results
 
 		if (use_url_round)
 		{
-			// Get the round from the url
-
-			var url_string = window.location.href; //"http://www.example.com/t.html?a=1&b=3&c=m2-m3-m4-m5"
+			var url_string = window.location.href;
 			var url = new URL(url_string);
 
 			roundname = url.searchParams.get("round");
+
+			if (!roundname)
+			{
+				roundname = "APT3";
+			}
 		}
 		else
 		{
@@ -335,6 +336,7 @@ Search Results
 	}
 
 </script>
+
 
 </div>
 
