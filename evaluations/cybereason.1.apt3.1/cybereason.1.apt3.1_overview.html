@@ -25,20 +25,28 @@
 <body>
     <header class='pb-5'>
         <nav class='navbar navbar-expand-lg navbar-dark fixed-top bg-orange border-bottom'>
-        <a class='navbar-brand' href='/'><img src='https://d1zq5d3dtjfcoj.cloudfront.net/ATT&CKEvals_Logo.png' alt=''></a>
+        <a class='navbar-brand' href='/'><img src='/theme/images/ATT&CKEvals_Logo.png' alt=''></a>
         <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarCollapse' aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation'>
           <span class='navbar-toggler-icon'></span>
         </button>
         <div class='collapse navbar-collapse' id='navbarCollapse'>
           <ul class='nav nav-tabs ml-auto'>
             
-            <li class='nav-item'><a  class='nav-link'  href='/evaluations.html'><strong>Results</strong></a></li>
+            <!-- <li class='nav-item'><a  class='nav-link'  href='/evaluations.html'><strong>Evaluations</strong></a></li> -->
+
+            <li class="dropdown-submenu">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Evaluations</strong></a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href='/evaluations.html?round=APT3'>Round 1 - APT3 Results</a>
+                    <a class="dropdown-item" href='/evaluations.html?round=APT29'>Round 2 - APT29 Participants</a>
+                </div>  
+            </li>
 
             <li class="dropdown-submenu">
                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Methodology</strong></a>
                 <!-- <ul class="dropdown-menu dropleft"> -->
                 <ul class="dropdown-menu dropright">
-				    <li class="dropdown-item dropdown-submenu2">
+                    <li class="dropdown-item dropdown-submenu2">
                         <!-- <ul class="dropdown-menu drop_menu_side"> -->
                         <ul class="dropdown-menu drop_menu_side_right">
                             <li><a class="dropdown-item" href="/methodology/">Adversary Emulation</a></li>
@@ -75,7 +83,7 @@
                     </li>
                 </ul>
             </li>
-				
+                
             <li class='nav-item dropdown'>
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Tools</strong></a>
                 <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown"> -->
@@ -84,18 +92,18 @@
                     <a class="dropdown-item" href='/technique_comparison.html'>Technique Comparison Tool</a>
                 </div>  
             </li>
-			<li class='nav-item'><a  class='nav-link'  href='/get-evaluated.html'><strong>Get Evaluated</strong></a></li> 
+            <li class='nav-item'><a  class='nav-link'  href='/get-evaluated.html'><strong>Get Evaluated</strong></a></li> 
             <li class='nav-item dropdown'>
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Resources</strong></a>
                 <!-- <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> -->
                 <div class="dropdown-menu dropdown-menu-right">
-					<a class="dropdown-item" href="/about-attack-evaluations.html">About ATT&CK Evaluations</a>
+                    <a class="dropdown-item" href="/about-attack-evaluations.html">About ATT&CK Evaluations</a>
                     <a class="dropdown-item" href="/using-attack-evaluations.html">Using ATT&CK Evaluations</a>
                     <a class="dropdown-item" href="/FAQ.html">FAQ</a>                    
                     <a class="dropdown-item" href="/issues.html">Issue Tracker</a>
                 </div>  
             </li>
-            <li class='nav-item'><a  class='nav-link'  href='https://medium.com/mitre-attack/tagged/evaluation' target="_blank"><strong>Blog</strong>&nbsp;<img src="https://d1zq5d3dtjfcoj.cloudfront.net/external-site.svg"
+            <li class='nav-item'><a  class='nav-link'  href='https://medium.com/mitre-attack/tagged/evaluation' target="_blank"><strong>Blog</strong>&nbsp;<img src="/theme/images/external-site.svg"
                 alt="External site" class="external-icon" /></a></li>
           </ul>
         </div>
@@ -161,6 +169,7 @@
 												<a href="/cybereason.1.apt3.1_configuration">Vendor Configuration</a>
 											</td>
 											<td class='tdLegend-tacticsummary'>
+							
 												&nbsp;&nbsp;&nbsp;
 												<a href='/Cybereason.1.APT3.1_Results.json' class='aLegendExport'>
 													JSON
@@ -6061,7 +6070,7 @@ Telemetry showed modloads associated with the execution of a keylogger.         
 							</td>
 						</tr>
 					</table>
-				<br /><table></table><br /></div></div><div id='my-modal' class='modal'><div class='modal-content'><div class='modal-header'><h2> Evaluation Comparison </h2><span class='close'>&times;</span></div><div class='modal-body'><p> Choose an evaluation to compare to this Cybereason evaluation.</p><div><button class='btn btn-default dropdown-toggle' type='button' id='btnCompareVendorsDropdown' data-toggle='dropdown' aria-haspopup='true' aria-expanded='true'> ------------- <span class='caret'></span></button><ul class='dropdown-menu' id='ulCompareVendorsDropdown'><li class='liVendorComparisonName' id='li_Microsoft' onclick='select_vendor_for_comparison(this.id);'>Microsoft</li><li class='liVendorComparisonName' id='li_Endgame' onclick='select_vendor_for_comparison(this.id);'>Endgame</li><li class='liVendorComparisonName' id='li_SentinelOne' onclick='select_vendor_for_comparison(this.id);'>SentinelOne</li><li class='liVendorComparisonName' id='li_RSA' onclick='select_vendor_for_comparison(this.id);'>RSA</li><li class='liVendorComparisonName' id='li_CrowdStrike' onclick='select_vendor_for_comparison(this.id);'>CrowdStrike</li><li class='liVendorComparisonName' id='li_CarbonBlack' onclick='select_vendor_for_comparison(this.id);'>CarbonBlack</li><li class='liVendorComparisonName' id='li_CounterTack' onclick='select_vendor_for_comparison(this.id);'>CounterTack</li><li class='liVendorComparisonName' id='li_FireEye' onclick='select_vendor_for_comparison(this.id);'>FireEye</li><li class='liVendorComparisonName' id='li_Cybereason' onclick='select_vendor_for_comparison(this.id);'>Cybereason</li><li class='liVendorComparisonName' id='li_Palo Alto Networks' onclick='select_vendor_for_comparison(this.id);'>Palo Alto Networks</li><li class='liVendorComparisonName' id='li_Countercept' onclick='select_vendor_for_comparison(this.id);'>Countercept</li></ul></div></div><div class=modal-footer><button id='btnCompareVendors' class='button' onclick='navigate_to_vendor_comparison();' disabled>COMPARE</button></div></div></div>
+				<br /><table></table><br /></div></div><div id='my-modal' class='modal'><div class='modal-content'><div class='modal-header'><h2> Evaluation Comparison </h2><span class='close'>&times;</span></div><div class='modal-body'><p> Choose an evaluation to compare to this Cybereason evaluation.</p><div><button class='btn btn-default dropdown-toggle' type='button' id='btnCompareVendorsDropdown' data-toggle='dropdown' aria-haspopup='true' aria-expanded='true'> ------------- <span class='caret'></span></button><ul class='dropdown-menu' id='ulCompareVendorsDropdown'><li class='liVendorComparisonName' id='li_Microsoft' onclick='select_vendor_for_comparison(this.id);'>Microsoft</li><li class='liVendorComparisonName' id='li_Endgame' onclick='select_vendor_for_comparison(this.id);'>Endgame</li><li class='liVendorComparisonName' id='li_SentinelOne' onclick='select_vendor_for_comparison(this.id);'>SentinelOne</li><li class='liVendorComparisonName' id='li_RSA' onclick='select_vendor_for_comparison(this.id);'>RSA</li><li class='liVendorComparisonName' id='li_CrowdStrike' onclick='select_vendor_for_comparison(this.id);'>CrowdStrike</li><li class='liVendorComparisonName' id='li_CarbonBlack' onclick='select_vendor_for_comparison(this.id);'>CarbonBlack</li><li class='liVendorComparisonName' id='li_GoSecure' onclick='select_vendor_for_comparison(this.id);'>GoSecure</li><li class='liVendorComparisonName' id='li_FireEye' onclick='select_vendor_for_comparison(this.id);'>FireEye</li><li class='liVendorComparisonName' id='li_Palo Alto Networks' onclick='select_vendor_for_comparison(this.id);'>Palo Alto Networks</li></ul></div></div><div class=modal-footer><button id='btnCompareVendors' class='button' onclick='navigate_to_vendor_comparison();' disabled >COMPARE</button></div></div></div>
 
 				<script type="text/javascript">
 
@@ -6090,7 +6099,7 @@ Telemetry showed modloads associated with the execution of a keylogger.         
 					// Close If Outside Click
 					function outsideClick(e) {
 					  if (e.target == modal) {
-					    modal.style.display = 'none';
+						modal.style.display = 'none';
 					  }
 					}
 
@@ -6146,7 +6155,7 @@ Telemetry showed modloads associated with the execution of a keylogger.         
             <div class="col">
                 <div class="footer-center-responsive my-auto">
                     <a href="https://www.mitre.org" target="_blank" rel="noopener" aria-label="MITRE">
-                        <img src="https://d1zq5d3dtjfcoj.cloudfront.net/mitrelogowhiteontrans.gif" style="vertical-align: center" width="144" height="66">
+                        <img src="/theme/images/mitrelogowhiteontrans.gif" style="vertical-align: center" width="144" height="66">
                     </a>
                 </div>
             </div>
@@ -6174,7 +6183,7 @@ Telemetry showed modloads associated with the execution of a keylogger.         
                     <div class="mb-1">
                         <a href="https://twitter.com/MITREattack" class="btn btn-primary w-100">
                             <!-- <i class="fa fa-twitter"></i> -->
-                            <img src="https://d1zq5d3dtjfcoj.cloudfront.net/twitter.png" class="mr-1" style="vertical-align: top" width="20" height="20">
+                            <img src="/theme/images/twitter.png" class="mr-1" style="vertical-align: top" width="20" height="20">
                             <b>@MITREattack</b>
                         </a>
                     </div>
