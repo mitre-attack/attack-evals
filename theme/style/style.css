@@ -345,8 +345,12 @@ display: block;
 {
 transition: all .5s ease;
 
-height: 310px;
-width: 310px;
+/* height: 310px;
+width: 310px; */
+
+height: 250px;
+width: 250px;
+
 background-size: auto;
 padding-left: 5px;
 padding-right: 5px;
@@ -360,6 +364,11 @@ border-radius: 10px;
 animation: fadeIn 1s;
 }
 
+.div_home-card-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
 .EvalCard-results:hover
 {
 transition: all .5s ease;
@@ -371,8 +380,12 @@ border: 3px solid #c63f1e;
 {
 transition: all .5s ease;
 
-height: 310px;
-width: 310px;
+/* height: 310px;
+width: 310px; */
+
+height: 250px;
+width: 250px;
+
 background-size: auto;
 padding-left: 5px;
 padding-right: 5px;
@@ -400,6 +413,7 @@ text-align: center;
 width: 100%;
 background-color: #f3f3f3;
 margin-top: 5px;
+margin-bottom: 12px;
 opacity: 1;
 }
 
@@ -836,6 +850,12 @@ padding: 5px;
 max-width: 20px;
 }
 
+.calibration_detection_icon 
+{
+  max-width: 18px;
+  width: 18px;
+}
+
 .pDetectionLegendDescription
 {
 line-height: 1px;
@@ -1076,7 +1096,7 @@ border-right: 3px solid lightgray;
 { 
 width: 50%;
 font-size: 10px;
-border-right: 3px solid lightgray;
+/* border-right: 3px solid lightgray; */
 padding: 0px;
 height: 0px;
 }
@@ -1130,6 +1150,7 @@ font-size: 10px;
 .tdSummaryDetectionIcons
 {
 font-size: 13px;
+display: inline-block;
 }
 
 .tableDetectionTypesAndNotes
@@ -1167,6 +1188,7 @@ padding: 0px;
 {
 font-size: 10px;
 text-align: left;
+padding: 5px;
 }
 
 .tdInnerDetectionNotesSum
@@ -1356,7 +1378,7 @@ border-right: 3px solid lightgray;
 {
 width: 42%;
 font-size: 10px;
-border-right: 3px solid lightgray;
+/* border-right: 3px solid lightgray; */
 padding: 0px;
 height: 0px; 
 }
@@ -1415,6 +1437,7 @@ font-size: 10px;
 {
 color: #666666;
 font-size: 11px;
+/* margin-left: 25%; */
 }
 
 .aFootnote:hover
@@ -1632,10 +1655,11 @@ background-image: linear-gradient(to right, #ccc, #333, #ccc);
 
 .spanDetectionIconSeparator
 {
-font-size: 16px;
+font-size: 20px;
 /*font-weight: bold;*/
 color: black;
 text-decoration: none;
+margin-left: 3px;
 }
 
 /*.aDetectionIconSeparator:hover
@@ -1650,12 +1674,12 @@ cursor: default;
 /*headers*/
 .td1AHeader-overview
 {
-width: 9%;
+width: 8%;
 }
 
 .td2AHeader-overview
 {
-width: 13%;
+width: 92%;
 }
 
 .tdStepsHeader-overview
@@ -1665,23 +1689,33 @@ width: 40%;
 
 .tdProceduresHeader-overview
 {
-width: 60%;
+width: 30%;
 }
 
 
 .td1BHeader-overview
 {
-width: 78%;
+width: 70%;
 }
 
 .tdTechniqueHeader-overview
 {
-width: 25%;
+width: 20%;
 }
 
 .tdDetectionTypesAndNotesHeader-overview
 {
-width: 42%;
+width: 80%;
+}
+
+.tdDetectionTypeHeader-overview
+{
+width: 30%; 
+font-size: 13px;
+}
+
+.tdDetectionNotesHeader-overview {
+  width: 70%;
 }
 
 .tdScreenshotsHeader-overview
@@ -1692,14 +1726,16 @@ width: 33%;
 /*Summary items*/
 .td1A-overview
 {
-width: 9%;
+width: 8%;
 border-right: 3px solid lightgray;
+height: 1px;
 }
 
 .td2A-overview
 {
-width: 13%;
+width: 92%;
 border-right: 3px solid lightgray;
+padding: 0;
 }
 
 .tdSteps-overview
@@ -1709,8 +1745,9 @@ width: 40%;
 
 .tdProcedures-overview
 {
-width: 60%;
+width: 30%;
 font-size: 12px;
+border-right: 3px solid lightgray;
 
 /* These are technically the same, but use both */   
 overflow-wrap: break-word;
@@ -1732,7 +1769,8 @@ padding: 0px;
 
 .tdTechnique-overview
 {
-width: 25%;
+/* width: 25%; */
+width: 20%;
 border-right: 3px solid lightgray;
 
 overflow-wrap: break-word;
@@ -1742,9 +1780,42 @@ word-break: break-word;
 
 .tdDetectionTypesAndNotes-overview
 {
-width: 42%; 
-border-right: 3px solid lightgray;
+/* width: 42%;  */
+width: 90%;
 height: 0px;
+padding: 0;
+}
+
+.tdDetectionType-overview
+{
+  width: 30%;
+  font-size: 10px;
+  border-right: 3px solid lightgray;
+  padding: 0px;
+}
+
+.tdDetectionTypeDotted-overview
+{
+  width: 30%;
+  font-size: 10px;
+  border-right: 3px solid lightgray;
+  border-bottom: 3px dotted lightgray;
+  padding: 0px; 
+}
+
+.tdDetectionNotes-overview 
+{
+  width: 70%;
+  font-size: 10px;
+  padding: 3px;
+}
+
+.tdDetectionNotesDotted-overview 
+{
+  width: 70%;
+  font-size: 10px;
+  border-bottom: 3px dotted lightgray;
+  padding: 3px; 
 }
 
 .tdScreenshots-overview
@@ -2013,7 +2084,7 @@ font-size: 16px;
 .tableCalibration_Results_Header {
   width: 100%;
   position: sticky;
-  top: 114px;
+  top: 111px;
 }
 
 .divCalibration_Results_byTID {
@@ -2046,12 +2117,25 @@ font-size: 16px;
   text-align: center;
 }
 
+.tdCalibration_Vendor_Header2 {
+  font-size: 13px;
+  color: white;
+  width: 9%;
+  padding: 5px;
+  text-align: center;
+}
+
 .tdCalibration_DetectionTypesAndNotes_Header {
-  width: 58%;
+  width: 91%;
   height: 1px;
 }
 
-.tableCalibration_DetectionTypesAndNotes_Header {
+.tdCalibration_DetectionTypesAndNotes_Header2 {
+  width: 91%;
+  height: 1px;
+}
+
+.tableCalibration_DetectionTypesAndNotes_Header, .tableCalibration_AllDetectionInfo_Header {
   width: 100%;
   height: 100%;
 }
@@ -2059,7 +2143,15 @@ font-size: 16px;
 .tdCalibrationDetectionTypes_Header {
   font-size: 13px;
   color: white;
-  width: 35%;
+  width: 40%;
+  padding: 5px;
+  text-align: center;
+}
+
+.tdCalibrationDetectionTypes_Header2 {
+  font-size: 13px;
+  color: white;
+  width: 26%;
   padding: 5px;
   text-align: center;
 }
@@ -2067,7 +2159,15 @@ font-size: 16px;
 .tdCalibration_DetectionNotes_Header {
   font-size: 13px;
   color: white;
-  width: 65%;
+  width: 60%;
+  padding: 5px;
+  text-align: center;
+}
+
+.tdCalibration_DetectionNotes_Header2 {
+  font-size: 13px;
+  color: white;
+  width: 37%;
   padding: 5px;
   text-align: center;
 }
@@ -2076,6 +2176,14 @@ font-size: 16px;
   font-size: 13px;
   color: white;
   width: 32%;
+  padding: 5px;
+  text-align: center;
+}
+
+.tdCalibration_Screenshots_Header2 {
+  font-size: 13px;
+  color: white;
+  width: 37%;
   padding: 5px;
   text-align: center;
 }
@@ -2098,7 +2206,14 @@ font-size: 16px;
   border-right: 1px solid lightgray;
 }
 
-.tableCalibration_DetectionTypesAndNotes {
+.tdCalibration_AllDetectionInfo {
+  width: 90%;
+  height: 1px;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+}
+
+.tableCalibration_DetectionTypesAndNotes, .tableCalibration_AllDetectionInfo {
   width: 100%;
   height: 100%;
 }
@@ -2111,9 +2226,23 @@ font-size: 16px;
   border-right: 1px solid lightgray;
 }
 
+.tdCalibration_DetectionTypes2 {
+  font-size: 13px;
+  width: 26%;
+  padding: 5px;
+  text-align: center;
+  border-right: 1px solid lightgray;
+}
+
 .tdCalibration_DetectionNotes {
   font-size: 13px;
   width: 65%;
+  padding: 5px;
+}
+
+.tdCalibration_DetectionNotes2 {
+  font-size: 13px;
+  width: 37%;
   padding: 5px;
 }
 
@@ -2127,6 +2256,28 @@ font-size: 16px;
   padding: 5px;
 }
 
+.calibration_detection_icon {
+  /* max-width: 18px;
+  width: 18px; */
+
+  max-width: 14px;
+  width: 14px;
+  margin-left: 2px;
+}
+
+.matrix_icon {
+  max-width: 18px;
+  width: 18px;
+  margin-left: 2px;
+  margin-bottom: 10px;
+}
+
+/* .specific_behavior_icon {
+  max-width: 16px;
+  width: 16px;
+} */
+
+
 .border-top-grey-dotted {
   border-top: 2px dotted lightgray;
 }
@@ -2139,7 +2290,32 @@ font-size: 16px;
   display: none;
 }
 
+.tdCalibration_DetectionNotes2 a span {
+  display: none;
+}
+
 .tdCalibration_DetectionNotes a:hover span 
+{
+  display: block;
+  position: absolute;
+
+  /*position: relative;
+  right: 0;*/
+
+  margin: 0px;
+  padding: 10px;
+  color: black;
+  font-weight: normal;
+  background: white;
+  text-align: left;
+  border: 1px solid #666;
+  z-index: 2;
+  max-width: 400px;
+
+  cursor: default;
+}
+
+.tdCalibration_DetectionNotes2 a:hover span 
 {
   display: block;
   position: absolute;
@@ -2667,4 +2843,15 @@ font-size: 16px;
     width: 100%;
     margin-left: 0;
     margin-right: 0;
+}
+
+
+
+.hoverpointer
+{
+  cursor: pointer;
+}
+
+#btnSelectRound_Calibration {
+  margin: 0 auto;
 }
