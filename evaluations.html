@@ -195,7 +195,20 @@
 
 		if (use_url_round) {
 			var url_string = window.location.href;
-			var url = new URL(url_string);
+
+            /*!
+            * Sanitize and encode all HTML in a user-submitted string
+            * (c) 2018 Chris Ferdinandi, MIT License, https://gomakethings.com
+            * @param  {String} str  The user-submitted string
+            * @return {String} str  The sanitized string
+            */
+            var sanitizedHTML = function (url_string) {
+                var temp = document.createElement('div');
+                temp.textContent = url_string;
+                return temp.innerHTML;
+            };
+
+			var url = new URL(sanitizedHTML);
 
 			roundname = url.searchParams.get("round");
 
