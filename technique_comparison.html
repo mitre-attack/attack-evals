@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62667723-5"></script>
+    <script src="/theme/scripts/analytics.js"></script>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel='shortcut icon' href='/theme/favicon-blue-m.ico' type='image/x-icon'>
+
+    <link rel="stylesheet" href="/theme/style/all.css">
+
+    <script src="/theme/scripts/jquery-3.3.1.min.js"></script>
+    
+    <title>MITRE ATT&CK&reg; EVALUATIONS</title>
+    <!-- Bootstrap CSS -->
+    <link rel='stylesheet' href='/theme/style/bootstrap.min.css' />
+    <link rel='stylesheet' href='/theme/style/bootstrap-glyphicon.min.css' />
+    <link href='/theme/style/style.css' rel='stylesheet' type='text/css' />
+</head>
+
+<body>
+    <header class='pb-5'>
+        <nav class='navbar navbar-expand-lg navbar-dark fixed-top bg-orange border-bottom'>
+        <a class='navbar-brand' href='/'><img src='https://d1zq5d3dtjfcoj.cloudfront.net/ATT&CKEvals_Logo_new.png' height="30px" vspace="10" alt=''></a>
+        <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarCollapse' aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation'>
+          <span class='navbar-toggler-icon'></span>
+        </button>
+        <div class='collapse navbar-collapse' id='navbarCollapse'>
+          <ul class='nav nav-tabs ml-auto'>
+            
+            <li class="dropdown-submenu">
+               <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Evaluations</strong></a>
+                <!-- <ul class="dropdown-menu dropleft"> -->
+                <ul class="dropdown-menu dropright">
+                    <li class="dropdown-item dropdown-submenu2">
+                        <!-- <ul class="dropdown-menu drop_menu_side"> -->
+                        <ul class="dropdown-menu drop_menu_side_right">                            
+                            <li><a class="dropdown-item" href="/adversary-emulation.html">Adversary Emulation</a></li>
+                            <li><a class="dropdown-item" href="/evaluation-process.html">Evaluation Process</a></li>
+                            <li><a class="dropdown-item" href="/setup-and-configuration.html">Setup and Configuration</a></li>
+                        </ul>
+                        <a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">
+                            Methodology Overview
+                        </a>
+                    </li>
+                    <li class="dropdown-item dropdown-submenu2">
+                        <ul class="dropdown-menu drop_menu_side_right" style="margin-top: 50px;">
+                            <li><a class="dropdown-item" href="/evaluations.html?round=APT3">Results</a></li>
+                            <li><a class="dropdown-item" href="/APT3">Overview</a></li>
+                            <li><a class="dropdown-item" href="/APT3/detection-categories.html">Detection Categories</a></li>
+                            <li><a class="dropdown-item" href="/APT3/environment.html">Environment</a></li>
+                            <li><a class="dropdown-item" href="/APT3/scope.html">Technique Scope</a></li>
+                            <li><a class="dropdown-item" href="/APT3/operational-flow.html">Operational Flow</a></li>
+                        </ul>
+                        <a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">
+                            APT3
+                        </a>
+                        
+                    </li>
+                    <li class="dropdown-item dropdown-submenu2">
+                        <ul class="dropdown-menu drop_menu_side_right" style="margin-top: 90px;">
+                            <li><a class="dropdown-item" href="/evaluations.html?round=APT29">Results</a></li>
+                            <li><a class="dropdown-item" href="/APT29">Overview</a></li>
+                            <li><a class="dropdown-item" href="/APT29/detection-categories.html">Detection Categories</a></li>
+                            <li><a class="dropdown-item" href="/APT29/environment.html">Environment</a></li>
+                            <li><a class="dropdown-item" href="/APT29/scope.html">Technique Scope</a></li>
+                            <li><a class="dropdown-item" href="/APT29/operational-flow.html">Operational Flow</a></li>
+                        </ul>
+                        <a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">
+                            APT29
+                        </a>
+                    </li>
+                    <li class="dropdown-item dropdown-submenu2">
+                        <ul class="dropdown-menu drop_menu_side_right" style="margin-top: 130px;">
+                            <li><a class="dropdown-item" href="/get-evaluated.html">Call For Participation</a></li>
+                            <li><a class="dropdown-item" href="/carbanak-fin7/">Overview</a></li>
+                            <li><a class="dropdown-item" href="/carbanak-fin7/environment.html">Environment</a></li>
+                            <li><a class="dropdown-item" href="/carbanak-fin7/scope.html">Technique Scope</a></li>
+                        </ul>
+                        <a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">
+                            Carbanak+FIN7
+                        </a>
+                    </li>
+                </ul>
+            </li>
+                
+            <li class='nav-item dropdown'>
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Tools</strong></a>
+                <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown"> -->
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href='/technique_comparison.html'>Technique Comparison Tool </a>
+                    <a class="dropdown-item" href='/do-it-yourself.html'>Do It Yourself Evaluations</a>
+                    <a class="dropdown-item" href='/data_analysis_tool.html'>Data Analysis Tool</a>
+                </div>  
+            </li>
+            <li class='nav-item dropdown'>
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Resources</strong></a>
+                <!-- <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> -->
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="/about-attack-evaluations.html">ATT&CK For Evaluations</a>
+                        <a class="dropdown-item" href="/using-attack-evaluations.html">Using ATT&CK Evaluations</a>
+                        <a class="dropdown-item" href="/connect.html">Connect with ATT&CK Evaluations</a>
+                        <a class="dropdown-item" href="/FAQ.html">FAQ</a>                    
+                        <a class="dropdown-item" href="/issues.html">Issue Tracker</a>
+                        <a class="dropdown-item" href="https://medium.com/mitre-attack/tagged/evaluation" target="_blank"> Blog</strong>&nbsp;<img src="https://d1zq5d3dtjfcoj.cloudfront.net/external-site.svg"
+                            alt="External site" class="external-icon" /> </a>
+                    </div>  
+                </li> 
+            <li class='nav-item'><a  class='nav-link'  href='/get-evaluated.html'><strong>Get Evaluated</strong></a></li>
+          </ul>
+        </div>
+</nav>
+    </header>
+    <div id='content'>
+<div class='divCalibration_Main'>
+    <div class='divCalibration_breadcrumbs_tags'>
+        <table style='width: 100%;'>
+            <tr>
+                <td style='width: 50%;'>
+                    <div style="padding: 0px; width: 100%;"> 
+                        <span class="spanBreadcrumbs-results"> 
+                            <a href='/'> Home </a> &nbsp; > &nbsp; Technique Comparison Tool
+                        </span>
+                    </div>
+                </td>
+                <td style='width: 50%; text-align: right;'>
+                </td>
+            </tr>
+        </table>
+    </div>    
+    <table class='tableCalibration_Main'>
+        <tr>
+            <td class='tdCalibration_OperationalFlow'>
+                <div class='divCalibration_OperationalFlow'>
+                    <div style="display: flex; flex-direction: column;" id="divOperationalFlow">
+                        <span class='spanOperationalFlow-tacticsummary' style='color: black;'>
+                            Operational Flow
+                            <span class='tdInnerDetectionNotesSum'>
+                                <a class='aFootnote' href='javascript:void(0);'><i class="fas fa-info-circle"></i>
+                                    <span class='spanPopup-footnotes' onclick='return false;' href='#'>
+                                        The Operational Flow panel provides the context around when a procedure was executed by showing all steps of the evaluation, including the tactics, techniques and procedures of the executed steps.
+                                    </span>
+                                </a>
+                            </span>
+                        </span>
+                        <!-- $OperationalFlowHTML -->
+                    </div>
+                </div>
+            </td>
+            <!-- <td class='tdCalibration_Results'"> -->
+            <td class='tdCalibration_Results' style="vertical-align: top;">
+                <div class="dropdown tc_round_dropdown">
+                    <div class="btn-group" role="group">
+                        <button id="btnSelectRound" type="button" class="btn btn-navy dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select Round
+                        </button>
+                        <div class="dropdown-menu" id="round_dropdown" aria-labelledby="btnSelectRound" style="background-color: rgb(18, 47, 77); position: absolute; transform: translate3d(763px, 152px, 0px); top: 0px; left: 0px;" x-placement="bottom-start">  
+                        </div>
+                    </div>
+                </div>
+                <div class='divCalibration_Results'>                    
+                    <br><br><br>
+                    <span class='spanCalibration_Results_StepHeader' id='spanStepHeader'></span>
+                    <br><br>
+                    <span class='spanCalibration_Results_ProcedureHeader'>Procedure: </span>
+                    <span class='spanCalibration_Results_Procedure' id='spanProcedureText'></span> <br>
+                    <span class='spanCalibration_Results_Procedure' id='spanCriteriaText'></span>
+                    <br><br>
+                    <table class='tableCalibration_Results_Header'>
+                        <tr class='trCalibration_Results_HeaderBar'>
+                            <td class='tdCalibration_Vendor_Header'>
+                                <strong>Vendor</strong>
+                            </td>
+                            <td class='tdCalibration_DetectionTypesAndNotes_Header'>
+                                <table class='tableCalibration_DetectionTypesAndNotes_Header'>
+                                    <tr>
+                                        <td class='tdCalibrationDetectionTypes_Header'>
+                                            <strong>Detection Types</strong>
+                                        </td>
+                                        <td class='tdCalibration_DetectionNotes_Header'>
+                                            <strong>Detection Notes</strong>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="tc_div_controls">
+                        <div class='tc_divVendorCards' id='divVendorCards'></div>
+                        <div class='tc_divAddVendorCard' onclick='add_vendor_card();'> + </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<script type="text/javascript">
+    var json_data = {};
+    var current_round = "APT3";
+    var selected_round;
+    var selected_step;
+    var all_vendors_in_round = [];
+    var vendor_display_names = [];
+    var all_vendors_in_round_lwr = [];
+    var table_uid = 0;
+    var current_step;
+
+    document.onload = load_initial()
+
+    function load_initial() {        
+        var round_info = {'APT3': 'Active', 'APT29': 'Active', 'Carbanak': 'Pending'};
+        var url_string = window.location.href;
+        var url_obj = new URL(url_string);
+
+        load_rounds_dropdown(round_info);
+
+        selected_round = url_obj.searchParams.get("round");
+
+        if (selected_round) {
+            $.getJSON("Calibration_" + selected_round + ".json", function(json) {
+                json_data[selected_round] = json;
+                load_round(selected_round, url_obj);
+            });                
+        }
+        else {
+            selected_round = current_round;
+            $.getJSON("Calibration_" + selected_round + ".json", function(json) {
+                json_data[selected_round] = json;
+                load_round(current_round, null);
+            });                
+        }
+    }    
+
+    function load_rounds_dropdown(round_info) {
+        var dropdown = document.getElementById("round_dropdown");
+        
+        for (const [round, status] of Object.entries(round_info)) {
+            if (status == "Active") {
+                var dropitem = document.createElement("a");
+                dropitem.appendChild(document.createTextNode(round));
+                dropitem.setAttribute("id", round);
+                dropitem.setAttribute("class", "dropdown-item");
+                dropitem.setAttribute("href", "javascript:void(0);");
+                dropitem.setAttribute("onclick", "select_new_round(this.id);");
+                dropdown.appendChild(dropitem);                
+            }
+        }
+    }    
+
+    function select_new_round(round) {
+        // Clears the query string before calling load_round
+        var base_url = window.location.pathname.substring(0, window.location.pathname.indexOf(".html") + 5);
+        window.history.pushState({}, "", base_url);
+
+        // Clears the operational flow div
+        var divOperationalFlow = document.getElementById("divOperationalFlow");
+        var steps_to_remove = Array.from(divOperationalFlow.querySelectorAll("a"));
+        steps_to_remove.splice(0, 1);
+
+        while(steps_to_remove[0]) {
+            divOperationalFlow.removeChild(steps_to_remove[0]);
+            steps_to_remove.splice(0, 1);
+        }
+
+        // Reset to allow reloading of vendors that participated in the new round (for dropdowns)
+        all_vendors_in_round = [];
+        all_vendors_in_round_lwr = [];
+
+        // Clear divVendorCards of existing cards
+        divVendorCards.innerHTML = "";
+        
+        selected_round = round;
+
+        $.getJSON("Calibration_" + selected_round + ".json", function(json) {
+            json_data[selected_round] = json;
+            load_round(selected_round, null);
+        });                
+    }
+
+    function load_round(round, url_obj) {
+        var step_tid;
+        var vendors_str;
+        var vendors;
+        var divOperationalFlow = document.getElementById("divOperationalFlow");
+        var step_to_load;
+
+        btnSelectRound = document.getElementById("btnSelectRound");
+        btnSelectRound.innerHTML = "Round: " + round;
+
+        spanCriteriaText = document.getElementById("spanCriteriaText");
+        spanCriteriaText.innerHTML = "";
+
+        // Returns first step in OF as default step to load
+        step_to_load = load_operational_flow(round);
+
+        // If a step specified in the query string, load that instead
+        if (url_obj) {
+            // This ensures that the first step in the OF is not highlighted
+            selected_step = step_to_load;
+
+            step_tid = url_obj.searchParams.get("step_tid");
+            vendors_str = url_obj.searchParams.get("vendors");
+            vendors = vendors_str.split(",");
+            step_to_load = document.getElementById(step_tid);
+            // scroll_to_step(step_to_load);
+        }
+            
+        if (vendors) {
+            for (vendor of vendors) {
+                add_vendor_card(vendor);
+            }
+        }
+
+        load_step(step_to_load);
+    }
+
+    function load_step(step_elem) {
+        var spanStepHeader = document.getElementById("spanStepHeader");
+        var spanProcedureHeader = document.getElementById("spanProcedureHeader");
+        var spanProcedureText = document.getElementById("spanProcedureText");
+        var spanCriteriaText = document.getElementById("spanCriteriaText");
+        var substep = step_elem.getAttribute("data-substep");
+        var techId = step_elem.getAttribute("data-techId");
+        var techName = step_elem.getAttribute("data-techName");
+        var procedure = step_elem.getAttribute("data-procedure");
+        var criteria = step_elem.getAttribute("data-criteria");
+        var step_tid = substep + "_" + techId;
+        let query_string = window.location.href;
+        let step_tid_param = "";
+
+        if (selected_step) {
+            selected_step.firstChild.setAttribute("class", "divCalibration_OF_Step");
+        }
+
+        step_elem.firstChild.setAttribute("class", "divCalibration_OF_Step_Selected");
+
+        spanStepHeader.innerHTML = substep + " " + techName;
+        spanProcedureText.innerHTML = procedure;
+        
+        if(selected_round == "APT29") {
+            if(criteria != "undefined") {
+                spanCriteriaText.innerHTML = "Criteria: " + criteria
+            }
+        }
+
+        selected_step = step_elem;
+
+        // Set query string if none exists. Otherwise, update the step_tid only
+        if (query_string.indexOf("?") < 0) {
+            query_string += "?round=" + selected_round + "&step_tid=" + step_tid + "&vendors=";
+        }
+        else {
+            step_tid_param = query_string.substring(query_string.indexOf("&step_tid"), query_string.indexOf("&vendors"));
+            query_string = query_string.replace(step_tid_param, "&step_tid=" + step_tid);
+        }
+
+        window.history.pushState({}, "", query_string);
+
+        update_selected_vendors();
+    }
+
+    function update_selected_vendors() {
+        let divVendorCards = document.getElementById("divVendorCards");
+        
+        for (vendor_card of divVendorCards.children) {
+            let table_uid = vendor_card.getAttribute("table_uid");
+            let vendor_item = document.getElementById("tc_vendor_select_" + table_uid).selectedOptions[0];
+
+            if (vendor_item.text != "Select Vendor") {
+                if (document.getElementById("td_detection_types_" + table_uid)) {
+                    remove_element("td_detection_types_" + table_uid, false);
+                }
+                if (document.getElementById("td_detection_notes_" + table_uid)) {
+                    remove_element("td_detection_notes_" + table_uid, false);
+                }
+
+                vendor_selected(vendor_item);
+            }
+        }
+    }
+
+    function load_operational_flow(round) {    
+        var divOperationalFlow = document.getElementById("divOperationalFlow");
+        var first_OF_step;
+        var i;
+
+        for (i = 0; i < json_data[round].Steps.length; i++) {     
+            var step = json_data[round].Steps[i];
+
+            for (technique of step.Techniques) {
+                var step_anchor = document.createElement("a");
+                var step_div = document.createElement("div");
+
+                step_anchor.setAttribute("class", "aCalibration_OF_Step");
+                step_anchor.setAttribute("href", "javascript:void(0);");
+                step_anchor.setAttribute("id", step.Substep + "_" + technique.TechniqueId);
+                step_anchor.setAttribute("onclick", "load_step(this);");
+                step_anchor.setAttribute("data-substep", step.Substep);
+                step_anchor.setAttribute("data-techId", technique.TechniqueId);
+                step_anchor.setAttribute("data-techName", technique.TechniqueName);
+                step_anchor.setAttribute("data-procedure", step.Procedure);
+                step_anchor.setAttribute("data-criteria", step.Criteria);
+
+                if (i == 0) {
+                    step_div.setAttribute("class", "divCalibration_OF_Step_Selected");
+                }
+                else {
+                    step_div.setAttribute("class", "divCalibration_OF_Step");
+                }
+
+                step_div.setAttribute("id", "divCalibration_OF_" + step.Substep + "_" + technique.TechniqueId);
+                step_div.appendChild(document.createTextNode(step.Substep + " - " + technique.TechniqueName));
+                step_anchor.appendChild(step_div);
+
+                divOperationalFlow.appendChild(step_anchor);
+
+                if (i == 0) {
+                    first_OF_step = step_anchor;
+
+                    // Get all vendors in the round
+                    for (let vendor of technique.Vendors) {
+                        all_vendors_in_round.push(vendor.VendorName);
+                        vendor_display_names.push(vendor.DisplayName)
+                        all_vendors_in_round_lwr.push(vendor.VendorName.toLowerCase());
+                    }
+                }
+            }
+        }
+
+        return first_OF_step;
+    }
+
+    function scroll_to_step(step_elem) {
+        var topPos = step_elem.offsetTop;
+        document.getElementById('divOperationalFlow').scrollTop = topPos;
+    }
+
+
+    function add_vendor_card(vendorName) {
+        var divVendorCards = document.getElementById("divVendorCards");
+        
+        // Create table
+        var table_vendorCard = document.createElement("table");
+        table_vendorCard.setAttribute("id", "table_vendor_card_" + table_uid);
+        table_vendorCard.setAttribute("class", "tc_tableVendorCard");
+        table_vendorCard.setAttribute("table_uid", table_uid);
+
+        // Create Table Head and Row
+        var header_row = table_vendorCard.insertRow();
+
+        // Create tbody and row
+        var tbody = table_vendorCard.createTBody();
+        tbody.setAttribute("class", "tc_vendor_card_tbody");
+        var body_row = tbody.insertRow();
+        body_row.setAttribute("id", "tr_body_" + table_uid);
+
+        // Append all new elements to their parents
+        body_row.appendChild(create_select_vendor_cell(table_uid, vendorName));
+        header_row.appendChild(create_config_and_remove_cell(table_uid));
+        divVendorCards.appendChild(table_vendorCard);
+        table_uid += 1;
+    }
+
+    function create_select_vendor_cell(table_uid, vendorName) {
+        var i;
+        var th_vendor_dropdown = document.createElement("td");
+        th_vendor_dropdown.setAttribute("class", "tc_th_vendor_dropdown");
+
+        // create vendor select
+        let vendor_select = document.createElement("select");
+        vendor_select.setAttribute("onchange", "if (this.selectedOptions) vendor_selected(this.selectedOptions[0]);");
+        vendor_select.setAttribute("id", "tc_vendor_select_" + table_uid);
+
+        if (!vendorName) {
+            let first_vendor_item = document.createElement("option");
+            first_vendor_item.appendChild(document.createTextNode("Select Vendor"));
+            first_vendor_item.setAttribute("id", "default_option_" + table_uid);
+            vendor_select.appendChild(first_vendor_item);
+        }
+
+        for (i = 0; i < all_vendors_in_round.length; i++) {
+            let vendor_item = document.createElement("option");
+            vendor_item.setAttribute("data-table_uid", table_uid);
+            vendor_item.setAttribute("data-vendorName", all_vendors_in_round[i]);
+            vendor_item.setAttribute("data-displayName", vendor_display_names[i]);
+            vendor_item.appendChild(document.createTextNode(vendor_display_names[i]));
+            vendor_select.appendChild(vendor_item);
+
+            if (vendorName && vendorName.toLowerCase() == all_vendors_in_round_lwr[i]) {
+                vendor_select.selectedIndex = i;
+            }
+        }
+
+        th_vendor_dropdown.appendChild(vendor_select);
+
+        return th_vendor_dropdown;
+    }
+
+    function vendor_selected(vendor_item) {
+        let table_uid = vendor_item.getAttribute("data-table_uid");
+        let query_string = window.location.href;
+
+        // Remove the default "Select Vendor" option after a vendor has been selected.
+        if (document.getElementById("default_option_" + table_uid)) {
+            remove_element("default_option_" + table_uid, false);
+        }
+
+        // Set vendor configuration link details for the selected vendor
+        let vendor_config_anchor = document.getElementById("tc_a_external_" + table_uid);
+        vendor_config_anchor.removeAttribute("onclick");
+        vendor_config_anchor.setAttribute("href", "/" + selected_round + "/results/" + vendor_item.getAttribute("data-vendorName").replace(/ /g, "").toLowerCase() + "/configuration.html");
+        vendor_config_anchor.setAttribute("target", "_blank");
+        vendor_config_anchor.setAttribute("title", vendor_item.getAttribute("data-vendorName") + " Configuration");
+
+        let tr_body_row = document.getElementById("tr_body_" + table_uid);
+
+        // Remove existing detections cells
+        if (document.getElementById("td_detections_" + table_uid)) {
+            remove_element("td_detections_" + table_uid, false);
+        }
+
+        // Create and append detections cell
+        tr_body_row.appendChild(create_detections_cell(table_uid));
+
+        update_query_string_vendor_params();
+    }
+
+    function update_query_string_vendor_params() {
+        let query_string = window.location.href;
+
+        // get list of vendors for query string
+        let vendors = [];
+        for (card of document.getElementById("divVendorCards").children) {
+            let table_uid = card.getAttribute("table_uid");
+            let selected_option = document.getElementById("tc_vendor_select_" + table_uid).selectedOptions[0];
+            
+            if (selected_option.text != "Select Vendor") {
+                vendors.push(selected_option.text);
+            }
+        }
+
+        // Update query string with new vendor
+        let vendors_param = query_string.substring(query_string.indexOf("&vendors"), query_string.length);
+        let new_vendors_param = "&vendors=";
+
+        for (i = 0; i < vendors.length; i++) {
+            if (i === 0) {
+                new_vendors_param += vendors[i];
+            }
+            else {
+                new_vendors_param += "," + vendors[i];
+            }
+        }
+
+        query_string = query_string.replace(vendors_param, new_vendors_param);
+        
+        window.history.pushState({}, "", query_string);
+    }
+
+    function create_config_and_remove_cell(table_uid) {
+        let th_config_and_remove = document.createElement("tr");
+        th_config_and_remove.setAttribute("class", "tc_th_config_and_remove");
+
+        let vendor_config_anchor = document.createElement("a");
+        vendor_config_anchor.setAttribute("href", "javascript:void(0);");
+        vendor_config_anchor.setAttribute("onclick", "alert('Please select a vendor.');");
+        vendor_config_anchor.setAttribute("class", "tc_a_config_link");
+        vendor_config_anchor.setAttribute("id", "tc_a_external_" + table_uid)
+        vendor_config_anchor.innerHTML = "<i class='fas fa-external-link-alt'></i>";
+
+        let remove_card_anchor = document.createElement("a");
+        remove_card_anchor.setAttribute("href", "javascript:void(0);");
+        remove_card_anchor.setAttribute("class", "tc_a_remove_card");
+        remove_card_anchor.setAttribute("onclick", "remove_element('table_vendor_card_" + table_uid + "', true);");
+        remove_card_anchor.innerHTML = "<i class='fas fa-times'></i>";
+
+        th_config_and_remove.appendChild(vendor_config_anchor);
+        th_config_and_remove.appendChild(remove_card_anchor);
+
+        return th_config_and_remove;
+    }
+
+    function create_detections_cell(table_uid) {
+        // Get the vendor name
+        let vendorName = document.getElementById("tc_vendor_select_" + table_uid).selectedOptions[0].getAttribute("data-vendorName");
+        
+        // Create the cell
+        let td_detections = document.createElement("td");
+        td_detections.setAttribute("class", "tc_td_detections");
+        td_detections.setAttribute("id", "td_detections_" + table_uid);
+        td_detections.setAttribute("colspan", "2");
+        
+        // Create the table
+        let table_detections = document.createElement("table");
+        table_detections.setAttribute("class", "tableCalibration_DetectionTypesAndNotes")
+        
+        // Get detection data from json and fill the div before appending the div to the cell
+        let substep = selected_step.getAttribute("data-substep");
+        let techId = selected_step.getAttribute("data-techid");
+
+        loop1:
+        for (step of json_data[selected_round].Steps) {
+            if (step.Substep == substep && step.Techniques[0].TechniqueId == techId) {
+
+                loop2:
+                for (vendor of step.Techniques[0].Vendors) {
+                    if (vendor.VendorName == vendorName) {
+                        let detection_counter = 0;
+                        let createdFirstDetection = false;
+                        for (detection of vendor.Detections) {                          
+                            detection_counter_str = detection_counter.toString();
+
+                            // Make new table row for each detection
+                            let tr_detection = document.createElement("tr");
+                            tr_detection.setAttribute("class", "trCalibration_DetectionTypeAndNotes");
+                            if (createdFirstDetection) tr_detection.setAttribute("class", "border-top-grey-dotted");
+                            createdFirstDetection = true;
+                            
+                            // Make td for detection type and notes
+                            let td_detection_type = document.createElement("td");
+                            td_detection_type.setAttribute("class", "tdCalibration_DetectionTypes");
+
+                            // Get detection type and append it to the detection type cell
+                            let detection_type_elem = document.createElement("h6");
+                            let d_type_text = detection.DetectionType;
+                            let modifiers = detection.Modifiers;
+                            if (modifiers.length > 0) {
+                                modifiers.sort();
+                                d_type_text += " (";
+                                modifiers.forEach(function (modifier, i) {
+                                    d_type_text += modifier;
+                                    if (i != modifiers.length-1) {
+                                        d_type_text += ", ";
+                                    }
+                                });
+                                d_type_text += ")";
+                            }
+                            
+                            detection_type_elem.appendChild(document.createTextNode(d_type_text));
+                            detection_type_elem.appendChild(create_detection_icon(detection.DetectionType));
+                            for (modifier of modifiers) {
+                                detection_type_elem.appendChild(create_detection_icon(modifier));
+                            }
+                            td_detection_type.appendChild(detection_type_elem)
+
+                            // Append detection type to the table row
+                            tr_detection.appendChild(td_detection_type);
+
+                            // Make Detection notes cell 
+                            let td_detection_notes = document.createElement("td");
+                            td_detection_notes.setAttribute("class", "tdCalibration_DetectionNotes");
+                                
+                            // Get detection note text and remove brackets
+                            let detection_note_text = detection.DetectionNote;
+                            let regex = /\[[A-Z][A-Z]\d+\]/g;
+                            detection_note_text = detection_note_text.replace(regex, '');
+                            td_detection_notes.innerHTML = detection_note_text;
+
+                            // Add footnotes after the detection note
+                            for (let i = 0; i < detection.Footnotes.length; i++) {
+                                let a_footnote = document.createElement("a");
+                                a_footnote.setAttribute("href", "javascript:void(0);")
+                                a_footnote.setAttribute("class", "aFootnote");
+
+                                let i_detection_icon = document.createElement("i");
+                                i_detection_icon.setAttribute("class", "fas fa-info-circle");
+
+                                let span_footnote = document.createElement("span");
+                                span_footnote.setAttribute("class", "spanPopup-footnotes");
+                                span_footnote.setAttribute("onclick", "return false;");
+                                span_footnote.setAttribute("href", "#")
+                                span_footnote.appendChild(document.createTextNode(detection.Footnotes[i]));
+
+                                i_detection_icon.appendChild(span_footnote);
+                                a_footnote.appendChild(i_detection_icon);
+                                td_detection_notes.appendChild(a_footnote);
+                            }
+
+                            // Add screenshots after detection note and footnotes
+                            for (i = 0; i < detection.Screenshots.length; i++) {
+                                let a_screenshot = document.createElement("a");
+                                a_screenshot.setAttribute("href", "https://d1zq5d3dtjfcoj.cloudfront.net/" + detection.Screenshots[i].ScreenshotName);
+                                a_screenshot.setAttribute("target", "_blank");
+                                a_screenshot.innerHTML = a_screenshot.innerHTML + "<sup>[" + (i + 1) + "]</sup> ";
+                                td_detection_notes.appendChild(a_screenshot);
+                            }
+
+                            // Append detection notes to the table row
+                            tr_detection.appendChild(td_detection_notes);
+
+                            // Append the detection card to the detections container
+                            table_detections.appendChild(tr_detection);
+                            detection_counter += 1;
+                        }
+                        break loop1;
+                    }
+                }
+            }
+        }     
+
+        // Attach the table to the cell
+        td_detections.appendChild(table_detections);
+
+        return td_detections;
+    }
+
+    function remove_element(element_id, update_query_string) {
+        let element_to_remove = document.getElementById(element_id);
+        element_to_remove.parentNode.removeChild(element_to_remove);
+
+        if (update_query_string) {
+            update_query_string_vendor_params();
+        }
+    }
+
+    function create_detection_icon(str_detection_type) {
+        let icon = document.createElement("img");
+        let icon_dict = {};
+
+        icon_dict['indicator of compromise'] = "https://d1zq5d3dtjfcoj.cloudfront.net/noun_indicator_of_compromise.svg";
+        icon_dict['general behavior'] = "https://d1zq5d3dtjfcoj.cloudfront.net/noun_general_behavior.svg";
+        icon_dict['specific behavior'] = "https://d1zq5d3dtjfcoj.cloudfront.net/noun_specific_behavior.svg";
+        icon_dict['tainted'] = "https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg";
+        icon_dict['enrichment'] = "https://d1zq5d3dtjfcoj.cloudfront.net/noun_enrichment.svg";
+        icon_dict['none'] = "https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg";
+        icon_dict['telemetry'] = "https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg";
+        icon_dict['general'] = "https://d1zq5d3dtjfcoj.cloudfront.net/round2_general.svg";
+        icon_dict['tactic'] = "https://d1zq5d3dtjfcoj.cloudfront.net/round2_tactic.svg";
+        icon_dict['technique'] = "https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg";
+        icon_dict['mssp'] = "https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg";
+
+        icon_dict['alert'] = "https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg";
+        icon_dict['correlated'] = "https://d1zq5d3dtjfcoj.cloudfront.net/round2_correlated.svg";
+        icon_dict['delayed'] = "https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg";
+        icon_dict['host interrogation'] = "https://d1zq5d3dtjfcoj.cloudfront.net/round2_host_interrogation.svg";
+        icon_dict['residual artifact'] = "https://d1zq5d3dtjfcoj.cloudfront.net/round2_residual_artifact.svg";
+        icon_dict['configuration change'] = "https://d1zq5d3dtjfcoj.cloudfront.net/round2_configuration_change.svg";
+        icon_dict['innovative'] = "https://d1zq5d3dtjfcoj.cloudfront.net/round2_distinction.svg";
+
+        if(str_detection_type.includes("(")) {
+            str_detection_type = str_detection_type.split("(")[0].trim();
+        }
+
+        icon.setAttribute("src", icon_dict[str_detection_type.toLowerCase()]);
+        icon.setAttribute("class", "tc_img_detection_icon");
+        icon.setAttribute("title", str_detection_type);
+
+        return icon;
+    }
+    
+</script>
+
+
+</div>
+
+<footer class="footer p-3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="footer-center-responsive my-auto">
+                    <a href="https://www.mitre.org" target="_blank" rel="noopener" aria-label="MITRE">
+                        <img src="https://d1zq5d3dtjfcoj.cloudfront.net/mitrelogowhiteontrans.gif" style="vertical-align: center" width="144" height="66">
+                    </a>
+                </div>
+            </div>
+            <!-- <div class="w-100 p-1 footer-responsive-break"></div> -->
+            <div class="col-6 text-center">
+                <p>
+                    &copy; 2018 - 2020, The MITRE Corporation.
+                </p>
+                <p>
+                    MITRE ATT&CK and ATT&CK are registered trademarks of The MITRE Corporation.
+                </p>
+                <div class="row">
+                    <div class="col text-right">
+                        <small>
+                            <a href="/privacy.html" class="footer-link">Privacy Policy</a>
+                        </small>
+                    </div>
+                    <div class="col text-left">
+                        <small>
+                            <a href="/terms-of-use.html" class="footer-link">Terms of Use</a>
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100 p-2 footer-responsive-break"></div>
+            <div class="col">
+                <div class="footer-float-right-responsive">
+                    <div class="mb-1">
+                        <a href="https://twitter.com/MITREattack" class="btn btn-primary w-100">
+                            <!-- <i class="fa fa-twitter"></i> -->
+                            <img src="https://d1zq5d3dtjfcoj.cloudfront.net/twitter.png" class="mr-1" style="vertical-align: top" width="20" height="20">
+                            <b>@MITREattack</b>
+                        </a>
+                    </div>
+                    <div class="">
+                        <a href="/contact.html" class="btn btn-primary w-100">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+    
+    <!--SCRIPTS-->
+    <script src="/theme/scripts/jquery-3.3.1.min.js"></script>
+    <script src="/theme/scripts/popper.min.js"></script>
+    <script src="/theme/scripts/bootstrap.min.js"></script>
+    <script src="/theme/scripts/site.js"></script>
+    
+</body>
+
+<!-- jjli -->
+
+</html>

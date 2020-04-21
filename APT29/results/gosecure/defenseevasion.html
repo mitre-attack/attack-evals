@@ -1,0 +1,3350 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62667723-5"></script>
+    <script src="/theme/scripts/analytics.js"></script>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel='shortcut icon' href='/theme/favicon-blue-m.ico' type='image/x-icon'>
+
+    <link rel="stylesheet" href="/theme/style/all.css">
+
+    <script src="/theme/scripts/jquery-3.3.1.min.js"></script>
+    
+    <title>MITRE ATT&CK&reg; EVALUATIONS</title>
+    <!-- Bootstrap CSS -->
+    <link rel='stylesheet' href='/theme/style/bootstrap.min.css' />
+    <link rel='stylesheet' href='/theme/style/bootstrap-glyphicon.min.css' />
+    <link href='/theme/style/style.css' rel='stylesheet' type='text/css' />
+</head>
+
+<body>
+    <header class='pb-5'>
+        <nav class='navbar navbar-expand-lg navbar-dark fixed-top bg-orange border-bottom'>
+        <a class='navbar-brand' href='/'><img src='https://d1zq5d3dtjfcoj.cloudfront.net/ATT&CKEvals_Logo_new.png' height="30px" vspace="10" alt=''></a>
+        <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarCollapse' aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation'>
+          <span class='navbar-toggler-icon'></span>
+        </button>
+        <div class='collapse navbar-collapse' id='navbarCollapse'>
+          <ul class='nav nav-tabs ml-auto'>
+            
+            <li class="dropdown-submenu">
+               <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Evaluations</strong></a>
+                <!-- <ul class="dropdown-menu dropleft"> -->
+                <ul class="dropdown-menu dropright">
+                    <li class="dropdown-item dropdown-submenu2">
+                        <!-- <ul class="dropdown-menu drop_menu_side"> -->
+                        <ul class="dropdown-menu drop_menu_side_right">                            
+                            <li><a class="dropdown-item" href="/adversary-emulation.html">Adversary Emulation</a></li>
+                            <li><a class="dropdown-item" href="/evaluation-process.html">Evaluation Process</a></li>
+                            <li><a class="dropdown-item" href="/setup-and-configuration.html">Setup and Configuration</a></li>
+                        </ul>
+                        <a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">
+                            Methodology Overview
+                        </a>
+                    </li>
+                    <li class="dropdown-item dropdown-submenu2">
+                        <ul class="dropdown-menu drop_menu_side_right" style="margin-top: 50px;">
+                            <li><a class="dropdown-item" href="/evaluations.html?round=APT3">Results</a></li>
+                            <li><a class="dropdown-item" href="/APT3">Overview</a></li>
+                            <li><a class="dropdown-item" href="/APT3/detection-categories.html">Detection Categories</a></li>
+                            <li><a class="dropdown-item" href="/APT3/environment.html">Environment</a></li>
+                            <li><a class="dropdown-item" href="/APT3/scope.html">Technique Scope</a></li>
+                            <li><a class="dropdown-item" href="/APT3/operational-flow.html">Operational Flow</a></li>
+                        </ul>
+                        <a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">
+                            APT3
+                        </a>
+                        
+                    </li>
+                    <li class="dropdown-item dropdown-submenu2">
+                        <ul class="dropdown-menu drop_menu_side_right" style="margin-top: 90px;">
+                            <li><a class="dropdown-item" href="/evaluations.html?round=APT29">Results</a></li>
+                            <li><a class="dropdown-item" href="/APT29">Overview</a></li>
+                            <li><a class="dropdown-item" href="/APT29/detection-categories.html">Detection Categories</a></li>
+                            <li><a class="dropdown-item" href="/APT29/environment.html">Environment</a></li>
+                            <li><a class="dropdown-item" href="/APT29/scope.html">Technique Scope</a></li>
+                            <li><a class="dropdown-item" href="/APT29/operational-flow.html">Operational Flow</a></li>
+                        </ul>
+                        <a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">
+                            APT29
+                        </a>
+                    </li>
+                    <li class="dropdown-item dropdown-submenu2">
+                        <ul class="dropdown-menu drop_menu_side_right" style="margin-top: 130px;">
+                            <li><a class="dropdown-item" href="/get-evaluated.html">Call For Participation</a></li>
+                            <li><a class="dropdown-item" href="/carbanak-fin7/">Overview</a></li>
+                            <li><a class="dropdown-item" href="/carbanak-fin7/environment.html">Environment</a></li>
+                            <li><a class="dropdown-item" href="/carbanak-fin7/scope.html">Technique Scope</a></li>
+                        </ul>
+                        <a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">
+                            Carbanak+FIN7
+                        </a>
+                    </li>
+                </ul>
+            </li>
+                
+            <li class='nav-item dropdown'>
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Tools</strong></a>
+                <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown"> -->
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href='/technique_comparison.html'>Technique Comparison Tool </a>
+                    <a class="dropdown-item" href='/do-it-yourself.html'>Do It Yourself Evaluations</a>
+                    <a class="dropdown-item" href='/data_analysis_tool.html'>Data Analysis Tool</a>
+                </div>  
+            </li>
+            <li class='nav-item dropdown'>
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Resources</strong></a>
+                <!-- <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> -->
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="/about-attack-evaluations.html">ATT&CK For Evaluations</a>
+                        <a class="dropdown-item" href="/using-attack-evaluations.html">Using ATT&CK Evaluations</a>
+                        <a class="dropdown-item" href="/connect.html">Connect with ATT&CK Evaluations</a>
+                        <a class="dropdown-item" href="/FAQ.html">FAQ</a>                    
+                        <a class="dropdown-item" href="/issues.html">Issue Tracker</a>
+                        <a class="dropdown-item" href="https://medium.com/mitre-attack/tagged/evaluation" target="_blank"> Blog</strong>&nbsp;<img src="https://d1zq5d3dtjfcoj.cloudfront.net/external-site.svg"
+                            alt="External site" class="external-icon" /> </a>
+                    </div>  
+                </li> 
+            <li class='nav-item'><a  class='nav-link'  href='/get-evaluated.html'><strong>Get Evaluated</strong></a></li>
+          </ul>
+        </div>
+</nav>
+    </header>
+    <div id='content'>
+<div class='divProcedureSummaryBody'>
+    <div style='width: 100%; padding-top: 20px;'>
+        <table style='width: 100%;'>
+            <tr>
+                <td style='width: 100%;'>
+                    <div style="padding: 0px; width: 100%;"> 
+                        <span class="spanBreadcrumbs-results"> 
+                            <a href='/'> Home </a> &nbsp;>&nbsp; 
+                            <a href='/APT29'>APT29 </a> &nbsp;>&nbsp;
+                            <a href='/evaluations.html?round=APT29'>Results </a> &nbsp;>&nbsp;
+                            <a href='/APT29/results/gosecure'>GoSecure </a> &nbsp;>&nbsp; 
+                            Defense Evasion
+                        </span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <br />
+
+        <table class='tableMain-tacticsummary'>
+            <tr>
+                <td class='tdMainLeftPane-tacticsummary'>
+                    <table class='tableHeaderLegend-tacticsummary'>
+                        <tr>
+                            <td class='tdMainLabel-tacticsummary' colspan='2'>
+                                <span class='labSubheader-tacticsummary'>
+                                    Tactic Results: Defense Evasion (TA0005)
+                                </span>
+                                <span class='tdInnerDetectionNotesSum'>
+                                    <a class='aFootnote' href='javascript:void(0);'><i class="fas fa-info-circle"></i>
+                                        <span class='spanPopup-footnotes' onclick='return false;' href='#'>
+                                            <strong style="font-size:16px">Tactic Page Information</strong><br />
+                                            <hr syle="border:2px solid black;" />
+                                            The ATT&CK tactic page displays all tested techniques belonging to that tactic, as well as all procedures and their respective detections. The procedures are grouped by their technique. The Procedure column contains a description of how the technique was tested. The Step column is where in the operational flow the procedure occurred. Click the Step Number to view it in the Operational Flow panel. Detections are classified by one or more Detection Types, summarized by the Detection Notes, and may be supported by Screenshots. The Operational Flow panel provides the context around when a procedure was executed by showing all steps of the evaluation, including the tactics, techniques and procedures of the executed steps. 
+                                        </span>
+                                    </a>
+                                </span>
+                        </tr>
+                        <tr>
+                            <td>
+                                <br />
+                                <div class='divDisclaimer_overview'>
+                                    <em>MITRE does not assign scores, rankings, or ratings. The evaluation results are available to the public, so other organizations may provide their own analysis and interpretation - these are not endorsed or validated by MITRE.</em>
+                                </div>
+                                <br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class='tdMainLabel-tacticsummary'>
+                                <a href="/APT29/results/gosecure/configuration.html">Vendor Configuration</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                            <td class='tdLegend-tacticsummary'>
+                                <a href="/APT29/results/gosecure/allresults.html" class='aLegendExport'>All Results</a>
+                                <a href='/GoSecure.1.APT29.1_Results.json' class='aLegendExport pl-3' id="JSON">JSON</a>
+                                <a href='/GoSecure.1.APT29.1_Results.json' class='aLegendExport pl-3' id="oldJSON">Legacy JSON</a>
+                                <a href='/GoSecure.1.APT29.1_Results_new.json' class='aLegendExport pl-3' id="newJSON">JSON</a>
+                                <a class='aLegendExport pl-3' href='#' onclick='show_legend();'>
+                                    Legend
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div class='divLegend' id='divLegend'>
+                        <table class='tableLegend'>
+                            <tr>
+                                <td class='tdLegendBigIcon'>
+                                    <a href='/APT29/detection-categories.html'><h5><i class="fas fa-info-circle"></i></h5></a>
+                                </td>
+                                <td class='tdLegendSummary'>
+                                    <h5> Legend </h5>
+                                </td>
+                                <td style='text-align: right;'>
+                                    <h5 id="closeLegend" onclick="hide_legend();"><i class="fas fa-times"></i></h5>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class='tdLegendBigIcon'>
+                                </td>
+                                <td class='tdLegendSummary'>
+                                    <table class='tableLegendSummary-tacticsummary'>
+                                        <tr>
+                                            <td style='width:50%'>
+                                                <h8><b>Main Detection Categories:</b></h8>
+                                            </td>
+                                            <td style='width: 50%'>
+                                                <h8><b>Detection Modifiers:</b></h8>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style='width: 50%'>
+                                                <div class='divLegendIcon' id='None'>
+                                                    <img class="ml-1" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg">
+                                                    <br />
+                                                    <span class='spanLegendIconText-evalsummary'>None</span>
+                                                </div>
+                                                <div class='divLegendIcon' id='Telemetry'>
+                                                    <img class="ml-1" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg">
+                                                    <br />
+                                                    <span class='spanLegendIconText-evalsummary'>Telemetry</span>
+                                                </div>
+                                                <div class='divLegendIcon' id='IndicatorOfCompromise'>
+                                                    <i class='fas fa-fingerprint' title='Indicator of Compromise'></i>
+                                                    <br />
+                                                    <span class='spanLegendIconText-evalsummary'>Indicator of<br>Compromise</span>
+                                                </div>
+                                                <div class='divLegendIcon' id='GeneralBehavior'>
+                                                    <i class='fas fa-user-alt' title='General Behavior'></i>
+                                                    <br />
+                                                    <span class='spanLegendIconText-evalsummary'>General<br> Behavior</span>
+                                                </div>
+                                                <div class='divLegendIcon' id='MSSP'>
+                                                    <img class="ml-1" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg">
+                                                    <br />
+                                                    <span class='spanLegendIconText-evalsummary'>MSSP</span>
+                                                </div>
+                                                <div class='divLegendIcon' id='General'>
+                                                    <img class="ml-1" width="20px" height="20px" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_general.svg">
+                                                    <br />
+                                                    <span class='spanLegendIconText-evalsummary'>General</span>
+                                                </div>
+                                                <div class='divLegendIcon' id='Tactic'>
+                                                    <img class="ml-1" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_tactic.svg">
+                                                    <br />
+                                                    <span class='spanLegendIconText-evalsummary'>Tactic</span>
+                                                </div>
+                                                <div class='divLegendIcon' id='Specific'>
+                                                    <i class='fas fa-bullseye' title='Specific Behavior'></i>
+                                                    <br />
+                                                    <span class='spanLegendIconText-evalsummary'>Specific<br> Behavior</span>
+                                                </div>
+                                                <div class='divLegendIcon' id='Technique'>
+                                                    <img class="ml-1" width="20px" height="20px" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg">
+                                                    <br />
+                                                    <span class='spanLegendIconText-evalsummary'>Technique</span>
+                                                </div>
+                                                <div class='divLegendIcon' id='Enrichment'>
+                                                    <i class='far fa-plus-square' title='Enrichment'></i>
+                                                    <br />
+                                                    <span class='spanLegendIconText-evalsummary'>Enrichment</span>
+                                                </div>
+                                            </td>
+                                            <td style='width: 50%'>
+                                                <div class='divLegendIcon' id='Tainted'>
+                                                    <i class='fas fa-link' title='Tainted'></i>
+                                                    <br />
+                                                    <span class='spanLegendIconText-evalsummary'>Tainted</span>
+                                                </div>
+                                                <div class='divLegendIcon' id='Alert'>
+                                                    <img class="ml-1" width="20px" height="20px" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg">
+                                                    <br />
+                                                    <span class='spanLegendIconText-evalsummary'>Alert</span>
+                                                </div>
+                                                <div class='divLegendIcon' id='Correlated'>
+                                                    <img class="ml-1" width="20px" height="20px" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_correlated.svg">
+                                                    <br />
+                                                    <span class='spanLegendIconText-evalsummary'>Correlated</span>
+                                                </div>
+                                                <div class='divLegendIcon' id='Delayed'>
+                                                    <img class="ml-1" width="20px" height="20px" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg">
+                                                    <br />
+                                                    <span class='spanLegendIconText-evalsummary'>Delayed</span>
+                                                </div>
+                                                <div class='divLegendIcon' id='Host'>
+                                                    <img class="ml-1" width="20px" height="20px" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_host_interrogation.svg">
+                                                    <br />
+                                                    <span class='spanLegendIconText-evalsummary'>Host<br> Interrogation</span>
+                                                </div>
+                                                <div class='divLegendIcon' id='Residual'>
+                                                    <img class="ml-1" width="20px" height="20px" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_residual_artifact.svg">
+                                                    <br />
+                                                    <span class='spanLegendIconText-evalsummary'>Residual<br> Artifact</span>
+                                                </div>
+                                                <div class='divLegendIcon' id='Configuration'>
+                                                    <img class="ml-1" width="20px" height="20px" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_configuration_change.svg">
+                                                    <br />
+                                                    <span class='spanLegendIconText-evalsummary'>Configuration<br> Change</span>
+                                                </div>
+                                                <div class='divLegendIcon' id='Innovative'>
+                                                    <img class="ml-1" width="20px" height="20px" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_distinction.svg">
+                                                    <br />
+                                                    <span class='spanLegendIconText-evalsummary'>Innovative</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <table class='tableHeaderBar-tacticsummary' id='tableHeaderBar'>
+                        <tr class='trHeaderBar-tacticsummary'>
+                            <td class='td1AHeader'>
+                                <table class='table2'>
+                                    <tr>
+                                        <td class='td2TechniqueHeader-tacticsummary'>
+                                            Technique
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class='td1B'>
+                                <table class='table2'>
+                                    <tr>
+                                        <td class='td2ProceduresHeader-tacticsummary-apt29'>
+                                            Procedures
+                                        </td>
+                                        <td class='td2CriteriaHeader-tacticsummary'>
+                                            Criteria
+                                        </td>
+                                        
+                                        <td class='td2StepsHeader-tacticsummary'>
+                                            Step
+                                        </td>
+                                        <td class='tdDetectionTypesAndNotesHeader-tacticsummary' colspan='2'>
+                                            <table class='tableDetectionTypesAndNotes'>
+                                                <tr class='trDetectionTypesAndNotes'>
+                                                    <td class='tdDetectionTypeHeader-tacticsummary'>
+                                                        Detection Type
+                                                    </td>
+                                                    <td class='tdDetectionNotesHeader-tacticsummary'>
+                                                        Detection Notes
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <!-- <td class='td2ScreenshotsHeader-tacticsummary'>
+                                            Screenshots
+                                        </td> -->
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+
+                    
+					<table class='table1'>
+						<tr class='tr1'>
+							<td class='td1A'>
+								<table class='table2'>
+									<tr>
+										<td class='td2Technique'>
+											<a class="aTechnique-tacticsummary" href="/APT29/results/gosecure/masquerading.html">
+												Masquerading
+												<br />(T1036)
+											</a>
+										</td>
+                        			</tr>
+                    			</table>
+                			</td>
+							<td class='td1B'>
+								<table class='table2'>
+			    	<tr class='tr2'>
+											<td class='td2Procedures-apt29'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Used unicode right-to-left override (RTLO) character to obfuscate file name rcs.3aka3.doc (originally cod.3aka.scr)
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Criteria'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Evidence of the right-to-left override character (U+202E) in the rcs.3aka.doc process ​OR the original filename (cod.3aka.scr)
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Steps'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															<span class='spanProcedureSummaryStep' id='p1_A_2' onclick="scroll_to_step('1_A_2')">
+																1.A.2
+															</span>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2DetectionTypesAndNotes' colspan='2'>
+												<table class='tableDetectionTypesAndNotes'>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionTypeDotted'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															MSSP(Delayed (Manual))
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotesDotted'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	An MSSP detection for Masqurading contained evidence that showed the original file name cod.3aka3.scr.
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-12697.png' target='_blank'>
+																		[1]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															Telemetry()
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotes'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	Telemetry showed the original filename cod.3aka.scr.
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-10819.png' target='_blank'>
+																		[1]
+																	</a>
+						             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-10813.png' target='_blank'>
+																		[2]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				
+											</table>
+                                		</td>
+									</tr>
+			    	<tr class='tr2NoBottomBorder'>
+											<td class='td2Procedures-apt29'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Masqueraded a Chrome password dump tool as accesscheck.exe, a legitimate Sysinternals tool
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Criteria'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Evidence that accesschk.exe is not the legitimate Sysinternals tool
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Steps'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															<span class='spanProcedureSummaryStep' id='p6_A_3' onclick="scroll_to_step('6_A_3')">
+																6.A.3
+															</span>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2DetectionTypesAndNotes' colspan='2'>
+												<table class='tableDetectionTypesAndNotes'>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															Telemetry()
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotes'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	Telemetry showed hash of accesschk.exe which can be used to verify it is not the legitimate Sysinternals tool.
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-10956.png' target='_blank'>
+																		[1]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				
+											</table>
+                                		</td>
+									</tr>
+			
+								</table>
+							</td>
+						</tr>
+					</table>
+		
+					<table class='table1'>
+						<tr class='tr1'>
+							<td class='td1A'>
+								<table class='table2'>
+									<tr>
+										<td class='td2Technique'>
+											<a class="aTechnique-tacticsummary" href="/APT29/results/gosecure/processinjection.html">
+												Process Injection
+												<br />(T1055)
+											</a>
+										</td>
+                        			</tr>
+                    			</table>
+                			</td>
+							<td class='td1B'>
+								<table class='table2'>
+			    	<tr class='tr2'>
+											<td class='td2Procedures-apt29'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Reflectively injected SDelete binary into PowerShell
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Criteria'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Injection into PowerShell via Invoke-ReflectivePEInjection
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Steps'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															<span class='spanProcedureSummaryStep' id='p19_A_2' onclick="scroll_to_step('19_A_2')">
+																19.A.2
+															</span>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2DetectionTypesAndNotes' colspan='2'>
+												<table class='tableDetectionTypesAndNotes'>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															N/A()
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotes'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	Due to execution inconsistencies Step 19 has been omitted from the evaluation results.
+				
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				
+											</table>
+                                		</td>
+									</tr>
+			    	<tr class='tr2'>
+											<td class='td2Procedures-apt29'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Reflectively injected SDelete binary into PowerShell
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Criteria'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Injection into PowerShell via Invoke-ReflectivePEInjection
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Steps'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															<span class='spanProcedureSummaryStep' id='p19_B_2' onclick="scroll_to_step('19_B_2')">
+																19.B.2
+															</span>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2DetectionTypesAndNotes' colspan='2'>
+												<table class='tableDetectionTypesAndNotes'>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															N/A()
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotes'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	Due to execution inconsistencies Step 19 has been omitted from the evaluation results.
+				
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				
+											</table>
+                                		</td>
+									</tr>
+			    	<tr class='tr2NoBottomBorder'>
+											<td class='td2Procedures-apt29'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Reflectively injected SDelete binary into PowerShell
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Criteria'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Injection into PowerShell via Invoke-ReflectivePEInjection
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Steps'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															<span class='spanProcedureSummaryStep' id='p19_C_2' onclick="scroll_to_step('19_C_2')">
+																19.C.2
+															</span>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2DetectionTypesAndNotes' colspan='2'>
+												<table class='tableDetectionTypesAndNotes'>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															N/A()
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotes'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	Due to execution inconsistencies Step 19 has been omitted from the evaluation results.
+				
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				
+											</table>
+                                		</td>
+									</tr>
+			
+								</table>
+							</td>
+						</tr>
+					</table>
+		
+					<table class='table1'>
+						<tr class='tr1'>
+							<td class='td1A'>
+								<table class='table2'>
+									<tr>
+										<td class='td2Technique'>
+											<a class="aTechnique-tacticsummary" href="/APT29/results/gosecure/timestomp.html">
+												Timestomp
+												<br />(T1099)
+											</a>
+										</td>
+                        			</tr>
+                    			</table>
+                			</td>
+							<td class='td1B'>
+								<table class='table2'>
+			    	<tr class='tr2NoBottomBorder'>
+											<td class='td2Procedures-apt29'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Modified the time attributes of the kxwn.lock persistence payload using PowerShell
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Criteria'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															powershell.exe modifying the creation, last access, and last write times of kxwn.lock
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Steps'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															<span class='spanProcedureSummaryStep' id='p12_A_2' onclick="scroll_to_step('12_A_2')">
+																12.A.2
+															</span>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2DetectionTypesAndNotes' colspan='2'>
+												<table class='tableDetectionTypesAndNotes'>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															MSSP(Delayed (Manual))
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotes'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	An MSSP detection occurred for evidence of file timestamp manipulation.
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-12736.png' target='_blank'>
+																		[1]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				
+											</table>
+                                		</td>
+									</tr>
+			
+								</table>
+							</td>
+						</tr>
+					</table>
+		
+					<table class='table1'>
+						<tr class='tr1'>
+							<td class='td1A'>
+								<table class='table2'>
+									<tr>
+										<td class='td2Technique'>
+											<a class="aTechnique-tacticsummary" href="/APT29/results/gosecure/deobfuscateordecodefilesorinformation.html">
+												Deobfuscate/Decode Files or Information
+												<br />(T1140)
+											</a>
+										</td>
+                        			</tr>
+                    			</table>
+                			</td>
+							<td class='td1B'>
+								<table class='table2'>
+			    	<tr class='tr2'>
+											<td class='td2Procedures-apt29'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Decompressed ZIP (SysinternalsSuite.zip) file using PowerShell
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Criteria'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															powershell.exe executing Expand-Archive
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Steps'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															<span class='spanProcedureSummaryStep' id='p4_A_3' onclick="scroll_to_step('4_A_3')">
+																4.A.3
+															</span>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2DetectionTypesAndNotes' colspan='2'>
+												<table class='tableDetectionTypesAndNotes'>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															Telemetry(Correlated)
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_correlated.svg" title="Correlated">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotes'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	Telemetry showed PowerShell writing the files that were decompressed from the ZIP.  The event was correlated to a parent detection on "Bypass User Account Control".
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-10888.png' target='_blank'>
+																		[1]
+																	</a>
+						             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-10885.png' target='_blank'>
+																		[2]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				
+											</table>
+                                		</td>
+									</tr>
+			    	<tr class='tr2'>
+											<td class='td2Procedures-apt29'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Decoded an embedded DLL payload to disk using certutil.exe
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Criteria'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															certutil.exe decoding kxwn.lock
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Steps'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															<span class='spanProcedureSummaryStep' id='p11_A_10' onclick="scroll_to_step('11_A_10')">
+																11.A.10
+															</span>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2DetectionTypesAndNotes' colspan='2'>
+												<table class='tableDetectionTypesAndNotes'>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionTypeDotted'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															Technique(Alert)
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotesDotted'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	A Technique alert detection (yellow indicator) called "Deobfuscate/Decode Files or Information (Certutil executed with suspicious commands)" was generated for certutil decoding the payload with command-line arguments.
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-11330.png' target='_blank'>
+																		[1]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															Telemetry()
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotes'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	Telemetry showed the certutil.exe process and corresponding file write of the kxwn.lock payload.
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-11332.png' target='_blank'>
+																		[1]
+																	</a>
+						             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-11330.png' target='_blank'>
+																		[2]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				
+											</table>
+                                		</td>
+									</tr>
+			    	<tr class='tr2NoBottomBorder'>
+											<td class='td2Procedures-apt29'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Read and decoded Mimikatz output from a WMI class property using PowerShell
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Criteria'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															powershell.exe executing Get-WmiInstance
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Steps'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															<span class='spanProcedureSummaryStep' id='p14_B_6' onclick="scroll_to_step('14_B_6')">
+																14.B.6
+															</span>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2DetectionTypesAndNotes' colspan='2'>
+												<table class='tableDetectionTypesAndNotes'>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															None()
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg" title="None">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotes'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	No detection capability demonstrated for this procedure.
+				
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				
+											</table>
+                                		</td>
+									</tr>
+			
+								</table>
+							</td>
+						</tr>
+					</table>
+		
+					<table class='table1'>
+						<tr class='tr1'>
+							<td class='td1A'>
+								<table class='table2'>
+									<tr>
+										<td class='td2Technique'>
+											<a class="aTechnique-tacticsummary" href="/APT29/results/gosecure/filedeletion.html">
+												File Deletion
+												<br />(T1107)
+											</a>
+										</td>
+                        			</tr>
+                    			</table>
+                			</td>
+							<td class='td1B'>
+								<table class='table2'>
+			    	<tr class='tr2'>
+											<td class='td2Procedures-apt29'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Deleted rcs.3aka3.doc on disk using SDelete
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Criteria'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															sdelete64.exe deleting the file rcs.3aka3.doc
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Steps'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															<span class='spanProcedureSummaryStep' id='p4_B_2' onclick="scroll_to_step('4_B_2')">
+																4.B.2
+															</span>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2DetectionTypesAndNotes' colspan='2'>
+												<table class='tableDetectionTypesAndNotes'>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionTypeDotted'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															Technique(Alert)
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotesDotted'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	A Technique alert detection (red indicator) was generated due to the use of SDelete to delete rcs.3aka3.doc.
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-10890.png' target='_blank'>
+																		[1]
+																	</a>
+						             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-10892.png' target='_blank'>
+																		[2]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															Telemetry(Correlated)
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_correlated.svg" title="Correlated">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotes'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	Telemetry showed sdelete.exe running with command-line arguments to delete the file and the subsequent file rename and delete events. The event was correlated to a parent detection on "Bypass User Account Control".
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-10890.png' target='_blank'>
+																		[1]
+																	</a>
+						             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-10892.png' target='_blank'>
+																		[2]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				
+											</table>
+                                		</td>
+									</tr>
+			    	<tr class='tr2'>
+											<td class='td2Procedures-apt29'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Deleted Draft.zip on disk using SDelete
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Criteria'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															sdelete64.exe deleting the file draft.zip
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Steps'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															<span class='spanProcedureSummaryStep' id='p4_B_3' onclick="scroll_to_step('4_B_3')">
+																4.B.3
+															</span>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2DetectionTypesAndNotes' colspan='2'>
+												<table class='tableDetectionTypesAndNotes'>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionTypeDotted'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															Technique(Alert)
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotesDotted'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	A Technique alert detection (red indicator) was generated due to the use of SDelete to delete rcs.3aka3.doc.
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-10892.png' target='_blank'>
+																		[1]
+																	</a>
+						             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-10893.png' target='_blank'>
+																		[2]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															Telemetry(Correlated)
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_correlated.svg" title="Correlated">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotes'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	Telemetry showed sdelete.exe running with command-line arguments to delete the file and the subsequent file rename and delete events. The event was correlated to a parent detection on "Bypass User Account Control".
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-10892.png' target='_blank'>
+																		[1]
+																	</a>
+						             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-10893.png' target='_blank'>
+																		[2]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				
+											</table>
+                                		</td>
+									</tr>
+			    	<tr class='tr2'>
+											<td class='td2Procedures-apt29'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Deleted SysinternalsSuite.zip on disk using SDelete
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Criteria'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															sdelete64.exe deleting the file SysinternalsSuite.zip
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Steps'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															<span class='spanProcedureSummaryStep' id='p4_B_4' onclick="scroll_to_step('4_B_4')">
+																4.B.4
+															</span>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2DetectionTypesAndNotes' colspan='2'>
+												<table class='tableDetectionTypesAndNotes'>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionTypeDotted'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															Technique(Alert)
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotesDotted'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	A Technique alert detection (red indicator) was generated due to the use of SDelete to delete SysinternalsSuite.zip.
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-10892.png' target='_blank'>
+																		[1]
+																	</a>
+						             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-10894.png' target='_blank'>
+																		[2]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															Telemetry(Correlated)
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_correlated.svg" title="Correlated">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotes'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	Telemetry showed sdelete.exe running with command-line arguments to delete the file and the subsequent file rename and delete events. The event was correlated to a parent detection on "Bypass User Account Control".
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-10894.png' target='_blank'>
+																		[1]
+																	</a>
+						             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-10892.png' target='_blank'>
+																		[2]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				
+											</table>
+                                		</td>
+									</tr>
+			    	<tr class='tr2'>
+											<td class='td2Procedures-apt29'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Deleted rar.exe on disk using SDelete
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Criteria'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															sdelete64.exe deleting the file rar.exe
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Steps'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															<span class='spanProcedureSummaryStep' id='p9_C_1' onclick="scroll_to_step('9_C_1')">
+																9.C.1
+															</span>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2DetectionTypesAndNotes' colspan='2'>
+												<table class='tableDetectionTypesAndNotes'>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionTypeDotted'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															Technique(Alert)
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotesDotted'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	A Technnique alert detection (red indicator) called "Sdelete Tool Ran" was generated when sdelete64.exe with command-line arguments was used to delete rar.exe.
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-11090.png' target='_blank'>
+																		[1]
+																	</a>
+						             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-11089.png' target='_blank'>
+																		[2]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionTypeDotted'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															MSSP(Delayed (Manual))
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotesDotted'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	An MSSP detection contained evidence of the deletion of Rar.exe by SDelete.
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-12703.png' target='_blank'>
+																		[1]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															Telemetry(Correlated)
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_correlated.svg" title="Correlated">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotes'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	Telemetry showed sdelete64.exe with command-line arguments to delete rar.exe. The event was correlated to parent alert on New Windows Service Created.
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-11089.png' target='_blank'>
+																		[1]
+																	</a>
+						             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-11090.png' target='_blank'>
+																		[2]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				
+											</table>
+                                		</td>
+									</tr>
+			    	<tr class='tr2'>
+											<td class='td2Procedures-apt29'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Deleted working.zip (from Desktop) on disk using SDelete
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Criteria'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															sdelete64.exe deleting the file \Desktop\working.zip
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Steps'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															<span class='spanProcedureSummaryStep' id='p9_C_2' onclick="scroll_to_step('9_C_2')">
+																9.C.2
+															</span>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2DetectionTypesAndNotes' colspan='2'>
+												<table class='tableDetectionTypesAndNotes'>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionTypeDotted'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															Technique(Alert)
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotesDotted'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	A Technnique alert detection (red indicator) called "Sdelete Tool Ran" was generated when sdelete64.exe with command-line arguments was used to delete Desktop\working.zip.
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-11092.png' target='_blank'>
+																		[1]
+																	</a>
+						             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-11089.png' target='_blank'>
+																		[2]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionTypeDotted'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															MSSP(Delayed (Manual))
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotesDotted'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	An MSSP detection contained evidence of the deletion of working.zip by SDelete.
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-12703.png' target='_blank'>
+																		[1]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															Telemetry(Correlated)
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_correlated.svg" title="Correlated">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotes'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	Telemetry showed sdelete64.exe with command-line arguments to delete Desktop\working.zip. The event was correlated to parent alert on New Windows Service Created.
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-11089.png' target='_blank'>
+																		[1]
+																	</a>
+						             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-11092.png' target='_blank'>
+																		[2]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				
+											</table>
+                                		</td>
+									</tr>
+			    	<tr class='tr2'>
+											<td class='td2Procedures-apt29'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Deleted working.zip (from AppData directory) on disk using SDelete
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Criteria'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															sdelete64.exe deleting the file \AppData\Roaming\working.zip
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Steps'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															<span class='spanProcedureSummaryStep' id='p9_C_3' onclick="scroll_to_step('9_C_3')">
+																9.C.3
+															</span>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2DetectionTypesAndNotes' colspan='2'>
+												<table class='tableDetectionTypesAndNotes'>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionTypeDotted'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															Technique(Alert)
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotesDotted'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	A Technnique alert detection (red indicator) called "Sdelete Tool Ran" was generated when sdelete64.exe with command-line arguments was used to delete rar.exe.
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-11092.png' target='_blank'>
+																		[1]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionTypeDotted'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															MSSP(Delayed (Manual))
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotesDotted'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	An MSSP detection contained evidence of the deletion of working.zip by SDelete.
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-12703.png' target='_blank'>
+																		[1]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															Telemetry(Correlated)
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_correlated.svg" title="Correlated">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotes'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	Telemetry showed sdelete64.exe with command-line arguments to delete Roaming\working.zip. The event was correlated to parent alert on New Windows Service Created.
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-11092.png' target='_blank'>
+																		[1]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				
+											</table>
+                                		</td>
+									</tr>
+			    	<tr class='tr2'>
+											<td class='td2Procedures-apt29'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Deleted SDelete on disk using cmd.exe del command
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Criteria'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															cmd.exe deleting the file sdelete64.exe
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Steps'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															<span class='spanProcedureSummaryStep' id='p9_C_4' onclick="scroll_to_step('9_C_4')">
+																9.C.4
+															</span>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2DetectionTypesAndNotes' colspan='2'>
+												<table class='tableDetectionTypesAndNotes'>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															Telemetry(Correlated)
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_correlated.svg" title="Correlated">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotes'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	Telemetry showed cmd.exe deleting sdelete64.exe and file deletion event. The event was correlated to parent alert on New Windows Service Created.
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-11094.png' target='_blank'>
+																		[1]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				
+											</table>
+                                		</td>
+									</tr>
+			    	<tr class='tr2'>
+											<td class='td2Procedures-apt29'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Deleted Mimikatz (m.exe) on disk using SDelete
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Criteria'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															File delete event for C:\Windows\System32\m.exe
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Steps'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															<span class='spanProcedureSummaryStep' id='p19_A_1' onclick="scroll_to_step('19_A_1')">
+																19.A.1
+															</span>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2DetectionTypesAndNotes' colspan='2'>
+												<table class='tableDetectionTypesAndNotes'>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															N/A()
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotes'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	Due to execution inconsistencies Step 19 has been omitted from the evaluation results.
+				
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				
+											</table>
+                                		</td>
+									</tr>
+			    	<tr class='tr2'>
+											<td class='td2Procedures-apt29'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Deleted exfiltrated data on disk using SDelete
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Criteria'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															File delete event for C:\Windows\Temp\WindowsParentalControlMigration.tmp
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Steps'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															<span class='spanProcedureSummaryStep' id='p19_B_1' onclick="scroll_to_step('19_B_1')">
+																19.B.1
+															</span>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2DetectionTypesAndNotes' colspan='2'>
+												<table class='tableDetectionTypesAndNotes'>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															N/A()
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotes'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	Due to execution inconsistencies Step 19 has been omitted from the evaluation results.
+				
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				
+											</table>
+                                		</td>
+									</tr>
+			    	<tr class='tr2NoBottomBorder'>
+											<td class='td2Procedures-apt29'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Deleted staged data on disk using SDelete
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Criteria'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															File delete event for C:\Windows\Temp\WindowsParentalControlMigration\MITRE-ATTACK-EVALS.HTML
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Steps'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															<span class='spanProcedureSummaryStep' id='p19_C_1' onclick="scroll_to_step('19_C_1')">
+																19.C.1
+															</span>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2DetectionTypesAndNotes' colspan='2'>
+												<table class='tableDetectionTypesAndNotes'>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															N/A()
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotes'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	Due to execution inconsistencies Step 19 has been omitted from the evaluation results.
+				
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				
+											</table>
+                                		</td>
+									</tr>
+			
+								</table>
+							</td>
+						</tr>
+					</table>
+		
+					<table class='table1'>
+						<tr class='tr1'>
+							<td class='td1A'>
+								<table class='table2'>
+									<tr>
+										<td class='td2Technique'>
+											<a class="aTechnique-tacticsummary" href="/APT29/results/gosecure/componentobjectmodelhijacking.html">
+												Component Object Model Hijacking
+												<br />(T1122)
+											</a>
+										</td>
+                        			</tr>
+                    			</table>
+                			</td>
+							<td class='td1B'>
+								<table class='table2'>
+			    	<tr class='tr2'>
+											<td class='td2Procedures-apt29'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Modified the Registry to enable COM hijacking of sdclt.exe using PowerShell
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Criteria'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Addition of the DelegateExecute ​subkey in ​HKCU\Software\Classes\Folder\shell\open\​​command​​
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Steps'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															<span class='spanProcedureSummaryStep' id='p3_B_1' onclick="scroll_to_step('3_B_1')">
+																3.B.1
+															</span>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2DetectionTypesAndNotes' colspan='2'>
+												<table class='tableDetectionTypesAndNotes'>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionTypeDotted'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															MSSP(Delayed (Manual))
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotesDotted'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	An MSSP detection for Component Object Model Hijacking contained evidence of the DelegateExecute subkey added to the Registry.
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-12702.png' target='_blank'>
+																		[1]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															Telemetry()
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotes'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	Telemetry showed the addition of the DelegateExecute Registry Value.
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-11677.png' target='_blank'>
+																		[1]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				
+											</table>
+                                		</td>
+									</tr>
+			    	<tr class='tr2NoBottomBorder'>
+											<td class='td2Procedures-apt29'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Modified the Registry to enable COM hijacking of sdclt.exe using PowerShell
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Criteria'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Addition of the DelegateExecute subkey in HKCU\Software\Classes\Folder\shell\open\command
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Steps'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															<span class='spanProcedureSummaryStep' id='p14_A_1' onclick="scroll_to_step('14_A_1')">
+																14.A.1
+															</span>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2DetectionTypesAndNotes' colspan='2'>
+												<table class='tableDetectionTypesAndNotes'>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionTypeDotted'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															Tactic(Alert)
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_tactic.svg" title="Tactic"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotesDotted'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	A Tactic alert detection (green indicator) called "T1088: User Account Control Bypass (\Folder\shell\open\command registry key)" was generated for the setting of a Registry key used by User Account Control (UAC).
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-11392.png' target='_blank'>
+																		[1]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															Telemetry()
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotes'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	Telemetry showed the addition of the DelegateExecute Registry value.
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-11392.png' target='_blank'>
+																		[1]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				
+											</table>
+                                		</td>
+									</tr>
+			
+								</table>
+							</td>
+						</tr>
+					</table>
+		
+					<table class='table1'>
+						<tr class='tr1'>
+							<td class='td1A'>
+								<table class='table2'>
+									<tr>
+										<td class='td2Technique'>
+											<a class="aTechnique-tacticsummary" href="/APT29/results/gosecure/softwarepacking.html">
+												Software Packing
+												<br />(T1045)
+											</a>
+										</td>
+                        			</tr>
+                    			</table>
+                			</td>
+							<td class='td1B'>
+								<table class='table2'>
+			    	<tr class='tr2NoBottomBorder'>
+											<td class='td2Procedures-apt29'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															python.exe payload was packed with UPX
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Criteria'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Evidence that the file python.exe is packed
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Steps'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															<span class='spanProcedureSummaryStep' id='p8_B_2' onclick="scroll_to_step('8_B_2')">
+																8.B.2
+															</span>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2DetectionTypesAndNotes' colspan='2'>
+												<table class='tableDetectionTypesAndNotes'>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															None()
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg" title="None">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotes'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	No detection capability demonstrated for this procedure.
+				
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				
+											</table>
+                                		</td>
+									</tr>
+			
+								</table>
+							</td>
+						</tr>
+					</table>
+		
+					<table class='table1'>
+						<tr class='tr1'>
+							<td class='td1A'>
+								<table class='table2'>
+									<tr>
+										<td class='td2Technique'>
+											<a class="aTechnique-tacticsummary" href="/APT29/results/gosecure/modifyregistry.html">
+												Modify Registry
+												<br />(T1112)
+											</a>
+										</td>
+                        			</tr>
+                    			</table>
+                			</td>
+							<td class='td1B'>
+								<table class='table2'>
+			    	<tr class='tr2'>
+											<td class='td2Procedures-apt29'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Modified the Registry to remove artifacts of COM hijacking
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Criteria'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Deletion of of the HKCU\Software\Classes\Folder\shell\Open\command subkey
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Steps'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															<span class='spanProcedureSummaryStep' id='p3_C_1' onclick="scroll_to_step('3_C_1')">
+																3.C.1
+															</span>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2DetectionTypesAndNotes' colspan='2'>
+												<table class='tableDetectionTypesAndNotes'>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															Telemetry()
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotes'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	Telemetry showed the deletion of the command subkey.
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-10862.png' target='_blank'>
+																		[1]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				
+											</table>
+                                		</td>
+									</tr>
+			    	<tr class='tr2NoBottomBorder'>
+											<td class='td2Procedures-apt29'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Modified the Registry to remove artifacts of COM hijacking using PowerShell
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Criteria'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Deletion of the HKCU\Software\Classes\Folder\shell\Open\command subkey
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Steps'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															<span class='spanProcedureSummaryStep' id='p14_A_3' onclick="scroll_to_step('14_A_3')">
+																14.A.3
+															</span>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2DetectionTypesAndNotes' colspan='2'>
+												<table class='tableDetectionTypesAndNotes'>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionTypeDotted'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															Technique()
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotesDotted'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	A Technique detection called "Registry key deleted" was generated due to the deletion of the Registry value. 
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-11397.png' target='_blank'>
+																		[1]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															Telemetry()
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotes'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	Telemetry showed the deletion of the Registry value.
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-11397.png' target='_blank'>
+																		[1]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				
+											</table>
+                                		</td>
+									</tr>
+			
+								</table>
+							</td>
+						</tr>
+					</table>
+		
+					<table class='table1'>
+						<tr class='tr1'>
+							<td class='td1A'>
+								<table class='table2'>
+									<tr>
+										<td class='td2Technique'>
+											<a class="aTechnique-tacticsummary" href="/APT29/results/gosecure/webservice.html">
+												Web Service
+												<br />(T1102)
+											</a>
+										</td>
+                        			</tr>
+                    			</table>
+                			</td>
+							<td class='td1B'>
+								<table class='table2'>
+			    	<tr class='tr2NoBottomBorder'>
+											<td class='td2Procedures-apt29'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Mapped a network drive to an online OneDrive account using PowerShell
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Criteria'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															net.exe with command-line arguments then making a network connection to a public IP over port 443
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Steps'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															<span class='spanProcedureSummaryStep' id='p18_A_1' onclick="scroll_to_step('18_A_1')">
+																18.A.1
+															</span>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2DetectionTypesAndNotes' colspan='2'>
+												<table class='tableDetectionTypesAndNotes'>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionTypeDotted'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															General(Alert, Correlated)
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_general.svg" title="General"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_correlated.svg" title="Correlated">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotesDotted'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	A General alert detection (orange indicator) was generated for an outbound connection network operation over a commonly used port. The event was correlated to a parent detection on "Bypass User Account Control."
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-11487.png' target='_blank'>
+																		[1]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															Telemetry(Correlated)
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_correlated.svg" title="Correlated">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotes'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	Telemetry showed net.exe with command-line arguments to connect to a OneDrive URL as well as net.exe subsequently making a network connection to public IPs over port 443. The event was correlated to a parent detection on "Bypass User Account Control."
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-11487.png' target='_blank'>
+																		[1]
+																	</a>
+						             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-11472.png' target='_blank'>
+																		[2]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				
+											</table>
+                                		</td>
+									</tr>
+			
+								</table>
+							</td>
+						</tr>
+					</table>
+		
+					<table class='table1'>
+						<tr class='tr1'>
+							<td class='td1A'>
+								<table class='table2'>
+									<tr>
+										<td class='td2Technique'>
+											<a class="aTechnique-tacticsummary" href="/APT29/results/gosecure/obfuscatedfilesorinformation.html">
+												Obfuscated Files or Information
+												<br />(T1027)
+											</a>
+										</td>
+                        			</tr>
+                    			</table>
+                			</td>
+							<td class='td1B'>
+								<table class='table2'>
+			    	<tr class='tr2'>
+											<td class='td2Procedures-apt29'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Embedded PowerShell payload in monkey.png using steganography
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Criteria'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Evidence that a PowerShell payload was within monkey.png
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Steps'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															<span class='spanProcedureSummaryStep' id='p3_A_2' onclick="scroll_to_step('3_A_2')">
+																3.A.2
+															</span>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2DetectionTypesAndNotes' colspan='2'>
+												<table class='tableDetectionTypesAndNotes'>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionTypeDotted'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															MSSP(Delayed (Manual))
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotesDotted'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	An MSSP detection for Obfuscated PowerShell occurred containing evidence of the PowerShell script contained within monkey.png.
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-12705.png' target='_blank'>
+																		[1]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															Telemetry()
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotes'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	Telemetry showed PowerShell extracting and executing the code embedded within monkey.png.
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-10851.png' target='_blank'>
+																		[1]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				
+											</table>
+                                		</td>
+									</tr>
+			    	<tr class='tr2'>
+											<td class='td2Procedures-apt29'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Encoded and wrote Mimikatz output to a WMI class property using PowerShell
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Criteria'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															powershell.exe executing Set-WmiInstance
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Steps'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															<span class='spanProcedureSummaryStep' id='p14_B_5' onclick="scroll_to_step('14_B_5')">
+																14.B.5
+															</span>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2DetectionTypesAndNotes' colspan='2'>
+												<table class='tableDetectionTypesAndNotes'>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															MSSP(Delayed (Manual))
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotes'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	An MSSP detection contained evidence of PowerShell executing Set-WmiInstance to write encoded content to Win32_AuditCode.
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-12715.png' target='_blank'>
+																		[1]
+																	</a>
+						             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-12714.png' target='_blank'>
+																		[2]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				
+											</table>
+                                		</td>
+									</tr>
+			    	<tr class='tr2NoBottomBorder'>
+											<td class='td2Procedures-apt29'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Prepended the GIF file header to a compressed staging file using PowerShell
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Criteria'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															powershell.exe executing Set-Content
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Steps'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															<span class='spanProcedureSummaryStep' id='p17_C_2' onclick="scroll_to_step('17_C_2')">
+																17.C.2
+															</span>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2DetectionTypesAndNotes' colspan='2'>
+												<table class='tableDetectionTypesAndNotes'>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															None(Host Interrogation, Delayed (Manual))
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg" title="None"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_host_interrogation.svg" title="Host Interrogation">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotes'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	No detection capability demonstrated for this procedure, though file was manually pulled to show the GIF89 header, it is identified as Host Interrogation.
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-11461.png' target='_blank'>
+																		[1]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				
+											</table>
+                                		</td>
+									</tr>
+			
+								</table>
+							</td>
+						</tr>
+					</table>
+		
+					<table class='table1'>
+						<tr class='tr1'>
+							<td class='td1A'>
+								<table class='table2'>
+									<tr>
+										<td class='td2Technique'>
+											<a class="aTechnique-tacticsummary" href="/APT29/results/gosecure/accesstokenmanipulation.html">
+												Access Token Manipulation
+												<br />(T1134)
+											</a>
+										</td>
+                        			</tr>
+                    			</table>
+                			</td>
+							<td class='td1B'>
+								<table class='table2'>
+			    	<tr class='tr2NoBottomBorder'>
+											<td class='td2Procedures-apt29'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Manipulated the token of the PowerShell payload via the CreateProcessWithToken API
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Criteria'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															hostui.exe manipulating the token of powershell.exe via the CreateProcessWithToken API OR 
+powershell.exe executing with the stolen token of explorer.exe
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Steps'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															<span class='spanProcedureSummaryStep' id='p10_B_3' onclick="scroll_to_step('10_B_3')">
+																10.B.3
+															</span>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2DetectionTypesAndNotes' colspan='2'>
+												<table class='tableDetectionTypesAndNotes'>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															None()
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg" title="None">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotes'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	No detection capability demonstrated for this procedure.
+				
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				
+											</table>
+                                		</td>
+									</tr>
+			
+								</table>
+							</td>
+						</tr>
+					</table>
+		
+					<table class='table1'>
+						<tr class='tr1'>
+							<td class='td1A'>
+								<table class='table2'>
+									<tr>
+										<td class='td2Technique'>
+											<a class="aTechnique-tacticsummary" href="/APT29/results/gosecure/ntfsfileattributes.html">
+												NTFS File Attributes
+												<br />(T1096)
+											</a>
+										</td>
+                        			</tr>
+                    			</table>
+                			</td>
+							<td class='td1B'>
+								<table class='table2'>
+			    	<tr class='tr2NoBottomBorder'>
+											<td class='td2Procedures-apt29'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Executed an alternate data stream (ADS) using PowerShell
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Criteria'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															powershell.exe executing the schemas ADS via Get-Content and IEX
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Steps'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															<span class='spanProcedureSummaryStep' id='p11_A_2' onclick="scroll_to_step('11_A_2')">
+																11.A.2
+															</span>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2DetectionTypesAndNotes' colspan='2'>
+												<table class='tableDetectionTypesAndNotes'>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionTypeDotted'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															Technique(Alert)
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotesDotted'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	A Technique alert detection (red indicator) called "NTFS File Attributes" was generated due to PowerShell executing the schemas ADS.
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-17445.png' target='_blank'>
+																		[1]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															Telemetry()
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotes'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	Telemetry showed powershell.exe executing the schemas ADS with Get-Content and IEX.
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-17445.png' target='_blank'>
+																		[1]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				
+											</table>
+                                		</td>
+									</tr>
+			
+								</table>
+							</td>
+						</tr>
+					</table>
+		
+					<table class='table1'>
+						<tr class='tr1'>
+							<td class='td1A'>
+								<table class='table2'>
+									<tr>
+										<td class='td2Technique'>
+											<a class="aTechnique-tacticsummary" href="/APT29/results/gosecure/validaccounts.html">
+												Valid Accounts
+												<br />(T1078)
+											</a>
+										</td>
+                        			</tr>
+                    			</table>
+                			</td>
+							<td class='td1B'>
+								<table class='table2'>
+			    	<tr class='tr2'>
+											<td class='td2Procedures-apt29'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Logged on to remote host Scranton (10.0.1.4) using valid credentials for user Pam
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Criteria'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Successful logon as user Pam on Scranton (10.0.1.4) 
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Steps'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															<span class='spanProcedureSummaryStep' id='p8_C_1' onclick="scroll_to_step('8_C_1')">
+																8.C.1
+															</span>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2DetectionTypesAndNotes' colspan='2'>
+												<table class='tableDetectionTypesAndNotes'>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															MSSP(Delayed (Manual))
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotes'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	An MSSP detection occurred containing evidence of Pam successfully logging on to Scranton (10.0.1.4).
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-12747.png' target='_blank'>
+																		[1]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				
+											</table>
+                                		</td>
+									</tr>
+			    	<tr class='tr2NoBottomBorder'>
+											<td class='td2Procedures-apt29'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Logged on to the domain controller host NewYork (10.0.0.4) using valid credentials for user MScott 
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Criteria'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															Successful logon as user MScott on NewYork (10.0.0.4) 
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2Steps'>
+												<table class='table3'>
+													<tr class='tr3'>
+														<td class='td3'>
+															<span class='spanProcedureSummaryStep' id='p16_C_2' onclick="scroll_to_step('16_C_2')">
+																16.C.2
+															</span>
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td class='td2DetectionTypesAndNotes' colspan='2'>
+												<table class='tableDetectionTypesAndNotes'>
+				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
+														<table class='tableSummaryDetectionIcons'>
+                                                    		<tr>
+                                                        		<td class='tdSummaryDetectionIcons'>
+				
+        															MSSP(Delayed (Manual))
+																</td>
+																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
+																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+																</td>
+                                                    		</tr>
+                                                		</table>
+													</td>
+				<td class='tdDetectionNotes'>
+														<table class='table3'>
+															<tr class='tr3'>
+																<td class='tdInnerDetectionNotes'>
+																	An MSSP detection occurred for the successful logon on NewYork (10.0.0.4) as user mscott. 
+				             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-12729.png' target='_blank'>
+																		[1]
+																	</a>
+						             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-12728.png' target='_blank'>
+																		[2]
+																	</a>
+						             
+																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/GoSecure-APT29-12727.png' target='_blank'>
+																		[3]
+																	</a>
+						
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+				
+											</table>
+                                		</td>
+									</tr>
+			
+								</table>
+							</td>
+						</tr>
+					</table>
+		
+				
+				</td>
+                <!-- <td class='tdMainRightPane-tacticsummary'>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <div class='divOperationalFlow-tacticsummary' id='divOF_tacticsummary'>
+                        <span class='spanOperationalFlow-tacticsummary'>
+                        Operational Flow
+                            <span class='tdInnerDetectionNotesSum'>
+                                <a class='aFootnote' href='javascript:void(0);'><i class="fas fa-info-circle"></i>
+                                    <span class='spanPopup-footnotes' onclick='return false;' href='#'>
+                                        The Operational Flow panel provides the context around when a procedure was executed by showing all steps of the evaluation, including the tactics, techniques and procedures of the executed steps.
+                                    </span>
+                                </a>
+                            </span>
+                        </span> -->
+                        
+                    <!-- </div>
+                </td> -->
+            </tr>
+        </table>
+        <br />
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+    var r1_exclusive = ['IndicatorOfCompromise', 'Specific', 'Enrichment', 'Tainted', 'GeneralBehavior'];
+	var r2_exclusive = ['Tactic', 'Technique', 'MSSP', 'Host', 'Residual', 'Alert', 'Correlated', 'Innovative', 'General'];
+    var url_string = window.location.href;
+	
+    document.onload = organize_legend();
+    document.onload = display_exports();
+
+    function organize_legend() {
+        if(url_string.includes('APT3')) {
+			for (i=0; i < r2_exclusive.length; i++) {
+				var div = document.getElementById(r2_exclusive[i]);
+				div.remove();
+			}
+        } else {
+			for (i=0; i < r1_exclusive.length; i++) {
+				var div = document.getElementById(r1_exclusive[i]);
+				div.remove();
+			}
+        }
+    }
+
+    function show_legend()
+    {
+        var divLegend = document.getElementById('divLegend');
+        var tableHeaderBar = document.getElementById('tableHeaderBar');
+
+        divLegend.style.display = 'Block';
+        tableHeaderBar.className = 'tableHeaderBar-withlegend-tacticsummary';
+    }
+
+    function hide_legend()
+    {
+        var divLegend = document.getElementById('divLegend');
+        var tableHeaderBar = document.getElementById('tableHeaderBar');
+
+        divLegend.style.display = 'None';
+        tableHeaderBar.className = 'tableHeaderBar-tacticsummary';
+    }
+
+    function display_exports() {
+        if(url_string.includes('APT3')) {
+            var json = document.getElementById('JSON');
+            json.remove()
+        } else {
+            var newJSON = document.getElementById('newJSON');
+            var oldJSON = document.getElementById('oldJSON');
+            newJSON.remove();
+            oldJSON.remove();
+        }
+    }
+
+</script>
+</div>
+
+<footer class="footer p-3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="footer-center-responsive my-auto">
+                    <a href="https://www.mitre.org" target="_blank" rel="noopener" aria-label="MITRE">
+                        <img src="https://d1zq5d3dtjfcoj.cloudfront.net/mitrelogowhiteontrans.gif" style="vertical-align: center" width="144" height="66">
+                    </a>
+                </div>
+            </div>
+            <!-- <div class="w-100 p-1 footer-responsive-break"></div> -->
+            <div class="col-6 text-center">
+                <p>
+                    &copy; 2018 - 2020, The MITRE Corporation.
+                </p>
+                <p>
+                    MITRE ATT&CK and ATT&CK are registered trademarks of The MITRE Corporation.
+                </p>
+                <div class="row">
+                    <div class="col text-right">
+                        <small>
+                            <a href="/privacy.html" class="footer-link">Privacy Policy</a>
+                        </small>
+                    </div>
+                    <div class="col text-left">
+                        <small>
+                            <a href="/terms-of-use.html" class="footer-link">Terms of Use</a>
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100 p-2 footer-responsive-break"></div>
+            <div class="col">
+                <div class="footer-float-right-responsive">
+                    <div class="mb-1">
+                        <a href="https://twitter.com/MITREattack" class="btn btn-primary w-100">
+                            <!-- <i class="fa fa-twitter"></i> -->
+                            <img src="https://d1zq5d3dtjfcoj.cloudfront.net/twitter.png" class="mr-1" style="vertical-align: top" width="20" height="20">
+                            <b>@MITREattack</b>
+                        </a>
+                    </div>
+                    <div class="">
+                        <a href="/contact.html" class="btn btn-primary w-100">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+    
+    <!--SCRIPTS-->
+    <script src="/theme/scripts/jquery-3.3.1.min.js"></script>
+    <script src="/theme/scripts/popper.min.js"></script>
+    <script src="/theme/scripts/bootstrap.min.js"></script>
+    <script src="/theme/scripts/site.js"></script>
+    
+</body>
+
+<!-- jjli -->
+
+</html>
