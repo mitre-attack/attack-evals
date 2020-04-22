@@ -199,7 +199,7 @@
 </div>
 
 <script type="text/javascript">
-    var current_round = "APT3";
+    var current_round = "APT29";
     var selected_round;
     var selected_step;
     var all_vendors_in_round = [];
@@ -214,31 +214,17 @@
 
     document.onload = load_initial()
 
-    function sanitize(string) {
-        const map = {
-            '&': '&amp;',
-            '<': '&lt;',
-            '>': '&gt;',
-            '"': '&quot;',
-            "'": '&#x27;',
-            "/": '&#x2F;',
-            "`": '&grave;'
-        };
-        const reg = /[&<>"'/]/ig;
-        return string.replace(reg, (match)=>(map[match]));
-    }
-
     function load_initial() {        
         var round_info = {'APT3': 'Active', 'APT29': 'Active', 'Carbanak': 'Pending'};
         var url_string = window.location.href;
-        var sanitized = sanitize(url_string);
-        var url_obj = new URL(sanitized);
+
+        var url_obj = new URL(url_string);
 
         load_rounds_dropdown(round_info);
 
         selected_round = url_obj.searchParams.get("round");
 
-        if (selected_round) {
+        if (selected_round == 'APT3' || selected_round == 'APT29') {
             load_round(selected_round, url_obj);
         }
         else {

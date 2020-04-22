@@ -138,7 +138,7 @@
             <span id="spanRound-results"> APT3 </span>
 		</button>
         <div class="dropdown-menu">
-            <a class='dropdown-item' href='#' onclick='ChangeDropdownSpanValue(this)'> APT29</a><a class='dropdown-item' href='#' onclick='ChangeDropdownSpanValue(this)'> APT3</a>
+            <a class='dropdown-item' href='/evaluations.html?round=APT29' onclick='ChangeDropdownSpanValue(this)'> APT29</a><a class='dropdown-item' href='/evaluations.html?round=APT3' onclick='ChangeDropdownSpanValue(this)'> APT3</a>
         </div>
 	</div>
 	<div class="pl-4"> 
@@ -210,12 +210,16 @@
 		if (use_url_round) {
 			var url_string = window.location.href;
             var sanitized = sanitize(url_string);
-			var url = new URL(sanitized);
 
-			roundname = url.searchParams.get("round");
+            var tokens = sanitized.split('=');
+            if (tokens.length > 1) {
+                roundQuery = tokens[1];
+                if (roundQuery == 'APT3') roundname = 'APT3';
+                else roundname = 'APT29';
+            }
 
 			if (!roundname) {
-				roundname = "APT3";
+				roundname = "APT29";
 			}
 		}
 		else {
