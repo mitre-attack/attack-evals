@@ -676,36 +676,32 @@
                             td_detection_notes.innerHTML = detection_note_text;
 
                             // Add footnotes after the detection note
-                            if ("Footnotes" in Object.keys(detection)) {
-                                for (let i = 0; i < detection.Footnotes.length; i++) {
-                                    let a_footnote = document.createElement("a");
-                                    a_footnote.setAttribute("href", "javascript:void(0);")
-                                    a_footnote.setAttribute("class", "aFootnote");
+                            for (let i = 0; i < detection.Footnotes.length; i++) {
+                                let a_footnote = document.createElement("a");
+                                a_footnote.setAttribute("href", "javascript:void(0);")
+                                a_footnote.setAttribute("class", "aFootnote");
 
-                                    let i_detection_icon = document.createElement("i");
-                                    i_detection_icon.setAttribute("class", "fas fa-info-circle");
+                                let i_detection_icon = document.createElement("i");
+                                i_detection_icon.setAttribute("class", "fas fa-info-circle");
 
-                                    let span_footnote = document.createElement("span");
-                                    span_footnote.setAttribute("class", "spanPopup-footnotes");
-                                    span_footnote.setAttribute("onclick", "return false;");
-                                    span_footnote.setAttribute("href", "#")
-                                    span_footnote.appendChild(document.createTextNode(detection.Footnotes[i]));
+                                let span_footnote = document.createElement("span");
+                                span_footnote.setAttribute("class", "spanPopup-footnotes");
+                                span_footnote.setAttribute("onclick", "return false;");
+                                span_footnote.setAttribute("href", "#")
+                                span_footnote.appendChild(document.createTextNode(detection.Footnotes[i]));
 
-                                    i_detection_icon.appendChild(span_footnote);
-                                    a_footnote.appendChild(i_detection_icon);
-                                    td_detection_notes.appendChild(a_footnote);
-                                }
+                                i_detection_icon.appendChild(span_footnote);
+                                a_footnote.appendChild(i_detection_icon);
+                                td_detection_notes.appendChild(a_footnote);
                             }
 
                             // Add screenshots after detection note and footnotes
-                            if ("Screenshots" in Object.keys(detection)) {
-                                for (i = 0; i < detection.Screenshots.length; i++) {
-                                    let a_screenshot = document.createElement("a");
-                                    a_screenshot.setAttribute("href", "https://d1zq5d3dtjfcoj.cloudfront.net/" + detection.Screenshots[i].ScreenshotName);
-                                    a_screenshot.setAttribute("target", "_blank");
-                                    a_screenshot.innerHTML = a_screenshot.innerHTML + "<sup>[" + (i + 1) + "]</sup> ";
-                                    td_detection_notes.appendChild(a_screenshot);
-                                }
+                            for (i = 0; i < detection.Screenshots.length; i++) {
+                                let a_screenshot = document.createElement("a");
+                                a_screenshot.setAttribute("href", "https://d1zq5d3dtjfcoj.cloudfront.net/" + detection.Screenshots[i].ScreenshotName);
+                                a_screenshot.setAttribute("target", "_blank");
+                                a_screenshot.innerHTML = a_screenshot.innerHTML + "<sup>[" + (i + 1) + "]</sup> ";
+                                td_detection_notes.appendChild(a_screenshot);
                             }
 
                             // Append detection notes to the table row
