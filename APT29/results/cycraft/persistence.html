@@ -77,6 +77,8 @@
                         <ul class="dropdown-menu drop_menu_side_right" style="margin-top: 130px;">
                             <li><a class="dropdown-item" href="/get-evaluated.html">Call For Participation</a></li>
                             <li><a class="dropdown-item" href="/carbanak-fin7/">Overview</a></li>
+                            <li><a class="dropdown-item" href="/carbanak-fin7/detection-categories.html">Detection Categories</a></li>
+                            <li><a class="dropdown-item" href="/carbanak-fin7/protection-categories.html">Protection Categories</a></li>
                             <li><a class="dropdown-item" href="/carbanak-fin7/environment.html">Environment</a></li>
                             <li><a class="dropdown-item" href="/carbanak-fin7/scope.html">Technique Scope</a></li>
                         </ul>
@@ -94,6 +96,10 @@
                     <a class="dropdown-item" href='/technique_comparison.html'>Technique Comparison Tool </a>
                     <a class="dropdown-item" href='/do-it-yourself.html'>Do It Yourself Evaluations</a>
                     <a class="dropdown-item" href='/data_analysis_tool.html'>Data Analysis Tool</a>
+                    <a class="dropdown-item" href='https://github.com/mitre-attack/attack-arsenal'>
+                        ATT&CK Arsenal
+                        &nbsp;<img src="https://d1zq5d3dtjfcoj.cloudfront.net/external-site.svg" alt="External site" class="external-icon">
+                    </a>
                 </div>  
             </li>
             <li class='nav-item dropdown'>
@@ -123,7 +129,7 @@
                     <div style="padding: 0px; width: 100%;"> 
                         <span class="spanBreadcrumbs-results"> 
                             <a href='/'> Home </a> &nbsp;>&nbsp; 
-                            <a href='/APT29'>APT29 </a> &nbsp;>&nbsp;
+                            <a href='/APT29'>APT29</a> &nbsp;>&nbsp;
                             <a href='/evaluations.html?round=APT29'>Results </a> &nbsp;>&nbsp;
                             <a href='/APT29/results/cycraft'>CyCraft </a> &nbsp;>&nbsp; 
                             Persistence
@@ -167,10 +173,9 @@
                                 <a href="/APT29/results/cycraft/configuration.html">Vendor Configuration</a>&nbsp;&nbsp;&nbsp;&nbsp;
                             </td>
                             <td class='tdLegend-tacticsummary'>
-                                <a href="/APT29/results/cycraft/allresults.html" class='aLegendExport'>All Results</a>
-                                <a href='/Cycraft.1.APT29.1_Results.json' class='aLegendExport pl-3' id="JSON">JSON</a>
-                                <a href='/Cycraft.1.APT29.1_Results.json' class='aLegendExport pl-3' id="oldJSON">Legacy JSON</a>
-                                <a href='/Cycraft.1.APT29.1_Results_new.json' class='aLegendExport pl-3' id="newJSON">JSON</a>
+                                <a href="//APT29/results/cycraft/allresults.html" class='aLegendExport'>All Results</a>
+                                <a class='aLegendExport pl-3' href='/Cycraft.1.APT29.1_Results.json'>JSON</a>
+                                
                                 <a class='aLegendExport pl-3' href='#' onclick='show_legend();'>
                                     Legend
                                 </a>
@@ -322,13 +327,8 @@
                             <td class='td1B'>
                                 <table class='table2'>
                                     <tr>
-                                        <td class='td2ProceduresHeader-tacticsummary-apt29'>
-                                            Procedures
-                                        </td>
-                                        <td class='td2CriteriaHeader-tacticsummary'>
-                                            Criteria
-                                        </td>
-                                        
+                                        <td class='td2ProceduresHeader-tacticsummary-apt29'>Procedures</td>
+                                        <td class='td2CriteriaHeader-tacticsummary'>Criteria</td>
                                         <td class='td2StepsHeader-tacticsummary'>
                                             Step
                                         </td>
@@ -344,24 +344,20 @@
                                                 </tr>
                                             </table>
                                         </td>
-                                        <!-- <td class='td2ScreenshotsHeader-tacticsummary'>
-                                            Screenshots
-                                        </td> -->
                                     </tr>
                                 </table>
                             </td>
                         </tr>
                     </table>
 
-                    
-					<table class='table1'>
+                    <table class='table1'>
 						<tr class='tr1'>
 							<td class='td1A'>
 								<table class='table2'>
 									<tr>
 										<td class='td2Technique'>
-											<a class="aTechnique-tacticsummary" href="/APT29/results/cycraft/createaccount.html">
-												Create Account
+                                                <a class="aTechnique-tacticsummary" href="/APT29/results/cycraft/CreateAccount.html">
+                                                    Create Account
 												<br />(T1136)
 											</a>
 										</td>
@@ -370,144 +366,159 @@
                 			</td>
 							<td class='td1B'>
 								<table class='table2'>
-			    	<tr class='tr2NoBottomBorder'>
-											<td class='td2Procedures-apt29'>
-												<table class='table3'>
-													<tr class='tr3'>
-														<td class='td3'>
-															Added a new user to the remote host Scranton (10.0.1.4) using net.exe
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class='td2Criteria'>
-												<table class='table3'>
-													<tr class='tr3'>
-														<td class='td3'>
-															net.exe adding the user Toby 
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class='td2Steps'>
-												<table class='table3'>
-													<tr class='tr3'>
-														<td class='td3'>
-															<span class='spanProcedureSummaryStep' id='p20_B_3' onclick="scroll_to_step('20_B_3')">
-																20.B.3
-															</span>
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class='td2DetectionTypesAndNotes' colspan='2'>
-												<table class='tableDetectionTypesAndNotes'>
-				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionTypeDotted'>
-														<table class='tableSummaryDetectionIcons'>
-                                                    		<tr>
-                                                        		<td class='tdSummaryDetectionIcons'>
-				
-        															Technique(Alert)
-																</td>
-																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
-																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
-																</td>
-                                                    		</tr>
-                                                		</table>
-													</td>
-				<td class='tdDetectionNotesDotted'>
-														<table class='table3'>
-															<tr class='tr3'>
-																<td class='tdInnerDetectionNotes'>
-																	A Technique alert detection (orange indicator) for "Account Operation" was generated for the addition of the new user Toby.
-				             
-																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-2501.png' target='_blank'>
-																		[1]
-																	</a>
-						             
-																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-2500.png' target='_blank'>
-																		[2]
-																	</a>
-						
-																</td>
-															</tr>
-														</table>
-													</td>
-												</tr>
-				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionTypeDotted'>
-														<table class='tableSummaryDetectionIcons'>
-                                                    		<tr>
-                                                        		<td class='tdSummaryDetectionIcons'>
-				
-        															Technique(Alert, Correlated)
-																</td>
-																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
-																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_correlated.svg" title="Correlated">
-																</td>
-                                                    		</tr>
-                                                		</table>
-													</td>
-				<td class='tdDetectionNotesDotted'>
-														<table class='table3'>
-															<tr class='tr3'>
-																<td class='tdInnerDetectionNotes'>
-																	A Technique alert detection (orange indicator) for "Create Account" was generated for net.exe with the command-line arguments to add the new user Toby. The detection was correlated to a parent alert for creation of a Windows Remote Management session.
-				             
-																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-2500.png' target='_blank'>
-																		[1]
-																	</a>
-						
-																</td>
-															</tr>
-														</table>
-													</td>
-												</tr>
-				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
-														<table class='tableSummaryDetectionIcons'>
-                                                    		<tr>
-                                                        		<td class='tdSummaryDetectionIcons'>
-				
-        															MSSP(Delayed (Manual))
-																</td>
-																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
-																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
-																</td>
-                                                    		</tr>
-                                                		</table>
-													</td>
-				<td class='tdDetectionNotes'>
-														<table class='table3'>
-															<tr class='tr3'>
-																<td class='tdInnerDetectionNotes'>
-																	An MSSP detection for "Create Account" was received that described the attacker creating a new account on host Scranton (10.0.1.4) for persistence.
-				             
-																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-12523.png' target='_blank'>
-																		[1]
-																	</a>
-						
-																</td>
-															</tr>
-														</table>
-													</td>
-												</tr>
-				
-											</table>
-                                		</td>
-									</tr>
-			
-								</table>
-							</td>
-						</tr>
-					</table>
-		
-					<table class='table1'>
+                                    <tr class='tr2NoBottomBorder'>
+                        
+                                                <td class='td2Procedures-apt29'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                Added a new user to the remote host Scranton (10.0.1.4) using net.exe
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Criteria'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                net.exe adding the user Toby 
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Steps'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                <span class='spanProcedureSummaryStep' id='p20_B_3' onclick="scroll_to_step('20_B_3')">
+                                                                    20.B.3
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                    <table class='tableDetectionTypesAndNotes'>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionTypeDotted'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            Technique (Alert)
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotesDotted'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            A Technique alert detection (orange indicator) for "Account Operation" was generated for the addition of the new user Toby.
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-2501.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-2500.png' target='_blank'>
+                                                                                [2]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionTypeDotted'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            Technique (Alert, Correlated)
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_correlated.svg" title="Correlated">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotesDotted'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            A Technique alert detection (orange indicator) for "Create Account" was generated for net.exe with the command-line arguments to add the new user Toby. The detection was correlated to a parent alert for creation of a Windows Remote Management session.
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-2500.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionType'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            MSSP (Delayed (Manual))
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotes'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            An MSSP detection for "Create Account" was received that described the attacker creating a new account on host Scranton (10.0.1.4) for persistence.
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-12523.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class='table1'>
 						<tr class='tr1'>
 							<td class='td1A'>
 								<table class='table2'>
 									<tr>
 										<td class='td2Technique'>
-											<a class="aTechnique-tacticsummary" href="/APT29/results/cycraft/registryrunkeysorstartupfolder.html">
-												Registry Run Keys / Startup Folder
+                                                <a class="aTechnique-tacticsummary" href="/APT29/results/cycraft/RegistryRunKeysOrStartupFolder.html">
+                                                    Registry Run Keys / Startup Folder
 												<br />(T1060)
 											</a>
 										</td>
@@ -516,278 +527,304 @@
                 			</td>
 							<td class='td1B'>
 								<table class='table2'>
-			    	<tr class='tr2'>
-											<td class='td2Procedures-apt29'>
-												<table class='table3'>
-													<tr class='tr3'>
-														<td class='td3'>
-															Created a LNK file (hostui.lnk) in the Startup folder that executes on login
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class='td2Criteria'>
-												<table class='table3'>
-													<tr class='tr3'>
-														<td class='td3'>
-															powershell.exe creating the file hostui.lnk in the Startup folder
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class='td2Steps'>
-												<table class='table3'>
-													<tr class='tr3'>
-														<td class='td3'>
-															<span class='spanProcedureSummaryStep' id='p5_B_1' onclick="scroll_to_step('5_B_1')">
-																5.B.1
-															</span>
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class='td2DetectionTypesAndNotes' colspan='2'>
-												<table class='tableDetectionTypesAndNotes'>
-				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionTypeDotted'>
-														<table class='tableSummaryDetectionIcons'>
-                                                    		<tr>
-                                                        		<td class='tdSummaryDetectionIcons'>
-				
-        															Technique(Alert)
-																</td>
-																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
-																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
-																</td>
-                                                    		</tr>
-                                                		</table>
-													</td>
-				<td class='tdDetectionNotesDotted'>
-														<table class='table3'>
-															<tr class='tr3'>
-																<td class='tdInnerDetectionNotes'>
-																	A Technique alert detection (green indicator) for "Registry Run Keys / Startup Folder" was generated due to hostui.lnk being written to the Startup folder.
-				             
-																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-2232.png' target='_blank'>
-																		[1]
-																	</a>
-						
-																</td>
-															</tr>
-														</table>
-													</td>
-												</tr>
-				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
-														<table class='tableSummaryDetectionIcons'>
-                                                    		<tr>
-                                                        		<td class='tdSummaryDetectionIcons'>
-				
-        															MSSP(Delayed (Manual))
-																</td>
-																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
-																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
-																</td>
-                                                    		</tr>
-                                                		</table>
-													</td>
-				<td class='tdDetectionNotes'>
-														<table class='table3'>
-															<tr class='tr3'>
-																<td class='tdInnerDetectionNotes'>
-																	An MSSP detection for "Registry Run Keys / Startup Folder" was received that included a Registry Created event for addition of hostui.lnk to the Startup folder. Additional analysis was received that included a PowerShell script and explained that it used the Invoke-Persistence command to create a LNK file in the Startup folder.
-				
-																	<a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
-																		<span class="spanPopup-footnotes" onclick="return false;" href="#"> 
-																			MSSP analysis that was performed on Windows Event Logs (Event ID 4104, PowerShell ScriptBlock Logs) would have been requested during a normal engagement when CyCraft MDR received insufficient information for analysis of adversary activity.
-																		</span>
-																	</a>
-						             
-																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-12443.png' target='_blank'>
-																		[1]
-																	</a>
-						             
-																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-12469.png' target='_blank'>
-																		[2]
-																	</a>
-						
-																</td>
-															</tr>
-														</table>
-													</td>
-												</tr>
-				
-											</table>
-                                		</td>
-									</tr>
-			    	<tr class='tr2'>
-											<td class='td2Procedures-apt29'>
-												<table class='table3'>
-													<tr class='tr3'>
-														<td class='td3'>
-															Executed LNK payload (hostui.lnk) in Startup Folder on user login
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class='td2Criteria'>
-												<table class='table3'>
-													<tr class='tr3'>
-														<td class='td3'>
-															Evidence that the file hostui.lnk (which executes hostui.bat as a byproduct) was executed from the Startup Folder
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class='td2Steps'>
-												<table class='table3'>
-													<tr class='tr3'>
-														<td class='td3'>
-															<span class='spanProcedureSummaryStep' id='p10_B_1' onclick="scroll_to_step('10_B_1')">
-																10.B.1
-															</span>
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class='td2DetectionTypesAndNotes' colspan='2'>
-												<table class='tableDetectionTypesAndNotes'>
-				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
-														<table class='tableSummaryDetectionIcons'>
-                                                    		<tr>
-                                                        		<td class='tdSummaryDetectionIcons'>
-				
-        															None()
-																</td>
-																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
-																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg" title="None">
-																</td>
-                                                    		</tr>
-                                                		</table>
-													</td>
-				<td class='tdDetectionNotes'>
-														<table class='table3'>
-															<tr class='tr3'>
-																<td class='tdInnerDetectionNotes'>
-																	No detection capability demonstrated for this procedure.
-				
-																</td>
-															</tr>
-														</table>
-													</td>
-												</tr>
-				
-											</table>
-                                		</td>
-									</tr>
-			    	<tr class='tr2NoBottomBorder'>
-											<td class='td2Procedures-apt29'>
-												<table class='table3'>
-													<tr class='tr3'>
-														<td class='td3'>
-															Established Registry Run key persistence using PowerShell
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class='td2Criteria'>
-												<table class='table3'>
-													<tr class='tr3'>
-														<td class='td3'>
-															Addition of the Webcache subkey in HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class='td2Steps'>
-												<table class='table3'>
-													<tr class='tr3'>
-														<td class='td3'>
-															<span class='spanProcedureSummaryStep' id='p11_A_11' onclick="scroll_to_step('11_A_11')">
-																11.A.11
-															</span>
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class='td2DetectionTypesAndNotes' colspan='2'>
-												<table class='tableDetectionTypesAndNotes'>
-				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionTypeDotted'>
-														<table class='tableSummaryDetectionIcons'>
-                                                    		<tr>
-                                                        		<td class='tdSummaryDetectionIcons'>
-				
-        															Technique(Alert)
-																</td>
-																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
-																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
-																</td>
-                                                    		</tr>
-                                                		</table>
-													</td>
-				<td class='tdDetectionNotesDotted'>
-														<table class='table3'>
-															<tr class='tr3'>
-																<td class='tdInnerDetectionNotes'>
-																	A Technique alert detection (red indicator) for "Registry Run Keys / Startup Folder" was generated for a Registry Creation event associated with establishing Registry Run Key persistence.
-				             
-																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-2437.png' target='_blank'>
-																		[1]
-																	</a>
-						
-																</td>
-															</tr>
-														</table>
-													</td>
-												</tr>
-				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
-														<table class='tableSummaryDetectionIcons'>
-                                                    		<tr>
-                                                        		<td class='tdSummaryDetectionIcons'>
-				
-        															MSSP(Delayed (Manual))
-																</td>
-																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
-																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
-																</td>
-                                                    		</tr>
-                                                		</table>
-													</td>
-				<td class='tdDetectionNotes'>
-														<table class='table3'>
-															<tr class='tr3'>
-																<td class='tdInnerDetectionNotes'>
-																	An MSSP detection for "Registry Run Keys / Startup Folder" was received that included a PowerShell script and explained that it was used to establish Registry Run Key persistence.
-				             
-																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-12497.png' target='_blank'>
-																		[1]
-																	</a>
-						             
-																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-2503.png' target='_blank'>
-																		[2]
-																	</a>
-						
-																</td>
-															</tr>
-														</table>
-													</td>
-												</tr>
-				
-											</table>
-                                		</td>
-									</tr>
-			
-								</table>
-							</td>
-						</tr>
-					</table>
-		
-					<table class='table1'>
+                                    <tr class='tr2'>
+                        
+                                                <td class='td2Procedures-apt29'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                Created a LNK file (hostui.lnk) in the Startup folder that executes on login
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Criteria'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                powershell.exe creating the file hostui.lnk in the Startup folder
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Steps'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                <span class='spanProcedureSummaryStep' id='p5_B_1' onclick="scroll_to_step('5_B_1')">
+                                                                    5.B.1
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                    <table class='tableDetectionTypesAndNotes'>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionTypeDotted'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            Technique (Alert)
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotesDotted'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            A Technique alert detection (green indicator) for "Registry Run Keys / Startup Folder" was generated due to hostui.lnk being written to the Startup folder.
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-2232.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionType'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            MSSP (Delayed (Manual))
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotes'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            An MSSP detection for "Registry Run Keys / Startup Folder" was received that included a Registry Created event for addition of hostui.lnk to the Startup folder. Additional analysis was received that included a PowerShell script and explained that it used the Invoke-Persistence command to create a LNK file in the Startup folder.
+
+                                                                            <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
+                                                                                <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
+                                                                                    MSSP analysis that was performed on Windows Event Logs (Event ID 4104, PowerShell ScriptBlock Logs) would have been requested during a normal engagement when CyCraft MDR received insufficient information for analysis of adversary activity.
+                                                                                </span>
+                                                                            </a>
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-12443.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-12469.png' target='_blank'>
+                                                                                [2]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr class='tr2'>
+                        
+                                                <td class='td2Procedures-apt29'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                Executed LNK payload (hostui.lnk) in Startup Folder on user login
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Criteria'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                Evidence that the file hostui.lnk (which executes hostui.bat as a byproduct) was executed from the Startup Folder
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Steps'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                <span class='spanProcedureSummaryStep' id='p10_B_1' onclick="scroll_to_step('10_B_1')">
+                                                                    10.B.1
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                    <table class='tableDetectionTypesAndNotes'>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionType'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            None
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg" title="None">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotes'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            No detection capability demonstrated for this procedure.
+
+
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr class='tr2NoBottomBorder'>
+                        
+                                                <td class='td2Procedures-apt29'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                Established Registry Run key persistence using PowerShell
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Criteria'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                Addition of the Webcache subkey in HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Steps'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                <span class='spanProcedureSummaryStep' id='p11_A_11' onclick="scroll_to_step('11_A_11')">
+                                                                    11.A.11
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                    <table class='tableDetectionTypesAndNotes'>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionTypeDotted'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            Technique (Alert)
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotesDotted'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            A Technique alert detection (red indicator) for "Registry Run Keys / Startup Folder" was generated for a Registry Creation event associated with establishing Registry Run Key persistence.
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-2437.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionType'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            MSSP (Delayed (Manual))
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotes'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            An MSSP detection for "Registry Run Keys / Startup Folder" was received that included a PowerShell script and explained that it was used to establish Registry Run Key persistence.
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-12497.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-2503.png' target='_blank'>
+                                                                                [2]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class='table1'>
 						<tr class='tr1'>
 							<td class='td1A'>
 								<table class='table2'>
 									<tr>
 										<td class='td2Technique'>
-											<a class="aTechnique-tacticsummary" href="/APT29/results/cycraft/windowsmanagementinstrumentationeventsubscription.html">
-												Windows Management Instrumentation Event Subscription
+                                                <a class="aTechnique-tacticsummary" href="/APT29/results/cycraft/WindowsManagementInstrumentationEventSubscription.html">
+                                                    Windows Management Instrumentation Event Subscription
 												<br />(T1084)
 											</a>
 										</td>
@@ -796,208 +833,229 @@
                 			</td>
 							<td class='td1B'>
 								<table class='table2'>
-			    	<tr class='tr2'>
-											<td class='td2Procedures-apt29'>
-												<table class='table3'>
-													<tr class='tr3'>
-														<td class='td3'>
-															Established WMI event subscription persistence using PowerShell
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class='td2Criteria'>
-												<table class='table3'>
-													<tr class='tr3'>
-														<td class='td3'>
-															powershell.exe creating the WindowsParentalControlMigration WMI filter, consumer, and binding created in root/subscription
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class='td2Steps'>
-												<table class='table3'>
-													<tr class='tr3'>
-														<td class='td3'>
-															<span class='spanProcedureSummaryStep' id='p15_A_2' onclick="scroll_to_step('15_A_2')">
-																15.A.2
-															</span>
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class='td2DetectionTypesAndNotes' colspan='2'>
-												<table class='tableDetectionTypesAndNotes'>
-				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionTypeDotted'>
-														<table class='tableSummaryDetectionIcons'>
-                                                    		<tr>
-                                                        		<td class='tdSummaryDetectionIcons'>
-				
-        															Technique(Alert)
-																</td>
-																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
-																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
-																</td>
-                                                    		</tr>
-                                                		</table>
-													</td>
-				<td class='tdDetectionNotesDotted'>
-														<table class='table3'>
-															<tr class='tr3'>
-																<td class='tdInnerDetectionNotes'>
-																	A Technique alert detection (red alert icon) for "Windows Management Instrumentation Event Subscription" was generated due to the WindowsParentalControlMigration event filter creation. 
-				             
-																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-2458.png' target='_blank'>
-																		[1]
-																	</a>
-						
-																</td>
-															</tr>
-														</table>
-													</td>
-												</tr>
-				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
-														<table class='tableSummaryDetectionIcons'>
-                                                    		<tr>
-                                                        		<td class='tdSummaryDetectionIcons'>
-				
-        															MSSP(Delayed (Manual))
-																</td>
-																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
-																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
-																</td>
-                                                    		</tr>
-                                                		</table>
-													</td>
-				<td class='tdDetectionNotes'>
-														<table class='table3'>
-															<tr class='tr3'>
-																<td class='tdInnerDetectionNotes'>
-																	An MSSP detection for "Windows Management Instrumentation Event Subscription" was occurred containing evidence of a PowerShell script and explained that it was used establish persistence.
-				             
-																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-12504.png' target='_blank'>
-																		[1]
-																	</a>
-						
-																</td>
-															</tr>
-														</table>
-													</td>
-												</tr>
-				
-											</table>
-                                		</td>
-									</tr>
-			    	<tr class='tr2NoBottomBorder'>
-											<td class='td2Procedures-apt29'>
-												<table class='table3'>
-													<tr class='tr3'>
-														<td class='td3'>
-															Executed WMI persistence on user login
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class='td2Criteria'>
-												<table class='table3'>
-													<tr class='tr3'>
-														<td class='td3'>
-															The WMI process (wmiprvse.exe) executing powershell.exe
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class='td2Steps'>
-												<table class='table3'>
-													<tr class='tr3'>
-														<td class='td3'>
-															<span class='spanProcedureSummaryStep' id='p20_A_2' onclick="scroll_to_step('20_A_2')">
-																20.A.2
-															</span>
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class='td2DetectionTypesAndNotes' colspan='2'>
-												<table class='tableDetectionTypesAndNotes'>
-				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionTypeDotted'>
-														<table class='tableSummaryDetectionIcons'>
-                                                    		<tr>
-                                                        		<td class='tdSummaryDetectionIcons'>
-				
-        															Technique(Alert)
-																</td>
-																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
-																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
-																</td>
-                                                    		</tr>
-                                                		</table>
-													</td>
-				<td class='tdDetectionNotesDotted'>
-														<table class='table3'>
-															<tr class='tr3'>
-																<td class='tdInnerDetectionNotes'>
-																	A Technique alert detection (red alert icon) for "Windows Management Instrumentation Event Subscription" was generated for wmiprvse.exe executing the PowerShell stager.
-				             
-																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-15516.png' target='_blank'>
-																		[1]
-																	</a>
-						
-																</td>
-															</tr>
-														</table>
-													</td>
-												</tr>
-				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
-														<table class='tableSummaryDetectionIcons'>
-                                                    		<tr>
-                                                        		<td class='tdSummaryDetectionIcons'>
-				
-        															MSSP(Delayed (Manual))
-																</td>
-																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
-																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
-																</td>
-                                                    		</tr>
-                                                		</table>
-													</td>
-				<td class='tdDetectionNotes'>
-														<table class='table3'>
-															<tr class='tr3'>
-																<td class='tdInnerDetectionNotes'>
-																	An MSSP detection for "Windows Management Instrumentation Event Subscription" was received that described the triggering of a WMI Event Subscription upon logon of user Oscar in order to execute powershell.exe.
-				             
-																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-12522.png' target='_blank'>
-																		[1]
-																	</a>
-						             
-																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-12521.png' target='_blank'>
-																		[2]
-																	</a>
-						
-																</td>
-															</tr>
-														</table>
-													</td>
-												</tr>
-				
-											</table>
-                                		</td>
-									</tr>
-			
-								</table>
-							</td>
-						</tr>
-					</table>
-		
-					<table class='table1'>
+                                    <tr class='tr2'>
+                        
+                                                <td class='td2Procedures-apt29'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                Established WMI event subscription persistence using PowerShell
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Criteria'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                powershell.exe creating the WindowsParentalControlMigration WMI filter, consumer, and binding created in root/subscription
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Steps'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                <span class='spanProcedureSummaryStep' id='p15_A_2' onclick="scroll_to_step('15_A_2')">
+                                                                    15.A.2
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                    <table class='tableDetectionTypesAndNotes'>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionTypeDotted'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            Technique (Alert)
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotesDotted'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            A Technique alert detection (red alert icon) for "Windows Management Instrumentation Event Subscription" was generated due to the WindowsParentalControlMigration event filter creation. 
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-2458.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionType'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            MSSP (Delayed (Manual))
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotes'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            An MSSP detection for "Windows Management Instrumentation Event Subscription" was occurred containing evidence of a PowerShell script and explained that it was used establish persistence.
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-12504.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr class='tr2NoBottomBorder'>
+                        
+                                                <td class='td2Procedures-apt29'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                Executed WMI persistence on user login
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Criteria'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                The WMI process (wmiprvse.exe) executing powershell.exe
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Steps'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                <span class='spanProcedureSummaryStep' id='p20_A_2' onclick="scroll_to_step('20_A_2')">
+                                                                    20.A.2
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                    <table class='tableDetectionTypesAndNotes'>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionTypeDotted'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            Technique (Alert)
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotesDotted'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            A Technique alert detection (red alert icon) for "Windows Management Instrumentation Event Subscription" was generated for wmiprvse.exe executing the PowerShell stager.
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-15516.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionType'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            MSSP (Delayed (Manual))
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotes'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            An MSSP detection for "Windows Management Instrumentation Event Subscription" was received that described the triggering of a WMI Event Subscription upon logon of user Oscar in order to execute powershell.exe.
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-12522.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-12521.png' target='_blank'>
+                                                                                [2]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class='table1'>
 						<tr class='tr1'>
 							<td class='td1A'>
 								<table class='table2'>
 									<tr>
 										<td class='td2Technique'>
-											<a class="aTechnique-tacticsummary" href="/APT29/results/cycraft/newservice.html">
-												New Service
+                                                <a class="aTechnique-tacticsummary" href="/APT29/results/cycraft/NewService.html">
+                                                    New Service
 												<br />(T1050)
 											</a>
 										</td>
@@ -1006,138 +1064,124 @@
                 			</td>
 							<td class='td1B'>
 								<table class='table2'>
-			    	<tr class='tr2NoBottomBorder'>
-											<td class='td2Procedures-apt29'>
-												<table class='table3'>
-													<tr class='tr3'>
-														<td class='td3'>
-															Created a new service (javamtsup) that executes a service binary (javamtsup.exe) at system startup
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class='td2Criteria'>
-												<table class='table3'>
-													<tr class='tr3'>
-														<td class='td3'>
-															powershell.exe creating the Javamtsup service
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class='td2Steps'>
-												<table class='table3'>
-													<tr class='tr3'>
-														<td class='td3'>
-															<span class='spanProcedureSummaryStep' id='p5_A_1' onclick="scroll_to_step('5_A_1')">
-																5.A.1
-															</span>
-														</td>
-													</tr>
-												</table>
-											</td>
-											<td class='td2DetectionTypesAndNotes' colspan='2'>
-												<table class='tableDetectionTypesAndNotes'>
-				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionTypeDotted'>
-														<table class='tableSummaryDetectionIcons'>
-                                                    		<tr>
-                                                        		<td class='tdSummaryDetectionIcons'>
-				
-        															General(Alert)
-																</td>
-																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
-																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_general.svg" title="General"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
-																</td>
-                                                    		</tr>
-                                                		</table>
-													</td>
-				<td class='tdDetectionNotesDotted'>
-														<table class='table3'>
-															<tr class='tr3'>
-																<td class='tdInnerDetectionNotes'>
-																	A General alert detection (orange indicator) showed a Registry event for the creation of javamtsup service.
-				             
-																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-2168.png' target='_blank'>
-																		[1]
-																	</a>
-						
-																</td>
-															</tr>
-														</table>
-													</td>
-												</tr>
-				<tr class='trDetectionTypesAndNotes'><td class='tdDetectionType'>
-														<table class='tableSummaryDetectionIcons'>
-                                                    		<tr>
-                                                        		<td class='tdSummaryDetectionIcons'>
-				
-        															MSSP(Delayed (Manual))
-																</td>
-																<td class='tdSummaryDetectionIcons' style="padding-left: 5px;">
-																	<img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
-																</td>
-                                                    		</tr>
-                                                		</table>
-													</td>
-				<td class='tdDetectionNotes'>
-														<table class='table3'>
-															<tr class='tr3'>
-																<td class='tdInnerDetectionNotes'>
-																	An MSSP detection for "New Service" was received that included events and analysis related to registration and execution of the javamtsup service.
-				             
-																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-12442.png' target='_blank'>
-																		[1]
-																	</a>
-						             
-																	<a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-12441.png' target='_blank'>
-																		[2]
-																	</a>
-						
-																</td>
-															</tr>
-														</table>
-													</td>
-												</tr>
-				
-											</table>
-                                		</td>
-									</tr>
-			
-								</table>
-							</td>
-						</tr>
-					</table>
-		
+                                    <tr class='tr2NoBottomBorder'>
+                        
+                                                <td class='td2Procedures-apt29'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                Created a new service (javamtsup) that executes a service binary (javamtsup.exe) at system startup
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Criteria'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                powershell.exe creating the Javamtsup service
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Steps'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                <span class='spanProcedureSummaryStep' id='p5_A_1' onclick="scroll_to_step('5_A_1')">
+                                                                    5.A.1
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                    <table class='tableDetectionTypesAndNotes'>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionTypeDotted'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            General (Alert)
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_general.svg" title="General"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotesDotted'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            A General alert detection (orange indicator) showed a Registry event for the creation of javamtsup service.
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-2168.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionType'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            MSSP (Delayed (Manual))
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotes'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            An MSSP detection for "New Service" was received that included events and analysis related to registration and execution of the javamtsup service.
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-12442.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-12441.png' target='_blank'>
+                                                                                [2]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
 				
 				</td>
-                <!-- <td class='tdMainRightPane-tacticsummary'>
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <div class='divOperationalFlow-tacticsummary' id='divOF_tacticsummary'>
-                        <span class='spanOperationalFlow-tacticsummary'>
-                        Operational Flow
-                            <span class='tdInnerDetectionNotesSum'>
-                                <a class='aFootnote' href='javascript:void(0);'><i class="fas fa-info-circle"></i>
-                                    <span class='spanPopup-footnotes' onclick='return false;' href='#'>
-                                        The Operational Flow panel provides the context around when a procedure was executed by showing all steps of the evaluation, including the tactics, techniques and procedures of the executed steps.
-                                    </span>
-                                </a>
-                            </span>
-                        </span> -->
-                        
-                    <!-- </div>
-                </td> -->
             </tr>
         </table>
         <br />
     </div>
 </div>
-
 
 
 <script type="text/javascript">
@@ -1146,7 +1190,6 @@
     var url_string = window.location.href;
 	
     document.onload = organize_legend();
-    document.onload = display_exports();
 
     function organize_legend() {
         if(url_string.includes('APT3')) {
@@ -1178,18 +1221,6 @@
 
         divLegend.style.display = 'None';
         tableHeaderBar.className = 'tableHeaderBar-tacticsummary';
-    }
-
-    function display_exports() {
-        if(url_string.includes('APT3')) {
-            var json = document.getElementById('JSON');
-            json.remove()
-        } else {
-            var newJSON = document.getElementById('newJSON');
-            var oldJSON = document.getElementById('oldJSON');
-            newJSON.remove();
-            oldJSON.remove();
-        }
     }
 
 </script>

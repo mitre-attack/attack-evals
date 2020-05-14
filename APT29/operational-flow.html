@@ -77,6 +77,8 @@
                         <ul class="dropdown-menu drop_menu_side_right" style="margin-top: 130px;">
                             <li><a class="dropdown-item" href="/get-evaluated.html">Call For Participation</a></li>
                             <li><a class="dropdown-item" href="/carbanak-fin7/">Overview</a></li>
+                            <li><a class="dropdown-item" href="/carbanak-fin7/detection-categories.html">Detection Categories</a></li>
+                            <li><a class="dropdown-item" href="/carbanak-fin7/protection-categories.html">Protection Categories</a></li>
                             <li><a class="dropdown-item" href="/carbanak-fin7/environment.html">Environment</a></li>
                             <li><a class="dropdown-item" href="/carbanak-fin7/scope.html">Technique Scope</a></li>
                         </ul>
@@ -94,6 +96,10 @@
                     <a class="dropdown-item" href='/technique_comparison.html'>Technique Comparison Tool </a>
                     <a class="dropdown-item" href='/do-it-yourself.html'>Do It Yourself Evaluations</a>
                     <a class="dropdown-item" href='/data_analysis_tool.html'>Data Analysis Tool</a>
+                    <a class="dropdown-item" href='https://github.com/mitre-attack/attack-arsenal'>
+                        ATT&CK Arsenal
+                        &nbsp;<img src="https://d1zq5d3dtjfcoj.cloudfront.net/external-site.svg" alt="External site" class="external-icon">
+                    </a>
                 </div>  
             </li>
             <li class='nav-item dropdown'>
@@ -132,12 +138,15 @@
 	   <br />
 	<p>
 		The Operational Flow separated technique execution into sequences we referred to as “Steps”. Organizing our execution into Steps ensured that the detection displayed was correctly associated with the technique that was being tested. Each Step corresponded to an adversary’s intended goal during an operation. We performed 20 Steps in total across two scenarios: 10 Steps corresponded to our first scenario (which used Pupy, Meterpreter, and custom tooling), and 10 Steps corresponded to our second scenario (which used PoshC2 and custom tooling). We further divided each Step into Sub-Steps that are denoted by letters (e.g. 1A, 1B, etc.). Those Steps and the corresponding techniques are outlined below.
-	</p><br>
-	<h3>First Scenario</h3>
+	</p>
+	<p>
+		This information is also available in a single, downloadable <a href="https://github.com/mitre-attack/attack-arsenal/blob/master/adversary_emulation/APT29/Emulation_Plan/APT29_EmuPlan.pdf">PDF document</a>.
+	</p>
+	<h3 class="mt-3">First Scenario</h3>
 	<p>
 		The content to execute this scenario was tested and developed using <a href="https://github.com/n1nj4sec/pupy" target="_blank">Pupy</a>, <a href="https://github.com/rapid7/metasploit-framework" target="_blank">Meterpreter</a>, and other custom/modified scripts and payloads. Pupy and Meterpreter were chosen based on their available functionality and similarities to the adversary's malware within the context of this scenario, but alternative red team tooling could be used to accurately execute these and other APT29 behaviors. More information, including the required resources, setup instructions, and step by step instructions on how to execute the Day 1 scenario, is available at <a href='https://github.com/mitre-attack/attack-arsenal/tree/master/adversary_emulation/APT29'>ATT&CK Arsenal</a>.
 	</p>
-	<p onclick="testing_toggle('step1DIV')" id="hide_show" class="someClass"><span style="font-size: 18px;">Step 1 - Initial Breach: </span><a href="javascript:;">Malware is executed on victim; establishes C2 connection</a><test class="right"></i></p>		
+	<p onclick="testing_toggle('step1DIV')" id="hide_show" class="someClass"><span style="font-size: 18px;">Step 1 - Initial Compromise: </span><a href="javascript:;">Malware is executed on victim; establishes C2 connection</a><test class="right"></i></p>		
 	 <div id="step1DIV"  style="display:none">
 	   <table class="table_opflow_step">
 		   <thead>
@@ -166,7 +175,7 @@
 		   </tbody>
 	   </table>
 	  </div>
-	  <p onclick="testing_toggle('step2DIV')" id="hide_show" class="someClass"><span style="font-size: 18px;">Step 2 - Rapid Collection and Exfiltration: </span><a href="javascript:;">Adversary performs smash-and-grab data theft</a><test class="right"></i></p>
+	  <p onclick="testing_toggle('step2DIV')" id="hide_show" class="someClass"><span style="font-size: 18px;">Step 2 - Collection and Exfiltration: </span><a href="javascript:;">Adversary performs smash-and-grab data theft</a><test class="right"></i></p>
 	 <div id="step2DIV"  style="display:none">
 		<table class="table_opflow_step">
 			<thead>
@@ -232,7 +241,7 @@
 			</tbody>
 		</table>
 	  </div>
-	  	  <p onclick="testing_toggle('step4DIV')" id="hide_show" class="someClass"><span style="font-size: 18px;">Step 4 - Defense Evasion and Discovery: </span><a href="javascript:;">Adversary drops new tools, cleans up artifacts of breach, and surveys the victim environment</a><test class="right"></i></p>
+	  	  <p onclick="testing_toggle('step4DIV')" id="hide_show" class="someClass"><span style="font-size: 18px;">Step 4 - Clean Up and Reconnaissance: </span><a href="javascript:;">Adversary drops new tools, cleans up artifacts of breach, and surveys the victim environment</a><test class="right"></i></p>
 	 <div id="step4DIV"  style="display:none">
 		<table class="table_opflow_step">
 			<thead>
@@ -271,7 +280,7 @@
 			</tbody>
 		</table>
 	  </div>
-	  	  <p onclick="testing_toggle('step5DIV')" id="hide_show" class="someClass"><span style="font-size: 18px;">Step 5 - Persistence: </span><a href="javascript:;">Adversary establishes two separate means of persistent access to the victim</a><test class="right"></i></p>
+	  	  <p onclick="testing_toggle('step5DIV')" id="hide_show" class="someClass"><span style="font-size: 18px;">Step 5 - Establish Persistence: </span><a href="javascript:;">Adversary establishes two separate means of persistent access to the victim</a><test class="right"></i></p>
 	 <div id="step5DIV"  style="display:none">
 		<table class="table_opflow_step">
 			<thead>
@@ -348,7 +357,7 @@
 			<tbody>
 				<tr>					
 					<td class="td_opflow_step" style="text-align: left; width: 32%;">
-						The attacker collects screenshots (<a href="https://attack.mitre.org/techniques/T1113/" target="_blank">T1113</a>), data from the user’s clipboard (<a href="https://attack.mitre.org/techniques/T1115/" target="_blank">T1115</a>), and keystrokes (<a href="https://attack.mitre.org/techniques/T1056/" target="_blank">T1056</a>). The attacker then collects files (<a href="https://attack.mitre.org/techniques/T11005/" target="_blank">T11005</a>), which are compressed (<a href="https://attack.mitre.org/techniques/T1002/" target="_blank">T1002</a>) and encrypted (<a href="https://attack.mitre.org/techniques/T1022/" target="_blank">T1022</a>), before being exfiltrated to an attacker-controlled WebDAV share (<a href="https://attack.mitre.org/techniques/T1048/" target="_blank">T1048</a>).
+						The attacker collects screenshots (<a href="https://attack.mitre.org/techniques/T1113/" target="_blank">T1113</a>), data from the user’s clipboard (<a href="https://attack.mitre.org/techniques/T1115/" target="_blank">T1115</a>), and keystrokes (<a href="https://attack.mitre.org/techniques/T1056/" target="_blank">T1056</a>). The attacker then collects files (<a href="https://attack.mitre.org/techniques/T1005/" target="_blank">T1005</a>), which are compressed (<a href="https://attack.mitre.org/techniques/T1002/" target="_blank">T1002</a>) and encrypted (<a href="https://attack.mitre.org/techniques/T1022/" target="_blank">T1022</a>), before being exfiltrated to an attacker-controlled WebDAV share (<a href="https://attack.mitre.org/techniques/T1048/" target="_blank">T1048</a>).
 					</td>
 					<td class="td_opflow_step" style="text-align: left; width: 33%;">
 						CosmicDuke’s information stealing functionality has included keylogging, taking screenshots, and stealing clipboard contents. Collected data can be exfiltrated using WebDAV. <a href="https://www.f-secure.com/documents/996508/1030745/dukes_whitepaper.pdf" target="_blank">[1]</a> <a href="https://www.f-secure.com/documents/996508/1030745/cosmicduke_whitepaper.pdf" target="_blank">[2]</a> 
@@ -365,7 +374,7 @@
 			</tbody>
 		</table>
 	  </div>
-	  	  <p onclick="testing_toggle('step8DIV')" id="hide_show" class="someClass"><span style="font-size: 18px;">Step 8 - Lateral Movement: </span><a href="javascript:;">Adversary enumerates then executes payload on a remote workstation</a><test class="right"></i></p>
+	  	  <p onclick="testing_toggle('step8DIV')" id="hide_show" class="someClass"><span style="font-size: 18px;">Step 8 - Expand Access: </span><a href="javascript:;">Adversary enumerates then executes payload on a remote workstation</a><test class="right"></i></p>
 	 <div id="step8DIV"  style="display:none">
 		<table class="table_opflow_step">
 			<thead>
@@ -400,7 +409,7 @@
 			</tbody>
 		</table>
 	  </div>
-	  	  <p onclick="testing_toggle('step9DIV')" id="hide_show" class="someClass"><span style="font-size: 18px;">Step 9 - Collection: </span><a href="javascript:;">Adversary drops new tools, performs smash-and-grab data theft, then cleans up artifacts of breach on a remote workstation</a><test class="right"></i></p>
+	  	  <p onclick="testing_toggle('step9DIV')" id="hide_show" class="someClass"><span style="font-size: 18px;">Step 9 - Clean Up, Collection, and Exfiltration: </span><a href="javascript:;">Adversary drops new tools, performs smash-and-grab data theft, then cleans up artifacts of breach on a remote workstation</a><test class="right"></i></p>
 	 <div id="step9DIV" style="display:none">
 		<table class="table_opflow_step">
 			<thead>
@@ -467,7 +476,7 @@
 	<p>
 		The content to execute this scenario was tested and developed using <a href="https://github.com/nettitude/PoshC2" target="_blank">PoshC2</a> and other custom/modified scripts and payloads. PoshC2 was chosen based on its available functionality and similarities to the adversary's malware within the context of this scenario, but alternative red team tooling could be used to accurately execute these and other APT29 behaviors. More information, including the required resources, setup instructions, and step by step instructions on how to execute the Day 2 scenario, is available at <a href="https://github.com/mitre-attack/attack-arsenal/tree/master/adversary_emulation/APT29" target="_blank">ATT&CK Arsenal</a>.
 	</p>
-	  	  <p onclick="testing_toggle('step11DIV')" id="hide_show" class="someClass">Step 11 - Initial Breach: <a href="javascript:;">Malware is executed on victim; surveys victim then establishes persistence access and C2 connection</a><test class="right"></i></p>
+	  	  <p onclick="testing_toggle('step11DIV')" id="hide_show" class="someClass">Step 11 - Initial Compromise: <a href="javascript:;">Malware is executed on victim; surveys victim then establishes persistence access and C2 connection</a><test class="right"></i></p>
 	 <div id="step11DIV"  style="display:none">
 	    <table class="table_opflow_step">
 			<thead>
@@ -533,7 +542,7 @@
 			</tbody>
 		</table>
 	  </div>
-	  	  <p onclick="testing_toggle('step13DIV')" id="hide_show" class="someClass">Step 13 - Local Enumeration: <a href="javascript:;">Adversary surveys the victim environment</a><test class="right"></i></p>
+	  	  <p onclick="testing_toggle('step13DIV')" id="hide_show" class="someClass">Step 13 - Reconnaissance: <a href="javascript:;">Adversary surveys the victim environment</a><test class="right"></i></p>
 	 <div id="step13DIV" style="display:none">
 		<table class="table_opflow_step">
 			<thead>
@@ -562,7 +571,7 @@
 			</tbody>
 		</table>
 	  </div>
-	  	  <p onclick="testing_toggle('step14DIV')" id="hide_show" class="someClass">Step 14 - Elevation: <a href="javascript:;">Adversary elevates privileges and dumps credential materials</a><test class="right"></i></p>
+	  	  <p onclick="testing_toggle('step14DIV')" id="hide_show" class="someClass">Step 14 - Elevation & Credential Access: <a href="javascript:;">Adversary elevates privileges and dumps credential materials</a><test class="right"></i></p>
 	 <div id="step14DIV" style="display:none">
 	   <table class="table_opflow_step">
 			<thead>
@@ -624,7 +633,7 @@
 			</tbody>
 		</table>
 	  </div>
-	  	  <p onclick="testing_toggle('step16DIV')" id="hide_show" class="someClass">Step 16 - Lateral Movement: <a href="javascript:;">Adversary enumerates then dumps credential materials from domain controller</a><test class="right"></i></p>
+	  	  <p onclick="testing_toggle('step16DIV')" id="hide_show" class="someClass">Step 16 - Expand Access: <a href="javascript:;">Adversary enumerates then dumps credential materials from domain controller</a><test class="right"></i></p>
 	 <div id="step16DIV"  style="display:none">
 	   <table class="table_opflow_step">
 			<thead>
@@ -638,7 +647,7 @@
 			<tbody>
 				<tr>					
 					<td class="td_opflow_step" style="text-align: left; width: 32%;">
-						The attacker enumerates the environment’s domain controller (<a href="https://attack.mitre.org/techniques/T1018" target="_blank">T1018</a>) and the domain’s security identifier (SID) (<a href="https://attack.mitre.org/techniques/T1033" target="_blank">T1033</a>) via the Windows API (<a href="https://attack.mitre.org/techniques/T1106" target="_blank">T1106</a>). Next, the attacker uses the previously dumped credentials (<a href="https://attack.mitre.org/techniques/T1078" target="_blank">T1078</a>) to create a remote PowerShell session to the domain controller (<a href="https://attack.mitre.org/techniques/T1028" target="_blank">T1028</a>). Through this connection, the attacker copies the Mimikatz binary used in Step 14 to the domain controller (<a href="https://attack.mitre.org/techniques/T1105" target="_blank">T1105</a>) then dumps the hash of the KRBTGT account (<a href="https://attack.mitre.org/techniques/T11003" target="_blank">T11003</a>).
+						The attacker enumerates the environment’s domain controller (<a href="https://attack.mitre.org/techniques/T1018" target="_blank">T1018</a>) and the domain’s security identifier (SID) (<a href="https://attack.mitre.org/techniques/T1033" target="_blank">T1033</a>) via the Windows API (<a href="https://attack.mitre.org/techniques/T1106" target="_blank">T1106</a>). Next, the attacker uses the previously dumped credentials (<a href="https://attack.mitre.org/techniques/T1078" target="_blank">T1078</a>) to create a remote PowerShell session to the domain controller (<a href="https://attack.mitre.org/techniques/T1028" target="_blank">T1028</a>). Through this connection, the attacker copies the Mimikatz binary used in Step 14 to the domain controller (<a href="https://attack.mitre.org/techniques/T1105" target="_blank">T1105</a>) then dumps the hash of the KRBTGT account (<a href="https://attack.mitre.org/techniques/T1003" target="_blank">T1003</a>).
 					</td>
 					<td class="td_opflow_step" style="text-align: left; width: 33%;">
 						PowerDuke can get the current user’s SID via select Windows API calls. <a href="https://www.volexity.com/blog/2016/11/09/powerduke-post-election-spear-phishing-campaigns-targeting-think-tanks-and-ngos" target="_blank">[11]</a>
@@ -754,7 +763,7 @@
 		</table>
 
 	  </div>
-	  	  <p onclick="testing_toggle('step20DIV')" id="hide_show" class="someClass">Step 20 - Leverage Persistence: <a href="javascript:;">Adversary persistence mechanisms are executed when the initial victim machine is rebooted, access is used to create credential material and access new victim workstation</a><test class="right"></i></p>
+	  	  <p onclick="testing_toggle('step20DIV')" id="hide_show" class="someClass">Step 20 - Persistence Execution: <a href="javascript:;">Adversary persistence mechanisms are executed when the initial victim machine is rebooted, access is used to create credential material and access new victim workstation</a><test class="right"></i></p>
 	 <div id="step20DIV"  style="display:none">
 	   <table class="table_opflow_step">
 			<thead>
