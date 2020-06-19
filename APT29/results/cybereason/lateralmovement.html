@@ -356,6 +356,519 @@
 								<table class='table2'>
 									<tr>
 										<td class='td2Technique'>
+                                                <a class="aTechnique-tacticsummary" href="/APT29/results/cybereason/RemoteFileCopy.html">
+                                                    Remote File Copy
+												<br />(T1105)
+											</a>
+										</td>
+                        			</tr>
+                    			</table>
+                			</td>
+							<td class='td1B'>
+								<table class='table2'>
+                                    <tr class='tr2'>
+                        
+                                                <td class='td2Procedures-apt29'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                Dropped stage 2 payload (monkey.png) to disk
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Criteria'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                The rcs.3aka3.doc process creating the file monkey.png
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Steps'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                <span style="font-size: 12px; font-weight: bold;">
+                                                                    3.A.1
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                    <table class='tableDetectionTypesAndNotes'>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionType'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            Telemetry (Correlated)
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_correlated.svg" title="Correlated">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotes'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            Telemetry showed rcs.3aka3.doc creating monkey.png. The detection was correlated to a parent alert for User Execution of rcs.3aka3.doc.
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/Cybereason-APT29-7379.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr class='tr2'>
+                        
+                                                <td class='td2Procedures-apt29'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                Dropped additional tools (SysinternalsSuite.zip) to disk over C2 channel (192.168.0.5)
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Criteria'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                powershell.exe creating the file SysinternalsSuite.zip
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Steps'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                <span style="font-size: 12px; font-weight: bold;">
+                                                                    4.A.1
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                    <table class='tableDetectionTypesAndNotes'>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionType'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            Telemetry (Correlated)
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_correlated.svg" title="Correlated">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotes'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            Telemetry showed the file write of the ZIP by PowerShell. The detection was correlated to a parent alert for malicious PowerShell.  
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/Cybereason-APT29-9596.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/Cybereason-APT29-9594.png' target='_blank'>
+                                                                                [2]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr class='tr2'>
+                        
+                                                <td class='td2Procedures-apt29'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                Copied python.exe payload from a WebDAV share (192.168.0.4) to remote host Scranton (10.0.1.4)
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Criteria'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                The file python.exe created on Scranton (10.0.1.4)
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Steps'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                <span style="font-size: 12px; font-weight: bold;">
+                                                                    8.B.1
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                    <table class='tableDetectionTypesAndNotes'>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionType'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            Telemetry (Correlated)
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_correlated.svg" title="Correlated">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotes'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            Telemetry showed a file write event of python.exe. The detection was correlated to a parent alert for malicious PowerShell.
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/Cybereason-APT29-9635.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr class='tr2'>
+                        
+                                                <td class='td2Procedures-apt29'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                Dropped rar.exe to disk on remote host Scranton (10.0.1.4) 
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Criteria'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                python.exe creating the file rar.exe
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Steps'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                <span style="font-size: 12px; font-weight: bold;">
+                                                                    9.A.1
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                    <table class='tableDetectionTypesAndNotes'>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionType'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            Telemetry (Correlated)
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_correlated.svg" title="Correlated">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotes'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            Telemetry showed a create file event for python.exe creating rar.exe. The detection was correlated to a parent alert for psexec.exe executing a malicious file. 
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/Cybereason-APT29-9650.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr class='tr2'>
+                        
+                                                <td class='td2Procedures-apt29'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                Dropped sdelete.exe to disk on remote host Scranton (10.0.1.4) 
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Criteria'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                python.exe creating the file sdelete64.exe
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Steps'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                <span style="font-size: 12px; font-weight: bold;">
+                                                                    9.A.2
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                    <table class='tableDetectionTypesAndNotes'>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionType'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            Telemetry (Correlated)
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_correlated.svg" title="Correlated">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotes'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            Telemetry showed a create file event for python.exe creating sdelete64.exe. The detection was correlated to a parent alert for psexec.exe executing a malicious file. 
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/Cybereason-APT29-9650.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr class='tr2'>
+                        
+                                                <td class='td2Procedures-apt29'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                Downloaded and dropped Mimikatz (m.exe) to disk
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Criteria'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                powershell.exe downloading and/or the file write of m.exe
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Steps'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                <span style="font-size: 12px; font-weight: bold;">
+                                                                    14.B.3
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                    <table class='tableDetectionTypesAndNotes'>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionType'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            General (Alert, Correlated)
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_general.svg" title="General"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_correlated.svg" title="Correlated">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotes'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            A General alert detection (unique symbol) was generated for using PowerShell to execute suspicious 'download' commands. The detection was correlated to a parent alert for the malicious use of powershell.exe. 
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/Cybereason-APT29-9742.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr class='tr2NoBottomBorder'>
+                        
+                                                <td class='td2Procedures-apt29'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                Dropped Mimikatz (m.exe) to disk on the domain controller host NewYork (10.0.0.4) over a WinRM connection
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Criteria'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                File write of m.exe by the WinRM process (wsmprovhost.exe)
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Steps'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                <span style="font-size: 12px; font-weight: bold;">
+                                                                    16.D.1
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                    <table class='tableDetectionTypesAndNotes'>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionType'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            Telemetry (Correlated)
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_correlated.svg" title="Correlated">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotes'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            Telemetry showed the file write of m.exe to the System32 directory by wsmprovhost.exe. The detection was correlated to a parent alert for the malicious use of powershell.exe. 
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/Cybereason-APT29-9790.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class='table1'>
+						<tr class='tr1'>
+							<td class='td1A'>
+								<table class='table2'>
+									<tr>
+										<td class='td2Technique'>
                                                 <a class="aTechnique-tacticsummary" href="/APT29/results/cybereason/PasstheTicket.html">
                                                     Pass the Ticket
 												<br />(T1097)

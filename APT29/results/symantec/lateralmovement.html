@@ -717,6 +717,817 @@
 								<table class='table2'>
 									<tr>
 										<td class='td2Technique'>
+                                                <a class="aTechnique-tacticsummary" href="/APT29/results/symantec/RemoteFileCopy.html">
+                                                    Remote File Copy
+												<br />(T1105)
+											</a>
+										</td>
+                        			</tr>
+                    			</table>
+                			</td>
+							<td class='td1B'>
+								<table class='table2'>
+                                    <tr class='tr2'>
+                        
+                                                <td class='td2Procedures-apt29'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                Dropped stage 2 payload (monkey.png) to disk
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Criteria'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                The rcs.3aka3.doc process creating the file monkey.png
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Steps'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                <span style="font-size: 12px; font-weight: bold;">
+                                                                    3.A.1
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                    <table class='tableDetectionTypesAndNotes'>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionType'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            Telemetry (Delayed (Manual))
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotes'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            Telemetry showed rcs.3aka3.doc creating monkey.png, with the file path reversed due to the Unicode right-to-left override character.
+
+                                                                            <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
+                                                                                <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
+                                                                                    The telemetry was acquired by manually initiating an export of endpoint-stored event data that was not automatically sent to the analysis system, which caused this detection to receive Delayed (Manual).
+                                                                                </span>
+                                                                            </a>
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/Symantec-APT29-9907.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr class='tr2'>
+                        
+                                                <td class='td2Procedures-apt29'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                Dropped additional tools (SysinternalsSuite.zip) to disk over C2 channel (192.168.0.5)
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Criteria'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                powershell.exe creating the file SysinternalsSuite.zip
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Steps'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                <span style="font-size: 12px; font-weight: bold;">
+                                                                    4.A.1
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                    <table class='tableDetectionTypesAndNotes'>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionType'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            Telemetry
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotes'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            Telemetry showed the file write of the ZIP by PowerShell. 
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/Symantec-APT29-7416.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/Symantec-APT29-7419.png' target='_blank'>
+                                                                                [2]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr class='tr2'>
+                        
+                                                <td class='td2Procedures-apt29'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                Copied python.exe payload from a WebDAV share (192.168.0.4) to remote host Scranton (10.0.1.4)
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Criteria'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                The file python.exe created on Scranton (10.0.1.4)
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Steps'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                <span style="font-size: 12px; font-weight: bold;">
+                                                                    8.B.1
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                    <table class='tableDetectionTypesAndNotes'>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionTypeDotted'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            Technique
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotesDotted'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            A Technique detection for "Remote File Copy" was generated data being sent over SMB2 to Scranton (10.0.1.4) creating a .exe file.
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/Symantec-APT29-17664.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionType'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            General (Delayed (Processing), Alert)
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_general.svg" title="General"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotes'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            A General alert detection for "Malicious file detected python.exe" was generated on sandbox detection evaluation of python.exe. Detection incurred a delay based on sandbox detonation processing.
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/Symantec-APT29-17662.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr class='tr2'>
+                        
+                                                <td class='td2Procedures-apt29'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                Dropped rar.exe to disk on remote host Scranton (10.0.1.4) 
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Criteria'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                python.exe creating the file rar.exe
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Steps'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                <span style="font-size: 12px; font-weight: bold;">
+                                                                    9.A.1
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                    <table class='tableDetectionTypesAndNotes'>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionTypeDotted'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            Technique (Alert)
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotesDotted'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            A Technique alert detection for "Remote File Copy - Suspicious N-Gram" was generated when python.exe connected to 192.168.0.4 port 8443 and then immediately created rar.exe.
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/Symantec-APT29-17864.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/Symantec-APT29-17864.png' target='_blank'>
+                                                                                [2]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionType'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            Telemetry
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotes'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            Telemetry showed python.exe creating rar.exe.
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/Symantec-APT29-7468.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr class='tr2'>
+                        
+                                                <td class='td2Procedures-apt29'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                Dropped sdelete.exe to disk on remote host Scranton (10.0.1.4) 
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Criteria'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                python.exe creating the file sdelete64.exe
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Steps'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                <span style="font-size: 12px; font-weight: bold;">
+                                                                    9.A.2
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                    <table class='tableDetectionTypesAndNotes'>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionTypeDotted'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            General (Alert)
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_general.svg" title="General"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotesDotted'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            A General alert detection for "Suspicious N-Gram" was generated when python.exe connected to 192.168.0.4 port 8443 and then immediately created sdelete64.exe.
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/Symantec-APT29-17867.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionType'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            Telemetry
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotes'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            Telemetry showed Created File event for python.exe connecting to 192.168.0.4 port 8443 and then immediately creating sdelete64.exe.
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/Symantec-APT29-7471.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr class='tr2'>
+                        
+                                                <td class='td2Procedures-apt29'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                Downloaded and dropped Mimikatz (m.exe) to disk
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Criteria'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                powershell.exe downloading and/or the file write of m.exe
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Steps'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                <span style="font-size: 12px; font-weight: bold;">
+                                                                    14.B.3
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                    <table class='tableDetectionTypesAndNotes'>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionTypeDotted'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            Technique (Correlated)
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_correlated.svg" title="Correlated">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotesDotted'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            A Technique detection for "Remote File Copy" was generated when powershell.exe generated network traffic immediately followed by creation of an executable file. The event was correlated to a previous event showing wmiprvse.exe executing powershell.exe.
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/Symantec-APT29-9759.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/Symantec-APT29-9758.png' target='_blank'>
+                                                                                [2]
+                                                                            </a>
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/Symantec-APT29-12906.png' target='_blank'>
+                                                                                [3]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionTypeDotted'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            MSSP (Delayed (Manual))
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotesDotted'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            An MSSP detection for "Remote File Copy" was received that included a PowerShell command executed by the adversary and explained that it was used to download m.exe from a remote server.
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/Symantec-APT29-12962.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionType'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            Telemetry
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotes'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            Telemetry showed the file create event for m.exe into the System32 folder.
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/Symantec-APT29-9757.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/Symantec-APT29-9759.png' target='_blank'>
+                                                                                [2]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr class='tr2NoBottomBorder'>
+                        
+                                                <td class='td2Procedures-apt29'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                Dropped Mimikatz (m.exe) to disk on the domain controller host NewYork (10.0.0.4) over a WinRM connection
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Criteria'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                File write of m.exe by the WinRM process (wsmprovhost.exe)
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2Steps'>
+                                                    <table class='table3'>
+                                                        <tr class='tr3'>
+                                                            <td class='td3'>
+                                                                <span style="font-size: 12px; font-weight: bold;">
+                                                                    16.D.1
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                    <table class='tableDetectionTypesAndNotes'>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionTypeDotted'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            Technique
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotesDotted'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            A Technique detection for "Remote File Copy" was generated when SMB traffic from another host was received and then immediately followed by a file write for m.exe by wsmprovhost.exe.
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/Symantec-APT29-9735.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/Symantec-APT29-9774.png' target='_blank'>
+                                                                                [2]
+                                                                            </a>
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/Symantec-APT29-9775.png' target='_blank'>
+                                                                                [3]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionTypeDotted'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            General (Delayed (Processing), Alert)
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_general.svg" title="General"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotesDotted'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            A General alert detection called "Malicious file detected" was generated on sandbox detection analysis of m.exe. Detection incurred a delay based on sandbox detonation processing.
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/Symantec-APT29-17725.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionTypeDotted'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            MSSP (Delayed (Manual))
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotesDotted'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            An MSSP detection for "Remote File Copy" was received that included a PowerShell command executed by the adversary and explained that it was used to copy mimikatz to a remote PowerShell session.
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/Symantec-APT29-12970.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/Symantec-APT29-12969.png' target='_blank'>
+                                                                                [2]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class='trDetectionTypesAndNotes'>
+                                                            <td class='tdDetectionType'>
+                                                                <table class='tableSummaryDetectionIcons'>
+                                                                    <tr>
+                                                                        <td class='tdSummaryDetectionIcons'>
+
+
+                            Telemetry
+                                                                        </td>
+                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+
+                                                            <td class='tdDetectionNotes'>
+                            
+
+                                                                <table class='table3'>
+                                                                    <tr class='tr3'>
+                                                                        <td class='tdInnerDetectionNotes'>
+                                                                            Telemetry showed a file create event for m.exe in the System32 directory by "Host process for WinRM plug-ins".
+
+
+                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/Symantec-APT29-9775.png' target='_blank'>
+                                                                                [1]
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class='table1'>
+						<tr class='tr1'>
+							<td class='td1A'>
+								<table class='table2'>
+									<tr>
+										<td class='td2Technique'>
                                                 <a class="aTechnique-tacticsummary" href="/APT29/results/symantec/WindowsAdminShares.html">
                                                     Windows Admin Shares
 												<br />(T1077)
