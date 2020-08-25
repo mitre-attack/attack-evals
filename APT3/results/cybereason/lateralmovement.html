@@ -356,6 +356,357 @@
 								<table class='table2'>
 									<tr>
 										<td class='td2Technique'>
+                                                <a class="aTechnique-tacticsummary" href="/APT3/results/cybereason/windowsadminshares.html">
+                                                    Windows Admin Shares
+												<br />(T1077)
+											</a>
+										</td>
+                        			</tr>
+                    			</table>
+                			</td>
+							<td class='td1B'>
+								<table class='table2'>
+
+
+                                        <tr class='tr2'>
+                        
+                                            <td class='td2Procedures-apt3'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            Empire: Successful authentication targeted Windows admin share on Conficker (10.0.0.5)ï¿½
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2Steps'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            <span class='spanProcedureSummaryStep' id='p16_B_1' onclick="scroll_to_step('16_B_1')">
+                                                                16.B.1
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                Specific Behavior (Tainted)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_specific_behavior.svg" title="Specific Behavior"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotesDotted'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                A Specific Behavior alert was generated for net.exe attempting to mount an administrative share. The alert was tagged with the correct ATT&CK Tactic (Lateral Movement) and Technique (Windows Admin Shares) in addition to labeling net.exe as having a High Internal Outgoing Embryonic Connection Rate (meaning 25% of the internal network connections did not receive a response). The alert was tainted by a parent PowerShell alert.
+
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-16.B.1-20.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                Telemetry
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotes'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed net.exe executing with command-line arguments.
+
+                                                                                <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
+                                                                                    <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
+                                                                                         For most alerts in the user interface, the telemetry behind it is separately available in the capability. This is counted as a separate detection because the functionality was showed to MITRE throughout the evaluation, though a screenshot was not taken in this instance.
+                                                                                    </span>
+                                                                                </a>
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-16.B.1-20.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                        <tr class='tr2NoBottomBorder'>
+                        
+                                            <td class='td2Procedures-apt3'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            Empire: Successful authentication targeted Windows admin shares on Conficker (10.0.0.5)
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2Steps'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            <span class='spanProcedureSummaryStep' id='p16_D_1' onclick="scroll_to_step('16_D_1')">
+                                                                16.D.1
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                Specific Behavior (Tainted)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_specific_behavior.svg" title="Specific Behavior"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotesDotted'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                A Specific Behavior alert was generated for net.exe attempting to mount an administrative share. The alert was tagged with the correct ATT&CK Tactic (Lateral Movement) and Technique (Windows Admin Shares). The alert was tainted by a parent PowerShell alert.
+
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-16.D.1-100.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-16.D.1-10.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                Telemetry
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotes'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed net.exe executing with command-line arguments.
+
+                                                                                <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
+                                                                                    <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
+                                                                                         For most alerts in the user interface, the telemetry behind it is separately available in the capability. This is counted as a separate detection because the functionality was showed to MITRE throughout the evaluation, though a screenshot was not taken in this instance.
+                                                                                    </span>
+                                                                                </a>
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-16.D.1-100.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-16.D.1-10.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class='table1'>
+						<tr class='tr1'>
+							<td class='td1A'>
+								<table class='table2'>
+									<tr>
+										<td class='td2Technique'>
+                                                <a class="aTechnique-tacticsummary" href="/APT3/results/cybereason/bruteforce.html">
+                                                    Brute Force
+												<br />(T1110)
+											</a>
+										</td>
+                        			</tr>
+                    			</table>
+                			</td>
+							<td class='td1B'>
+								<table class='table2'>
+
+
+                                        <tr class='tr2NoBottomBorder'>
+                        
+                                            <td class='td2Procedures-apt3'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            Empire: Successful authentication to Conficker (10.0.0.5) using credentials of user Kmitnick as a result of the brute force password spraying
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2Steps'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            <span class='spanProcedureSummaryStep' id='p16_B_1' onclick="scroll_to_step('16_B_1')">
+                                                                16.B.1
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                Enrichment (Tainted)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_enrichment.svg" title="Enrichment"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotesDotted'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                The capability enriched net.exe execution with a related ATT&CK Tactic (Lateral Movement) and Technique (Windows Admin Shares) in addition to labeling net.exe as having a High Internal Outgoing Embryonic Connection Rate (meaning 25% of the internal network connections did not receive a response). The data was tainted by a parent PowerShell alert.
+
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-16.B.1-20.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                Telemetry
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotes'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed net.exe executing with command-line arguments. 
+
+                                                                                <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
+                                                                                    <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
+                                                                                         The telemetry behind each enrichment is separately available in the capability. This is counted as a separate detection because the functionality was showed to MITRE throughout the evaluation, though a screenshot was not taken in this instance.
+                                                                                    </span>
+                                                                                </a>
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-16.B.1-20.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class='table1'>
+						<tr class='tr1'>
+							<td class='td1A'>
+								<table class='table2'>
+									<tr>
+										<td class='td2Technique'>
                                                 <a class="aTechnique-tacticsummary" href="/APT3/results/cybereason/remotedesktopprotocol.html">
                                                     Remote Desktop Protocol
 												<br />(T1076)
@@ -366,241 +717,385 @@
                 			</td>
 							<td class='td1B'>
 								<table class='table2'>
-                                    <tr class='tr2'>
+
+                                        <tr class='tr2'>
                         
-                                        <td class='td2Procedures-apt3'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        Cobalt Strike: C2 channel modified to proxy RDP connection to Conficker (10.0.0.5)
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2Steps'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        <span class='spanProcedureSummaryStep' id='p6_C_1' onclick="scroll_to_step('6_C_1')">
-                                                            6.C.1
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                            <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                            <td class='td2Procedures-apt3'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            Cobalt Strike: C2 channel modified to proxy RDP connection to Conficker (10.0.0.5)
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2Steps'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            <span class='spanProcedureSummaryStep' id='p6_C_1' onclick="scroll_to_step('6_C_1')">
+                                                                6.C.1
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            Telemetry (Tainted)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Telemetry (Tainted)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed cmd.exe establishing an outbound RDP connection over port 3389 to 10.0.0.5 (Conficker) with Remote Interactive Logon Type. The telemetry was tainted by a parent Injected Shellcode alert listed as the owner process Telemetry also showed rdpclip.exe executing on 10.0.0.5 (Conficker).
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed cmd.exe establishing an outbound RDP connection over port 3389 to 10.0.0.5 (Conficker) with Remote Interactive Logon Type. The telemetry was tainted by a parent Injected Shellcode alert listed as the owner process Telemetry also showed rdpclip.exe executing on 10.0.0.5 (Conficker).
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-6.B.1-20.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-6.C.1-10.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-6.C.1-11.png' target='_blank'>
-                                                                                [3]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-6.B.1-20.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-6.C.1-10.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-6.C.1-11.png' target='_blank'>
+                                                                                    [3]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class='table1'>
+						<tr class='tr1'>
+							<td class='td1A'>
+								<table class='table2'>
+									<tr>
+										<td class='td2Technique'>
+                                                <a class="aTechnique-tacticsummary" href="/APT3/results/cybereason/remotefilecopy.html">
+                                                    Remote File Copy
+												<br />(T1105)
+											</a>
+										</td>
+                        			</tr>
+                    			</table>
+                			</td>
+							<td class='td1B'>
+								<table class='table2'>
+
+
+
+
+                                        <tr class='tr2'>
                         
-                                        <td class='td2Procedures-apt3'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        RDP connection made to Conficker (10.0.0.5) as part of execution of persistence mechanism
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2Steps'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        <span class='spanProcedureSummaryStep' id='p10_B_1' onclick="scroll_to_step('10_B_1')">
-                                                            10.B.1
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                            <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                            <td class='td2Procedures-apt3'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            Empire: Built-in move capability executed to write malicious VBScript (update.vbs) to disk on Creeper (10.0.0.4)
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2Steps'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            <span class='spanProcedureSummaryStep' id='p16_G_1' onclick="scroll_to_step('16_G_1')">
+                                                                16.G.1
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            Telemetry (Tainted)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Telemetry (Tainted)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed the logon session for Jesse to Conficker (10.0.0.5) as a Remote Interactive Logon Type. Telemetry also showed a connection over port 3389 to Conficker (10.0.0.5) through rundll32.exe serving as a proxy. The telemetry was tainted by a parent Injected Shellcode alert.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed file events for the write of update.vbs to Creeper (10.0.0.4). The telemetry was tainted by a parent PowerShell alert listed as the owner process.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-10.B.1-10.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-10.B.1-20.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-10.B.1-100.png' target='_blank'>
-                                                                                [3]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2NoBottomBorder'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-16.G.1-10.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class='table1'>
+						<tr class='tr1'>
+							<td class='td1A'>
+								<table class='table2'>
+									<tr>
+										<td class='td2Technique'>
+                                                <a class="aTechnique-tacticsummary" href="/APT3/results/cybereason/validaccounts.html">
+                                                    Valid Accounts
+												<br />(T1078)
+											</a>
+										</td>
+                        			</tr>
+                    			</table>
+                			</td>
+							<td class='td1B'>
+								<table class='table2'>
+
+
+                                        <tr class='tr2'>
                         
-                                        <td class='td2Procedures-apt3'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        RDP connection made to Creeper (10.0.0.4) as part of execution of persistence mechanism
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2Steps'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        <span class='spanProcedureSummaryStep' id='p20_A_1' onclick="scroll_to_step('20_A_1')">
-                                                            20.A.1
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                            <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                            <td class='td2Procedures-apt3'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            Empire: 'net use' via PowerShell to successfully authenticate to Conficker (10.0.0.5) using credentials of user Kmitnick
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2Steps'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            <span class='spanProcedureSummaryStep' id='p16_B_1' onclick="scroll_to_step('16_B_1')">
+                                                                16.B.1
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            Telemetry
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Enrichment (Tainted)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_enrichment.svg" title="Enrichment"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotesDotted'>
+                                                                <td class='tdDetectionNotesDotted'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed creation of a RDP session on Creeper (10.0.0.4).
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                The capability enriched a logon attempt via net.exe, using the valid credentials of user Kmitnick, with a related ATT&CK Tactic (Lateral Movement) and Technique (Windows Admin Shares) in addition to labeling net.exe as having a High Internal Outgoing Embryonic Connection Rate (meaning 25% of the internal network connections did not receive a response). The data was tainted by a parent PowerShell alert.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-20.A.1-21.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-20.A.1-20.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-16.B.1-20.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            Enrichment
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_enrichment.svg" title="Enrichment">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Telemetry
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            The capability enriched a RDP connection with information that the connection was made to a RDP port, as well as a related ATT&CK Tactic (Command and Control) and Techniques (Commonly Used Port, Standard Application Layer Protocol).
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed net.exe executing with command-line arguments. 
+
+                                                                                <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
+                                                                                    <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
+                                                                                         The telemetry behind each enrichment is separately available in the capability. This is counted as a separate detection because the functionality was showed to MITRE throughout the evaluation, though a screenshot was not taken in this instance.
+                                                                                    </span>
+                                                                                </a>
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-16.B.1-20.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                        <tr class='tr2NoBottomBorder'>
+                        
+                                            <td class='td2Procedures-apt3'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            Empire: 'net use' via PowerShell to successfully authenticate to Creeper (10.0.0.4) using credentials of user Kmitnick
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2Steps'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            <span class='spanProcedureSummaryStep' id='p16_D_1' onclick="scroll_to_step('16_D_1')">
+                                                                16.D.1
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-20.A.1-21.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-20.A.1-20.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
+                                General Behavior (Tainted)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_general_behavior.svg" title="General Behavior"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotesDotted'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                A General Behavior alert was generated for net.exe conducting suspicious activity related to Discovery/Privilege Escalation as well as being a descendant of a suspicious process. The alert was tainted by a parent PowerShell alert.
+
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-16.D.1-10.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                Telemetry
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotes'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed net.exe executing with command-line arguments.
+
+                                                                                <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
+                                                                                    <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
+                                                                                         For most alerts in the user interface, the telemetry behind it is separately available in the capability. This is counted as a separate detection because the functionality was showed to MITRE throughout the evaluation, though a screenshot was not taken in this instance.
+                                                                                    </span>
+                                                                                </a>
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-16.D.1-10.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
                                 </table>
                             </td>
                         </tr>
@@ -878,13 +1373,13 @@
 										<p class='pOFProcedure' id='pProcedure7_A_1'>
 											i. Microsoft Management Console (Local Users and Groups snap-in) GUI utility displayed user account information
 										</p>
-					<div class='divOFSubstep' id='div7_B_1'><p class='pOFSubstep' id=pSubstep7_B_1>7.B.1 Command and Control       	</p>
-											<p class='pOFTechniques' id='pTechniques7_B_1'>
+					<div class='divOFInScopeSubstep' id='div7_B_1'><p class='pOFInScopeSubstep' id=pSubstep7_B_1>7.B.1 Command and Control       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques7_B_1'>
 				<a href='/APT3/results/cybereason/remotefilecopy'>Remote File Copy</a>          </p>
-										<p class='pOFProcedure' id='pProcedure7_B_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure7_B_1'>
 											i. Cobalt Strike: Built-in upload capability executed to write a DLL payload (updater.dll) to disk on Nimda (10.0.1.6)
 										</p>
-					<div class='divOFSubstep' id='div7_C_1'><p class='pOFSubstep' id=pSubstep7_C_1>7.C.1 Persistence       	</p>
+					</div><div class='divOFSubstep' id='div7_C_1'><p class='pOFSubstep' id=pSubstep7_C_1>7.C.1 Persistence       	</p>
 											<p class='pOFTechniques' id='pTechniques7_C_1'>
 				<a href='/APT3/results/cybereason/scheduledtask'>Scheduled Task</a>          </p>
 										<p class='pOFProcedure' id='pProcedure7_C_1'>
@@ -1178,31 +1673,31 @@
 										<p class='pOFProcedure' id='pProcedure13_C_1'>
 											i. Empire:ï¿½'reg query' via PowerShell to enumerate a specific Registry key
 										</p>
-					     <p class='pOFStep'>Step 14: Privilege Escalation     </p><div class='divOFSubstep' id='div14_A_1'><p class='pOFSubstep' id=pSubstep14_A_1>14.A.1 Privilege Escalation       	</p>
-											<p class='pOFTechniques' id='pTechniques14_A_1'>
+					     <p class='pOFStep'>Step 14: Privilege Escalation     </p><div class='divOFInScopeSubstep' id='div14_A_1'><p class='pOFInScopeSubstep' id=pSubstep14_A_1>14.A.1 Privilege Escalation       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques14_A_1'>
 				<a href='/APT3/results/cybereason/bypassuseraccountcontrol'>Bypass User Account Control</a>          </p>
-										<p class='pOFProcedure' id='pProcedure14_A_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure14_A_1'>
 											i. Empire: Built-in UAC bypass token duplication module executed to launch new callback with elevated process integrity level
 										</p>
-					<div class='divOFSubstep' id='div14_A_1'><p class='pOFSubstep' id=pSubstep14_A_1>14.A.1 Privilege Escalation       	</p>
-											<p class='pOFTechniques' id='pTechniques14_A_1'>
+					</div><div class='divOFInScopeSubstep' id='div14_A_1'><p class='pOFInScopeSubstep' id=pSubstep14_A_1>14.A.1 Privilege Escalation       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques14_A_1'>
 				<a href='/APT3/results/cybereason/remotefilecopy'>Remote File Copy</a>          </p>
-										<p class='pOFProcedure' id='pProcedure14_A_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure14_A_1'>
 											i. Empire: UAC bypass module downloaded and wrote a new Empire stager (wdbypass) to disk
 										</p>
-					<div class='divOFSubstep' id='div14_A_1'><p class='pOFSubstep' id=pSubstep14_A_1>14.A.1 Privilege Escalation       	</p>
-											<p class='pOFTechniques' id='pTechniques14_A_1'>
+					</div><div class='divOFInScopeSubstep' id='div14_A_1'><p class='pOFInScopeSubstep' id=pSubstep14_A_1>14.A.1 Privilege Escalation       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques14_A_1'>
 				<a href='/APT3/results/cybereason/standardapplicationlayerprotocol'>Standard Application Layer Protocol</a>          </p>
-										<p class='pOFProcedure' id='pProcedure14_A_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure14_A_1'>
 											i. Empire: UAC bypass module downloaded a new Empire stager (wdbypass) over HTTP
 										</p>
-					<div class='divOFSubstep' id='div14_A_1'><p class='pOFSubstep' id=pSubstep14_A_1>14.A.1 Privilege Escalation       	</p>
-											<p class='pOFTechniques' id='pTechniques14_A_1'>
+					</div><div class='divOFInScopeSubstep' id='div14_A_1'><p class='pOFInScopeSubstep' id=pSubstep14_A_1>14.A.1 Privilege Escalation       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques14_A_1'>
 				<a href='/APT3/results/cybereason/commonlyusedport'>Commonly Used Port</a>          </p>
-										<p class='pOFProcedure' id='pProcedure14_A_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure14_A_1'>
 											i. Empire: UAC bypass module downloaded a new Empire stager (wdbypass) over port 8080
 										</p>
-					     <p class='pOFStep'>Step 15: Credential Access     </p><div class='divOFSubstep' id='div15_A_1'><p class='pOFSubstep' id=pSubstep15_A_1>15.A.1 Credential Access       	</p>
+					</div>     <p class='pOFStep'>Step 15: Credential Access     </p><div class='divOFSubstep' id='div15_A_1'><p class='pOFSubstep' id=pSubstep15_A_1>15.A.1 Credential Access       	</p>
 											<p class='pOFTechniques' id='pTechniques15_A_1'>
 				<a href='/APT3/results/cybereason/inputcapture'>Input Capture</a>          </p>
 										<p class='pOFProcedure' id='pProcedure15_A_1'>
@@ -1220,73 +1715,73 @@
 										<p class='pOFProcedure' id='pProcedure15_B_1'>
 											i. Empire: 'get-content' via PowerShell to collect sensitive file (it_tasks.txt) from a network shared drive (Wormshare) on Conficker (10.0.0.5)
 										</p>
-					     <p class='pOFStep'>Step 16: Lateral Movement     </p><div class='divOFSubstep' id='div16_A_1'><p class='pOFSubstep' id=pSubstep16_A_1>16.A.1 Credential Access       	</p>
-											<p class='pOFTechniques' id='pTechniques16_A_1'>
+					     <p class='pOFStep'>Step 16: Lateral Movement     </p><div class='divOFInScopeSubstep' id='div16_A_1'><p class='pOFInScopeSubstep' id=pSubstep16_A_1>16.A.1 Credential Access       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques16_A_1'>
 				<a href='/APT3/results/cybereason/bruteforce'>Brute Force</a>          </p>
-										<p class='pOFProcedure' id='pProcedure16_A_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure16_A_1'>
 											i. Empire: 'net use' via PowerShell to brute force password spraying authentication attempts to Morris (10.0.1.4) and Nimda (10.0.1.6) targeting credentials of usersï¿½Kmitnick, Bob, and Frieda
 										</p>
-					<div class='divOFSubstep' id='div16_A_1'><p class='pOFSubstep' id=pSubstep16_A_1>16.A.1 Credential Access       	</p>
-											<p class='pOFTechniques' id='pTechniques16_A_1'>
+					</div><div class='divOFInScopeSubstep' id='div16_A_1'><p class='pOFInScopeSubstep' id=pSubstep16_A_1>16.A.1 Credential Access       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques16_A_1'>
 				<a href='/APT3/results/cybereason/windowsadminshares'>Windows Admin Shares</a>          </p>
-										<p class='pOFProcedure' id='pProcedure16_A_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure16_A_1'>
 											i. Empire: Brute force password spraying attempts targeted Windows admin shares on Morris (10.0.1.4) and Nimda (10.0.1.6)
 										</p>
-					<div class='divOFSubstep' id='div16_B_1'><p class='pOFSubstep' id=pSubstep16_B_1>16.B.1 Lateral Movement       	</p>
-											<p class='pOFTechniques' id='pTechniques16_B_1'>
+					</div><div class='divOFInScopeSubstep' id='div16_B_1'><p class='pOFInScopeSubstep' id=pSubstep16_B_1>16.B.1 Lateral Movement       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques16_B_1'>
 				<a href='/APT3/results/cybereason/validaccounts'>Valid Accounts</a>          </p>
-										<p class='pOFProcedure' id='pProcedure16_B_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure16_B_1'>
 											i. Empire: 'net use' via PowerShell to successfully authenticate to Conficker (10.0.0.5) using credentials of user Kmitnick
 										</p>
-					<div class='divOFSubstep' id='div16_B_1'><p class='pOFSubstep' id=pSubstep16_B_1>16.B.1 Lateral Movement       	</p>
-											<p class='pOFTechniques' id='pTechniques16_B_1'>
+					</div><div class='divOFInScopeSubstep' id='div16_B_1'><p class='pOFInScopeSubstep' id=pSubstep16_B_1>16.B.1 Lateral Movement       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques16_B_1'>
 				<a href='/APT3/results/cybereason/windowsadminshares'>Windows Admin Shares</a>          </p>
-										<p class='pOFProcedure' id='pProcedure16_B_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure16_B_1'>
 											i. Empire: Successful authentication targeted Windows admin share on Conficker (10.0.0.5)ï¿½
 										</p>
-					<div class='divOFSubstep' id='div16_B_1'><p class='pOFSubstep' id=pSubstep16_B_1>16.B.1 Lateral Movement       	</p>
-											<p class='pOFTechniques' id='pTechniques16_B_1'>
+					</div><div class='divOFInScopeSubstep' id='div16_B_1'><p class='pOFInScopeSubstep' id=pSubstep16_B_1>16.B.1 Lateral Movement       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques16_B_1'>
 				<a href='/APT3/results/cybereason/bruteforce'>Brute Force</a>          </p>
-										<p class='pOFProcedure' id='pProcedure16_B_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure16_B_1'>
 											i. Empire: Successful authentication to Conficker (10.0.0.5) using credentials of user Kmitnick as a result of the brute force password spraying
 										</p>
-					<div class='divOFSubstep' id='div16_C_1'><p class='pOFSubstep' id=pSubstep16_C_1>16.C.1 Defense Evasion       	</p>
+					</div><div class='divOFSubstep' id='div16_C_1'><p class='pOFSubstep' id=pSubstep16_C_1>16.C.1 Defense Evasion       	</p>
 											<p class='pOFTechniques' id='pTechniques16_C_1'>
 				<a href='/APT3/results/cybereason/networkshareconnectionremoval'>Network Share Connection Removal</a>          </p>
 										<p class='pOFProcedure' id='pProcedure16_C_1'>
 											i. Empire: 'net use -delete' via PowerShell
 										</p>
-					<div class='divOFSubstep' id='div16_D_1'><p class='pOFSubstep' id=pSubstep16_D_1>16.D.1 Lateral Movement       	</p>
-											<p class='pOFTechniques' id='pTechniques16_D_1'>
+					<div class='divOFInScopeSubstep' id='div16_D_1'><p class='pOFInScopeSubstep' id=pSubstep16_D_1>16.D.1 Lateral Movement       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques16_D_1'>
 				<a href='/APT3/results/cybereason/windowsadminshares'>Windows Admin Shares</a>          </p>
-										<p class='pOFProcedure' id='pProcedure16_D_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure16_D_1'>
 											i. Empire: Successful authentication targeted Windows admin shares on Conficker (10.0.0.5)
 										</p>
-					<div class='divOFSubstep' id='div16_D_1'><p class='pOFSubstep' id=pSubstep16_D_1>16.D.1 Lateral Movement       	</p>
-											<p class='pOFTechniques' id='pTechniques16_D_1'>
+					</div><div class='divOFInScopeSubstep' id='div16_D_1'><p class='pOFInScopeSubstep' id=pSubstep16_D_1>16.D.1 Lateral Movement       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques16_D_1'>
 				<a href='/APT3/results/cybereason/validaccounts'>Valid Accounts</a>          </p>
-										<p class='pOFProcedure' id='pProcedure16_D_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure16_D_1'>
 											i. Empire: 'net use' via PowerShell to successfully authenticate to Creeper (10.0.0.4) using credentials of user Kmitnick
 										</p>
-					<div class='divOFSubstep' id='div16_E_1'><p class='pOFSubstep' id=pSubstep16_E_1>16.E.1 Command and Control       	</p>
-											<p class='pOFTechniques' id='pTechniques16_E_1'>
+					</div><div class='divOFInScopeSubstep' id='div16_E_1'><p class='pOFInScopeSubstep' id=pSubstep16_E_1>16.E.1 Command and Control       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques16_E_1'>
 				<a href='/APT3/results/cybereason/remotefilecopy'>Remote File Copy</a>          </p>
-										<p class='pOFProcedure' id='pProcedure16_E_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure16_E_1'>
 											i. Empire: Built-in upload module executed to write malicious VBScript (autoupdate.vbs) to disk on CodeRed (10.0.1.5)
 										</p>
-					<div class='divOFSubstep' id='div16_F_1'><p class='pOFSubstep' id=pSubstep16_F_1>16.F.1 Execution       	</p>
+					</div><div class='divOFSubstep' id='div16_F_1'><p class='pOFSubstep' id=pSubstep16_F_1>16.F.1 Execution       	</p>
 											<p class='pOFTechniques' id='pTechniques16_F_1'>
 				<a href='/APT3/results/cybereason/command-lineinterface'>Command-Line Interface</a>          </p>
 										<p class='pOFProcedure' id='pProcedure16_F_1'>
 											i. Empire: Built-in runas module executed to launch malicious VBScript (autoupdate.vbs) as user Kmitnickï¿½
 										</p>
-					<div class='divOFSubstep' id='div16_G_1'><p class='pOFSubstep' id=pSubstep16_G_1>16.G.1 Lateral Movement       	</p>
-											<p class='pOFTechniques' id='pTechniques16_G_1'>
+					<div class='divOFInScopeSubstep' id='div16_G_1'><p class='pOFInScopeSubstep' id=pSubstep16_G_1>16.G.1 Lateral Movement       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques16_G_1'>
 				<a href='/APT3/results/cybereason/remotefilecopy'>Remote File Copy</a>          </p>
-										<p class='pOFProcedure' id='pProcedure16_G_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure16_G_1'>
 											i. Empire: Built-in move capability executed to write malicious VBScript (update.vbs) to disk on Creeper (10.0.0.4)
 										</p>
-					<div class='divOFSubstep' id='div16_H_1'><p class='pOFSubstep' id=pSubstep16_H_1>16.H.1 Discovery       	</p>
+					</div><div class='divOFSubstep' id='div16_H_1'><p class='pOFSubstep' id=pSubstep16_H_1>16.H.1 Discovery       	</p>
 											<p class='pOFTechniques' id='pTechniques16_H_1'>
 				<a href='/APT3/results/cybereason/systemservicediscovery'>System Service Discovery</a>          </p>
 										<p class='pOFProcedure' id='pProcedure16_H_1'>
@@ -1370,19 +1865,19 @@
 										<p class='pOFProcedure' id='pProcedure18_B_1'>
 											i. Empire: 'copy' via PowerShell collected a file (Shockwave_network.vsdx) from a network shared drive (Wormshare) on Conficker (10.0.0.5)
 										</p>
-					     <p class='pOFStep'>Step 19: Exfiltration     </p><div class='divOFSubstep' id='div19_A_1'><p class='pOFSubstep' id=pSubstep19_A_1>19.A.1 Command and Control       	</p>
-											<p class='pOFTechniques' id='pTechniques19_A_1'>
+					     <p class='pOFStep'>Step 19: Exfiltration     </p><div class='divOFInScopeSubstep' id='div19_A_1'><p class='pOFInScopeSubstep' id=pSubstep19_A_1>19.A.1 Command and Control       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques19_A_1'>
 				<a href='/APT3/results/cybereason/masquerading'>Masquerading</a>          </p>
-										<p class='pOFProcedure' id='pProcedure19_A_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure19_A_1'>
 											i. Empire: File dropped to disk is a renamed copy of the WinRAR binary
 										</p>
-					<div class='divOFSubstep' id='div19_A_1'><p class='pOFSubstep' id=pSubstep19_A_1>19.A.1 Command and Control       	</p>
-											<p class='pOFTechniques' id='pTechniques19_A_1'>
+					</div><div class='divOFInScopeSubstep' id='div19_A_1'><p class='pOFInScopeSubstep' id=pSubstep19_A_1>19.A.1 Command and Control       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques19_A_1'>
 				<a href='/APT3/results/cybereason/remotefilecopy'>Remote File Copy</a>          </p>
-										<p class='pOFProcedure' id='pProcedure19_A_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure19_A_1'>
 											i. Empire: Built-in upload module executed to write binary (recycler.exe) to disk on CodeRed (10.0.1.5)
 										</p>
-					<div class='divOFSubstep' id='div19_B_1'><p class='pOFSubstep' id=pSubstep19_B_1>19.B.1 Defense Evasion       	</p>
+					</div><div class='divOFSubstep' id='div19_B_1'><p class='pOFSubstep' id=pSubstep19_B_1>19.B.1 Defense Evasion       	</p>
 											<p class='pOFTechniques' id='pTechniques19_B_1'>
 				<a href='/APT3/results/cybereason/datacompressed'>Data Compressed</a>          </p>
 										<p class='pOFProcedure' id='pProcedure19_B_1'>

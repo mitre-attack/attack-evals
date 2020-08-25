@@ -356,9 +356,9 @@
 								<table class='table2'>
 									<tr>
 										<td class='td2Technique'>
-                                                <a class="aTechnique-tacticsummary" href="/APT3/results/cybereason/masquerading.html">
-                                                    Masquerading
-												<br />(T1036)
+                                                <a class="aTechnique-tacticsummary" href="/APT3/results/cybereason/standardapplicationlayerprotocol.html">
+                                                    Standard Application Layer Protocol
+												<br />(T1071)
 											</a>
 										</td>
                         			</tr>
@@ -366,588 +366,74 @@
                 			</td>
 							<td class='td1B'>
 								<table class='table2'>
-                                    <tr class='tr2'>
+
+
+
+
+                                        <tr class='tr2NoBottomBorder'>
                         
-                                        <td class='td2Procedures-apt3'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        Empire: 'sc description' via PowerShell to remotely disguise a service on Creeper (10.0.0.4)
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2Steps'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        <span class='spanProcedureSummaryStep' id='p16_I_1' onclick="scroll_to_step('16_I_1')">
-                                                            16.I.1
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                            <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                            <td class='td2Procedures-apt3'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            Empire: UAC bypass module downloaded a new Empire stager (wdbypass) over HTTP
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2Steps'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            <span class='spanProcedureSummaryStep' id='p14_A_1' onclick="scroll_to_step('14_A_1')">
+                                                                14.A.1
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            Telemetry (Tainted)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Specific Behavior (Tainted)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_specific_behavior.svg" title="Specific Behavior"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed sc.exe executing with command-line arguments to set the service description. An analyst could use this information to determine it is not a legitimate service. The telemetry was tainted by a parent PowerShell alert.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                A Specific Behavior alert was generated for powershell.exe executed as a PowerShell downloader. The alert was tagged with the correct ATT&CK Tactic (Command and Control) and the Technique (Standard Application Layer Protocol). Data also showed decoded PowerShell commands extracted from the command-line arguments showing a connection over port 8080 with a HTTP request to download the wdbypass payload. The alert was tainted by a parent PowerShell alert.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-16.I.1-21.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2'>
-                        
-                                        <td class='td2Procedures-apt3'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        Empire: File dropped to disk is a renamed copy of the WinRAR binary
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2Steps'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        <span class='spanProcedureSummaryStep' id='p19_A_1' onclick="scroll_to_step('19_A_1')">
-                                                            19.A.1
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                            <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            Telemetry (Tainted)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotes'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed that recycler.exe was WinRAR via file metadata. The telemetry was tainted by a parent PowerShell alert.
-
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-19.A.1-100.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2NoBottomBorder'>
-                        
-                                        <td class='td2Procedures-apt3'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        Empire: Executed binary (recycler.exe) is a renamed copy of the WinRAR binary
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2Steps'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        <span class='spanProcedureSummaryStep' id='p19_B_1' onclick="scroll_to_step('19_B_1')">
-                                                            19.B.1
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                            <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            Telemetry (Tainted)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotes'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed recycler.exe with full command-line arguments, including the use of the -hp flag to encrypt and compress data, indicating the WinRAR utility was in use. The telemetry was tainted by a parent PowerShell alert.
-
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-19.B.1-20.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                    <table class='table1'>
-						<tr class='tr1'>
-							<td class='td1A'>
-								<table class='table2'>
-									<tr>
-										<td class='td2Technique'>
-                                                <a class="aTechnique-tacticsummary" href="/APT3/results/cybereason/processinjection.html">
-                                                    Process Injection
-												<br />(T1055)
-											</a>
-										</td>
-                        			</tr>
-                    			</table>
-                			</td>
-							<td class='td1B'>
-								<table class='table2'>
-                                    <tr class='tr2'>
-                        
-                                        <td class='td2Procedures-apt3'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        Cobalt Strike: Built-in process injection capability executed to inject callback into cmd.exe
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2Steps'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        <span class='spanProcedureSummaryStep' id='p3_C_1' onclick="scroll_to_step('3_C_1')">
-                                                            3.C.1
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                            <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            Specific Behavior (Tainted)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_specific_behavior.svg" title="Specific Behavior"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotes'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            A Specific Behavior alert was generated for process injection from powershell.exe into cmd.exe (Anonymous RWX). The alert is tagged with the correct ATT&CK Tactic (Defense Evasion) and Technique (Process Injection). The alert is tainted by a parent PowerShell alert.
-
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-3.C.1-10.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-3.C.1-100.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2'>
-                        
-                                        <td class='td2Procedures-apt3'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        Cobalt Strike: Credential dump capability involved process injection into lsass
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2Steps'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        <span class='spanProcedureSummaryStep' id='p5_A_1' onclick="scroll_to_step('5_A_1')">
-                                                            5.A.1
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                            <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            Specific Behavior
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_specific_behavior.svg" title="Specific Behavior">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotes'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            A Specific Behavior alert was generated for svchost.exe reflectively loading a malicious executable, identified as Mimikatz, then accessing lsass. The alert was also tagged with the correct ATT&CK Technique (Process Injection) and Tactics (Defense Evasion, Privilege Escalation). The powerkatz.dll was also seen loaded as a floating executable code.
-
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-5.A.1-11.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-5.A.1-21.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2'>
-                        
-                                        <td class='td2Procedures-apt3'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        Cobalt Strike: Hash dump capability involved process injection into lsass.exe
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2Steps'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        <span class='spanProcedureSummaryStep' id='p5_A_2' onclick="scroll_to_step('5_A_2')">
-                                                            5.A.2
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                            <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            Specific Behavior
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_specific_behavior.svg" title="Specific Behavior">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotes'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            A Specific Behavior alert was generated for svchost.exe injection into lsass.exe. The alert was mapped with the correct ATT&CK Tactic (Defense Evasion, Privilege Escalation) and Technique (Process Injection). The hashdumpx64.dll was also seen loaded as a floating executable code.
-
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-5.A.2-10.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-5.A.2-20.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-5.A.2-11.png' target='_blank'>
-                                                                                [3]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2NoBottomBorder'>
-                        
-                                        <td class='td2Procedures-apt3'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        Cobalt Strike: Screen capture capability involved process injection into explorer.exe
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2Steps'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        <span class='spanProcedureSummaryStep' id='p8_D_1' onclick="scroll_to_step('8_D_1')">
-                                                            8.D.1
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                            <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            Specific Behavior
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_specific_behavior.svg" title="Specific Behavior">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotes'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            A Specific Behavior alert was generated based on a malicious code injection caused by process injection of explorer.exe. The alert was mapped with the correct ATT&CK Tactics (Defense Evasion, Privilege Escalation) and Technique (Process Injection) and indicated that explorer.exe was hosting injected threads and loading malicious files.
-
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-8.D.1-21.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-8.D.1-20.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                    <table class='table1'>
-						<tr class='tr1'>
-							<td class='td1A'>
-								<table class='table2'>
-									<tr>
-										<td class='td2Technique'>
-                                                <a class="aTechnique-tacticsummary" href="/APT3/results/cybereason/newservice.html">
-                                                    New Service
-												<br />(T1050)
-											</a>
-										</td>
-                        			</tr>
-                    			</table>
-                			</td>
-							<td class='td1B'>
-								<table class='table2'>
-                                    <tr class='tr2NoBottomBorder'>
-                        
-                                        <td class='td2Procedures-apt3'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        Empire: 'sc create' via PowerShell to remotely create a service on Creeper (10.0.0.4)
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2Steps'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        <span class='spanProcedureSummaryStep' id='p16_I_1' onclick="scroll_to_step('16_I_1')">
-                                                            16.I.1
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                            <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            Specific Behavior (Tainted)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_specific_behavior.svg" title="Specific Behavior"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotesDotted'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            A Specific Behavior alert was generated for the unconventional creation of a new service with the correct ATT&CK Technique (New Service) and Tactic (Persistence, Privilege Escalation). The alert was tainted by a parent PowerShell alert.
-
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-16.I.1-13.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            Telemetry
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotes'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed sc.exe executing with command-line arguments.
-
-                                                                            <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
-                                                                                <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
-                                                                                     For most alerts in the user interface, the telemetry behind it is separately available in the capability. This is counted as a separate detection because the functionality was showed to MITRE throughout the evaluation, though a screenshot was not taken in this instance.
-                                                                                </span>
-                                                                            </a>
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-16.I.1-13.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-14.A.1-40.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-14.A.1-30.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
                                 </table>
                             </td>
                         </tr>
@@ -968,131 +454,133 @@
                 			</td>
 							<td class='td1B'>
 								<table class='table2'>
-                                    <tr class='tr2'>
+
+                                        <tr class='tr2'>
                         
-                                        <td class='td2Procedures-apt3'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        Cobalt Strike: Built-in UAC bypass token duplication capability executed to modify current process token
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2Steps'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        <span class='spanProcedureSummaryStep' id='p3_A_1' onclick="scroll_to_step('3_A_1')">
-                                                            3.A.1
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                            <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                            <td class='td2Procedures-apt3'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            Cobalt Strike: Built-in UAC bypass token duplication capability executed to modify current process token
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2Steps'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            <span class='spanProcedureSummaryStep' id='p3_A_1' onclick="scroll_to_step('3_A_1')">
+                                                                3.A.1
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            None
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg" title="None">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                None
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg" title="None">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            No detection capability demonstrated for this procedure, though an alert was generated for malicious code injection into PowerShell. Telemetry also showed that bypassuactoken.x64.dll was loaded.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                No detection capability demonstrated for this procedure, though an alert was generated for malicious code injection into PowerShell. Telemetry also showed that bypassuactoken.x64.dll was loaded.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-3.C.1-10.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-3.A.1-10.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2NoBottomBorder'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-3.C.1-10.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-3.A.1-10.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                        <tr class='tr2NoBottomBorder'>
                         
-                                        <td class='td2Procedures-apt3'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        Cobalt Strike: Built-in token theft capability executed to change user context to George
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2Steps'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        <span class='spanProcedureSummaryStep' id='p5_B_1' onclick="scroll_to_step('5_B_1')">
-                                                            5.B.1
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                            <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                            <td class='td2Procedures-apt3'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            Cobalt Strike: Built-in token theft capability executed to change user context to George
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2Steps'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            <span class='spanProcedureSummaryStep' id='p5_B_1' onclick="scroll_to_step('5_B_1')">
+                                                                5.B.1
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            Telemetry (Tainted)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Telemetry (Tainted)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed cmd.exe associated with both users Debbie and George, indicating user context change via token manipulation. The telemetry was tainted by a parent alert on explorer.exe attempting to execute a file (Resume Viewer.exe) identified as malicious.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed cmd.exe associated with both users Debbie and George, indicating user context change via token manipulation. The telemetry was tainted by a parent alert on explorer.exe attempting to execute a file (Resume Viewer.exe) identified as malicious.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-5.B.1-10.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-5.B.1-10.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
                                 </table>
                             </td>
                         </tr>
@@ -1113,137 +601,651 @@
                 			</td>
 							<td class='td1B'>
 								<table class='table2'>
-                                    <tr class='tr2'>
+
+                                        <tr class='tr2'>
                         
-                                        <td class='td2Procedures-apt3'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        Cobalt Strike: Built-in UAC bypass token duplication capability executed to elevate process integrity level
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2Steps'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        <span class='spanProcedureSummaryStep' id='p3_A_1' onclick="scroll_to_step('3_A_1')">
-                                                            3.A.1
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                            <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                            <td class='td2Procedures-apt3'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            Cobalt Strike: Built-in UAC bypass token duplication capability executed to elevate process integrity level
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2Steps'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            <span class='spanProcedureSummaryStep' id='p3_A_1' onclick="scroll_to_step('3_A_1')">
+                                                                3.A.1
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            Telemetry (Tainted)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Telemetry (Tainted)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed powershell.exe running as medium integrity as user Debbie then another instance running later as high integrity as user Debbie. The telemetry is tainted by a parent PowerShell alert.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed powershell.exe running as medium integrity as user Debbie then another instance running later as high integrity as user Debbie. The telemetry is tainted by a parent PowerShell alert.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-3.A.1-1.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-3.A.1-20.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2NoBottomBorder'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-3.A.1-1.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-3.A.1-20.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                        <tr class='tr2NoBottomBorder'>
                         
-                                        <td class='td2Procedures-apt3'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        Empire: Built-in UAC bypass token duplication module executed to launch new callback with elevated process integrity level
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2Steps'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        <span class='spanProcedureSummaryStep' id='p14_A_1' onclick="scroll_to_step('14_A_1')">
-                                                            14.A.1
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                            <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                            <td class='td2Procedures-apt3'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            Empire: Built-in UAC bypass token duplication module executed to launch new callback with elevated process integrity level
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2Steps'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            <span class='spanProcedureSummaryStep' id='p14_A_1' onclick="scroll_to_step('14_A_1')">
+                                                                14.A.1
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            Telemetry (Tainted)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Telemetry (Tainted)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed an integrity level change from medium to high for powershell.exe, which is indicative of bypass UAC. The telemetry was tainted by a parent Malicious use of PowerShell alert.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed an integrity level change from medium to high for powershell.exe, which is indicative of bypass UAC. The telemetry was tainted by a parent Malicious use of PowerShell alert.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-14.A.1-11.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-14.A.1-12.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-14.A.1-13.png' target='_blank'>
-                                                                                [3]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-14.A.1-11.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-14.A.1-12.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-14.A.1-13.png' target='_blank'>
+                                                                                    [3]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class='table1'>
+						<tr class='tr1'>
+							<td class='td1A'>
+								<table class='table2'>
+									<tr>
+										<td class='td2Technique'>
+                                                <a class="aTechnique-tacticsummary" href="/APT3/results/cybereason/newservice.html">
+                                                    New Service
+												<br />(T1050)
+											</a>
+										</td>
+                        			</tr>
+                    			</table>
+                			</td>
+							<td class='td1B'>
+								<table class='table2'>
+
+                                        <tr class='tr2NoBottomBorder'>
+                        
+                                            <td class='td2Procedures-apt3'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            Empire: 'sc create' via PowerShell to remotely create a service on Creeper (10.0.0.4)
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2Steps'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            <span class='spanProcedureSummaryStep' id='p16_I_1' onclick="scroll_to_step('16_I_1')">
+                                                                16.I.1
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                Specific Behavior (Tainted)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_specific_behavior.svg" title="Specific Behavior"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotesDotted'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                A Specific Behavior alert was generated for the unconventional creation of a new service with the correct ATT&CK Technique (New Service) and Tactic (Persistence, Privilege Escalation). The alert was tainted by a parent PowerShell alert.
+
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-16.I.1-13.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                Telemetry
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotes'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed sc.exe executing with command-line arguments.
+
+                                                                                <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
+                                                                                    <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
+                                                                                         For most alerts in the user interface, the telemetry behind it is separately available in the capability. This is counted as a separate detection because the functionality was showed to MITRE throughout the evaluation, though a screenshot was not taken in this instance.
+                                                                                    </span>
+                                                                                </a>
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-16.I.1-13.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class='table1'>
+						<tr class='tr1'>
+							<td class='td1A'>
+								<table class='table2'>
+									<tr>
+										<td class='td2Technique'>
+                                                <a class="aTechnique-tacticsummary" href="/APT3/results/cybereason/commonlyusedport.html">
+                                                    Commonly Used Port
+												<br />(T1043)
+											</a>
+										</td>
+                        			</tr>
+                    			</table>
+                			</td>
+							<td class='td1B'>
+								<table class='table2'>
+
+
+
+
+                                        <tr class='tr2NoBottomBorder'>
+                        
+                                            <td class='td2Procedures-apt3'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            Empire: UAC bypass module downloaded a new Empire stager (wdbypass) over port 8080
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2Steps'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            <span class='spanProcedureSummaryStep' id='p14_A_1' onclick="scroll_to_step('14_A_1')">
+                                                                14.A.1
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                Specific Behavior (Tainted)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_specific_behavior.svg" title="Specific Behavior"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotesDotted'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                A Specific Behavior alert was generated for powershell.exe executed as a PowerShell downloader. The alert was tagged with the correct ATT&CK Tactic (Command and Control) and the Technique (Commonly Used Port). Data also showed decoded PowerShell commands extracted from the command-line arguments showing a connection over port 8080 with a HTTP request to download the wdbypass payload. The alert was tainted by a parent PowerShell alert.
+
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-14.A.1-30.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-14.A.1-40.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                Telemetry
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotes'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed powershell.exe making a network connection over port 8080. 
+
+                                                                                <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
+                                                                                    <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
+                                                                                         For most alerts in the user interface, the telemetry behind it is separately available in the capability. This is counted as a separate detection because the functionality was showed to MITRE throughout the evaluation, though a screenshot was not taken in this instance.
+                                                                                    </span>
+                                                                                </a>
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-14.A.1-30.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-14.A.1-40.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class='table1'>
+						<tr class='tr1'>
+							<td class='td1A'>
+								<table class='table2'>
+									<tr>
+										<td class='td2Technique'>
+                                                <a class="aTechnique-tacticsummary" href="/APT3/results/cybereason/remotefilecopy.html">
+                                                    Remote File Copy
+												<br />(T1105)
+											</a>
+										</td>
+                        			</tr>
+                    			</table>
+                			</td>
+							<td class='td1B'>
+								<table class='table2'>
+
+
+                                        <tr class='tr2'>
+                        
+                                            <td class='td2Procedures-apt3'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            Empire: UAC bypass module downloaded and wrote a new Empire stager (wdbypass) to disk
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2Steps'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            <span class='spanProcedureSummaryStep' id='p14_A_1' onclick="scroll_to_step('14_A_1')">
+                                                                14.A.1
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                Specific Behavior (Tainted)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_specific_behavior.svg" title="Specific Behavior"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotes'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                A Specific Behavior alert was generated based on the downloading and execution of wdbypass, identified as Fileless malware, from freegoogleadsenseinfo.com (C2 domain) over port 8080. The alert also showed decoded PowerShell commands extracted from the command-line arguments showing a connection over port 8080 with a HTTP request to download the wdbypass payload. The alert was tainted by a parent PowerShell alert
+
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-14.A.1-40.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-14.A.1-10.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+
+
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class='table1'>
+						<tr class='tr1'>
+							<td class='td1A'>
+								<table class='table2'>
+									<tr>
+										<td class='td2Technique'>
+                                                <a class="aTechnique-tacticsummary" href="/APT3/results/cybereason/masquerading.html">
+                                                    Masquerading
+												<br />(T1036)
+											</a>
+										</td>
+                        			</tr>
+                    			</table>
+                			</td>
+							<td class='td1B'>
+								<table class='table2'>
+
+                                        <tr class='tr2'>
+                        
+                                            <td class='td2Procedures-apt3'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            Empire: 'sc description' via PowerShell to remotely disguise a service on Creeper (10.0.0.4)
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2Steps'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            <span class='spanProcedureSummaryStep' id='p16_I_1' onclick="scroll_to_step('16_I_1')">
+                                                                16.I.1
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                Telemetry (Tainted)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotes'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed sc.exe executing with command-line arguments to set the service description. An analyst could use this information to determine it is not a legitimate service. The telemetry was tainted by a parent PowerShell alert.
+
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-16.I.1-21.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class='table1'>
+						<tr class='tr1'>
+							<td class='td1A'>
+								<table class='table2'>
+									<tr>
+										<td class='td2Technique'>
+                                                <a class="aTechnique-tacticsummary" href="/APT3/results/cybereason/processinjection.html">
+                                                    Process Injection
+												<br />(T1055)
+											</a>
+										</td>
+                        			</tr>
+                    			</table>
+                			</td>
+							<td class='td1B'>
+								<table class='table2'>
+
+                                        <tr class='tr2'>
+                        
+                                            <td class='td2Procedures-apt3'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            Cobalt Strike: Built-in process injection capability executed to inject callback into cmd.exe
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2Steps'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            <span class='spanProcedureSummaryStep' id='p3_C_1' onclick="scroll_to_step('3_C_1')">
+                                                                3.C.1
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                Specific Behavior (Tainted)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_specific_behavior.svg" title="Specific Behavior"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotes'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                A Specific Behavior alert was generated for process injection from powershell.exe into cmd.exe (Anonymous RWX). The alert is tagged with the correct ATT&CK Tactic (Defense Evasion) and Technique (Process Injection). The alert is tainted by a parent PowerShell alert.
+
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-3.C.1-10.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CR-3.C.1-100.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+
+
                                 </table>
                             </td>
                         </tr>
@@ -1287,25 +1289,25 @@
 										<p class='pOFProcedure' id='pProcedure1_B_1'>
 											i. Previously executed batch file (pdfhelper.cmd) moved a separate batch file (autoupdate.bat) to the Startup folder
 										</p>
-					<div class='divOFSubstep' id='div1_C_1'><p class='pOFSubstep' id=pSubstep1_C_1>1.C.1 Command and Control       	</p>
-											<p class='pOFTechniques' id='pTechniques1_C_1'>
+					<div class='divOFInScopeSubstep' id='div1_C_1'><p class='pOFInScopeSubstep' id=pSubstep1_C_1>1.C.1 Command and Control       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques1_C_1'>
 				<a href='/APT3/results/cybereason/commonlyusedport'>Commonly Used Port</a>          </p>
-										<p class='pOFProcedure' id='pProcedure1_C_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure1_C_1'>
 											i. Cobalt Strike: C2 channel established using port 53
 										</p>
-					<div class='divOFSubstep' id='div1_C_1'><p class='pOFSubstep' id=pSubstep1_C_1>1.C.1 Command and Control       	</p>
-											<p class='pOFTechniques' id='pTechniques1_C_1'>
+					</div><div class='divOFInScopeSubstep' id='div1_C_1'><p class='pOFInScopeSubstep' id=pSubstep1_C_1>1.C.1 Command and Control       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques1_C_1'>
 				<a href='/APT3/results/cybereason/standardapplicationlayerprotocol'>Standard Application Layer Protocol</a>          </p>
-										<p class='pOFProcedure' id='pProcedure1_C_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure1_C_1'>
 											i. Cobalt Strike: C2 channel established using DNS traffic to freegoogleadsenseinfo.com
 										</p>
-					<div class='divOFSubstep' id='div1_C_1'><p class='pOFSubstep' id=pSubstep1_C_1>1.C.1 Command and Control       	</p>
-											<p class='pOFTechniques' id='pTechniques1_C_1'>
+					</div><div class='divOFInScopeSubstep' id='div1_C_1'><p class='pOFInScopeSubstep' id=pSubstep1_C_1>1.C.1 Command and Control       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques1_C_1'>
 				<a href='/APT3/results/cybereason/dataencoding'>Data Encoding</a>          </p>
-										<p class='pOFProcedure' id='pProcedure1_C_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure1_C_1'>
 											i. Cobalt Strike: C2 channel established using both NetBIOS and base64 encoding
 										</p>
-					     <p class='pOFStep'>Step 2: Initial Discover     </p><div class='divOFSubstep' id='div2_A_1'><p class='pOFSubstep' id=pSubstep2_A_1>2.A.1 Discovery       	</p>
+					</div>     <p class='pOFStep'>Step 2: Initial Discover     </p><div class='divOFSubstep' id='div2_A_1'><p class='pOFSubstep' id=pSubstep2_A_1>2.A.1 Discovery       	</p>
 											<p class='pOFTechniques' id='pTechniques2_A_1'>
 				<a href='/APT3/results/cybereason/systemnetworkconfigurationdiscovery'>System Network Configuration Discovery</a>          </p>
 										<p class='pOFProcedure' id='pProcedure2_A_1'>
@@ -1479,25 +1481,25 @@
 										<p class='pOFProcedure' id='pProcedure6_A_1'>
 											i. Cobalt Strike: 'reg query' via cmd to remotely enumerate a specific Registry key on Conficker (10.0.0.5)
 										</p>
-					<div class='divOFSubstep' id='div6_B_1'><p class='pOFSubstep' id=pSubstep6_B_1>6.B.1 Command and Control       	</p>
-											<p class='pOFTechniques' id='pTechniques6_B_1'>
+					<div class='divOFInScopeSubstep' id='div6_B_1'><p class='pOFInScopeSubstep' id=pSubstep6_B_1>6.B.1 Command and Control       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques6_B_1'>
 				<a href='/APT3/results/cybereason/commonlyusedport'>Commonly Used Port</a>          </p>
-										<p class='pOFProcedure' id='pProcedure6_B_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure6_B_1'>
 											i. Cobalt Strike: C2 channel modified to use port 80
 										</p>
-					<div class='divOFSubstep' id='div6_B_1'><p class='pOFSubstep' id=pSubstep6_B_1>6.B.1 Command and Control       	</p>
-											<p class='pOFTechniques' id='pTechniques6_B_1'>
+					</div><div class='divOFInScopeSubstep' id='div6_B_1'><p class='pOFInScopeSubstep' id=pSubstep6_B_1>6.B.1 Command and Control       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques6_B_1'>
 				<a href='/APT3/results/cybereason/standardapplicationlayerprotocol'>Standard Application Layer Protocol</a>          </p>
-										<p class='pOFProcedure' id='pProcedure6_B_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure6_B_1'>
 											i. Cobalt Strike: C2 channel modified to use HTTP traffic to freegoogleadsenseinfo.com
 										</p>
-					<div class='divOFSubstep' id='div6_B_1'><p class='pOFSubstep' id=pSubstep6_B_1>6.B.1 Command and Control       	</p>
-											<p class='pOFTechniques' id='pTechniques6_B_1'>
+					</div><div class='divOFInScopeSubstep' id='div6_B_1'><p class='pOFInScopeSubstep' id=pSubstep6_B_1>6.B.1 Command and Control       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques6_B_1'>
 				<a href='/APT3/results/cybereason/multibandcommunication'>Multiband Communication</a>          </p>
-										<p class='pOFProcedure' id='pProcedure6_B_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure6_B_1'>
 											i. Cobalt Strike: C2 channel modified to split communications between both HTTP and DNS
 										</p>
-					<div class='divOFSubstep' id='div6_C_1'><p class='pOFSubstep' id=pSubstep6_C_1>6.C.1 Lateral Movement       	</p>
+					</div><div class='divOFSubstep' id='div6_C_1'><p class='pOFSubstep' id=pSubstep6_C_1>6.C.1 Lateral Movement       	</p>
 											<p class='pOFTechniques' id='pTechniques6_C_1'>
 				<a href='/APT3/results/cybereason/remotedesktopprotocol'>Remote Desktop Protocol</a>          </p>
 										<p class='pOFProcedure' id='pProcedure6_C_1'>
@@ -1521,13 +1523,13 @@
 										<p class='pOFProcedure' id='pProcedure7_A_1'>
 											i. Microsoft Management Console (Local Users and Groups snap-in) GUI utility displayed user account information
 										</p>
-					<div class='divOFSubstep' id='div7_B_1'><p class='pOFSubstep' id=pSubstep7_B_1>7.B.1 Command and Control       	</p>
-											<p class='pOFTechniques' id='pTechniques7_B_1'>
+					<div class='divOFInScopeSubstep' id='div7_B_1'><p class='pOFInScopeSubstep' id=pSubstep7_B_1>7.B.1 Command and Control       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques7_B_1'>
 				<a href='/APT3/results/cybereason/remotefilecopy'>Remote File Copy</a>          </p>
-										<p class='pOFProcedure' id='pProcedure7_B_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure7_B_1'>
 											i. Cobalt Strike: Built-in upload capability executed to write a DLL payload (updater.dll) to disk on Nimda (10.0.1.6)
 										</p>
-					<div class='divOFSubstep' id='div7_C_1'><p class='pOFSubstep' id=pSubstep7_C_1>7.C.1 Persistence       	</p>
+					</div><div class='divOFSubstep' id='div7_C_1'><p class='pOFSubstep' id=pSubstep7_C_1>7.C.1 Persistence       	</p>
 											<p class='pOFTechniques' id='pTechniques7_C_1'>
 				<a href='/APT3/results/cybereason/scheduledtask'>Scheduled Task</a>          </p>
 										<p class='pOFProcedure' id='pProcedure7_C_1'>
@@ -1623,25 +1625,25 @@
 										<p class='pOFProcedure' id='pProcedure11_A_1'>
 											i. Legitimate user Bob clicked and executed malicious VBScript (autoupdate.vbs) on 10.0.1.5 (CodeRed)
 										</p>
-					<div class='divOFSubstep' id='div11_B_1'><p class='pOFSubstep' id=pSubstep11_B_1>11.B.1 Command and Control       	</p>
-											<p class='pOFTechniques' id='pTechniques11_B_1'>
+					<div class='divOFInScopeSubstep' id='div11_B_1'><p class='pOFInScopeSubstep' id=pSubstep11_B_1>11.B.1 Command and Control       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques11_B_1'>
 				<a href='/APT3/results/cybereason/commonlyusedport'>Commonly Used Port</a>          </p>
-										<p class='pOFProcedure' id='pProcedure11_B_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure11_B_1'>
 											i. Empire: C2 channel established using port 443
 										</p>
-					<div class='divOFSubstep' id='div11_B_1'><p class='pOFSubstep' id=pSubstep11_B_1>11.B.1 Command and Control       	</p>
-											<p class='pOFTechniques' id='pTechniques11_B_1'>
+					</div><div class='divOFInScopeSubstep' id='div11_B_1'><p class='pOFInScopeSubstep' id=pSubstep11_B_1>11.B.1 Command and Control       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques11_B_1'>
 				<a href='/APT3/results/cybereason/standardapplicationlayerprotocol'>Standard Application Layer Protocol</a>          </p>
-										<p class='pOFProcedure' id='pProcedure11_B_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure11_B_1'>
 											i. Empire: C2 channel established using HTTPS traffic to freegoogleadsenseinfo.com
 										</p>
-					<div class='divOFSubstep' id='div11_B_1'><p class='pOFSubstep' id=pSubstep11_B_1>11.B.1 Command and Control       	</p>
-											<p class='pOFTechniques' id='pTechniques11_B_1'>
+					</div><div class='divOFInScopeSubstep' id='div11_B_1'><p class='pOFInScopeSubstep' id=pSubstep11_B_1>11.B.1 Command and Control       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques11_B_1'>
 				<a href='/APT3/results/cybereason/standardcryptographicprotocol'>Standard Cryptographic Protocol</a>          </p>
-										<p class='pOFProcedure' id='pProcedure11_B_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure11_B_1'>
 											i. Empire: Encrypted C2 channel established using HTTPS
 										</p>
-					     <p class='pOFStep'>Step 12: Initial Discover     </p><div class='divOFSubstep' id='div12_A_1'><p class='pOFSubstep' id=pSubstep12_A_1>12.A.1 Discovery       	</p>
+					</div>     <p class='pOFStep'>Step 12: Initial Discover     </p><div class='divOFSubstep' id='div12_A_1'><p class='pOFSubstep' id=pSubstep12_A_1>12.A.1 Discovery       	</p>
 											<p class='pOFTechniques' id='pTechniques12_A_1'>
 				<a href='/APT3/results/cybereason/systemnetworkconfigurationdiscovery'>System Network Configuration Discovery</a>          </p>
 										<p class='pOFProcedure' id='pProcedure12_A_1'>
@@ -1911,25 +1913,25 @@
 										<p class='pOFProcedure' id='pProcedure16_D_1'>
 											i. Empire: 'net use' via PowerShell to successfully authenticate to Creeper (10.0.0.4) using credentials of user Kmitnick
 										</p>
-					<div class='divOFSubstep' id='div16_E_1'><p class='pOFSubstep' id=pSubstep16_E_1>16.E.1 Command and Control       	</p>
-											<p class='pOFTechniques' id='pTechniques16_E_1'>
+					<div class='divOFInScopeSubstep' id='div16_E_1'><p class='pOFInScopeSubstep' id=pSubstep16_E_1>16.E.1 Command and Control       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques16_E_1'>
 				<a href='/APT3/results/cybereason/remotefilecopy'>Remote File Copy</a>          </p>
-										<p class='pOFProcedure' id='pProcedure16_E_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure16_E_1'>
 											i. Empire: Built-in upload module executed to write malicious VBScript (autoupdate.vbs) to disk on CodeRed (10.0.1.5)
 										</p>
-					<div class='divOFSubstep' id='div16_F_1'><p class='pOFSubstep' id=pSubstep16_F_1>16.F.1 Execution       	</p>
+					</div><div class='divOFSubstep' id='div16_F_1'><p class='pOFSubstep' id=pSubstep16_F_1>16.F.1 Execution       	</p>
 											<p class='pOFTechniques' id='pTechniques16_F_1'>
 				<a href='/APT3/results/cybereason/command-lineinterface'>Command-Line Interface</a>          </p>
 										<p class='pOFProcedure' id='pProcedure16_F_1'>
 											i. Empire: Built-in runas module executed to launch malicious VBScript (autoupdate.vbs) as user Kmitnickï¿½
 										</p>
-					<div class='divOFSubstep' id='div16_G_1'><p class='pOFSubstep' id=pSubstep16_G_1>16.G.1 Lateral Movement       	</p>
-											<p class='pOFTechniques' id='pTechniques16_G_1'>
+					<div class='divOFInScopeSubstep' id='div16_G_1'><p class='pOFInScopeSubstep' id=pSubstep16_G_1>16.G.1 Lateral Movement       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques16_G_1'>
 				<a href='/APT3/results/cybereason/remotefilecopy'>Remote File Copy</a>          </p>
-										<p class='pOFProcedure' id='pProcedure16_G_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure16_G_1'>
 											i. Empire: Built-in move capability executed to write malicious VBScript (update.vbs) to disk on Creeper (10.0.0.4)
 										</p>
-					<div class='divOFSubstep' id='div16_H_1'><p class='pOFSubstep' id=pSubstep16_H_1>16.H.1 Discovery       	</p>
+					</div><div class='divOFSubstep' id='div16_H_1'><p class='pOFSubstep' id=pSubstep16_H_1>16.H.1 Discovery       	</p>
 											<p class='pOFTechniques' id='pTechniques16_H_1'>
 				<a href='/APT3/results/cybereason/systemservicediscovery'>System Service Discovery</a>          </p>
 										<p class='pOFProcedure' id='pProcedure16_H_1'>

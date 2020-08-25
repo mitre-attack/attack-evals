@@ -455,10 +455,10 @@
                             
                             
 
-                            Telemetry (Tainted)
+                            Enrichment (Tainted)
                                                                     </td>
                                                                     <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                        <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                        <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_enrichment.svg" title="Enrichment"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -472,7 +472,7 @@
                                                             <table class='table3'>
                                                                 <tr class='tr3'>
                                                                     <td class='tdInnerDetectionNotes'>
-                                                                        Telemetry showed rundll32.exe opening a connection over port 80. The telemetry was tainted by a parent Injected Shellcode alert listed as the owner process.
+                                                                        The capability enriched rundll32.exe opening a connection to the C2 server over a \"HTTP port\" with the correct ATT&CK Tactic (Command and Control) and the Technique (Commonly Used Port). The data was tainted by a parent Injected Shellcode alert.
 
 
 
@@ -499,10 +499,10 @@
                             
                             
 
-                            Enrichment (Tainted)
+                            Telemetry (Tainted)
                                                                     </td>
                                                                     <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                        <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_enrichment.svg" title="Enrichment"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                        <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -516,7 +516,7 @@
                                                             <table class='table3'>
                                                                 <tr class='tr3'>
                                                                     <td class='tdInnerDetectionNotes'>
-                                                                        The capability enriched rundll32.exe opening a connection to the C2 server over a \"HTTP port\" with the correct ATT&CK Tactic (Command and Control) and the Technique (Commonly Used Port). The data was tainted by a parent Injected Shellcode alert.
+                                                                        Telemetry showed rundll32.exe opening a connection over port 80. The telemetry was tainted by a parent Injected Shellcode alert listed as the owner process.
 
 
 
@@ -578,10 +578,10 @@
                             
                             
 
-                            Telemetry (Tainted)
+                            Enrichment (Tainted)
                                                                     </td>
                                                                     <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                        <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                        <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_enrichment.svg" title="Enrichment"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -595,7 +595,7 @@
                                                             <table class='table3'>
                                                                 <tr class='tr3'>
                                                                     <td class='tdInnerDetectionNotes'>
-                                                                        Telemetry showed powershell.exe making an outgoing connection on TCP port 443 to 192.168.0.5 (C2 Server). Telemetry also showed decoded command-line arguments to perform a HTTPS connection to freegoogleadsenseinfo.com (C2 domain) over port 443. The telemetry was tainted by a parent PowerShell alert.
+                                                                        The capability enriched powershell.exe as making a connection over a ”HTTP Port”. The data was tagged with the correct ATT&CK Technique (Commonly Used Port) and Tactic (Command and Control) and was tainted by a parent PowerShell alert.
 
 
 
@@ -627,10 +627,10 @@
                             
                             
 
-                            Enrichment (Tainted)
+                            Telemetry (Tainted)
                                                                     </td>
                                                                     <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                        <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_enrichment.svg" title="Enrichment"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                        <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -644,7 +644,7 @@
                                                             <table class='table3'>
                                                                 <tr class='tr3'>
                                                                     <td class='tdInnerDetectionNotes'>
-                                                                        The capability enriched powershell.exe as making a connection over a ”HTTP Port”. The data was tagged with the correct ATT&CK Technique (Commonly Used Port) and Tactic (Command and Control) and was tainted by a parent PowerShell alert.
+                                                                        Telemetry showed powershell.exe making an outgoing connection on TCP port 443 to 192.168.0.5 (C2 Server). Telemetry also showed decoded command-line arguments to perform a HTTPS connection to freegoogleadsenseinfo.com (C2 domain) over port 443. The telemetry was tainted by a parent PowerShell alert.
 
 
 

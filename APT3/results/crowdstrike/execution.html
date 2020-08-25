@@ -356,9 +356,9 @@
 								<table class='table2'>
 									<tr>
 										<td class='td2Technique'>
-                                                <a class="aTechnique-tacticsummary" href="/APT3/results/crowdstrike/serviceexecution.html">
-                                                    Service Execution
-												<br />(T1035)
+                                                <a class="aTechnique-tacticsummary" href="/APT3/results/crowdstrike/rundll32.html">
+                                                    Rundll32
+												<br />(T1085)
 											</a>
 										</td>
                         			</tr>
@@ -366,112 +366,240 @@
                 			</td>
 							<td class='td1B'>
 								<table class='table2'>
-                                    <tr class='tr2NoBottomBorder'>
+
+                                        <tr class='tr2NoBottomBorder'>
                         
-                                        <td class='td2Procedures-apt3'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        Empire: 'sc start' via PowerShell to remotely launch a specific service on Creeper (10.0.0.4)
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2Steps'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        <span class='spanProcedureSummaryStep' id='p16_L_1' onclick="scroll_to_step('16_L_1')">
-                                                            16.L.1
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                            <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                            <td class='td2Procedures-apt3'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            Previously executed batch file (pdfhelper.cmd) launched a DLL payload (update.dat) using Rundll32
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2Steps'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            <span class='spanProcedureSummaryStep' id='p1_A_1' onclick="scroll_to_step('1_A_1')">
+                                                                1.A.1
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            Telemetry (Tainted)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Specific Behavior
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_specific_behavior.svg" title="Specific Behavior">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotesDotted'>
+                                                                <td class='tdDetectionNotesDotted'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed sc.exe executing with command-line arguments to start the AdobeUpdater service on Creeper. The process tree view showed sc.exe as tainted by a previous powershell.exe detection.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                A Specific Behavior alert was generated due to rundll32 launching a suspended process. The alert was mapped to the correct ATT&CK Technique (Rundll32) and Tactic (Defense Evasion).
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-16.L.1-1.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-E-11.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-1.A.1-6.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-1.A.1-4.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            Specific Behavior (Delayed)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_specific_behavior.svg" title="Specific Behavior"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                General Behavior (Delayed)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_general_behavior.svg" title="General Behavior"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotesDotted'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            The OverWatch team sent an email indicating they observed a Specific Behavior because update.vbs executed following the start of the AdobeUpdater service.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                OverWatch generated a General Behavior alert indicating rundll32 executing update.dat was suspicious.
 
-                                                                            <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
-                                                                                <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
-                                                                                    OverWatch is the managed threat hunting service. The team sent emails to MITRE to mimic what they would send in a real incident.
-                                                                                </span>
-                                                                            </a>
+                                                                                <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
+                                                                                    <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
+                                                                                        OverWatch is the managed threat hunting service.
+                                                                                    </span>
+                                                                                </a>
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-16.L.1-1.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-E-11.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-1.A.1-6.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-1.A.1-4.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                Telemetry
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotes'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry within the OverWatch alert showed rundll32.exe executing, and would also be available in a separate view.
+
+                                                                                <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
+                                                                                    <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
+                                                                                        For any alert in the user interface, the telemetry behind it is separately available in the capability. This is counted as a separate detection because the functionality was shown to MITRE throughout the evaluation, though a screenshot was not taken in this instance.
+                                                                                    </span>
+                                                                                </a>
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-1.A.1-6.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-1.A.1-4.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class='table1'>
+						<tr class='tr1'>
+							<td class='td1A'>
+								<table class='table2'>
+									<tr>
+										<td class='td2Technique'>
+                                                <a class="aTechnique-tacticsummary" href="/APT3/results/crowdstrike/systemowneroruserdiscovery.html">
+                                                    System Owner/User Discovery
+												<br />(T1033)
+											</a>
+										</td>
+                        			</tr>
+                    			</table>
+                			</td>
+							<td class='td1B'>
+								<table class='table2'>
+
+
+
+
+                                        <tr class='tr2NoBottomBorder'>
+                        
+                                            <td class='td2Procedures-apt3'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            Executed 'whoami' via cmd persistence mechanism through RDP connection made to Creeper (10.0.0.4)
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2Steps'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            <span class='spanProcedureSummaryStep' id='p20_B_1' onclick="scroll_to_step('20_B_1')">
+                                                                20.B.1
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                Telemetry (Tainted)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotes'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed execution of whoami.exe. The process tree view showed whoami.exe was tainted by a previous magnify.exe detection.
+
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-20.B.1-1.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
                                 </table>
                             </td>
                         </tr>
@@ -492,106 +620,107 @@
                 			</td>
 							<td class='td1B'>
 								<table class='table2'>
-                                    <tr class='tr2NoBottomBorder'>
+
+                                        <tr class='tr2NoBottomBorder'>
                         
-                                        <td class='td2Procedures-apt3'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        Legitimate user Debbie clicked and executed malicious self-extracting archive (Resume Viewer.exe) on 10.0.1.6 (Nimda)
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2Steps'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        <span class='spanProcedureSummaryStep' id='p1_A_1' onclick="scroll_to_step('1_A_1')">
-                                                            1.A.1
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                            <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                            <td class='td2Procedures-apt3'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            Legitimate user Debbie clicked and executed malicious self-extracting archive (Resume Viewer.exe) on 10.0.1.6 (Nimda)
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2Steps'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            <span class='spanProcedureSummaryStep' id='p1_A_1' onclick="scroll_to_step('1_A_1')">
+                                                                1.A.1
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            General Behavior
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_general_behavior.svg" title="General Behavior">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                General Behavior
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_general_behavior.svg" title="General Behavior">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotesDotted'>
+                                                                <td class='tdDetectionNotesDotted'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            A General Behavior alert for Machine Learning showed that Resume Viewer.exe was executed and that it was detected as malicious.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                A General Behavior alert for Machine Learning showed that Resume Viewer.exe was executed and that it was detected as malicious.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-1.A.1-1.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-1.A.1-1.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            Telemetry
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Telemetry
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry within the alert showed that Resume Viewer.exe executed, and would also be available in a separate view.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry within the alert showed that Resume Viewer.exe executed, and would also be available in a separate view.
 
-                                                                            <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
-                                                                                <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
-                                                                                    For any alert in the user interface, the telemetry behind it is separately available in the capability. This is counted as a separate detection because the functionality was shown to MITRE throughout the evaluation, though a screenshot was not specifically taken in this instance.
-                                                                                </span>
-                                                                            </a>
+                                                                                <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
+                                                                                    <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
+                                                                                        For any alert in the user interface, the telemetry behind it is separately available in the capability. This is counted as a separate detection because the functionality was shown to MITRE throughout the evaluation, though a screenshot was not specifically taken in this instance.
+                                                                                    </span>
+                                                                                </a>
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-1.A.1-1.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-1.A.1-1.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
                                 </table>
                             </td>
                         </tr>
@@ -612,70 +741,198 @@
                 			</td>
 							<td class='td1B'>
 								<table class='table2'>
-                                    <tr class='tr2NoBottomBorder'>
+
+                                        <tr class='tr2NoBottomBorder'>
                         
-                                        <td class='td2Procedures-apt3'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        Empire: Built-in runas module executed to launch malicious VBScript (autoupdate.vbs) as user Kmitnickï¿½
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2Steps'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        <span class='spanProcedureSummaryStep' id='p16_F_1' onclick="scroll_to_step('16_F_1')">
-                                                            16.F.1
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                            <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                            <td class='td2Procedures-apt3'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            Empire: Built-in runas module executed to launch malicious VBScript (autoupdate.vbs) as user Kmitnickï¿½
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2Steps'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            <span class='spanProcedureSummaryStep' id='p16_F_1' onclick="scroll_to_step('16_F_1')">
+                                                                16.F.1
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            Telemetry (Tainted)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Telemetry (Tainted)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed a new cmd.exe process running wscript.exe as user Kmitnick, which then launched powershell.exe. The command line arguments for cmd.exe showed that autoupdate.vbs was run. The telemetry was tainted by a previous detection.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed a new cmd.exe process running wscript.exe as user Kmitnick, which then launched powershell.exe. The command line arguments for cmd.exe showed that autoupdate.vbs was run. The telemetry was tainted by a previous detection.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-16.F.1-1.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-16.F.1-2.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-16.F.1-1.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-16.F.1-2.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class='table1'>
+						<tr class='tr1'>
+							<td class='td1A'>
+								<table class='table2'>
+									<tr>
+										<td class='td2Technique'>
+                                                <a class="aTechnique-tacticsummary" href="/APT3/results/crowdstrike/serviceexecution.html">
+                                                    Service Execution
+												<br />(T1035)
+											</a>
+										</td>
+                        			</tr>
+                    			</table>
+                			</td>
+							<td class='td1B'>
+								<table class='table2'>
+
+                                        <tr class='tr2NoBottomBorder'>
+                        
+                                            <td class='td2Procedures-apt3'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            Empire: 'sc start' via PowerShell to remotely launch a specific service on Creeper (10.0.0.4)
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2Steps'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            <span class='spanProcedureSummaryStep' id='p16_L_1' onclick="scroll_to_step('16_L_1')">
+                                                                16.L.1
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                Specific Behavior (Delayed)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_specific_behavior.svg" title="Specific Behavior"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotesDotted'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                The OverWatch team sent an email indicating they observed a Specific Behavior because update.vbs executed following the start of the AdobeUpdater service.
+
+                                                                                <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
+                                                                                    <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
+                                                                                        OverWatch is the managed threat hunting service. The team sent emails to MITRE to mimic what they would send in a real incident.
+                                                                                    </span>
+                                                                                </a>
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-16.L.1-1.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-E-11.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                Telemetry (Tainted)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotes'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed sc.exe executing with command-line arguments to start the AdobeUpdater service on Creeper. The process tree view showed sc.exe as tainted by a previous powershell.exe detection.
+
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-16.L.1-1.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-E-11.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
                                 </table>
                             </td>
                         </tr>
@@ -696,639 +953,317 @@
                 			</td>
 							<td class='td1B'>
 								<table class='table2'>
-                                    <tr class='tr2'>
+
+                                        <tr class='tr2'>
                         
-                                        <td class='td2Procedures-apt3'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        Previously executed self-extracting archive (Resume Viewer.exe) launched an embedded batch file (pdfhelper.cmd)
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2Steps'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        <span class='spanProcedureSummaryStep' id='p1_A_1' onclick="scroll_to_step('1_A_1')">
-                                                            1.A.1
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                            <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                            <td class='td2Procedures-apt3'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            Previously executed self-extracting archive (Resume Viewer.exe) launched an embedded batch file (pdfhelper.cmd)
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2Steps'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            <span class='spanProcedureSummaryStep' id='p1_A_1' onclick="scroll_to_step('1_A_1')">
+                                                                1.A.1
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            General Behavior (Delayed)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_general_behavior.svg" title="General Behavior"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                General Behavior (Delayed)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_general_behavior.svg" title="General Behavior"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotesDotted'>
+                                                                <td class='tdDetectionNotesDotted'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            OverWatch generated a General Behavior alert indicating the execution of pdfhelper.cmd was suspicious.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                OverWatch generated a General Behavior alert indicating the execution of pdfhelper.cmd was suspicious.
 
-                                                                            <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
-                                                                                <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
-                                                                                    OverWatch is the managed threat hunting service.
-                                                                                </span>
-                                                                            </a>
+                                                                                <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
+                                                                                    <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
+                                                                                        OverWatch is the managed threat hunting service.
+                                                                                    </span>
+                                                                                </a>
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-1.A.1-5.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-1.A.1-7.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            Telemetry
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-1.A.1-5.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-1.A.1-7.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                Telemetry
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed pdfhelper.cmd being executed by cmd.exe.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed pdfhelper.cmd being executed by cmd.exe.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-1.A.1-5.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-1.A.1-7.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-1.A.1-5.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-1.A.1-7.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                        <tr class='tr2'>
                         
-                                        <td class='td2Procedures-apt3'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        Legitimate user Bob clicked and executed malicious VBScript (autoupdate.vbs) on 10.0.1.5 (CodeRed)
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2Steps'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        <span class='spanProcedureSummaryStep' id='p11_A_1' onclick="scroll_to_step('11_A_1')">
-                                                            11.A.1
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                            <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                            <td class='td2Procedures-apt3'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            Legitimate user Bob clicked and executed malicious VBScript (autoupdate.vbs) on 10.0.1.5 (CodeRed)
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2Steps'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            <span class='spanProcedureSummaryStep' id='p11_A_1' onclick="scroll_to_step('11_A_1')">
+                                                                11.A.1
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            General Behavior (Delayed)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_general_behavior.svg" title="General Behavior"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Specific Behavior
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_specific_behavior.svg" title="Specific Behavior">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotesDotted'>
+                                                                <td class='tdDetectionNotesDotted'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            A General Behavior alert was generated from OverWatch indicating wscript.exe executing launcher.vbs was suspicious.
-
-                                                                            <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
-                                                                                <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
-                                                                                    OverWatch is the managed threat hunting service.
-                                                                                </span>
-                                                                            </a>
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-11.A.1-1.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-11.A.1-2.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-E-6.png' target='_blank'>
-                                                                                [3]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                A Specific Behavior alert was generated indicating "A PowerShell script launched that shares characteristics with known PowerShell exploit kits."
 
 
-                            Specific Behavior
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_specific_behavior.svg" title="Specific Behavior">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-11.A.1-1.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-11.A.1-2.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-E-6.png' target='_blank'>
+                                                                                    [3]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                                                            <td class='tdDetectionNotesDotted'>
+                                Specific Behavior (Delayed)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_specific_behavior.svg" title="Specific Behavior"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotesDotted'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            A Specific Behavior alert was generated indicating "A PowerShell script launched that shares characteristics with known PowerShell exploit kits."
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                The OverWatch team also sent an email indicating a Specific Behavior was observed because a malicious script invoked by wscript was run by Bob on CodeRed and launched PowerShell.
+
+                                                                                <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
+                                                                                    <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
+                                                                                        OverWatch is the managed threat hunting service. The team sent emails to MITRE to mimic what they would send in a real incident.
+                                                                                    </span>
+                                                                                </a>
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-11.A.1-1.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-11.A.1-2.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-E-6.png' target='_blank'>
+                                                                                    [3]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-11.A.1-1.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-11.A.1-2.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-E-6.png' target='_blank'>
-                                                                                [3]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                General Behavior (Delayed)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_general_behavior.svg" title="General Behavior"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                            Telemetry
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotesDotted'>
+                                                                <td class='tdDetectionNotesDotted'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry within the OverWatch alert showed wscript.exe executing launcher.vbs, and would be available in a separate view.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                A General Behavior alert was generated from OverWatch indicating wscript.exe executing launcher.vbs was suspicious.
 
-                                                                            <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
-                                                                                <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
-                                                                                    For any alert in the user interface, the telemetry behind it is separately available in the capability. This is counted as a separate detection because the functionality was shown to MITRE throughout the evaluation, though a screenshot was not taken in this instance.
-                                                                                </span>
-                                                                            </a>
+                                                                                <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
+                                                                                    <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
+                                                                                        OverWatch is the managed threat hunting service.
+                                                                                    </span>
+                                                                                </a>
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-11.A.1-1.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-11.A.1-2.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-E-6.png' target='_blank'>
-                                                                                [3]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            Specific Behavior (Delayed)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_specific_behavior.svg" title="Specific Behavior"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-11.A.1-1.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-11.A.1-2.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-E-6.png' target='_blank'>
+                                                                                    [3]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                Telemetry
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            The OverWatch team also sent an email indicating a Specific Behavior was observed because a malicious script invoked by wscript was run by Bob on CodeRed and launched PowerShell.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry within the OverWatch alert showed wscript.exe executing launcher.vbs, and would be available in a separate view.
 
-                                                                            <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
-                                                                                <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
-                                                                                    OverWatch is the managed threat hunting service. The team sent emails to MITRE to mimic what they would send in a real incident.
-                                                                                </span>
-                                                                            </a>
+                                                                                <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
+                                                                                    <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
+                                                                                        For any alert in the user interface, the telemetry behind it is separately available in the capability. This is counted as a separate detection because the functionality was shown to MITRE throughout the evaluation, though a screenshot was not taken in this instance.
+                                                                                    </span>
+                                                                                </a>
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-11.A.1-1.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-11.A.1-2.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-E-6.png' target='_blank'>
-                                                                                [3]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2NoBottomBorder'>
-                        
-                                        <td class='td2Procedures-apt3'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        Empire: Built-in WinEnum module executed to programmatically execute a series of enumeration techniques
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2Steps'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        <span class='spanProcedureSummaryStep' id='p12_E_1' onclick="scroll_to_step('12_E_1')">
-                                                            12.E.1
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                            <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-11.A.1-1.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-11.A.1-2.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-E-6.png' target='_blank'>
+                                                                                    [3]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
 
-
-                            Telemetry
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotesDotted'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed the PowerShell script (.ps1) being written to the temp folder.
-
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-12.E.1-1.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-12.E.1-4.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-12.E.1-3.png' target='_blank'>
-                                                                                [3]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            Specific Behavior (Delayed)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_specific_behavior.svg" title="Specific Behavior"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotesDotted'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            The OverWatch team also sent an email indicating they identified a Specific Behavior for an unidentified PowerShell script running.
-
-                                                                            <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
-                                                                                <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
-                                                                                    OverWatch is the managed threat hunting service. The team sent emails to MITRE to mimic what they would send in a real incident.
-                                                                                </span>
-                                                                            </a>
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-12.E.1-1.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-12.E.1-4.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-12.E.1-3.png' target='_blank'>
-                                                                                [3]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            Specific Behavior (Delayed)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_specific_behavior.svg" title="Specific Behavior"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotes'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            The OverWatch team generated a Specific Behavior alert indicating the PowerShell script was malicious.
-
-                                                                            <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
-                                                                                <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
-                                                                                    OverWatch is the managed threat hunting service.
-                                                                                </span>
-                                                                            </a>
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-12.E.1-1.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-12.E.1-4.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-12.E.1-3.png' target='_blank'>
-                                                                                [3]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                    <table class='table1'>
-						<tr class='tr1'>
-							<td class='td1A'>
-								<table class='table2'>
-									<tr>
-										<td class='td2Technique'>
-                                                <a class="aTechnique-tacticsummary" href="/APT3/results/crowdstrike/rundll32.html">
-                                                    Rundll32
-												<br />(T1085)
-											</a>
-										</td>
-                        			</tr>
-                    			</table>
-                			</td>
-							<td class='td1B'>
-								<table class='table2'>
-                                    <tr class='tr2NoBottomBorder'>
-                        
-                                        <td class='td2Procedures-apt3'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        Previously executed batch file (pdfhelper.cmd) launched a DLL payload (update.dat) using Rundll32
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2Steps'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        <span class='spanProcedureSummaryStep' id='p1_A_1' onclick="scroll_to_step('1_A_1')">
-                                                            1.A.1
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                            <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            Specific Behavior
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_specific_behavior.svg" title="Specific Behavior">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotesDotted'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            A Specific Behavior alert was generated due to rundll32 launching a suspended process. The alert was mapped to the correct ATT&CK Technique (Rundll32) and Tactic (Defense Evasion).
-
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-1.A.1-6.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-1.A.1-4.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            General Behavior (Delayed)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_general_behavior.svg" title="General Behavior"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotesDotted'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            OverWatch generated a General Behavior alert indicating rundll32 executing update.dat was suspicious.
-
-                                                                            <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
-                                                                                <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
-                                                                                    OverWatch is the managed threat hunting service.
-                                                                                </span>
-                                                                            </a>
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-1.A.1-6.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-1.A.1-4.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            Telemetry
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotes'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry within the OverWatch alert showed rundll32.exe executing, and would also be available in a separate view.
-
-                                                                            <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
-                                                                                <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
-                                                                                    For any alert in the user interface, the telemetry behind it is separately available in the capability. This is counted as a separate detection because the functionality was shown to MITRE throughout the evaluation, though a screenshot was not taken in this instance.
-                                                                                </span>
-                                                                            </a>
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-1.A.1-6.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CS-1.A.1-4.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
                                 </table>
                             </td>
                         </tr>
@@ -1402,13 +1337,13 @@
 										<p class='pOFProcedure' id='pProcedure2_A_2'>
 											i. Cobalt Strike: 'arp -a' via cmd
 										</p>
-					<div class='divOFSubstep' id='div2_B_1'><p class='pOFSubstep' id=pSubstep2_B_1>2.B.1 Discovery       	</p>
-											<p class='pOFTechniques' id='pTechniques2_B_1'>
+					<div class='divOFInScopeSubstep' id='div2_B_1'><p class='pOFInScopeSubstep' id=pSubstep2_B_1>2.B.1 Discovery       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques2_B_1'>
 				<a href='/APT3/results/crowdstrike/systemowneroruserdiscovery'>System Owner/User Discovery</a>          </p>
-										<p class='pOFProcedure' id='pProcedure2_B_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure2_B_1'>
 											i. Cobalt Strike: 'echo' via cmd to enumerate specific environment variables
 										</p>
-					<div class='divOFSubstep' id='div2_C_1'><p class='pOFSubstep' id=pSubstep2_C_1>2.C.1 Discovery       	</p>
+					</div><div class='divOFSubstep' id='div2_C_1'><p class='pOFSubstep' id=pSubstep2_C_1>2.C.1 Discovery       	</p>
 											<p class='pOFTechniques' id='pTechniques2_C_1'>
 				<a href='/APT3/results/crowdstrike/processdiscovery'>Process Discovery</a>          </p>
 										<p class='pOFProcedure' id='pProcedure2_C_1'>
@@ -1738,13 +1673,13 @@
 										<p class='pOFProcedure' id='pProcedure12_A_2'>
 											i. Empire: 'ipconfig -all' via PowerShell
 										</p>
-					<div class='divOFSubstep' id='div12_B_1'><p class='pOFSubstep' id=pSubstep12_B_1>12.B.1 Discovery       	</p>
-											<p class='pOFTechniques' id='pTechniques12_B_1'>
+					<div class='divOFInScopeSubstep' id='div12_B_1'><p class='pOFInScopeSubstep' id=pSubstep12_B_1>12.B.1 Discovery       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques12_B_1'>
 				<a href='/APT3/results/crowdstrike/systemowneroruserdiscovery'>System Owner/User Discovery</a>          </p>
-										<p class='pOFProcedure' id='pProcedure12_B_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure12_B_1'>
 											i. Empire: 'whoami -all -fo list' via PowerShell
 										</p>
-					<div class='divOFSubstep' id='div12_C_1'><p class='pOFSubstep' id=pSubstep12_C_1>12.C.1 Discovery       	</p>
+					</div><div class='divOFSubstep' id='div12_C_1'><p class='pOFSubstep' id=pSubstep12_C_1>12.C.1 Discovery       	</p>
 											<p class='pOFTechniques' id='pTechniques12_C_1'>
 				<a href='/APT3/results/crowdstrike/processdiscovery'>Process Discovery</a>          </p>
 										<p class='pOFProcedure' id='pProcedure12_C_1'>
@@ -1762,13 +1697,13 @@
 										<p class='pOFInScopeProcedure' id='pProcedure12_E_1'>
 											i. Empire: Built-in WinEnum module executed to programmatically execute a series of enumeration techniques
 										</p>
-					</div><div class='divOFSubstep' id='div12_E_1_1'><p class='pOFSubstep' id=pSubstep12_E_1_1>12.E.1.1 Discovery       	</p>
-											<p class='pOFTechniques' id='pTechniques12_E_1_1'>
+					</div><div class='divOFInScopeSubstep' id='div12_E_1_1'><p class='pOFInScopeSubstep' id=pSubstep12_E_1_1>12.E.1.1 Discovery       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques12_E_1_1'>
 				<a href='/APT3/results/crowdstrike/systemowneroruserdiscovery'>System Owner/User Discovery</a>          </p>
-										<p class='pOFProcedure' id='pProcedure12_E_1_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure12_E_1_1'>
 											i. Empire: WinEnum module included enumeration of user information
 										</p>
-					<div class='divOFSubstep' id='div12_E_1_2'><p class='pOFSubstep' id=pSubstep12_E_1_2>12.E.1.2 Discovery       	</p>
+					</div><div class='divOFSubstep' id='div12_E_1_2'><p class='pOFSubstep' id=pSubstep12_E_1_2>12.E.1.2 Discovery       	</p>
 											<p class='pOFTechniques' id='pTechniques12_E_1_2'>
 				<a href='/APT3/results/crowdstrike/permissiongroupsdiscovery'>Permission Groups Discovery</a>          </p>
 										<p class='pOFProcedure' id='pProcedure12_E_1_2'>
@@ -2158,13 +2093,13 @@
 										<p class='pOFProcedure' id='pProcedure20_A_1'>
 											i. RDP connection made to Creeper (10.0.0.4) as part of execution of persistence mechanism
 										</p>
-					<div class='divOFSubstep' id='div20_B_1'><p class='pOFSubstep' id=pSubstep20_B_1>20.B.1 Execution       	</p>
-											<p class='pOFTechniques' id='pTechniques20_B_1'>
+					<div class='divOFInScopeSubstep' id='div20_B_1'><p class='pOFInScopeSubstep' id=pSubstep20_B_1>20.B.1 Execution       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques20_B_1'>
 				<a href='/APT3/results/crowdstrike/systemowneroruserdiscovery'>System Owner/User Discovery</a>          </p>
-										<p class='pOFProcedure' id='pProcedure20_B_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure20_B_1'>
 											i. Executed 'whoami' via cmd persistence mechanism through RDP connection made to Creeper (10.0.0.4)
 										</p>
-					
+					</div>
                     </div>
                 </td>
             </tr>

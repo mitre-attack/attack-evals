@@ -356,270 +356,6 @@
 								<table class='table2'>
 									<tr>
 										<td class='td2Technique'>
-                                                <a class="aTechnique-tacticsummary" href="/APT29/results/fireeye/dataencrypted.html">
-                                                    Data Encrypted
-												<br />(T1022)
-											</a>
-										</td>
-                        			</tr>
-                    			</table>
-                			</td>
-							<td class='td1B'>
-								<table class='table2'>
-                                    <tr class='tr2'>
-                        
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Encrypted data from the user's Downloads directory using PowerShell
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                powershell.exe executing Compress-7Zip with the password argument used for encryption
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    7.B.3
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            MSSP (Delayed (Manual))
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotesDotted'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            An MSSP detection occurred containing evidence Invoke-Exfil was used to compress and encrypt data for exfiltration.
-
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-13001.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            Telemetry
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotes'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed powershell.exe executing Compress-7Zip with arguments for encryption.
-
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-11139.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2NoBottomBorder'>
-                        
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Encrypted staged ZIP (working.zip in AppData directory) into working.zip (on Desktop) using rar.exe
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                powershell.exe executing rar.exe with the -a parameter for a password to use for encryption
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    9.B.6
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            Technique (Alert)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotesDotted'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            A Technique alert detection called "Encrypted RAR Archive Command" "T1022" was generated when rar.exe used "-hp" command-line arguments.
-
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-11214.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            MSSP (Delayed (Manual))
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotesDotted'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            An MSSP detection contained evidence of execution of rar.exe with command line arguments to encrypt working.zip.
-
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-13017.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            Telemetry
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotes'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed powershell.exe executing rar.exe with command-line arguments.
-
-                                                                            <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
-                                                                                <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
-                                                                                    Though no image was captured, MITRE confirmed that the vendor has the capability to show available telemetry in a separate view.
-                                                                                </span>
-                                                                            </a>
-
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                    <table class='table1'>
-						<tr class='tr1'>
-							<td class='td1A'>
-								<table class='table2'>
-									<tr>
-										<td class='td2Technique'>
                                                 <a class="aTechnique-tacticsummary" href="/APT29/results/fireeye/exfiltrationoveralternativeprotocol.html">
                                                     Exfiltration Over Alternative Protocol
 												<br />(T1048)
@@ -630,321 +366,323 @@
                 			</td>
 							<td class='td1B'>
 								<table class='table2'>
-                                    <tr class='tr2'>
+
+                                        <tr class='tr2'>
                         
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Exfiltrated collection (OfficeSupplies.7z) to WebDAV network share using PowerShell
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                powershell executing Copy-Item pointing to an attack-controlled WebDav network share (192.168.0.4:80)
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    7.B.4
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                    <td class='td2Procedures-apt29'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    Exfiltrated collection (OfficeSupplies.7z) to WebDAV network share using PowerShell
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Criteria'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    powershell executing Copy-Item pointing to an attack-controlled WebDav network share (192.168.0.4:80)
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Steps'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    <span style="font-size: 12px; font-weight: bold;">
+                                                                        7.B.4
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                        <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            Technique (Alert)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Technique (Alert)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotesDotted'>
+                                                                <td class='tdDetectionNotesDotted'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            A Technique alert detection called "WebDav Network Request" was generated due to a WebDav user-agent being used to PUT OfficeSupplies.7z on a WebDav network share.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                A Technique alert detection called "WebDav Network Request" was generated due to a WebDav user-agent being used to PUT OfficeSupplies.7z on a WebDav network share.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-11125.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-11125.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            General (Alert)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_general.svg" title="General"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                General (Alert)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_general.svg" title="General"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotesDotted'>
+                                                                <td class='tdDetectionNotesDotted'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            A General alert detection was generated for the file write of OfficeSupplies.7z to a remote adversary WebDav network share (192.168.0.4).
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                A General alert detection was generated for the file write of OfficeSupplies.7z to a remote adversary WebDav network share (192.168.0.4).
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-11127.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-11127.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            MSSP (Delayed (Manual))
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                MSSP (Delayed (Manual))
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotesDotted'>
+                                                                <td class='tdDetectionNotesDotted'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            An MSSP detection occurred containing evidence of OfficeSupplies.7z being uploaded to 192.168.0.4 using WebDav.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                An MSSP detection occurred containing evidence of OfficeSupplies.7z being uploaded to 192.168.0.4 using WebDav.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-13002.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-13002.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            Telemetry
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Telemetry
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed PoweShell Copy-Item to a remote adversary WebDav network share (192.168.0.4).
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed PoweShell Copy-Item to a remote adversary WebDav network share (192.168.0.4).
 
-                                                                            <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
-                                                                                <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
-                                                                                    Though no image was captured, MITRE confirmed that the vendor has the capability to show available telemetry in a separate view.
-                                                                                </span>
-                                                                            </a>
+                                                                                <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
+                                                                                    <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
+                                                                                        Though no image was captured, MITRE confirmed that the vendor has the capability to show available telemetry in a separate view.
+                                                                                    </span>
+                                                                                </a>
 
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2NoBottomBorder'>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                        <tr class='tr2NoBottomBorder'>
                         
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Exfiltrated staged collection to an online OneDrive account using PowerShell
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                powershell.exe executing Copy-Item pointing to drive mapped to an attack-controlled OneDrive account
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    18.A.2
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                    <td class='td2Procedures-apt29'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    Exfiltrated staged collection to an online OneDrive account using PowerShell
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Criteria'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    powershell.exe executing Copy-Item pointing to drive mapped to an attack-controlled OneDrive account
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Steps'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    <span style="font-size: 12px; font-weight: bold;">
+                                                                        18.A.2
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                        <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            General (Alert)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_general.svg" title="General"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                General (Alert)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_general.svg" title="General"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotesDotted'>
+                                                                <td class='tdDetectionNotesDotted'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            A General detection alert was generated for a file write to a network share.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                A General detection alert was generated for a file write to a network share.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-11618.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-11619.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-11618.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-11619.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            MSSP (Delayed (Manual))
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                MSSP (Delayed (Manual))
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotesDotted'>
+                                                                <td class='tdDetectionNotesDotted'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            An MSSP detection occurred for the WindowsParentalControlMigration.tmp file being written to the mapped OneDrive network share.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                An MSSP detection occurred for the WindowsParentalControlMigration.tmp file being written to the mapped OneDrive network share.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-13047.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-13047.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            Telemetry (Correlated)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_correlated.svg" title="Correlated">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Telemetry (Correlated)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_correlated.svg" title="Correlated">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed PowerShell executing Copy-Item to exfiltrate data to a previously mapped OneDrive account. The detection was correlated to a parent alert on the PowerShell process.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed PowerShell executing Copy-Item to exfiltrate data to a previously mapped OneDrive account. The detection was correlated to a parent alert on the PowerShell process.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-11622.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-11622.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
                                 </table>
                             </td>
                         </tr>
@@ -965,569 +703,573 @@
                 			</td>
 							<td class='td1B'>
 								<table class='table2'>
-                                    <tr class='tr2'>
+
+                                        <tr class='tr2'>
                         
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Compressed and stored files into ZIP (Draft.zip) using PowerShell
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                powershell.exe executing Compress-Archive
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    2.A.4
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                    <td class='td2Procedures-apt29'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    Compressed and stored files into ZIP (Draft.zip) using PowerShell
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Criteria'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    powershell.exe executing Compress-Archive
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Steps'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    <span style="font-size: 12px; font-weight: bold;">
+                                                                        2.A.4
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                        <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            Technique (Alert)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Technique (Alert)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotesDotted'>
+                                                                <td class='tdDetectionNotesDotted'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            A Technique alert detection called "ZIP Archive Created - T1002" was generated due to Draft.zip being identified as compressed.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                A Technique alert detection called "ZIP Archive Created - T1002" was generated due to Draft.zip being identified as compressed.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-10871.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-10870.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-10871.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-10870.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            MSSP (Delayed (Manual))
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                MSSP (Delayed (Manual))
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotesDotted'>
+                                                                <td class='tdDetectionNotesDotted'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            An MSSP detection occurred for powershell.exe compressing via Compress-Archive.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                An MSSP detection occurred for powershell.exe compressing via Compress-Archive.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-12979.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-12979.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            Telemetry
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Telemetry
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed powershell.exe compressing via Compress-Archive.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed powershell.exe compressing via Compress-Archive.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-10884.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-10884.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                        <tr class='tr2'>
                         
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Compressed data from the user's Downloads directory into a ZIP file (OfficeSupplies.7z) using PowerShell
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                powershell.exe creating the file OfficeSupplies.7z
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    7.B.2
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                    <td class='td2Procedures-apt29'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    Compressed data from the user's Downloads directory into a ZIP file (OfficeSupplies.7z) using PowerShell
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Criteria'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    powershell.exe creating the file OfficeSupplies.7z
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Steps'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    <span style="font-size: 12px; font-weight: bold;">
+                                                                        7.B.2
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                        <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            Technique (Alert)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Technique (Alert)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotesDotted'>
+                                                                <td class='tdDetectionNotesDotted'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            A Technique alert detection called "7-Zip Archive Created" was generated due a 7-Zip file being written to disk.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                A Technique alert detection called "7-Zip Archive Created" was generated due a 7-Zip file being written to disk.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-11129.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-11129.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            MSSP (Delayed (Manual))
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                MSSP (Delayed (Manual))
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotesDotted'>
+                                                                <td class='tdDetectionNotesDotted'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            An MSSP detection occurred containing evidence of the file create of OfficeSupplies.7z.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                An MSSP detection occurred containing evidence of the file create of OfficeSupplies.7z.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-13002.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-13001.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-13002.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-13001.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            Telemetry (Correlated)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_correlated.svg" title="Correlated">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Telemetry (Correlated)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_correlated.svg" title="Correlated">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed the file write event for OfficeSupplies.7z. This detection was correlated to a parent alert on the parent PowerShell process.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed the file write event for OfficeSupplies.7z. This detection was correlated to a parent alert on the parent PowerShell process.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-11138.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-11138.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                        <tr class='tr2'>
                         
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Compressed staged ZIP (working.zip in AppData directory) into working.zip (on Desktop) using rar.exe
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                powershell.exe executing rar.exe
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    9.B.7
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                    <td class='td2Procedures-apt29'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    Compressed staged ZIP (working.zip in AppData directory) into working.zip (on Desktop) using rar.exe
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Criteria'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    powershell.exe executing rar.exe
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Steps'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    <span style="font-size: 12px; font-weight: bold;">
+                                                                        9.B.7
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                        <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            Technique (Alert)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Technique (Alert)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotesDotted'>
+                                                                <td class='tdDetectionNotesDotted'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            A Technique alert detection called "Rar Execution" "T1002" was generated when powershell.exe executed rar.exe.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                A Technique alert detection called "Rar Execution" "T1002" was generated when powershell.exe executed rar.exe.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-11212.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-11212.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            MSSP (Delayed (Manual))
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                MSSP (Delayed (Manual))
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotesDotted'>
+                                                                <td class='tdDetectionNotesDotted'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            An MSSP detection contained evidence of execution of rar.exe with command line arguments to compress working.zip.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                An MSSP detection contained evidence of execution of rar.exe with command line arguments to compress working.zip.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-13017.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-13017.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            Telemetry
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Telemetry
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed powershell.exe executing rar.exe with command-line arguments.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed powershell.exe executing rar.exe with command-line arguments.
 
-                                                                            <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
-                                                                                <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
-                                                                                    Though no image was captured, MITRE confirmed that the vendor has the capability to show available telemetry in a separate view.
-                                                                                </span>
-                                                                            </a>
+                                                                                <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
+                                                                                    <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
+                                                                                        Though no image was captured, MITRE confirmed that the vendor has the capability to show available telemetry in a separate view.
+                                                                                    </span>
+                                                                                </a>
 
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2NoBottomBorder'>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                        <tr class='tr2NoBottomBorder'>
                         
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Compressed a staging directory using PowerShell
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                powershell.exe executing the ZipFile.CreateFromDirectory .NET method
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    17.C.1
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                    <td class='td2Procedures-apt29'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    Compressed a staging directory using PowerShell
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Criteria'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    powershell.exe executing the ZipFile.CreateFromDirectory .NET method
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Steps'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    <span style="font-size: 12px; font-weight: bold;">
+                                                                        17.C.1
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                        <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            Technique (Alert)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Technique (Alert)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotesDotted'>
+                                                                <td class='tdDetectionNotesDotted'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            A Technique alert detection called "Zip Archive Created" was generated due to the creation of the ZIP archive WindowsParentalControlMigration.tmp on disk.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                A Technique alert detection called "Zip Archive Created" was generated due to the creation of the ZIP archive WindowsParentalControlMigration.tmp on disk.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-11591.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-11590.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-11591.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-11590.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            MSSP (Delayed (Manual))
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                MSSP (Delayed (Manual))
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotesDotted'>
+                                                                <td class='tdDetectionNotesDotted'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            An MSSP detection occurred containing evidence of data compression.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                An MSSP detection occurred containing evidence of data compression.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-13046.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-13046.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            Telemetry
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Telemetry
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed PowerShell compressing collection via the ZipFile.CreateFromDirectory .NET method.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed PowerShell compressing collection via the ZipFile.CreateFromDirectory .NET method.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-11602.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-11602.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
                                 </table>
                             </td>
                         </tr>
@@ -1548,140 +1290,408 @@
                 			</td>
 							<td class='td1B'>
 								<table class='table2'>
-                                    <tr class='tr2'>
+
+                                        <tr class='tr2'>
                         
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Read and downloaded ZIP (Draft.zip) over C2 channel (192.168.0.5 over TCP port 1234)
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                The rcs.3aka3.doc process reading the file draft.zip while connected to the C2 channel
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    2.B.1
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                    <td class='td2Procedures-apt29'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    Read and downloaded ZIP (Draft.zip) over C2 channel (192.168.0.5 over TCP port 1234)
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Criteria'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    The rcs.3aka3.doc process reading the file draft.zip while connected to the C2 channel
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Steps'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    <span style="font-size: 12px; font-weight: bold;">
+                                                                        2.B.1
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                        <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            None
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg" title="None">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                None
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg" title="None">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            No detection capability demonstrated for this procedure.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                No detection capability demonstrated for this procedure.
 
 
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2NoBottomBorder'>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                        <tr class='tr2NoBottomBorder'>
                         
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Read and downloaded ZIP (working.zip on Desktop) over C2 channel (192.168.0.5 over TCP port 8443)
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                python.exe reading the file working.zip while connected to the C2 channel
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    9.B.8
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                    <td class='td2Procedures-apt29'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    Read and downloaded ZIP (working.zip on Desktop) over C2 channel (192.168.0.5 over TCP port 8443)
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Criteria'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    python.exe reading the file working.zip while connected to the C2 channel
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Steps'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    <span style="font-size: 12px; font-weight: bold;">
+                                                                        9.B.8
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                        <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            None
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg" title="None">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                None
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg" title="None">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            No detection capability demonstrated for this procedure.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                No detection capability demonstrated for this procedure.
 
 
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class='table1'>
+						<tr class='tr1'>
+							<td class='td1A'>
+								<table class='table2'>
+									<tr>
+										<td class='td2Technique'>
+                                                <a class="aTechnique-tacticsummary" href="/APT29/results/fireeye/dataencrypted.html">
+                                                    Data Encrypted
+												<br />(T1022)
+											</a>
+										</td>
+                        			</tr>
+                    			</table>
+                			</td>
+							<td class='td1B'>
+								<table class='table2'>
+
+                                        <tr class='tr2'>
+                        
+                                                    <td class='td2Procedures-apt29'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    Encrypted data from the user's Downloads directory using PowerShell
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Criteria'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    powershell.exe executing Compress-7Zip with the password argument used for encryption
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Steps'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    <span style="font-size: 12px; font-weight: bold;">
+                                                                        7.B.3
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                        <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                MSSP (Delayed (Manual))
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotesDotted'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                An MSSP detection occurred containing evidence Invoke-Exfil was used to compress and encrypt data for exfiltration.
+
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-13001.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                Telemetry
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotes'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed powershell.exe executing Compress-7Zip with arguments for encryption.
+
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-11139.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                        <tr class='tr2NoBottomBorder'>
+                        
+                                                    <td class='td2Procedures-apt29'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    Encrypted staged ZIP (working.zip in AppData directory) into working.zip (on Desktop) using rar.exe
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Criteria'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    powershell.exe executing rar.exe with the -a parameter for a password to use for encryption
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Steps'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    <span style="font-size: 12px; font-weight: bold;">
+                                                                        9.B.6
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                        <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                Technique (Alert)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotesDotted'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                A Technique alert detection called "Encrypted RAR Archive Command" "T1022" was generated when rar.exe used "-hp" command-line arguments.
+
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-11214.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                MSSP (Delayed (Manual))
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotesDotted'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                An MSSP detection contained evidence of execution of rar.exe with command line arguments to encrypt working.zip.
+
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/FireEye-APT29-13017.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                Telemetry
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotes'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed powershell.exe executing rar.exe with command-line arguments.
+
+                                                                                <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
+                                                                                    <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
+                                                                                        Though no image was captured, MITRE confirmed that the vendor has the capability to show available telemetry in a separate view.
+                                                                                    </span>
+                                                                                </a>
+
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
                                 </table>
                             </td>
                         </tr>

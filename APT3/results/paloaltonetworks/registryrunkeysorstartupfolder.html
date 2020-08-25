@@ -381,10 +381,10 @@
                             
                             
 
-                            Telemetry (Tainted)
+                            Enrichment (Configuration Change, Tainted)
                                                                     </td>
                                                                     <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                        <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                        <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_enrichment.svg" title="Enrichment"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_configuration_change.svg" title="Configuration Change"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -398,8 +398,13 @@
                                                             <table class='table3'>
                                                                 <tr class='tr3'>
                                                                     <td class='tdInnerDetectionNotes'>
-                                                                        Telemetry showed autoupdate.bat being moved to the user Debbie's Startup folder. The telemetry was tainted by a parent alert related to Resume Viewer.exe and suspicious execution of the Windows Scripting Engine.
+                                                                        The capability enriched a file being created in the Startup folder with the correct ATT&CK Technique (Registry Run Keys / Start Folder). The data was tainted by a parent alert related to Resume Viewer.exe and suspicious execution of the Windows Scripting Engine.
 
+                                                                        <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
+                                                                            <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
+                                                                                The logic to produce the enrichment was configured after the start of the evaluation so it is identified as a config change.
+                                                                            </span>
+                                                                        </a>
 
 
                                                                         <a href='https://d1zq5d3dtjfcoj.cloudfront.net/PA-1.B.1-1.png' target='_blank'>
@@ -425,10 +430,10 @@
                             
                             
 
-                            Enrichment (Configuration Change, Tainted)
+                            Telemetry (Tainted)
                                                                     </td>
                                                                     <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                        <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_enrichment.svg" title="Enrichment"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_configuration_change.svg" title="Configuration Change"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                        <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -442,13 +447,8 @@
                                                             <table class='table3'>
                                                                 <tr class='tr3'>
                                                                     <td class='tdInnerDetectionNotes'>
-                                                                        The capability enriched a file being created in the Startup folder with the correct ATT&CK Technique (Registry Run Keys / Start Folder). The data was tainted by a parent alert related to Resume Viewer.exe and suspicious execution of the Windows Scripting Engine.
+                                                                        Telemetry showed autoupdate.bat being moved to the user Debbie's Startup folder. The telemetry was tainted by a parent alert related to Resume Viewer.exe and suspicious execution of the Windows Scripting Engine.
 
-                                                                        <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
-                                                                            <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
-                                                                                The logic to produce the enrichment was configured after the start of the evaluation so it is identified as a config change.
-                                                                            </span>
-                                                                        </a>
 
 
                                                                         <a href='https://d1zq5d3dtjfcoj.cloudfront.net/PA-1.B.1-1.png' target='_blank'>

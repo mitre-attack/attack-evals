@@ -356,9 +356,9 @@
 								<table class='table2'>
 									<tr>
 										<td class='td2Technique'>
-                                                <a class="aTechnique-tacticsummary" href="/APT3/results/sentinelone/serviceexecution.html">
-                                                    Service Execution
-												<br />(T1035)
+                                                <a class="aTechnique-tacticsummary" href="/APT3/results/sentinelone/rundll32.html">
+                                                    Rundll32
+												<br />(T1085)
 											</a>
 										</td>
                         			</tr>
@@ -366,107 +366,153 @@
                 			</td>
 							<td class='td1B'>
 								<table class='table2'>
-                                    <tr class='tr2NoBottomBorder'>
+
+                                        <tr class='tr2NoBottomBorder'>
                         
-                                        <td class='td2Procedures-apt3'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        Empire: 'sc start' via PowerShell to remotely launch a specific service on Creeper (10.0.0.4)
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2Steps'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        <span class='spanProcedureSummaryStep' id='p16_L_1' onclick="scroll_to_step('16_L_1')">
-                                                            16.L.1
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                            <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                            <td class='td2Procedures-apt3'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            Previously executed batch file (pdfhelper.cmd) launched a DLL payload (update.dat) using Rundll32
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2Steps'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            <span class='spanProcedureSummaryStep' id='p1_A_1' onclick="scroll_to_step('1_A_1')">
+                                                                1.A.1
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            General Behavior
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_general_behavior.svg" title="General Behavior">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Telemetry (Tainted)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotesDotted'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            A General Behavior alert was generated for the lateral movement activity. A new story grouping was generated for the event on Creeper to associate subsequent activity.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed rundll32.exe executing as a result of Resume Viewer.exe running. The telemetry was tainted by the previous alert generated from Resume Viewer.exe because it was associated with the same story (Group ID).
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/S1-16.L.1-1.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/S1-16.G.1-1.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/S1-1.A.1-1.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class='table1'>
+						<tr class='tr1'>
+							<td class='td1A'>
+								<table class='table2'>
+									<tr>
+										<td class='td2Technique'>
+                                                <a class="aTechnique-tacticsummary" href="/APT3/results/sentinelone/systemowneroruserdiscovery.html">
+                                                    System Owner/User Discovery
+												<br />(T1033)
+											</a>
+										</td>
+                        			</tr>
+                    			</table>
+                			</td>
+							<td class='td1B'>
+								<table class='table2'>
 
 
-                            Telemetry (Tainted)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                        <tr class='tr2NoBottomBorder'>
+                        
+                                            <td class='td2Procedures-apt3'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            Executed 'whoami' via cmd persistence mechanism through RDP connection made to Creeper (10.0.0.4)
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2Steps'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            <span class='spanProcedureSummaryStep' id='p20_B_1' onclick="scroll_to_step('20_B_1')">
+                                                                20.B.1
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                Enrichment
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_enrichment.svg" title="Enrichment">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed execution of sc.exe to start the AdobeUpdater service on Creeper. The activity seen during the initial compromise step tainted the event because it was associated with the same story (Group ID).
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Enrichment showed execution of the whoami command (enriched with description "whoami - displays logged on user information"). Execution of whoami was associated to the story (Group ID) created from the execution of magnify.exe, but was not considered tainted because an alert was not generated when magnify.exe was executed.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/S1-16.L.1-1.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/S1-16.G.1-1.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/S1-20.B.1-1.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
                                 </table>
                             </td>
                         </tr>
@@ -487,107 +533,108 @@
                 			</td>
 							<td class='td1B'>
 								<table class='table2'>
-                                    <tr class='tr2NoBottomBorder'>
+
+                                        <tr class='tr2NoBottomBorder'>
                         
-                                        <td class='td2Procedures-apt3'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        Legitimate user Debbie clicked and executed malicious self-extracting archive (Resume Viewer.exe) on 10.0.1.6 (Nimda)
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2Steps'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        <span class='spanProcedureSummaryStep' id='p1_A_1' onclick="scroll_to_step('1_A_1')">
-                                                            1.A.1
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                            <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                            <td class='td2Procedures-apt3'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            Legitimate user Debbie clicked and executed malicious self-extracting archive (Resume Viewer.exe) on 10.0.1.6 (Nimda)
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2Steps'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            <span class='spanProcedureSummaryStep' id='p1_A_1' onclick="scroll_to_step('1_A_1')">
+                                                                1.A.1
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            General Behavior
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_general_behavior.svg" title="General Behavior">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                General Behavior
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_general_behavior.svg" title="General Behavior">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotesDotted'>
+                                                                <td class='tdDetectionNotesDotted'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            A General Behavior alert was generated due to static analysis of the file through the DFI resulting in it being marked as suspicious, which generated a story (group ID) that subsequent linked events are tainted by.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                A General Behavior alert was generated due to static analysis of the file through the DFI resulting in it being marked as suspicious, which generated a story (group ID) that subsequent linked events are tainted by.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/S1-1.A.1-1.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/S1-1.A.1-2.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/S1-1.A.1-1.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/S1-1.A.1-2.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            Telemetry
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Telemetry
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed Resume Viewer.exe execution with subsequent file writes and execution.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed Resume Viewer.exe execution with subsequent file writes and execution.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/S1-1.A.1-1.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/S1-1.A.1-2.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/S1-1.A.1-1.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/S1-1.A.1-2.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
                                 </table>
                             </td>
                         </tr>
@@ -608,67 +655,190 @@
                 			</td>
 							<td class='td1B'>
 								<table class='table2'>
-                                    <tr class='tr2NoBottomBorder'>
+
+                                        <tr class='tr2NoBottomBorder'>
                         
-                                        <td class='td2Procedures-apt3'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        Empire: Built-in runas module executed to launch malicious VBScript (autoupdate.vbs) as user Kmitnickï¿½
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2Steps'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        <span class='spanProcedureSummaryStep' id='p16_F_1' onclick="scroll_to_step('16_F_1')">
-                                                            16.F.1
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                            <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                            <td class='td2Procedures-apt3'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            Empire: Built-in runas module executed to launch malicious VBScript (autoupdate.vbs) as user Kmitnickï¿½
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2Steps'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            <span class='spanProcedureSummaryStep' id='p16_F_1' onclick="scroll_to_step('16_F_1')">
+                                                                16.F.1
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            Telemetry (Tainted)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Telemetry (Tainted)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed cmd.exe execution of autoupdate.vbs. The activity seen during the initial compromise step tainted the event because it was associated with the same story (Group ID).
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed cmd.exe execution of autoupdate.vbs. The activity seen during the initial compromise step tainted the event because it was associated with the same story (Group ID).
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/S1-16.F.1-1.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/S1-16.F.1-1.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class='table1'>
+						<tr class='tr1'>
+							<td class='td1A'>
+								<table class='table2'>
+									<tr>
+										<td class='td2Technique'>
+                                                <a class="aTechnique-tacticsummary" href="/APT3/results/sentinelone/serviceexecution.html">
+                                                    Service Execution
+												<br />(T1035)
+											</a>
+										</td>
+                        			</tr>
+                    			</table>
+                			</td>
+							<td class='td1B'>
+								<table class='table2'>
+
+                                        <tr class='tr2NoBottomBorder'>
+                        
+                                            <td class='td2Procedures-apt3'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            Empire: 'sc start' via PowerShell to remotely launch a specific service on Creeper (10.0.0.4)
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2Steps'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            <span class='spanProcedureSummaryStep' id='p16_L_1' onclick="scroll_to_step('16_L_1')">
+                                                                16.L.1
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                General Behavior
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_general_behavior.svg" title="General Behavior">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotesDotted'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                A General Behavior alert was generated for the lateral movement activity. A new story grouping was generated for the event on Creeper to associate subsequent activity.
+
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/S1-16.L.1-1.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/S1-16.G.1-1.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                Telemetry (Tainted)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotes'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed execution of sc.exe to start the AdobeUpdater service on Creeper. The activity seen during the initial compromise step tainted the event because it was associated with the same story (Group ID).
+
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/S1-16.L.1-1.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/S1-16.G.1-1.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
                                 </table>
                             </td>
                         </tr>
@@ -689,310 +859,171 @@
                 			</td>
 							<td class='td1B'>
 								<table class='table2'>
-                                    <tr class='tr2'>
+
+                                        <tr class='tr2'>
                         
-                                        <td class='td2Procedures-apt3'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        Previously executed self-extracting archive (Resume Viewer.exe) launched an embedded batch file (pdfhelper.cmd)
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2Steps'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        <span class='spanProcedureSummaryStep' id='p1_A_1' onclick="scroll_to_step('1_A_1')">
-                                                            1.A.1
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                            <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                            <td class='td2Procedures-apt3'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            Previously executed self-extracting archive (Resume Viewer.exe) launched an embedded batch file (pdfhelper.cmd)
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2Steps'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            <span class='spanProcedureSummaryStep' id='p1_A_1' onclick="scroll_to_step('1_A_1')">
+                                                                1.A.1
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            Telemetry (Tainted)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Telemetry (Tainted)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed cmd.exe executing the pdfhelper.cmd script. The telemetry was tainted by the previous alert generated from Resume Viewer.exe because it was associated with the same story (Group ID).
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed cmd.exe executing the pdfhelper.cmd script. The telemetry was tainted by the previous alert generated from Resume Viewer.exe because it was associated with the same story (Group ID).
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/S1-1.B.1-1.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/S1-1.B.1-1.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                        <tr class='tr2'>
                         
-                                        <td class='td2Procedures-apt3'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        Legitimate user Bob clicked and executed malicious VBScript (autoupdate.vbs) on 10.0.1.5 (CodeRed)
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2Steps'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        <span class='spanProcedureSummaryStep' id='p11_A_1' onclick="scroll_to_step('11_A_1')">
-                                                            11.A.1
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                            <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                            <td class='td2Procedures-apt3'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            Legitimate user Bob clicked and executed malicious VBScript (autoupdate.vbs) on 10.0.1.5 (CodeRed)
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2Steps'>
+                                                <table class='table3'>
+                                                    <tr class='tr3'>
+                                                        <td class='td3'>
+                                                            <span class='spanProcedureSummaryStep' id='p11_A_1' onclick="scroll_to_step('11_A_1')">
+                                                                11.A.1
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            General Behavior
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_general_behavior.svg" title="General Behavior">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                General Behavior
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_general_behavior.svg" title="General Behavior">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotesDotted'>
+                                                                <td class='tdDetectionNotesDotted'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            A General Behavior alert was generated for the execution of autoupdate.vbs that was listed as an active threat.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                A General Behavior alert was generated for the execution of autoupdate.vbs that was listed as an active threat.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/S1-11.A.1-2.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/S1-11.A.1-1.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/S1-11.A.1-2.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/S1-11.A.1-1.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            Telemetry
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Telemetry
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed wscript.exe executing autoupdate.vbs which then executed powershell.exe with an encoded PowerShell script.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed wscript.exe executing autoupdate.vbs which then executed powershell.exe with an encoded PowerShell script.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/S1-11.A.1-2.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/S1-11.A.1-1.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2NoBottomBorder'>
-                        
-                                        <td class='td2Procedures-apt3'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        Empire: Built-in WinEnum module executed to programmatically execute a series of enumeration techniques
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2Steps'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        <span class='spanProcedureSummaryStep' id='p12_E_1' onclick="scroll_to_step('12_E_1')">
-                                                            12.E.1
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                            <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/S1-11.A.1-2.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/S1-11.A.1-1.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
 
-
-                            Telemetry (Tainted)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotes'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed execution of a PowerShell script with follow-on enumeration activity that coincided with the execution of the WinEnum module. The telemetry was tainted by the alert generated during initial compromise because it was associated with the same story (Group ID).
-
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/S1-12.E.1-1.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                    <table class='table1'>
-						<tr class='tr1'>
-							<td class='td1A'>
-								<table class='table2'>
-									<tr>
-										<td class='td2Technique'>
-                                                <a class="aTechnique-tacticsummary" href="/APT3/results/sentinelone/rundll32.html">
-                                                    Rundll32
-												<br />(T1085)
-											</a>
-										</td>
-                        			</tr>
-                    			</table>
-                			</td>
-							<td class='td1B'>
-								<table class='table2'>
-                                    <tr class='tr2NoBottomBorder'>
-                        
-                                        <td class='td2Procedures-apt3'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        Previously executed batch file (pdfhelper.cmd) launched a DLL payload (update.dat) using Rundll32
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2Steps'>
-                                            <table class='table3'>
-                                                <tr class='tr3'>
-                                                    <td class='td3'>
-                                                        <span class='spanProcedureSummaryStep' id='p1_A_1' onclick="scroll_to_step('1_A_1')">
-                                                            1.A.1
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                            <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            Telemetry (Tainted)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotes'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed rundll32.exe executing as a result of Resume Viewer.exe running. The telemetry was tainted by the previous alert generated from Resume Viewer.exe because it was associated with the same story (Group ID).
-
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/S1-1.A.1-1.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
                                 </table>
                             </td>
                         </tr>
@@ -1066,13 +1097,13 @@
 										<p class='pOFProcedure' id='pProcedure2_A_2'>
 											i. Cobalt Strike: 'arp -a' via cmd
 										</p>
-					<div class='divOFSubstep' id='div2_B_1'><p class='pOFSubstep' id=pSubstep2_B_1>2.B.1 Discovery       	</p>
-											<p class='pOFTechniques' id='pTechniques2_B_1'>
+					<div class='divOFInScopeSubstep' id='div2_B_1'><p class='pOFInScopeSubstep' id=pSubstep2_B_1>2.B.1 Discovery       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques2_B_1'>
 				<a href='/APT3/results/sentinelone/systemowneroruserdiscovery'>System Owner/User Discovery</a>          </p>
-										<p class='pOFProcedure' id='pProcedure2_B_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure2_B_1'>
 											i. Cobalt Strike: 'echo' via cmd to enumerate specific environment variables
 										</p>
-					<div class='divOFSubstep' id='div2_C_1'><p class='pOFSubstep' id=pSubstep2_C_1>2.C.1 Discovery       	</p>
+					</div><div class='divOFSubstep' id='div2_C_1'><p class='pOFSubstep' id=pSubstep2_C_1>2.C.1 Discovery       	</p>
 											<p class='pOFTechniques' id='pTechniques2_C_1'>
 				<a href='/APT3/results/sentinelone/processdiscovery'>Process Discovery</a>          </p>
 										<p class='pOFProcedure' id='pProcedure2_C_1'>
@@ -1402,13 +1433,13 @@
 										<p class='pOFProcedure' id='pProcedure12_A_2'>
 											i. Empire: 'ipconfig -all' via PowerShell
 										</p>
-					<div class='divOFSubstep' id='div12_B_1'><p class='pOFSubstep' id=pSubstep12_B_1>12.B.1 Discovery       	</p>
-											<p class='pOFTechniques' id='pTechniques12_B_1'>
+					<div class='divOFInScopeSubstep' id='div12_B_1'><p class='pOFInScopeSubstep' id=pSubstep12_B_1>12.B.1 Discovery       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques12_B_1'>
 				<a href='/APT3/results/sentinelone/systemowneroruserdiscovery'>System Owner/User Discovery</a>          </p>
-										<p class='pOFProcedure' id='pProcedure12_B_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure12_B_1'>
 											i. Empire: 'whoami -all -fo list' via PowerShell
 										</p>
-					<div class='divOFSubstep' id='div12_C_1'><p class='pOFSubstep' id=pSubstep12_C_1>12.C.1 Discovery       	</p>
+					</div><div class='divOFSubstep' id='div12_C_1'><p class='pOFSubstep' id=pSubstep12_C_1>12.C.1 Discovery       	</p>
 											<p class='pOFTechniques' id='pTechniques12_C_1'>
 				<a href='/APT3/results/sentinelone/processdiscovery'>Process Discovery</a>          </p>
 										<p class='pOFProcedure' id='pProcedure12_C_1'>
@@ -1426,13 +1457,13 @@
 										<p class='pOFInScopeProcedure' id='pProcedure12_E_1'>
 											i. Empire: Built-in WinEnum module executed to programmatically execute a series of enumeration techniques
 										</p>
-					</div><div class='divOFSubstep' id='div12_E_1_1'><p class='pOFSubstep' id=pSubstep12_E_1_1>12.E.1.1 Discovery       	</p>
-											<p class='pOFTechniques' id='pTechniques12_E_1_1'>
+					</div><div class='divOFInScopeSubstep' id='div12_E_1_1'><p class='pOFInScopeSubstep' id=pSubstep12_E_1_1>12.E.1.1 Discovery       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques12_E_1_1'>
 				<a href='/APT3/results/sentinelone/systemowneroruserdiscovery'>System Owner/User Discovery</a>          </p>
-										<p class='pOFProcedure' id='pProcedure12_E_1_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure12_E_1_1'>
 											i. Empire: WinEnum module included enumeration of user information
 										</p>
-					<div class='divOFSubstep' id='div12_E_1_2'><p class='pOFSubstep' id=pSubstep12_E_1_2>12.E.1.2 Discovery       	</p>
+					</div><div class='divOFSubstep' id='div12_E_1_2'><p class='pOFSubstep' id=pSubstep12_E_1_2>12.E.1.2 Discovery       	</p>
 											<p class='pOFTechniques' id='pTechniques12_E_1_2'>
 				<a href='/APT3/results/sentinelone/permissiongroupsdiscovery'>Permission Groups Discovery</a>          </p>
 										<p class='pOFProcedure' id='pProcedure12_E_1_2'>
@@ -1822,13 +1853,13 @@
 										<p class='pOFProcedure' id='pProcedure20_A_1'>
 											i. RDP connection made to Creeper (10.0.0.4) as part of execution of persistence mechanism
 										</p>
-					<div class='divOFSubstep' id='div20_B_1'><p class='pOFSubstep' id=pSubstep20_B_1>20.B.1 Execution       	</p>
-											<p class='pOFTechniques' id='pTechniques20_B_1'>
+					<div class='divOFInScopeSubstep' id='div20_B_1'><p class='pOFInScopeSubstep' id=pSubstep20_B_1>20.B.1 Execution       	</p>
+											<p class='pOFInScopeTechniques' id='pTechniques20_B_1'>
 				<a href='/APT3/results/sentinelone/systemowneroruserdiscovery'>System Owner/User Discovery</a>          </p>
-										<p class='pOFProcedure' id='pProcedure20_B_1'>
+										<p class='pOFInScopeProcedure' id='pProcedure20_B_1'>
 											i. Executed 'whoami' via cmd persistence mechanism through RDP connection made to Creeper (10.0.0.4)
 										</p>
-					
+					</div>
                     </div>
                 </td>
             </tr>

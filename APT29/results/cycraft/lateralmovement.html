@@ -356,9 +356,9 @@
 								<table class='table2'>
 									<tr>
 										<td class='td2Technique'>
-                                                <a class="aTechnique-tacticsummary" href="/APT29/results/cycraft/passtheticket.html">
-                                                    Pass the Ticket
-												<br />(T1097)
+                                                <a class="aTechnique-tacticsummary" href="/APT29/results/cycraft/windowsadminshares.html">
+                                                    Windows Admin Shares
+												<br />(T1077)
 											</a>
 										</td>
                         			</tr>
@@ -366,147 +366,77 @@
                 			</td>
 							<td class='td1B'>
 								<table class='table2'>
-                                    <tr class='tr2NoBottomBorder'>
+
+                                        <tr class='tr2NoBottomBorder'>
                         
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Created Kerberos Golden Ticket using Invoke-Mimikatz
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                powershell.exe executing Invoke-Mimikatz with command-line arguments to create a golden ticket
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    20.B.1
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                    <td class='td2Procedures-apt29'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    Established SMB session to remote host Scranton's (10.0.1.4) IPC$ share using PsExec
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Criteria'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    SMB session to Scranton (10.0.1.4) over TCP port 445/135 OR evidence of usage of a Windows share
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Steps'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    <span style="font-size: 12px; font-weight: bold;">
+                                                                        8.C.2
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                        <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            Technique (Alert)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                General (Alert)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_general.svg" title="General"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotesDotted'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            A Technique alert detection (yellow indicator) called of "Pass the Ticket" was generated when the user MScott forged a suspicious Kerberos ticket with the domain krbtgt.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                A General alert detection (red indicator) was generated for "Remote Accessed."
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-2495.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            General (Alert)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_general.svg" title="General"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotesDotted'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            A General alert detection (red indicator) was generated identifying PowerShell executing Invoke-Mimikatz as threat activity.
-
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-2496.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            MSSP (Delayed (Manual))
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotes'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            An MSSP detection for "Pass the Ticket" was received that described the adversary using Mimikatz to forge a golden ticket.
-
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-12521.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-12523.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-2254.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
                                 </table>
                             </td>
                         </tr>
@@ -517,9 +447,9 @@
 								<table class='table2'>
 									<tr>
 										<td class='td2Technique'>
-                                                <a class="aTechnique-tacticsummary" href="/APT29/results/cycraft/windowsremotemanagement.html">
-                                                    Windows Remote Management
-												<br />(T1028)
+                                                <a class="aTechnique-tacticsummary" href="/APT29/results/cycraft/passtheticket.html">
+                                                    Pass the Ticket
+												<br />(T1097)
 											</a>
 										</td>
                         			</tr>
@@ -527,318 +457,148 @@
                 			</td>
 							<td class='td1B'>
 								<table class='table2'>
-                                    <tr class='tr2'>
+
+                                        <tr class='tr2NoBottomBorder'>
                         
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Established WinRM connection to remote host Scranton (10.0.1.4)
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Network connection to Scranton (10.0.1.4) over port 5985
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    8.A.2
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                    <td class='td2Procedures-apt29'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    Created Kerberos Golden Ticket using Invoke-Mimikatz
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Criteria'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    powershell.exe executing Invoke-Mimikatz with command-line arguments to create a golden ticket
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Steps'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    <span style="font-size: 12px; font-weight: bold;">
+                                                                        20.B.1
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                        <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            None
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg" title="None">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Technique (Alert)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotesDotted'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            No detection capability demonstrated for this procedure.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                A Technique alert detection (yellow indicator) called of "Pass the Ticket" was generated when the user MScott forged a suspicious Kerberos ticket with the domain krbtgt.
 
 
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2'>
-                        
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Established a WinRM connection to the domain controller host NewYork (10.0.0.4) 
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Network connection to NewYork (10.0.0.4) over port 5985
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    16.C.1
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-2495.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            General (Alert)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_general.svg" title="General"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                General (Alert)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_general.svg" title="General"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotesDotted'>
+                                                                <td class='tdDetectionNotesDotted'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            A General alert detection (blue indicator) for threat activity was generated for powershell.exe executing the Invoke-WinRMSession command.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                A General alert detection (red indicator) was generated identifying PowerShell executing Invoke-Mimikatz as threat activity.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-2358.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-2496.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            MSSP (Delayed (Manual))
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                MSSP (Delayed (Manual))
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            An MSSP detection for "Windows Remote Management" was received that included a PowerShell command and explained that it was used to create a WinRM session to host Scranton (10.0.1.4).
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                An MSSP detection for "Pass the Ticket" was received that described the adversary using Mimikatz to forge a golden ticket.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-12506.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2NoBottomBorder'>
-                        
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Established a WinRM connection to the remote host Scranton (10.0.1.4) using the Golden Ticket as credentials
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Network connection to Scranton (10.0.1.4) over port 5985
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    20.B.2
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            General (Alert)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_general.svg" title="General"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotesDotted'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            A General alert detection (blue indicator) was generated identifying PowerShell executing the Enter-PSSession cmdlet to open a network connection to the remote host Scranton (10.0.1.4) as threat activity. 
-
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-2498.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            General (Alert)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_general.svg" title="General"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotesDotted'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            A General alert detection (orange indicator) for execution and tagged with "Windows Remote Management" was generated when net.exe was executed remotely on Scranton by wsmprovhost.exe.
-
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-2500.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            MSSP (Delayed (Manual))
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotes'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            An MSSP detection for "Windows Remote Management" was received that described the adversary using a golden ticket to establish a WinRM session to Scranton (10.0.1.4)
-
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-12523.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-12521.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-12521.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-12523.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
                                 </table>
                             </td>
                         </tr>
@@ -859,682 +619,224 @@
                 			</td>
 							<td class='td1B'>
 								<table class='table2'>
-                                    <tr class='tr2'>
+
+
+
+                                        <tr class='tr2'>
                         
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Dropped stage 2 payload (monkey.png) to disk
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                The rcs.3aka3.doc process creating the file monkey.png
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    3.A.1
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                    <td class='td2Procedures-apt29'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    Copied python.exe payload from a WebDAV share (192.168.0.4) to remote host Scranton (10.0.1.4)
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Criteria'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    The file python.exe created on Scranton (10.0.1.4)
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Steps'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    <span style="font-size: 12px; font-weight: bold;">
+                                                                        8.B.1
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                        <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            None
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg" title="None">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                General (Alert)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_general.svg" title="General"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotesDotted'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            No detection capability demonstrated for this procedure.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                A General alert detection (orange indicator) for "Remote Access" was generated for the file copy of python.exe from host Nashua (10.0.1.6) to host Scranton (10.0.1.4).
 
 
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-14872.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                General (Alert)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_general.svg" title="General"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotes'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                A General alert detection (yellow indicator) for "File Creation" for the file create event of python.exe. 
+
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-14901.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+
+
+
+                                        <tr class='tr2NoBottomBorder'>
                         
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Dropped additional tools (SysinternalsSuite.zip) to disk over C2 channel (192.168.0.5)
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                powershell.exe creating the file SysinternalsSuite.zip
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    4.A.1
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                    <td class='td2Procedures-apt29'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    Dropped Mimikatz (m.exe) to disk on the domain controller host NewYork (10.0.0.4) over a WinRM connection
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Criteria'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    File write of m.exe by the WinRM process (wsmprovhost.exe)
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Steps'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    <span style="font-size: 12px; font-weight: bold;">
+                                                                        16.D.1
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                        <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            None
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg" title="None">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Technique (Alert)
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotesDotted'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            No detection capability demonstrated for this procedure.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                A Technique alert detection (purple indicator) for File Movement was generated indicating that m.exe was moved from host Utica (10.0.1.5) to host NewYork (10.0.0.4).
 
 
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2'>
-                        
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Copied python.exe payload from a WebDAV share (192.168.0.4) to remote host Scranton (10.0.1.4)
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                The file python.exe created on Scranton (10.0.1.4)
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    8.B.1
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-2473.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            General (Alert)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_general.svg" title="General"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                MSSP (Delayed (Manual))
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotesDotted'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            A General alert detection (orange indicator) for "Remote Access" was generated for the file copy of python.exe from host Nashua (10.0.1.6) to host Scranton (10.0.1.4).
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                An MSSP detection for "Remote File Copy" was received that described the adversary moving m.exe from host Utica (10.0.1.5) to host NewYork (10.0.0.4).
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-14872.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            General (Alert)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_general.svg" title="General"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotes'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            A General alert detection (yellow indicator) for "File Creation" for the file create event of python.exe. 
-
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-14901.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2'>
-                        
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Dropped rar.exe to disk on remote host Scranton (10.0.1.4) 
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                python.exe creating the file rar.exe
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    9.A.1
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            None
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg" title="None">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotes'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            No detection capability demonstrated for this procedure.
-
-
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2'>
-                        
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Dropped sdelete.exe to disk on remote host Scranton (10.0.1.4) 
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                python.exe creating the file sdelete64.exe
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    9.A.2
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            None
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg" title="None">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotes'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            No detection capability demonstrated for this procedure.
-
-
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2'>
-                        
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Downloaded and dropped Mimikatz (m.exe) to disk
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                powershell.exe downloading and/or the file write of m.exe
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    14.B.3
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            General (Alert)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_general.svg" title="General"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotesDotted'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            A General alert detection (purple indicator) was generated identifying the PowerShell command to download m.exe as threat activity.
-
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-2339.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            General (Alert)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_general.svg" title="General"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotes'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            A General alert detection (purple indicator) was generated showed the file write event for m.exe into the System32 folder.
-
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-2452.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-2342.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2NoBottomBorder'>
-                        
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Dropped Mimikatz (m.exe) to disk on the domain controller host NewYork (10.0.0.4) over a WinRM connection
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                File write of m.exe by the WinRM process (wsmprovhost.exe)
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    16.D.1
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            Technique (Alert)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_technique.svg" title="Technique"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotesDotted'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            A Technique alert detection (purple indicator) for File Movement was generated indicating that m.exe was moved from host Utica (10.0.1.5) to host NewYork (10.0.0.4).
-
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-2473.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            MSSP (Delayed (Manual))
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotes'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            An MSSP detection for "Remote File Copy" was received that described the adversary moving m.exe from host Utica (10.0.1.5) to host NewYork (10.0.0.4).
-
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-12511.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-12510.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                    <table class='table1'>
-						<tr class='tr1'>
-							<td class='td1A'>
-								<table class='table2'>
-									<tr>
-										<td class='td2Technique'>
-                                                <a class="aTechnique-tacticsummary" href="/APT29/results/cycraft/windowsadminshares.html">
-                                                    Windows Admin Shares
-												<br />(T1077)
-											</a>
-										</td>
-                        			</tr>
-                    			</table>
-                			</td>
-							<td class='td1B'>
-								<table class='table2'>
-                                    <tr class='tr2NoBottomBorder'>
-                        
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Established SMB session to remote host Scranton's (10.0.1.4) IPC$ share using PsExec
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                SMB session to Scanton (10.0.1.4) over TCP port 445/135 OR evidence of usage of a Windows share
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    8.C.2
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            General (Alert)
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_general.svg" title="General"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_alert.svg" title="Alert">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotes'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            A General alert detection (red indicator) was generated for "Remote Accessed."
-
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-2254.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-12511.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CyCraft-APT29-12510.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
                                 </table>
                             </td>
                         </tr>

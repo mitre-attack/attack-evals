@@ -356,351 +356,6 @@
 								<table class='table2'>
 									<tr>
 										<td class='td2Technique'>
-                                                <a class="aTechnique-tacticsummary" href="/APT29/results/secureworks/inputcapture.html">
-                                                    Input Capture
-												<br />(T1056)
-											</a>
-										</td>
-                        			</tr>
-                    			</table>
-                			</td>
-							<td class='td1B'>
-								<table class='table2'>
-                                    <tr class='tr2NoBottomBorder'>
-                        
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Captured user keystrokes using the GetAsyncKeyState API
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                powershell.exe executing the GetAsyncKeyState API
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    7.A.3
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            MSSP (Delayed (Manual))
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotesDotted'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            An MSSP detection occurred containing evidence of input capture.
-
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/SecureWorks-APT29-12610.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            Telemetry
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotes'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed PowerShell calling the GetAsyncKeyState API.
-
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/SecureWorks-APT29-6656.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                    <table class='table1'>
-						<tr class='tr1'>
-							<td class='td1A'>
-								<table class='table2'>
-									<tr>
-										<td class='td2Technique'>
-                                                <a class="aTechnique-tacticsummary" href="/APT29/results/secureworks/datastaged.html">
-                                                    Data Staged
-												<br />(T1074)
-											</a>
-										</td>
-                        			</tr>
-                    			</table>
-                			</td>
-							<td class='td1B'>
-								<table class='table2'>
-                                    <tr class='tr2'>
-                        
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Staged files for exfiltration into ZIP (Draft.zip) using PowerShell
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                powershell.exe creating the file draft.zip
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    2.A.5
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            None
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg" title="None">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotes'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            No detection capability demonstrated for this procedure.
-
-
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2'>
-                        
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Staged files for exfiltration into ZIP (working.zip in AppData directory) using PowerShell
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                powershell.exe creating the file working.zip
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    9.B.5
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            None
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg" title="None">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotes'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            No detection capability demonstrated for this procedure.
-
-
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2NoBottomBorder'>
-                        
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Staged collected file into directory using PowerShell
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                powershell.exe creating the file \WindowsParentalControlMigration\MITRE-ATTACK-EVALS.HTML
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    17.B.2
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            None
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg" title="None">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotes'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            No detection capability demonstrated for this procedure.
-
-
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                    <table class='table1'>
-						<tr class='tr1'>
-							<td class='td1A'>
-								<table class='table2'>
-									<tr>
-										<td class='td2Technique'>
                                                 <a class="aTechnique-tacticsummary" href="/APT29/results/secureworks/clipboarddata.html">
                                                     Clipboard Data
 												<br />(T1115)
@@ -711,110 +366,111 @@
                 			</td>
 							<td class='td1B'>
 								<table class='table2'>
-                                    <tr class='tr2NoBottomBorder'>
+
+                                        <tr class='tr2NoBottomBorder'>
                         
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Captured clipboard contents using PowerShell
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                powershell.exe executing Get-Clipboard
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    7.A.2
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                    <td class='td2Procedures-apt29'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    Captured clipboard contents using PowerShell
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Criteria'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    powershell.exe executing Get-Clipboard
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Steps'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    <span style="font-size: 12px; font-weight: bold;">
+                                                                        7.A.2
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                        <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            MSSP (Delayed (Manual))
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                MSSP (Delayed (Manual))
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotesDotted'>
+                                                                <td class='tdDetectionNotesDotted'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            An MSSP detection for "Collection - Clipboard Data" occurred containing evidence of powershell.exe executing Get-Clipboard.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                An MSSP detection for "Collection - Clipboard Data" occurred containing evidence of powershell.exe executing Get-Clipboard.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/SecureWorks-APT29-12609.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/SecureWorks-APT29-12609.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            Telemetry
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Telemetry
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed powershell.exe executing Get-Clipboard.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed powershell.exe executing Get-Clipboard.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/SecureWorks-APT29-6667.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/SecureWorks-APT29-6667.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
                                 </table>
                             </td>
                         </tr>
@@ -835,505 +491,278 @@
                 			</td>
 							<td class='td1B'>
 								<table class='table2'>
-                                    <tr class='tr2'>
+
+                                        <tr class='tr2'>
                         
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Recursively collected files found in C:\Users\Pam\ using PowerShell
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                powershell.exe reading files in C:\Users\Pam\
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    2.A.3
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                    <td class='td2Procedures-apt29'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    Recursively collected files found in C:\Users\Pam\ using PowerShell
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Criteria'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    powershell.exe reading files in C:\Users\Pam\
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Steps'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    <span style="font-size: 12px; font-weight: bold;">
+                                                                        2.A.3
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                        <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            None
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg" title="None">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                None
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg" title="None">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            No detection capability demonstrated for this procedure.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                No detection capability demonstrated for this procedure.
 
 
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2'>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                        <tr class='tr2'>
                         
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Read data in the user's Downloads directory using PowerShell
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                powershell.exe reading files in C:\Users\pam\Downloads\
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    7.B.1
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                    <td class='td2Procedures-apt29'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    Read data in the user's Downloads directory using PowerShell
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Criteria'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    powershell.exe reading files in C:\Users\pam\Downloads\
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Steps'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    <span style="font-size: 12px; font-weight: bold;">
+                                                                        7.B.1
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                        <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            None
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg" title="None">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                None
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg" title="None">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            No detection capability demonstrated for this procedure.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                No detection capability demonstrated for this procedure.
 
 
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2'>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                        <tr class='tr2'>
                         
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Recursively collected files found in C:\Users\Pam\ using PowerShell
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                powershell.exe reading files in C:\Users\Pam\
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    9.B.4
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                    <td class='td2Procedures-apt29'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    Recursively collected files found in C:\Users\Pam\ using PowerShell
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Criteria'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    powershell.exe reading files in C:\Users\Pam\
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Steps'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    <span style="font-size: 12px; font-weight: bold;">
+                                                                        9.B.4
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                        <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            None
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg" title="None">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                None
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg" title="None">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            No detection capability demonstrated for this procedure.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                No detection capability demonstrated for this procedure.
 
 
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2NoBottomBorder'>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                        <tr class='tr2NoBottomBorder'>
                         
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Read and collected a local file using PowerShell
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                powershell.exe reading the file MITRE-ATTACK-EVALS.HTML
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    17.B.1
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                    <td class='td2Procedures-apt29'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    Read and collected a local file using PowerShell
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Criteria'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    powershell.exe reading the file MITRE-ATTACK-EVALS.HTML
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Steps'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    <span style="font-size: 12px; font-weight: bold;">
+                                                                        17.B.1
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                        <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            None
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg" title="None">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                None
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg" title="None">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            No detection capability demonstrated for this procedure.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                No detection capability demonstrated for this procedure.
 
 
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                    <table class='table1'>
-						<tr class='tr1'>
-							<td class='td1A'>
-								<table class='table2'>
-									<tr>
-										<td class='td2Technique'>
-                                                <a class="aTechnique-tacticsummary" href="/APT29/results/secureworks/automatedcollection.html">
-                                                    Automated Collection
-												<br />(T1119)
-											</a>
-										</td>
-                        			</tr>
-                    			</table>
-                			</td>
-							<td class='td1B'>
-								<table class='table2'>
-                                    <tr class='tr2'>
-                        
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Scripted search of filesystem for document and media files using PowerShell 
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                powershell.exe executing (Get-)ChildItem
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    2.A.2
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            MSSP (Delayed (Manual))
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotesDotted'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            An MSSP detection occurred showing evidence of powershell.exe executing ChildItem.
-
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/SecureWorks-APT29-13734.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            Telemetry
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotes'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed powershell.exe executing Get-ChildItem
-
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/SecureWorks-APT29-6534.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <tr class='tr2NoBottomBorder'>
-                        
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Scripted search of filesystem for document and media files using PowerShell 
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                powershell.exe executing (Get-)ChildItem​
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    9.B.3
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            MSSP (Delayed (Manual))
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotesDotted'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            A MSSP detection for "Collection - Automated Collection" occurred containing evidence of powershell.exe executing ChildItem.
-
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/SecureWorks-APT29-12630.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/SecureWorks-APT29-12631.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
-
-
-                            Telemetry
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-
-
-                                                            <td class='tdDetectionNotes'>
-                            
-
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed Powershell.exe executing ChildItem.
-
-
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/SecureWorks-APT29-6795.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
                                 </table>
                             </td>
                         </tr>
@@ -1354,110 +783,344 @@
                 			</td>
 							<td class='td1B'>
 								<table class='table2'>
-                                    <tr class='tr2NoBottomBorder'>
+
+                                        <tr class='tr2NoBottomBorder'>
                         
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Captured and saved screenshots using PowerShell
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                powershell.exe executing the CopyFromScreen function from System.Drawing.dll
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    7.A.1
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                    <td class='td2Procedures-apt29'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    Captured and saved screenshots using PowerShell
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Criteria'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    powershell.exe executing the CopyFromScreen function from System.Drawing.dll
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Steps'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    <span style="font-size: 12px; font-weight: bold;">
+                                                                        7.A.1
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                        <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            MSSP (Delayed (Manual))
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                MSSP (Delayed (Manual))
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotesDotted'>
+                                                                <td class='tdDetectionNotesDotted'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            An MSSP detection for "Collection - Screen Capture"  occurred showing evidence of a PowerShell script attempting to take screenshots.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                An MSSP detection for "Collection - Screen Capture"  occurred showing evidence of a PowerShell script attempting to take screenshots.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/SecureWorks-APT29-12608.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/SecureWorks-APT29-12608.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            Telemetry
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Telemetry
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed powershell.exe executing CopyFromScreen from System.Drawing.dll.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed powershell.exe executing CopyFromScreen from System.Drawing.dll.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/SecureWorks-APT29-13747.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/SecureWorks-APT29-13747.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class='table1'>
+						<tr class='tr1'>
+							<td class='td1A'>
+								<table class='table2'>
+									<tr>
+										<td class='td2Technique'>
+                                                <a class="aTechnique-tacticsummary" href="/APT29/results/secureworks/automatedcollection.html">
+                                                    Automated Collection
+												<br />(T1119)
+											</a>
+										</td>
+                        			</tr>
+                    			</table>
+                			</td>
+							<td class='td1B'>
+								<table class='table2'>
+
+                                        <tr class='tr2'>
+                        
+                                                    <td class='td2Procedures-apt29'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    Scripted search of filesystem for document and media files using PowerShell 
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Criteria'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    powershell.exe executing (Get-)ChildItem
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Steps'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    <span style="font-size: 12px; font-weight: bold;">
+                                                                        2.A.2
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                        <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                MSSP (Delayed (Manual))
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotesDotted'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                An MSSP detection occurred showing evidence of powershell.exe executing ChildItem.
+
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/SecureWorks-APT29-13734.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                Telemetry
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotes'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed powershell.exe executing Get-ChildItem
+
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/SecureWorks-APT29-6534.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                        <tr class='tr2NoBottomBorder'>
+                        
+                                                    <td class='td2Procedures-apt29'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    Scripted search of filesystem for document and media files using PowerShell 
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Criteria'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    powershell.exe executing (Get-)ChildItem​
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Steps'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    <span style="font-size: 12px; font-weight: bold;">
+                                                                        9.B.3
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                        <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                MSSP (Delayed (Manual))
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotesDotted'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                A MSSP detection for "Collection - Automated Collection" occurred containing evidence of powershell.exe executing ChildItem.
+
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/SecureWorks-APT29-12630.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/SecureWorks-APT29-12631.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                Telemetry
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotes'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed Powershell.exe executing ChildItem.
+
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/SecureWorks-APT29-6795.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
                                 </table>
                             </td>
                         </tr>
@@ -1478,113 +1141,463 @@
                 			</td>
 							<td class='td1B'>
 								<table class='table2'>
-                                    <tr class='tr2NoBottomBorder'>
+
+                                        <tr class='tr2NoBottomBorder'>
                         
-                                                <td class='td2Procedures-apt29'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                Dumped messages from the local Outlook inbox using PowerShell
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Criteria'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                outlook.exe spawning from svchost.exe or powershell.exe
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2Steps'>
-                                                    <table class='table3'>
-                                                        <tr class='tr3'>
-                                                            <td class='td3'>
-                                                                <span style="font-size: 12px; font-weight: bold;">
-                                                                    17.A.1
-                                                                </span>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                                <td class='td2DetectionTypesAndNotes' colspan='2'>
-                                                    <table class='tableDetectionTypesAndNotes'>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionTypeDotted'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                    <td class='td2Procedures-apt29'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    Dumped messages from the local Outlook inbox using PowerShell
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Criteria'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    outlook.exe spawning from svchost.exe or powershell.exe
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Steps'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    <span style="font-size: 12px; font-weight: bold;">
+                                                                        17.A.1
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                        <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            MSSP (Delayed (Manual))
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                MSSP (Delayed (Manual))
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotesDotted'>
+                                                                <td class='tdDetectionNotesDotted'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            An MSSP detection occurred containing evidence of PowerShell enumerating Outlook emails via COM.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                An MSSP detection occurred containing evidence of PowerShell enumerating Outlook emails via COM.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/SecureWorks-APT29-13787.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class='trDetectionTypesAndNotes'>
-                                                            <td class='tdDetectionType'>
-                                                                <table class='tableSummaryDetectionIcons'>
-                                                                    <tr>
-                                                                        <td class='tdSummaryDetectionIcons'>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/SecureWorks-APT29-13787.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
 
 
-                            Telemetry
-                                                                        </td>
-                                                                        <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                            <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
+                                Telemetry
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
 
 
-                                                            <td class='tdDetectionNotes'>
+                                                                <td class='tdDetectionNotes'>
                             
 
-                                                                <table class='table3'>
-                                                                    <tr class='tr3'>
-                                                                        <td class='tdInnerDetectionNotes'>
-                                                                            Telemetry showed outlook.exe spawning from svchost.exe with command-line arguments.
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed outlook.exe spawning from svchost.exe with command-line arguments.
 
 
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/SecureWorks-APT29-7147.png' target='_blank'>
-                                                                                [1]
-                                                                            </a>
-                                                                            <a href='https://d1zq5d3dtjfcoj.cloudfront.net/SecureWorks-APT29-7146.png' target='_blank'>
-                                                                                [2]
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/SecureWorks-APT29-7146.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/SecureWorks-APT29-7147.png' target='_blank'>
+                                                                                    [2]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class='table1'>
+						<tr class='tr1'>
+							<td class='td1A'>
+								<table class='table2'>
+									<tr>
+										<td class='td2Technique'>
+                                                <a class="aTechnique-tacticsummary" href="/APT29/results/secureworks/datastaged.html">
+                                                    Data Staged
+												<br />(T1074)
+											</a>
+										</td>
+                        			</tr>
+                    			</table>
+                			</td>
+							<td class='td1B'>
+								<table class='table2'>
+
+                                        <tr class='tr2'>
+                        
+                                                    <td class='td2Procedures-apt29'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    Staged files for exfiltration into ZIP (Draft.zip) using PowerShell
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Criteria'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    powershell.exe creating the file draft.zip
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Steps'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    <span style="font-size: 12px; font-weight: bold;">
+                                                                        2.A.5
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                        <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                None
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg" title="None">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotes'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                No detection capability demonstrated for this procedure.
+
+
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                        <tr class='tr2'>
+                        
+                                                    <td class='td2Procedures-apt29'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    Staged files for exfiltration into ZIP (working.zip in AppData directory) using PowerShell
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Criteria'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    powershell.exe creating the file working.zip
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Steps'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    <span style="font-size: 12px; font-weight: bold;">
+                                                                        9.B.5
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                        <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                None
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg" title="None">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotes'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                No detection capability demonstrated for this procedure.
+
+
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                        <tr class='tr2NoBottomBorder'>
+                        
+                                                    <td class='td2Procedures-apt29'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    Staged collected file into directory using PowerShell
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Criteria'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    powershell.exe creating the file \WindowsParentalControlMigration\MITRE-ATTACK-EVALS.HTML
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Steps'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    <span style="font-size: 12px; font-weight: bold;">
+                                                                        17.B.2
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                        <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                None
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_none.svg" title="None">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotes'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                No detection capability demonstrated for this procedure.
+
+
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class='table1'>
+						<tr class='tr1'>
+							<td class='td1A'>
+								<table class='table2'>
+									<tr>
+										<td class='td2Technique'>
+                                                <a class="aTechnique-tacticsummary" href="/APT29/results/secureworks/inputcapture.html">
+                                                    Input Capture
+												<br />(T1056)
+											</a>
+										</td>
+                        			</tr>
+                    			</table>
+                			</td>
+							<td class='td1B'>
+								<table class='table2'>
+
+                                        <tr class='tr2NoBottomBorder'>
+                        
+                                                    <td class='td2Procedures-apt29'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    Captured user keystrokes using the GetAsyncKeyState API
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Criteria'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    powershell.exe executing the GetAsyncKeyState API
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2Steps'>
+                                                        <table class='table3'>
+                                                            <tr class='tr3'>
+                                                                <td class='td3'>
+                                                                    <span style="font-size: 12px; font-weight: bold;">
+                                                                        7.A.3
+                                                                    </span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class='td2DetectionTypesAndNotes' colspan='2'>
+                                                        <table class='tableDetectionTypesAndNotes'>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionTypeDotted'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                MSSP (Delayed (Manual))
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_mssp.svg" title="MSSP"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_delayed.svg" title="Delayed">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotesDotted'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                An MSSP detection occurred containing evidence of input capture.
+
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/SecureWorks-APT29-12610.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class='trDetectionTypesAndNotes'>
+                                                                <td class='tdDetectionType'>
+                                                                    <table class='tableSummaryDetectionIcons'>
+                                                                        <tr>
+                                                                            <td class='tdSummaryDetectionIcons'>
+
+
+                                Telemetry
+                                                                            </td>
+                                                                            <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
+                                                                                <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+
+
+                                                                <td class='tdDetectionNotes'>
+                            
+
+                                                                    <table class='table3'>
+                                                                        <tr class='tr3'>
+                                                                            <td class='tdInnerDetectionNotes'>
+                                                                                Telemetry showed PowerShell calling the GetAsyncKeyState API.
+
+
+                                                                                <a href='https://d1zq5d3dtjfcoj.cloudfront.net/SecureWorks-APT29-6656.png' target='_blank'>
+                                                                                    [1]
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
                                 </table>
                             </td>
                         </tr>

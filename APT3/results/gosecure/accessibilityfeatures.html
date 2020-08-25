@@ -381,10 +381,10 @@
                             
                             
 
-                            Telemetry (Tainted)
+                            Enrichment (Configuration Change, Tainted)
                                                                     </td>
                                                                     <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                        <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                        <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_enrichment.svg" title="Enrichment"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_configuration_change.svg" title="Configuration Change"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -398,11 +398,11 @@
                                                             <table class='table3'>
                                                                 <tr class='tr3'>
                                                                     <td class='tdInnerDetectionNotes'>
-                                                                        Telemetry also showed a different view of the event with powershell.exe copying cmd.exe as magnify.exe in the system directory. The telemetry was tainted by parent "New Windows service created" alerts.
+                                                                        The capability enriched powershell.exe creating and writing magnify.exe to the system directory with the condition \"Creation of Sticky Keys File.\" The enrichment was tainted by parent \"New Windows service created\" alerts.
 
                                                                         <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
                                                                             <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
-                                                                                Vendor modified configurations between scenario one and two, but MITRE assesses the change did not significantly affect results for this detection. See Configuration page for details.
+                                                                                The condition contributing to Enrichment may have been added to the capability's detection after the start of the evaluation, so the detection is identified as a configuration change. See Configuration page for details.
                                                                             </span>
                                                                         </a>
 
@@ -430,10 +430,10 @@
                             
                             
 
-                            Enrichment (Configuration Change, Tainted)
+                            Telemetry (Tainted)
                                                                     </td>
                                                                     <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                        <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_enrichment.svg" title="Enrichment"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_configuration_change.svg" title="Configuration Change"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                        <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -447,11 +447,11 @@
                                                             <table class='table3'>
                                                                 <tr class='tr3'>
                                                                     <td class='tdInnerDetectionNotes'>
-                                                                        The capability enriched powershell.exe creating and writing magnify.exe to the system directory with the condition \"Creation of Sticky Keys File.\" The enrichment was tainted by parent \"New Windows service created\" alerts.
+                                                                        Telemetry also showed a different view of the event with powershell.exe copying cmd.exe as magnify.exe in the system directory. The telemetry was tainted by parent "New Windows service created" alerts.
 
                                                                         <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
                                                                             <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
-                                                                                The condition contributing to Enrichment may have been added to the capability's detection after the start of the evaluation, so the detection is identified as a configuration change. See Configuration page for details.
+                                                                                Vendor modified configurations between scenario one and two, but MITRE assesses the change did not significantly affect results for this detection. See Configuration page for details.
                                                                             </span>
                                                                         </a>
 

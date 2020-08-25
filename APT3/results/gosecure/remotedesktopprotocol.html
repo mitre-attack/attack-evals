@@ -381,10 +381,10 @@
                             
                             
 
-                            Telemetry
+                            Enrichment (Configuration Change, Tainted)
                                                                     </td>
                                                                     <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                        <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
+                                                                        <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_enrichment.svg" title="Enrichment"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_configuration_change.svg" title="Configuration Change"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -398,8 +398,13 @@
                                                             <table class='table3'>
                                                                 <tr class='tr3'>
                                                                     <td class='tdInnerDetectionNotes'>
-                                                                        Telemetry also identified an inbound connection to Conficker over TCP port 3389.
+                                                                        The capability showed cmd.exe creating an outbound TCP port 3389 (RDP) connection from Nimda and enriched the connection with the conditions Lateral Movement and Remote Share Access. The enrichment was tainted by the parent \"Windows command prompt invoked\" alert. 
 
+                                                                        <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
+                                                                            <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
+                                                                                At least one condition contributing to Enrichment was added to the capability's detection after the start of the evaluation, so this detection is identified as a configuration change. See Configuration page for details.
+                                                                            </span>
+                                                                        </a>
 
 
                                                                         <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CT-6.C.1-1.png' target='_blank'>
@@ -425,10 +430,10 @@
                             
                             
 
-                            Enrichment (Configuration Change, Tainted)
+                            Telemetry
                                                                     </td>
                                                                     <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                        <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_enrichment.svg" title="Enrichment"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_configuration_change.svg" title="Configuration Change"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                        <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/round2_telemetry.svg" title="Telemetry">
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -442,13 +447,8 @@
                                                             <table class='table3'>
                                                                 <tr class='tr3'>
                                                                     <td class='tdInnerDetectionNotes'>
-                                                                        The capability showed cmd.exe creating an outbound TCP port 3389 (RDP) connection from Nimda and enriched the connection with the conditions Lateral Movement and Remote Share Access. The enrichment was tainted by the parent \"Windows command prompt invoked\" alert. 
+                                                                        Telemetry also identified an inbound connection to Conficker over TCP port 3389.
 
-                                                                        <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
-                                                                            <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
-                                                                                At least one condition contributing to Enrichment was added to the capability's detection after the start of the evaluation, so this detection is identified as a configuration change. See Configuration page for details.
-                                                                            </span>
-                                                                        </a>
 
 
                                                                         <a href='https://d1zq5d3dtjfcoj.cloudfront.net/CT-6.C.1-1.png' target='_blank'>

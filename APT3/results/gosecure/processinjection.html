@@ -549,10 +549,10 @@
                             
                             
 
-                            General Behavior
+                            Specific Behavior (Tainted)
                                                                     </td>
                                                                     <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                        <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_general_behavior.svg" title="General Behavior">
+                                                                        <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_specific_behavior.svg" title="Specific Behavior"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -566,11 +566,11 @@
                                                             <table class='table3'>
                                                                 <tr class='tr3'>
                                                                     <td class='tdInnerDetectionNotes'>
-                                                                        A General Behavior alert was generated when a DDNA Scan alerted for svchost.exe. The DDNA scan results showed that svchost.exe "appeared to inject code into another process."
+                                                                        A Specific Behavior alert was generated for process hijacking based on a thread create within lsass.exe from svchost.exe (tainted by the parent "Powershell process created" and "Policy Remote Process Compromise" alerts.)
 
                                                                         <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
                                                                             <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
-                                                                                 According to the vendor, DDNA scans trigger due to machine learning scanning in-memory code and identifying that the code is malicious. DDNA output, which is delayed, shows the process capabilities (known as "traits"), which may give an analyst clues on what the process does.
+                                                                                The vendor noted Privilege Escalation is one of ten "Capabilities" that are part of the taxonomy.
                                                                             </span>
                                                                         </a>
 
@@ -603,10 +603,10 @@
                             
                             
 
-                            Specific Behavior (Tainted)
+                            General Behavior
                                                                     </td>
                                                                     <td class='tdSummaryDetectionIcons' style='padding-left: 5px;'>
-                                                                        <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_specific_behavior.svg" title="Specific Behavior"><img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_tainted.svg" title="Tainted">
+                                                                        <img class="calibration_detection_icon" src="https://d1zq5d3dtjfcoj.cloudfront.net/noun_general_behavior.svg" title="General Behavior">
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -620,11 +620,11 @@
                                                             <table class='table3'>
                                                                 <tr class='tr3'>
                                                                     <td class='tdInnerDetectionNotes'>
-                                                                        A Specific Behavior alert was generated for process hijacking based on a thread create within lsass.exe from svchost.exe (tainted by the parent "Powershell process created" and "Policy Remote Process Compromise" alerts.)
+                                                                        A General Behavior alert was generated when a DDNA Scan alerted for svchost.exe. The DDNA scan results showed that svchost.exe "appeared to inject code into another process."
 
                                                                         <a class="aFootnote" href="javascript:void(0);"><i class="fas fa-info-circle"></i>
                                                                             <span class="spanPopup-footnotes" onclick="return false;" href="#"> 
-                                                                                The vendor noted Privilege Escalation is one of ten "Capabilities" that are part of the taxonomy.
+                                                                                 According to the vendor, DDNA scans trigger due to machine learning scanning in-memory code and identifying that the code is malicious. DDNA output, which is delayed, shows the process capabilities (known as "traits"), which may give an analyst clues on what the process does.
                                                                             </span>
                                                                         </a>
 
