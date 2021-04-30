@@ -28,65 +28,14 @@
 </nav>
     </header>
     <div id='content'><br>
-<meta id="m-redirect" http-equiv="refresh"/>
+<meta http-equiv="refresh" content="15; url=https://attackevals.mitre-engenuity.org/technique_comparison.html"/>
 <div class="divEvaluationSummaryBody">
     <h1 class="mt-4" style="text-align: center;">The URL for this page has changed.</h1>
     <p class="mt-4" style="text-align: center;">
-        The new URL is: <a id="a-redirect"></a> <br>
-        Please update your bookmarks. You will be automatically redirected in 5 seconds. 
+        The new URL is: <a href="https://attackevals.mitre-engenuity.org/technique_comparison.html">https://attackevals.mitre-engenuity.org/technique_comparison.html</a> <br>
+        Please update your bookmarks. You will be automatically redirected in 15 seconds. 
     </p>
 </div>
-
-
-<script type="text/javascript">
-    var current_round = "APT29";
-    var selected_round;
-    var selected_step;
-    var all_vendors_in_round = [];
-    var vendor_display_names = [];
-    var all_vendors_in_round_lwr = [];
-    var table_uid = 0;
-    var current_step;
-    var redirectDomain = "https://attackevals.mitre-engenuity.org"
-
-    document.onload = load_initial()
-
-    function load_initial() {        
-        var url_string = window.location.href;
-        var path = window.location.pathname;
-
-        var url_obj = new URL(url_string);
-        selected_round = url_obj.searchParams.get("round");
-        step_tid = url_obj.searchParams.get("step_tid");
-        vendors_str = url_obj.searchParams.get("vendors");
-        var redirectURL = redirectDomain + path;
-        
-        if(selected_round) {
-            redirectURL = redirectURL + '?round=' + selected_round;
-            if(step_tid) {
-                redirectURL = redirectURL + '&step_tid=' + step_tid;
-            }
-            else{
-                redirectURL = redirectURL + '&step_tid=' + '1.A.1_T1204'
-            }
-            if(vendors_str) {
-                redirectURL = redirectURL + '&vendors=' + vendors_str;
-            }
-            else {
-                redirectURL = redirectURL + '&vendors=';
-            }
-        }
-
-        var meta = document.getElementById('m-redirect');
-        meta.setAttribute('content', '5; url=' + redirectURL)
-
-        var link = document.getElementById('a-redirect');
-        link.setAttribute('href', redirectURL);
-        link.innerText = redirectURL;
-
-    }    
-</script>
-
 
 </div>
 

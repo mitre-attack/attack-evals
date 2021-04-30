@@ -34,25 +34,25 @@
     <h1 class="mt-4" style="text-align: center;">The URL for this page has changed.</h1>
     <p class="mt-4" style="text-align: center;">
         The new URL is: <a id="a-redirect"></a> <br>
-        Please update your bookmarks. You will be automatically redirected in 5 seconds. 
+        Please update your bookmarks. You will be automatically redirected in 15 seconds. 
     </p>
 </div>
 
 <script type="text/javascript">
-    var redirectDomain = "https://attackevals.mitre-engenuity.org/enterprise"
+    var redirectDomain = "https://attackevals.mitre-engenuity.org/enterprise/participants/"
     document.onload = getRedirectLink()
 
     function getRedirectLink(){
         var path = window.location.pathname;
         var round = window.location.href.split('=')[1];
-        var redirectURL = redirectDomain + path + "?round=" + round;
+        var redirectURL = redirectDomain + "?adversaries=" + round.toLowerCase();
 
         var link = document.getElementById('a-redirect');
         link.setAttribute('href', redirectURL);
         link.innerText = redirectURL;
 
         var meta = document.getElementById('m-redirect');
-        meta.setAttribute('content', '5; url=' + redirectURL);
+        meta.setAttribute('content', '15; url=' + redirectURL);
     }
 </script>
 
